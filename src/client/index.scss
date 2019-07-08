@@ -1,0 +1,14 @@
+@import "~uikit/src/scss/mixins.scss";
+
+@import "~uikit/src/scss/variables.scss";
+@import "~uikit/src/scss/components/base.scss";
+
+@import "./src/shared/styles/fonts.scss";
+@import "./src/shared/styles/base.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
