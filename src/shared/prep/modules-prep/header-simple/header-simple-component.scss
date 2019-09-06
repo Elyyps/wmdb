@@ -1,0 +1,38 @@
+.header-simple {
+  position: relative;
+  min-height: 252px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media(max-width: $breakpoint-xsmall-max) {
+    min-height: 106px;
+  }
+  &__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba($black, .4);
+    }
+  }
+  &__title {
+    position: relative;
+    z-index: 1;
+    color: $global-inverse-color;
+    padding: 20px 0;
+    text-align: center;
+    h1 {
+      color: inherit;
+      margin: 0;
+    }
+  }
+}

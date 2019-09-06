@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+    <defs>
+        <path id="calendar_icon" d="M27.555 28.778V11.24H5.222v17.537h22.333zM22.759 0h3.222v3.222h1.574c.85 0 1.599.325 2.248.975.65.65.975 1.399.975 2.248v22.333c0 .849-.325 1.598-.975 2.248-.65.65-1.399.974-2.248.974H5.222a3.05 3.05 0 0 1-2.285-.974c-.625-.65-.937-1.4-.937-2.248V6.445c0-.85.312-1.599.937-2.248a3.05 3.05 0 0 1 2.285-.975h1.574V0h3.223v3.222h12.74V0zm1.648 17.611v8.019H16.39v-8.019h8.018z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="calendar_icon_mask" fill="#fff">
+            <use xlink:href="#calendar_icon"/>
+        </mask>
+        <use fill="#000" fill-rule="nonzero" xlink:href="#calendar_icon"/>
+        <g fill="#101010" mask="url(#calendar_icon_mask)">
+            <path d="M0 0h32v32H0z"/>
+        </g>
+    </g>
+</svg>

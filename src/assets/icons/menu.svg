@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+    <defs>
+        <path id="menu_icon" d="M0 26h32v-3H0v3zm0-8h32v-3H0v3zm0-9h32V6H0v3z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="menu_icon_mask" fill="#fff">
+            <use xlink:href="#menu_icon"/>
+        </mask>
+        <use fill="#000" xlink:href="#menu_icon"/>
+        <g fill="#101010" mask="url(#menu_icon_mask)">
+            <path d="M0 0h32v32H0z"/>
+        </g>
+    </g>
+</svg>

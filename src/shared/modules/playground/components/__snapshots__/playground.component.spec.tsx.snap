@@ -8,8 +8,7 @@ exports[`[PlaygroundComponent] should render without crashing 1`] = `
      Playground!! 
   </div>
   <div>
-     Test Items: 
+     Test Items:1111 
   </div>
-  <div />
 </div>
 `;

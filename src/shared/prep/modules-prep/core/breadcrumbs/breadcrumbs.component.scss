@@ -1,0 +1,33 @@
+.breadcrumbs {
+  margin: 0;
+  padding: 16px 0 ;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin: 0 -12px;
+  >li{
+    position: relative;
+    >a, >span{
+      display: flex;
+      align-items: center;
+      color: $global-color;
+      text-decoration: none;
+      padding: 0 12px;
+      .icon-svg{
+        position: absolute;
+        right: -5px;
+        top: 50%;
+        transform: translateY(-50%);
+        path{
+          stroke:$gray-light;
+        }
+      }
+    }
+    &:last-child{
+      span{
+        color: $gray-light;
+      }
+    }
+  }
+}

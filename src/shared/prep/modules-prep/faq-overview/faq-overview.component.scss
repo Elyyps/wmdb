@@ -1,0 +1,27 @@
+.faq-overview {
+  &__posts {
+    @media (min-width: $breakpoint-small) {
+      margin-bottom: -24px;
+    }
+    @media (min-width: $breakpoint-medium) {
+      margin-bottom: -40px;
+    }
+    > div {
+      @media (min-width: $breakpoint-small) {
+        padding-bottom: 24px;
+      }
+      @media (min-width: $breakpoint-medium) {
+        padding-bottom: 40px;
+      }
+    }
+    @media (max-width: $breakpoint-xsmall-max) {
+      > div:not(:first-child) {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    margin-bottom: 1px;
+  }
+}

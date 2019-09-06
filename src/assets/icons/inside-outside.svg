@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+    <defs>
+        <path id="inside-outside-id" d="M31.874 16.14l-8.248-6.588a.326.326 0 0 0-.409 0l-8.248 6.587c-.248.198-.11.601.204.601h1.319v10.23c0 .182.147.33.33.33h3.959a.33.33 0 0 0 .33-.33v-5.94a.33.33 0 0 1 .33-.33h3.96a.33.33 0 0 1 .33.33v5.94c0 .182.148.33.33.33h3.954c.186 0 .336-.15.336-.336V16.74h1.32c.313 0 .45-.403.203-.6zm-23.5-2.094h1.238c.31 0 .52-.356.4-.68L6.339 4.302c-.15-.403-.654-.403-.803 0l-3.674 9.064c-.12.324.09.68.4.68H3.5L.04 22.088c-.129.298.078.635.388.635h4.14v3.487c0 .596.483 1.08 1.079 1.08h.581a1.08 1.08 0 0 0 1.08-1.08v-3.487h4.138c.31 0 .518-.337.39-.635l-3.46-8.042z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="inside-outside" fill="#fff">
+            <use xlink:href="#inside-outside-id"/>
+        </mask>
+        <use fill="#000" xlink:href="#inside-outside-id"/>
+        <g fill="#101010" mask="url(#inside-outside)">
+            <path d="M0 0h32v32H0z"/>
+        </g>
+    </g>
+</svg>

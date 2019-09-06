@@ -1,0 +1,40 @@
+.nav-bar {
+  font-size: 14px;
+  font-weight: 600;
+  background: $global-background;
+  padding: 13px 0;
+  @media (max-width: $breakpoint-small-max) {
+    padding: 10px 0;
+  }
+  &__holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    > div {
+      display: flex;
+      align-items: center;
+    }
+  }
+  
+  &__toggle {
+    margin-left: 32px;
+    @media (max-width: $breakpoint-small-max) {
+      margin-left: 24px;
+    }
+  }
+  
+  .button--default {
+    @media (max-width: $breakpoint-xsmall-max) {
+      padding: 0;
+      background: none;
+      border: 0;
+      line-height: 0;
+      font-size: 0;
+      .icon-svg {
+        margin: 0;
+        width: 17px !important;
+        height: 17px !important;
+      }
+    }
+  }
+}

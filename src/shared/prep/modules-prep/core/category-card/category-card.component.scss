@@ -1,0 +1,75 @@
+.category-card {
+  display: block;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+
+  &__head {
+    background: $global-background;
+    padding: 22px 37px 22px 16px;
+    border-bottom: 2px solid $brand-primary;
+    position: relative;
+    @media (min-width: $breakpoint-small) {
+      padding-left: 24px;
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+    @media (max-width: $breakpoint-xsmall-max) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 16px;
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 2px;
+        width: 4px;
+        height: 4px;
+        background: $brand-primary;
+        content: '';
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+    @media (min-width: $breakpoint-medium) {
+      font-size: 18px;
+    }
+    > span {
+      color: $brand-primary;
+      padding-left: 4px;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%) rotate(-90deg);
+    color: $brand-primary;
+    path {
+      stroke: currentColor;
+    }
+  }
+
+  &__image {
+    overflow: hidden;
+    position: relative;
+    height: 125px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: currentColor;
+  }
+}

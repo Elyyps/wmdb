@@ -1,8 +1,156 @@
-//test data
-$red-b44: #b72b56;
-
 //
 // Brand colors
 //
-$brand-primary: #00a29c !default;
-$brand-secondary: #b72b56 !default;
+$brand-primary:          #34aadf !default;
+$brand-secondary:        #36c4d9 !default;
+
+$gray:                   #5d6467  !default;
+$gray-dark:              #101010 !default;
+$gray-light:             #969696 !default;
+$gray-light-secondary:   #eaeaea !default;
+$gray-lighter:           #bebebe !default;
+$black:                  #000!default;
+$bg-muted:               #fbfbfb !default;
+$brand-primary-light:    lighten($brand-primary, 40%);
+$brand-primary-dark:     darken($brand-primary, 7%);
+//
+// Breakpoints
+//
+$breakpoint-xsmall:           480px !important;
+$breakpoint-small:            640px !default;
+$breakpoint-small-medium:     770px !important;
+$breakpoint-medium:           960px !default;
+$breakpoint-large:            1200px !default;
+$breakpoint-xlarge:           1600px !default;
+
+$breakpoint-xsmall-max:       ($breakpoint-small - 1) !default;
+$breakpoint-small-max:        ($breakpoint-medium - 1) !default;
+$breakpoint-small-medium-max: ($breakpoint-small-medium - 1) !default;
+$breakpoint-medium-max:       ($breakpoint-large - 1) !default;
+$breakpoint-large-max:        ($breakpoint-xlarge - 1) !default;
+
+//
+// Typography
+//
+
+$global-font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+"Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$global-font-family-secondary: "Dosis", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$global-font-size:         16px !default;
+$global-line-height:       1.5 !default;
+
+$global-xxlarge-font-size: 34px !default;
+$global-xlarge-font-size:  28px !default;
+$global-large-font-size:   20px !default;
+$global-medium-font-size:  18px !default;
+$global-small-font-size:   16px !default;
+$global-xsmall-font-size:  14px !default;
+
+//
+// Colors
+//
+
+$global-color:                $gray-dark !default;
+$global-inverse-color:        #fff !default;
+$global-muted-color:          #999 !default;
+$global-emphasis-color:       $gray-dark !default;
+
+$global-link-color:           $brand-primary !default;
+$global-link-hover-color:     darken($global-link-color, 15%) !default;
+
+$global-background:           #fff !default;
+$global-muted-background:     $bg-muted !default;
+$global-primary-background:   $brand-primary !default;
+$global-secondary-background: $brand-secondary !default;
+
+$global-success-background:   #32d296 !default;
+$global-warning-background:   #faa05a !default;
+$global-danger-background:    #d40000 !default;
+
+$error:                       $global-danger-background!default;
+$success:                     $global-success-background!default;
+//
+// Borders
+//
+
+$global-border-width:       1px;
+$global-border:             $gray-lighter;
+$global-border-radius:      4px!default;
+
+//
+// Spacings
+//
+
+// Used in margin, section, list
+$global-margin:              24px;
+$global-small-margin:        16px;
+$global-medium-margin:       32px;
+$global-large-margin:        40px;
+$global-xlarge-margin:       120px;
+
+// Used in grid, column, container, align, card, padding
+$global-gutter:              24px;
+$global-small-gutter:        16px;
+$global-medium-gutter:       32px;
+$global-large-gutter:        40px;
+$global-xlarge-gutter:       80px;
+
+//
+// Container
+//
+
+$container-max-width:         1160px !default;
+$container-small-max-width:   740px !default;
+$container-medium-max-width:  860px !default;
+$container-large-max-width:   1600px !default;
+
+$container-padding-horizontal: 16px !default;
+$container-padding-horizontal-s: $global-gutter !default;
+$container-padding-horizontal-m: $global-medium-gutter !default;
+
+//
+// Buttons
+//
+
+$button-hover-background:         lighten($gray-dark, 10%);
+$button-primary-hover-background: darken($global-secondary-background, 7%);
+
+//
+// Border
+//
+
+$global-border: #eceaea;
+
+$accordion-item-margin-top: $global-margin !default;
+$accordion-title-font-size: $global-font-size !default;
+//$accordion-title-line-height: 1.4 !default;
+//$accordion-title-color: #00a29c !default;
+//$accordion-title-hover-color: #00a29c !default;
+//$accordion-content-margin-top: 8px !default;
+
+// new
+
+$base-heading-font-family:     $global-font-family-secondary;
+$base-heading-font-weight:     bold;
+$base-heading-color:           $gray-dark;
+$base-heading-text-transform:  none;
+$base-heading-margin-top:      $global-small-margin;
+
+$base-h1-font-size:            $global-xxlarge-font-size;
+$base-h1-line-height:          1.29;
+$base-h2-font-size:            $global-xlarge-font-size;
+$base-h2-line-height:          1.21;
+$base-h3-font-size:            $global-large-font-size;
+$base-h3-line-height:          1.2;
+$base-h4-font-size:            $global-medium-font-size;
+$base-h4-line-height:          1.38;
+$base-h5-font-size:            $global-small-font-size;
+$base-h5-line-height:          1.33;
+$base-h6-font-size:            $global-xsmall-font-size;
+$base-h6-line-height:          1;
+$base-list-padding-left:       35px;
+$base-em-color:                inherit;
+
+//form
+$placeholder:                  $gray-dark!default;
