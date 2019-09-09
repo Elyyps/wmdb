@@ -53,6 +53,16 @@
       color: $global-inverse-color;
     }
   }
+
+  &--secondary {
+    background: $brand-secondary;
+    color: $global-inverse-color;
+    border-color: $brand-secondary-dark;
+    &:hover {
+      background-color: $brand-secondary-dark;
+      color: $global-inverse-color;
+    }
+  }
   
   &--icon-left {
     > .icon-svg {

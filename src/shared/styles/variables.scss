@@ -11,8 +11,11 @@ $gray-light-secondary:   #eaeaea !default;
 $gray-lighter:           #bebebe !default;
 $black:                  #000!default;
 $bg-muted:               #fbfbfb !default;
+
 $brand-primary-light:    lighten($brand-primary, 40%);
 $brand-primary-dark:     darken($brand-primary, 7%);
+
+$brand-secondary-dark:   darken($brand-secondary, 7%);
 //
 // Breakpoints
 //
