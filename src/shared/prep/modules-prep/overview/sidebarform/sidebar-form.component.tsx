@@ -1,6 +1,7 @@
 import * as React from "react";
-import { Checkbox, RadioButton, Select, CalendarComponent } from "@app/prep/modules-prep/core";
+import { Checkbox, CalendarComponent } from "@app/prep/modules-prep/core";
 import InputRange from "react-input-range";
+import { Link } from "react-router-dom";
 
 export interface ISidebarFormComponentProps {
   checkboxCount?: number;
@@ -14,6 +15,7 @@ export interface ISidebarFormComponentProps {
   rangeMax?: number;
   rangeOnChange?: any;
   selectOptions?: any;
+  sidebarList?: any;
   stateCheckboxes?: any;
 }
 
@@ -29,12 +31,13 @@ const SidebarFormComponent = ({
   checkboxOnChange,
   dateOnchange,
   date,
+  sidebarList,
   rangeOnChange
 }: ISidebarFormComponentProps) => (
   <>
     {checkboxes ? (
       <div className="sidebar__item">
-        <h5>Activiteiten</h5>
+        <h5>Spel & Ontspanning</h5>
         {checkboxes.map((item, key) => (
           <Checkbox
             key={key}
@@ -49,32 +52,9 @@ const SidebarFormComponent = ({
         ))}
       </div>
     ) : null}
-    {selectOptions ? (
-      <div className="sidebar__item">
-        <h5>Leeftijd</h5>
-        <Select {...selectOptions} />
-      </div>
-    ) : null}
-    {radioButtons ? (
-      <div className="sidebar__item">
-        <h5>Type activiteit</h5>
-        {radioButtons.map((item, key: any) => (
-          <RadioButton
-            isChecked={stateCheckboxes[item.name] ? stateCheckboxes[item.name].isChecked : false}
-            key={key}
-            id={key}
-            label={item.label}
-            name={item.name}
-            value={item.label}
-            count={checkboxCount}
-            onChange={checkboxOnChange}
-          />
-        ))}
-      </div>
-    ) : null}
     {checkboxesSpecial ? (
       <div className="sidebar__item">
-        <h5>Speciale wensen</h5>
+        <h5>Sportief & Actie(f)</h5>
         {checkboxesSpecial.map((item, key) => (
           <Checkbox
             key={key}
@@ -89,11 +69,79 @@ const SidebarFormComponent = ({
         ))}
       </div>
     ) : null}
-    {rangeMax && range ? (
+    {checkboxesSpecial ? (
+      <div className="sidebar__item">
+        <h5>Creatieve Uitjes</h5>
+        {checkboxesSpecial.map((item, key) => (
+          <Checkbox
+            key={key}
+            isChecked={stateCheckboxes[item.name] ? stateCheckboxes[item.name].isChecked : false}
+            id={key}
+            label={item.label}
+            name={item.name}
+            value={item.label}
+            count={checkboxCount}
+            onChange={checkboxOnChange}
+          />
+        ))}
+      </div>
+    ) : null}
+    {checkboxesSpecial ? (
+      <div className="sidebar__item">
+        <h5>Eten, Drinken & Feesten</h5>
+        {checkboxesSpecial.map((item, key) => (
+          <Checkbox
+            key={key}
+            isChecked={stateCheckboxes[item.name] ? stateCheckboxes[item.name].isChecked : false}
+            id={key}
+            label={item.label}
+            name={item.name}
+            value={item.label}
+            count={checkboxCount}
+            onChange={checkboxOnChange}
+          />
+        ))}
+      </div>
+    ) : null}
+    {checkboxesSpecial ? (
+      <div className="sidebar__item">
+        <h5>Teambuilden</h5>
+        {checkboxesSpecial.map((item, key) => (
+          <Checkbox
+            key={key}
+            isChecked={stateCheckboxes[item.name] ? stateCheckboxes[item.name].isChecked : false}
+            id={key}
+            label={item.label}
+            name={item.name}
+            value={item.label}
+            count={checkboxCount}
+            onChange={checkboxOnChange}
+          />
+        ))}
+      </div>
+    ) : null}
+    {checkboxesSpecial ? (
+      <div className="sidebar__item">
+        <h5>Incentives</h5>
+        {checkboxesSpecial.map((item, key) => (
+          <Checkbox
+            key={key}
+            isChecked={stateCheckboxes[item.name] ? stateCheckboxes[item.name].isChecked : false}
+            id={key}
+            label={item.label}
+            name={item.name}
+            value={item.label}
+            count={checkboxCount}
+            onChange={checkboxOnChange}
+          />
+        ))}
+      </div>
+    ) : null}
+    {rangeMax ? (
       <div className="sidebar__item">
         <h5>Personen</h5>
         <div className="input-range__wrapper">
-          <InputRange maxValue={rangeMax} minValue={0} value={range} onChange={rangeOnChange} />
+          <InputRange maxValue={rangeMax} minValue={0} value={range ? range : 0} onChange={rangeOnChange} />
           <div className="input-range__items">
             <span>{range}+</span>
             <span>{rangeMax}+</span>
@@ -108,6 +156,20 @@ const SidebarFormComponent = ({
     ) : (
       ""
     )}
+    {sidebarList ? (
+      <div className="sidebar__item">
+        <h5>{sidebarList.title}</h5>
+        <ul className={"sidebar-list"}>
+          {sidebarList.list
+            ? sidebarList.list.map((item: string, index: number) => (
+                <li key={index}>
+                  <Link to={item}>{item}</Link>
+                </li>
+              ))
+            : null}
+        </ul>
+      </div>
+    ) : null}
   </>
 );
 

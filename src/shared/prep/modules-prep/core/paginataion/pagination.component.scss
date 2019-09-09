@@ -54,9 +54,11 @@
       }
       &.active{
         a{
-          background-color: $brand-primary;
-          color: $global-inverse-color;
+          background-color: #e8f2fc;
           border-radius: 2px;
+          font-family: $global-font-family-third;
+          font-weight: 600;
+          color: $global-color;
         }
       }
     }

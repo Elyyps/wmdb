@@ -2,7 +2,7 @@
 // Brand colors
 //
 $brand-primary:          #34aadf !default;
-$brand-secondary:        #36c4d9 !default;
+$brand-secondary:        #02906f !default;
 
 $gray:                   #5d6467  !default;
 $gray-dark:              #101010 !default;
@@ -36,6 +36,8 @@ $breakpoint-large-max:        ($breakpoint-xlarge - 1) !default;
 $global-font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
 "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $global-font-family-secondary: "Dosis", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$global-font-family-third: "Cabin", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
 Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $global-font-size:         16px !default;
 $global-line-height:       1.5 !default;

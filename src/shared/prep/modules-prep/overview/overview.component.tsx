@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./overview-component.scss";
 import { Sidebar, CardContainer, PaginationComponent, ListCheckComponent } from "@app/prep/modules-prep/core";
 import { LabelComponent } from "./label/label.component";
-import { CheckBoxes, RadioButtons, SelectOptions, CheckBoxesSpecial } from "./dummy-overview";
+import { CheckBoxes, CheckBoxesSpecial, SidebarList } from "./dummy-overview";
 import { SidebarFormComponent } from "./sidebarform/sidebar-form.component";
 
 export interface IOverviewComponentProps {
@@ -73,12 +73,11 @@ const OverviewComponent = ({ total, Cards, CardsSecondary, sidebar }: IOverviewC
                   checkboxOnChange={handleChange}
                   checkboxes={CheckBoxes}
                   checkboxesSpecial={CheckBoxesSpecial}
-                  radioButtons={RadioButtons}
                   rangeOnChange={handleOnChangeRange}
                   rangeMax={rangeMax}
                   range={range}
                   checkboxCount={checkboxCount}
-                  selectOptions={SelectOptions}
+                  sidebarList={SidebarList}
                 />
               )}
             </Sidebar>

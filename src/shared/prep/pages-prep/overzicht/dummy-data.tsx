@@ -1,5 +1,5 @@
 import ImageLarge from "@assets/img2.png";
-import IconInsideOutside from "@assets/icons/inside-outside.svg";
+import ROOMS from "@assets/icons/rooms.svg";
 
 const LocationsData = {
   backgroundColor: "#fff8ed",
@@ -274,11 +274,11 @@ const Cards = [
       href: "#"
     },
     data: {
-      icon: IconInsideOutside,
-      label: "Buiten"
+      icon: ROOMS,
+      label: "10 - 1000 personen"
     },
     content:
-      "Dagje uit met kinderen. De Julianatoren in Buiten is het gezelligste, veiligste en meest overzichtelijke familiepretpark van Nederland. Het pretpark, met méér dan 60 te gekke attracties, biedt een heerlijk dagje uitaan gezinnen met kinderen…"
+      "Dagje uit met kinderen. De Julianatoren in 10 - 1000 personen is het gezelligste, veiligste en meest overzichtelijke familiepretpark van Nederland. Het pretpark, met méér dan 60 te gekke attracties, biedt een heerlijk dagje uitaan gezinnen met kinderen…"
   },
   {
     title: "Julianatoren",
@@ -289,11 +289,11 @@ const Cards = [
       href: "#"
     },
     data: {
-      icon: IconInsideOutside,
-      label: "Buiten"
+      icon: ROOMS,
+      label: "10 - 1000 personen"
     },
     content:
-      "Dagje uit met kinderen. De Julianatoren in Buiten is het gezelligste, veiligste en meest overzichtelijke familiepretpark van Nederland. Het pretpark, met méér dan 60 te gekke attracties, biedt een heerlijk dagje uitaan gezinnen met kinderen…"
+      "Dagje uit met kinderen. De Julianatoren in 10 - 1000 personen is het gezelligste, veiligste en meest overzichtelijke familiepretpark van Nederland. Het pretpark, met méér dan 60 te gekke attracties, biedt een heerlijk dagje uitaan gezinnen met kinderen…"
   },
   {
     title: "Zomerspecial - bekijk nu de nieuwsbrief!",
@@ -314,11 +314,11 @@ const Cards = [
       href: "#"
     },
     data: {
-      icon: IconInsideOutside,
-      label: "Buiten"
+      icon: ROOMS,
+      label: "10 - 1000 personen"
     },
     content:
-      "Dagje uit met kinderen. De Julianatoren in Buiten is het gezelligste, veiligste en meest overzichtelijke familiepretpark van Nederland. Het pretpark, met méér dan 60 te gekke attracties, biedt een heerlijk dagje uitaan gezinnen met kinderen…"
+      "Dagje uit met kinderen. De Julianatoren in 10 - 1000 personen is het gezelligste, veiligste en meest overzichtelijke familiepretpark van Nederland. Het pretpark, met méér dan 60 te gekke attracties, biedt een heerlijk dagje uitaan gezinnen met kinderen…"
   },
   {
     title: "Julianatoren",
@@ -329,11 +329,11 @@ const Cards = [
       href: "#"
     },
     data: {
-      icon: IconInsideOutside,
-      label: "Buiten"
+      icon: ROOMS,
+      label: "10 - 1000 personen"
     },
     content:
-      "Dagje uit met kinderen. De Julianatoren in Buiten is het gezelligste, veiligste en meest overzichtelijke familiepretpark van Nederland. Het pretpark, met méér dan 60 te gekke attracties, biedt een heerlijk dagje uitaan gezinnen met kinderen…"
+      "Dagje uit met kinderen. De Julianatoren in 10 - 1000 personen is het gezelligste, veiligste en meest overzichtelijke familiepretpark van Nederland. Het pretpark, met méér dan 60 te gekke attracties, biedt een heerlijk dagje uitaan gezinnen met kinderen…"
   },
   {
     title: "Julianatoren",
@@ -344,11 +344,11 @@ const Cards = [
       href: "#"
     },
     data: {
-      icon: IconInsideOutside,
-      label: "Buiten"
+      icon: ROOMS,
+      label: "10 - 1000 personen"
     },
     content:
-      "Dagje uit met kinderen. De Julianatoren in Buiten is het gezelligste, veiligste en meest overzichtelijke familiepretpark van Nederland. Het pretpark, met méér dan 60 te gekke attracties, biedt een heerlijk dagje uitaan gezinnen met kinderen…"
+      "Dagje uit met kinderen. De Julianatoren in 10 - 1000 personen is het gezelligste, veiligste en meest overzichtelijke familiepretpark van Nederland. Het pretpark, met méér dan 60 te gekke attracties, biedt een heerlijk dagje uitaan gezinnen met kinderen…"
   }
 ];
 const CardsSecondary = [
@@ -361,11 +361,11 @@ const CardsSecondary = [
       href: "#"
     },
     data: {
-      icon: IconInsideOutside,
-      label: "Buiten"
+      icon: ROOMS,
+      label: "10 - 1000 personen"
     },
     content:
-      "Dagje uit met kinderen. De Julianatoren in Buiten is het gezelligste, veiligste en meest overzichtelijke familiepretpark van Nederland. Het pretpark, met méér dan 60 te gekke attracties, biedt een heerlijk dagje uitaan gezinnen met kinderen…"
+      "Dagje uit met kinderen. De Julianatoren in 10 - 1000 personen is het gezelligste, veiligste en meest overzichtelijke familiepretpark van Nederland. Het pretpark, met méér dan 60 te gekke attracties, biedt een heerlijk dagje uitaan gezinnen met kinderen…"
   },
   {
     title: "Julianatoren",
@@ -376,11 +376,11 @@ const CardsSecondary = [
       href: "#"
     },
     data: {
-      icon: IconInsideOutside,
-      label: "Buiten"
+      icon: ROOMS,
+      label: "10 - 1000 personen"
     },
     content:
-      "Dagje uit met kinderen. De Julianatoren in Buiten is het gezelligste, veiligste en meest overzichtelijke familiepretpark van Nederland. Het pretpark, met méér dan 60 te gekke attracties, biedt een heerlijk dagje uitaan gezinnen met kinderen…"
+      "Dagje uit met kinderen. De Julianatoren in 10 - 1000 personen is het gezelligste, veiligste en meest overzichtelijke familiepretpark van Nederland. Het pretpark, met méér dan 60 te gekke attracties, biedt een heerlijk dagje uitaan gezinnen met kinderen…"
   }
 ];
 export { LocationsData, Cards, CardsSecondary };
