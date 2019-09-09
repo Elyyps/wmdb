@@ -1,71 +1,50 @@
-const SelectOptions = {
-  name: "select",
-  placeholder: "Alle leeftijden",
-  options: [{ value: "item", label: "Item" }, { value: "item2", label: "Item 2" }, { value: "item3", label: "Item 3" }]
-};
-
 const CheckBoxes = [
   {
-    label: "Musea",
-    name: "musea1",
+    label: "Citygames",
+    name: "citygames",
     isChecked: false
   },
   {
-    label: "Speeltuin",
-    name: "speeltuin",
+    label: "Beachgames",
+    name: "beachgames",
     isChecked: false
   },
   {
-    label: "Voorstellingen",
-    name: "voorstellingen",
+    label: "Indoor Spel en Ontspanning",
+    name: "indoor",
     isChecked: false
   },
   {
-    label: "Pretpark",
-    name: "pretpark",
+    label: "Outdoor Spel en Ontspanning",
+    name: "outdoor",
     isChecked: false
-  },
-  {
-    label: "Eten",
-    name: "eten",
-    isChecked: false
-  },
-  {
-    label: "Schoolreisjes",
-    name: "schoolreisjes",
-    isChecked: false
-  },
-  {
-    label: "Overnachten",
-    name: "overnachten",
-    isChecked: false
-  }
-];
-const RadioButtons = [
-  {
-    label: "Binnen en Apeldoorn",
-    name: "radio"
-  },
-  {
-    label: "Alleen binnen",
-    name: "radio"
-  },
-  {
-    label: "Alleen buiten",
-    name: "radio"
   }
 ];
 const CheckBoxesSpecial = [
   {
-    label: "Alle activiteiten met korting",
-    name: "alle_activiteiten_met_korting",
+    label: "Fun op Wielen",
+    name: "fun_op_wielen",
     isChecked: false
   },
   {
-    label: "Geschikt voor gehandicapten",
-    name: "geschikt_voor_gehandicapten",
+    label: "Outdoor Lucht",
+    name: "outdoor_lucht",
+    isChecked: false
+  },
+  {
+    label: "Indoor Sport en Actie",
+    name: "indoor_sport_en_actie",
+    isChecked: false
+  },
+  {
+    label: "Outdoor Sport en Actie",
+    name: "outdoor_sport_en_actie",
     isChecked: false
   }
 ];
+const SidebarList = {
+  title: "Handige links",
+  list: ["www.link1.nl", "www.link2.nl"]
+};
 
-export { CheckBoxes, RadioButtons, SelectOptions, CheckBoxesSpecial };
+export { CheckBoxes, CheckBoxesSpecial, SidebarList };

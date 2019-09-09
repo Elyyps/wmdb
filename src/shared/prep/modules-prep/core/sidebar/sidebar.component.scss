@@ -101,4 +101,14 @@
       left: 0;
     }
   }
+  &-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    a{
+      text-decoration: none;
+      line-height: 1.71;
+    }
+  }
  }
