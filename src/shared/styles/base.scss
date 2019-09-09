@@ -143,6 +143,13 @@ blockquote {
   line-height: .5;
   display: flex;
   align-items: center;
+  &.icon-svg-stroke {
+    svg {
+      path {
+        fill: none;
+      }
+    }
+  }
   > div {
     width: 100%;
   }

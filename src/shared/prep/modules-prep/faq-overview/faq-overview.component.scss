@@ -20,6 +20,25 @@
       }
     }
   }
+  
+  &__head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    @media (max-width: $breakpoint-xsmall-max) {
+      margin-bottom: 16px;
+    }
+    > h3 {
+      margin: 0;
+    }
+    .icon-svg {
+      margin-right: 16px;
+      @media (max-width: $breakpoint-xsmall-max) {
+        width: 24px !important;
+        margin-right: 8px;
+      }
+    }
+  }
 
   &__item {
     margin-bottom: 1px;

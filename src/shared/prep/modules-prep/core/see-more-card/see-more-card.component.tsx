@@ -13,7 +13,7 @@ const SeeMoreCard = ({ link, title }: ISeeMoreCardProps) => (
   <Link to={link} className="see-more-card">
     <div className="see-more-card__title">{title}</div>
     <div className="see-more-card__arrow">
-      <IconComponent icon={Arrow} size={"14px"} />
+      <IconComponent icon={Arrow} size={"14px"} stroke />
     </div>
   </Link>
 );

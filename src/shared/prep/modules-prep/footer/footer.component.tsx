@@ -9,11 +9,15 @@ export interface IFooterComponentProps {}
 const FooterComponent = (props: IFooterComponentProps) => {
   const menuNav = [
     {
-      title: "info@wmdk.nl",
+      title: "info@wmdb.nl",
       link: "/"
     },
     {
       title: "Web-Effects",
+      link: "/"
+    },
+    {
+      title: "Algemene voorwaarden",
       link: "/"
     },
     {

@@ -31,7 +31,7 @@
     position: relative;
     padding: 24px 0;
     @media(min-width: $breakpoint-medium) {
-      padding: 34px 0;
+      padding: 43px 0;
     }
   }
   
@@ -61,13 +61,16 @@
     > * {
       margin: 0;
     }
-    @media(max-width: $breakpoint-small-max) {
-      .button {
-        width: 100%;
-      }
-    }
     .form__item {
       margin: 0;
+    }
+    .button {
+      white-space: nowrap;
+      @media(max-width: $breakpoint-small-max) {
+        .button {
+          width: 100%;
+        }
+      }
     }
   }
   

@@ -13,7 +13,7 @@ const SimpleCard = ({ link, title }: ISimpleCardProps) => (
   <Link to={link} className="simple-card">
     <div className="simple-card__title">{title}</div>
     <div className="simple-card__arrow">
-      <IconComponent icon={Arrow} size={"14px"} />
+      <IconComponent icon={Arrow} size={"14px"} stroke />
     </div>
   </Link>
 );
