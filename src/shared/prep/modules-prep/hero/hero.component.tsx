@@ -9,7 +9,7 @@ export interface IHeroComponentProps {
 
 const selectOption = {
   name: "select",
-  placeholder: "Kies een leuk uitje",
+  placeholder: "Kies een bedrijfsuitje categorie",
   options: [{ value: "item", label: "Item" }, { value: "item2", label: "Item 2" }, { value: "item3", label: "Item 3" }]
 };
 
@@ -33,6 +33,12 @@ const HeroComponent = ({ image, title }: IHeroComponentProps) => (
           </div>
           <div className="hero__form-area hero__form-area--flex">
             <Input name={"text"} placeholder={"Provincie of Plaats"} />
+          </div>
+          <div className="hero__form-area hero__form-area--flex">
+            <Input name={"text"} placeholder={"Zoekwoord"} />
+          </div>
+          <div className="hero__form-area hero__form-area--flex">
+            <Input name={"text"} type={"number"} placeholder={"Aantal personen"} />
           </div>
           <Button type={"submit"} title={"Toon 500 uitjes"} variant={"primary"} />
         </form>

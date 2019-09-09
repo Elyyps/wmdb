@@ -21,6 +21,14 @@
     overflow: hidden;
     margin: 0;
     position: relative;
+    display: flex;
+    align-items: center;
+    .icon-svg{
+      margin-right: 24px;
+      @media(max-width:$breakpoint-xsmall-max){
+        margin-right: 8px;
+      }
+    }
     @media (max-width: $breakpoint-xsmall-max) {
       display: flex;
       align-items: center;
@@ -60,7 +68,7 @@
   &__image {
     overflow: hidden;
     position: relative;
-    height: 125px;
+    height: 165px;
     img {
       width: 100%;
       height: 100%;

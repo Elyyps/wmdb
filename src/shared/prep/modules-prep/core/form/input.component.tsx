@@ -15,10 +15,11 @@ interface IInputProps {
   name: string;
   onClick?: any;
   placeholder?: string;
+  type?: string;
 }
 
 const Input = (props: IInputProps) => {
-  const { name, placeholder, classModify, icon, label, isError, isSuccess } = props;
+  const { name, type, placeholder, classModify, icon, label, isError, isSuccess } = props;
   const inputClassName = classNames("input", {
     [`input--${classModify}`]: classModify
   });
@@ -51,7 +52,7 @@ const Input = (props: IInputProps) => {
         <div className="form__item-holder">
           <input
             onChange={handelChange}
-            type="text"
+            type={type ? type : "text"}
             placeholder={placeholder}
             className={inputClassName}
             name={name}
