@@ -1,4 +1,4 @@
-import ImageLarge from "@assets/img2.png";
+import ImageLarge from "@assets/img02.png";
 import Location from "@assets/icons/location.svg";
 
 const LocationsData = {

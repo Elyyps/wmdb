@@ -6,10 +6,17 @@
   background: $global-background;
   padding: 20px 24px;
   font-size: 14px;
+  
+  &__head {
+    color: $gray-light;
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &__date {
     color: $gray-light;
-    margin-bottom: 22px;
   }
   &__content {
     margin-bottom: 24px;
@@ -17,7 +24,7 @@
   &__image {
     overflow: hidden;
     position: relative;
-    height: 208px;
+    height: 190px;
     margin: 0 -24px 24px;
     img {
       width: 100%;

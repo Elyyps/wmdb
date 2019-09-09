@@ -1,7 +1,7 @@
 import * as React from "react";
 import styles from "./homepage-component.module.scss";
 import { HeroComponent, NavBarComponent, FooterComponent } from "@app/prep/modules-prep";
-import Oasis from "@assets/oasis.jpg";
+import Placeholder from "@assets/img01.png";
 import {
   CategoryOverviewData,
   FAQOverviewData,
@@ -23,16 +23,10 @@ const HomepageComponent = (props: IHomepageComponentProps) => (
     <NavBarComponent />
     <HeroComponent
       title={"Wat gaan we dít jaar doen?! Vergelijk online gemakkelijk álle bedrijfsuitjes van Nederland"}
-      image={Oasis}
+      image={Placeholder}
     />
     <CategoryOverviewComponent {...CategoryOverviewData} />
-    <Section
-      title={"Zoveel mensen, zoveel wensen!"}
-      paddingBottom={"72px"}
-      paddingTop={"72px"}
-      size={"small"}
-      align={"center"}
-    >
+    <Section title={"Nieuwe activiteiten"} paddingBottom={"40px"} paddingTop={"40px"}>
       Erg lastig om een keuze te maken waar iedereen blij van wordt, terwijl dat toch het doel is. Geen nood! Wij zitten
       klaar om je te helpen.
     </Section>

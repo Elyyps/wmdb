@@ -1,93 +1,67 @@
-import PlaceholderImage from "@assets/img01.png";
-import Oasis from "@assets/oasis.jpg";
+import PlaceholderImage from "@assets/img02.png";
+import SPEL from "@assets/icons/spel.svg";
+import ETEN from "@assets/icons/eten.svg";
 
 const CategoryOverviewData = {
   backgroundColor: "#e8f2fc",
   paddingBottom: "72px",
   paddingTop: "72px",
   title: "Kies direct een categorie om het aanbod te bekijken!",
-  itemsSingle: [
-    {
-      title: "Tips4KidsGids",
-      image: PlaceholderImage,
-      link: "/"
-    },
-    {
-      title: "Actuele uitjes agenda",
-      image: PlaceholderImage,
-      link: "/"
-    }
-  ],
   items: [
     {
       title: "Musea",
       count: 200,
       image: PlaceholderImage,
+      icon: SPEL,
       link: "/"
     },
     {
       title: "Musea",
       count: 200,
       image: PlaceholderImage,
+      icon: SPEL,
       link: "/"
     },
     {
       title: "Musea",
       count: 200,
       image: PlaceholderImage,
+      icon: SPEL,
       link: "/"
     },
     {
       title: "Musea",
       count: 200,
       image: PlaceholderImage,
+      icon: SPEL,
       link: "/"
     },
     {
       title: "Musea",
       count: 200,
       image: PlaceholderImage,
+      icon: SPEL,
       link: "/"
     },
     {
       title: "Musea",
       count: 20,
       image: PlaceholderImage,
+      icon: SPEL,
       link: "/"
     },
     {
       title: "Musea",
-      count: 200,
       image: PlaceholderImage,
       link: "/"
     },
     {
       title: "Musea",
-      count: 200,
       image: PlaceholderImage,
       link: "/"
     },
     {
       title: "Musea",
-      count: 200,
-      image: PlaceholderImage,
-      link: "/"
-    },
-    {
-      title: "Musea",
-      count: 200,
-      image: PlaceholderImage,
-      link: "/"
-    },
-    {
-      title: "Musea",
-      count: 200,
-      image: PlaceholderImage,
-      link: "/"
-    },
-    {
-      title: "Musea",
-      count: 200,
       image: PlaceholderImage,
       link: "/"
     }
@@ -101,7 +75,8 @@ const FAQOverviewData = {
   title: "Veelgestelde vragen",
   items: [
     {
-      title: "Musea",
+      icon: ETEN,
+      title: "Spel & Ontspanning",
       items: [
         {
           title: "Wat is Lorem Ipsum?",
@@ -134,7 +109,8 @@ const FAQOverviewData = {
       }
     },
     {
-      title: "Pretpark",
+      icon: SPEL,
+      title: "Sportief & actie(f)",
       items: [
         {
           title: "Wat is Lorem Ipsum?",
@@ -167,7 +143,8 @@ const FAQOverviewData = {
       }
     },
     {
-      title: "Speeltuin",
+      icon: SPEL,
+      title: "Creatieve uitjes",
       items: [
         {
           title: "Wat is Lorem Ipsum?",
@@ -200,7 +177,8 @@ const FAQOverviewData = {
       }
     },
     {
-      title: "Kinderfeestjes",
+      icon: ETEN,
+      title: "Eten, drinken & feesten",
       items: [
         {
           title: "Wat is Lorem Ipsum?",
@@ -233,7 +211,8 @@ const FAQOverviewData = {
       }
     },
     {
-      title: "Workshop",
+      icon: SPEL,
+      title: "Teambuilden",
       items: [
         {
           title: "Wat is Lorem Ipsum?",
@@ -266,7 +245,8 @@ const FAQOverviewData = {
       }
     },
     {
-      title: "Eten",
+      icon: SPEL,
+      title: "Incentives",
       items: [
         {
           title: "Wat is Lorem Ipsum?",
@@ -302,7 +282,7 @@ const FAQOverviewData = {
 };
 
 const FeaturedPostsData = {
-  image: Oasis,
+  image: PlaceholderImage,
   title: "Alles over het kiezen van een bedrijfsuitje",
   button: {
     title: "Bekijk álle blogs",
@@ -310,6 +290,7 @@ const FeaturedPostsData = {
   },
   items: [
     {
+      icon: SPEL,
       title: "Blog titel",
       content:
         "Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc…",
@@ -321,6 +302,7 @@ const FeaturedPostsData = {
       }
     },
     {
+      icon: ETEN,
       title: "Blog titel",
       content:
         "Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc…",
@@ -332,6 +314,7 @@ const FeaturedPostsData = {
       }
     },
     {
+      icon: ETEN,
       title: "Blog titel",
       content:
         "Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc…",

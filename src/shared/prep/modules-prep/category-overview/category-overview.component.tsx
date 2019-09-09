@@ -5,7 +5,6 @@ import { CategoryCard } from "@app/prep/modules-prep/core";
 export interface ICategoryOverviewComponentProps {
   backgroundColor?: string;
   items?: any[];
-  itemsSingle?: any[];
   paddingBottom?: string;
   paddingTop?: string;
   title?: string;

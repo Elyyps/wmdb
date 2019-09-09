@@ -5,6 +5,7 @@ export interface IIconComponentProps {
   color?: string;
   icon: any;
   size: string;
+  stroke?: boolean;
 }
 
 const IconComponent: React.FunctionComponent<IIconComponentProps> = props => (
@@ -14,11 +15,12 @@ const IconComponent: React.FunctionComponent<IIconComponentProps> = props => (
     loading={() => <span />}
     renumerateIRIElements={false}
     style={{
+      color: props.color,
       fill: props.color,
       height: props.size,
       width: props.size
     }}
-    className={"icon-svg"}
+    className={`icon-svg ${props.stroke ? "icon-svg-stroke" : ""}`}
   />
 );
 

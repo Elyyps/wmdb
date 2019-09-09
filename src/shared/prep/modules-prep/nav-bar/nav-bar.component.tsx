@@ -1,10 +1,10 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 import "./nav-bar.component.scss";
-import { Button, LogoComponent } from "@app/prep/modules-prep/core";
+import { LogoComponent } from "@app/prep/modules-prep/core";
 import { ModalNavBar } from "@app/prep/modules-prep/core/modal-navbar";
 import { HamburgerMenuComponent } from "@app/prep/modules-prep/hamburger-menu";
 import MENU_ICON from "@assets/icons/menu.svg";
-import CalendarIcon from "@assets/icons/calendar.svg";
 
 export interface INavBarComponentProps {}
 
@@ -17,14 +17,24 @@ const NavBarComponent = (props: INavBarComponentProps) => (
         </div>
 
         <div>
-          <Button href={"/agenda"} title={"Actuele agenda"} icon={CalendarIcon} position={"left"} />
+          <ul className="nav-bar__links uk-visible@m">
+            <li>
+              <Link to={"#"}>Helpdesk</Link>
+            </li>
+            <li>
+              <Link to={"#"}>Nieuwsbrief</Link>
+            </li>
+            <li>
+              <Link to={"#"}>Mijn uitjes</Link>
+            </li>
+          </ul>
 
           <ModalNavBar
             className={"modal-menu nav-bar__toggle"}
             title={"Menu"}
             close={"Sluiten"}
             icon={MENU_ICON}
-            iconSize="17px"
+            iconSize="20px"
           >
             <HamburgerMenuComponent />
           </ModalNavBar>

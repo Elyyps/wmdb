@@ -1,5 +1,5 @@
 import Oasis from "@assets/oasis.jpg";
-import Image from "@assets/img2.png";
+import Image from "@assets/img02.png";
 
 const BreadcrumbsData = [
   {

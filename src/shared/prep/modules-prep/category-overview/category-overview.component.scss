@@ -7,6 +7,9 @@
   }
 
   &__posts {
+    @media (max-width: $breakpoint-xsmall-max) {
+      margin-left: -8px;
+    }
     &:last-child {
       margin-bottom: -8px;
       @media (min-width: $breakpoint-small) {
@@ -24,6 +27,13 @@
       }
       @media (min-width: $breakpoint-medium) {
         padding-bottom: 32px;
+      }
+      @media (max-width: $breakpoint-xsmall-max) {
+        padding-left: 8px;
+        &:last-child,
+        &:nth-last-child(2) {
+          flex-basis: 50%;
+        }
       }
     }
 
