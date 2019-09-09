@@ -12,7 +12,7 @@ export interface ICategoryOverviewComponentProps {
 }
 
 const CategoryOverviewComponent = (props: ICategoryOverviewComponentProps) => {
-  const { title, items, itemsSingle } = props;
+  const { title, items } = props;
 
   const styles = {
     backgroundColor: props.backgroundColor,
@@ -26,18 +26,8 @@ const CategoryOverviewComponent = (props: ICategoryOverviewComponentProps) => {
         {title && <h2 className="category-overview__title">{title}</h2>}
 
         {items && (
-          <div className="category-overview__posts uk-grid uk-child-width-1-2@s uk-child-width-1-4@m">
+          <div className="category-overview__posts uk-grid uk-child-width-1-2@s uk-child-width-1-3@m">
             {items.map((item, key) => (
-              <div key={key}>
-                <CategoryCard {...item} />
-              </div>
-            ))}
-          </div>
-        )}
-
-        {itemsSingle && (
-          <div className="category-overview__posts uk-grid uk-child-width-1-2@s">
-            {itemsSingle.map((item, key) => (
               <div key={key}>
                 <CategoryCard {...item} />
               </div>

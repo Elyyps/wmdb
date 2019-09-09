@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./category-card.component.scss";
 import { IconComponent, ImageComponent } from "@app/prep/modules-prep/core";
 import Arrow from "@assets/icons/chevron-down.svg";
+import SPEL from "@assets/icons/spel.svg";
 
 interface ICategoryCardProps {
   count?: number;
@@ -15,6 +16,7 @@ const CategoryCard = ({ link, title, count, image }: ICategoryCardProps) => (
   <Link to={link} className="category-card">
     <div className="category-card__head">
       <h3 className="category-card__title">
+        <IconComponent icon={SPEL} size={"34px"} />
         {title}
         {count && <span>({count})</span>}
       </h3>

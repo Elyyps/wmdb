@@ -22,7 +22,7 @@ const HomepageComponent = (props: IHomepageComponentProps) => (
   <div className={styles["homepage"]}>
     <NavBarComponent />
     <HeroComponent
-      title={"Wat gaan we dít jaar doen?! Vergelijk online gemakkelijk álle kids uitjes van Nederland"}
+      title={"Wat gaan we dít jaar doen?! Vergelijk online gemakkelijk álle bedrijfsuitjes van Nederland"}
       image={Oasis}
     />
     <CategoryOverviewComponent {...CategoryOverviewData} />
