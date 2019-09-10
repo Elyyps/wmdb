@@ -7,11 +7,12 @@ import {
   FAQOverviewData,
   FeaturedPostsData,
   LocationsData,
-  MostViewedLocations
+  MostViewedLocations,
+  Cards
 } from "@app/prep/pages-prep/homepage/dummy-data";
 import { LocationsSectionComponent } from "@app/prep/modules-prep/locations-section/";
 import { CategoryOverviewComponent } from "@app/prep/modules-prep/category-overview/";
-import { Section } from "@app/prep/modules-prep/core";
+import { CardPost, Section } from "@app/prep/modules-prep/core";
 import { FAQOverviewComponent } from "@app/prep/modules-prep/faq-overview";
 import { FeaturedPostsComponent } from "@app/prep/modules-prep/featured-posts";
 import { MostViewedLocationsComponent } from "@app/prep/modules-prep/most-viewed-locations/";
@@ -27,8 +28,13 @@ const HomepageComponent = (props: IHomepageComponentProps) => (
     />
     <CategoryOverviewComponent {...CategoryOverviewData} />
     <Section title={"Nieuwe activiteiten"} paddingBottom={"40px"} paddingTop={"40px"}>
-      Erg lastig om een keuze te maken waar iedereen blij van wordt, terwijl dat toch het doel is. Geen nood! Wij zitten
-      klaar om je te helpen.
+      <div className="section__columns uk-grid uk-child-width-1-2@m">
+        {Cards.map((card, key) => (
+          <div key={key}>
+            <CardPost modify={"small"} {...card} />
+          </div>
+        ))}
+      </div>
     </Section>
     <FAQOverviewComponent {...FAQOverviewData} />
     <FeaturedPostsComponent {...FeaturedPostsData} />

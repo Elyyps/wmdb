@@ -266,8 +266,8 @@ const LocationsData = {
 };
 const Cards = [
   {
-    title: "Julianatoren",
-    subtitle: "Schoolreisjes in Amsterdam",
+    title: "Escape City - Het ontsnappingsspel van Mokum",
+    subtitle: "Citygames in Amsterdam",
     image: [ImageLarge, ImageLarge, ImageLarge],
     button: {
       title: "Lees meer",
@@ -278,12 +278,12 @@ const Cards = [
       label: "10 - 1000 personen"
     },
     content:
-      "Dagje uit met kinderen. De Julianatoren in 10 - 1000 personen is het gezelligste, veiligste en meest overzichtelijke familiepretpark van Nederland. Het pretpark, met méér dan 60 te gekke attracties, biedt een heerlijk dagje uitaan gezinnen met kinderen…"
+      "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
   },
   {
-    title: "Julianatoren",
-    subtitle: "Schoolreisjes in Amsterdam",
-    image: [ImageLarge],
+    title: "Escape City - Het ontsnappingsspel van Mokum",
+    subtitle: "Citygames in Amsterdam",
+    image: [ImageLarge, ImageLarge, ImageLarge],
     button: {
       title: "Lees meer",
       href: "#"
@@ -293,10 +293,10 @@ const Cards = [
       label: "10 - 1000 personen"
     },
     content:
-      "Dagje uit met kinderen. De Julianatoren in 10 - 1000 personen is het gezelligste, veiligste en meest overzichtelijke familiepretpark van Nederland. Het pretpark, met méér dan 60 te gekke attracties, biedt een heerlijk dagje uitaan gezinnen met kinderen…"
+      "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
   },
   {
-    title: "Zomerspecial - bekijk nu de nieuwsbrief!",
+    title: "Herfstspecial - bekijk nu de nieuwsbrief!",
     image: [ImageLarge, ImageLarge, ImageLarge],
     variant: "advertise",
     button: {
@@ -306,8 +306,8 @@ const Cards = [
     }
   },
   {
-    title: "Julianatoren",
-    subtitle: "Schoolreisjes in Amsterdam",
+    title: "Escape City - Het ontsnappingsspel van Mokum",
+    subtitle: "Citygames in Amsterdam",
     image: [ImageLarge, ImageLarge, ImageLarge],
     button: {
       title: "Lees meer",
@@ -318,11 +318,11 @@ const Cards = [
       label: "10 - 1000 personen"
     },
     content:
-      "Dagje uit met kinderen. De Julianatoren in 10 - 1000 personen is het gezelligste, veiligste en meest overzichtelijke familiepretpark van Nederland. Het pretpark, met méér dan 60 te gekke attracties, biedt een heerlijk dagje uitaan gezinnen met kinderen…"
+      "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
   },
   {
-    title: "Julianatoren",
-    subtitle: "Schoolreisjes in Amsterdam",
+    title: "Escape City - Het ontsnappingsspel van Mokum",
+    subtitle: "Citygames in Amsterdam",
     image: [ImageLarge, ImageLarge, ImageLarge],
     button: {
       title: "Lees meer",
@@ -333,28 +333,13 @@ const Cards = [
       label: "10 - 1000 personen"
     },
     content:
-      "Dagje uit met kinderen. De Julianatoren in 10 - 1000 personen is het gezelligste, veiligste en meest overzichtelijke familiepretpark van Nederland. Het pretpark, met méér dan 60 te gekke attracties, biedt een heerlijk dagje uitaan gezinnen met kinderen…"
-  },
-  {
-    title: "Julianatoren",
-    subtitle: "Schoolreisjes in Amsterdam",
-    image: [ImageLarge, ImageLarge, ImageLarge],
-    button: {
-      title: "Lees meer",
-      href: "#"
-    },
-    data: {
-      icon: ROOMS,
-      label: "10 - 1000 personen"
-    },
-    content:
-      "Dagje uit met kinderen. De Julianatoren in 10 - 1000 personen is het gezelligste, veiligste en meest overzichtelijke familiepretpark van Nederland. Het pretpark, met méér dan 60 te gekke attracties, biedt een heerlijk dagje uitaan gezinnen met kinderen…"
+      "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
   }
 ];
 const CardsSecondary = [
   {
-    title: "Julianatoren",
-    subtitle: "Schoolreisjes in Amsterdam",
+    title: "Escape City - Het ontsnappingsspel van Mokum",
+    subtitle: "Citygames in Amsterdam",
     image: [ImageLarge, ImageLarge, ImageLarge],
     button: {
       title: "Lees meer",
@@ -365,11 +350,11 @@ const CardsSecondary = [
       label: "10 - 1000 personen"
     },
     content:
-      "Dagje uit met kinderen. De Julianatoren in 10 - 1000 personen is het gezelligste, veiligste en meest overzichtelijke familiepretpark van Nederland. Het pretpark, met méér dan 60 te gekke attracties, biedt een heerlijk dagje uitaan gezinnen met kinderen…"
+      "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
   },
   {
-    title: "Julianatoren",
-    subtitle: "Schoolreisjes in Amsterdam",
+    title: "Escape City - Het ontsnappingsspel van Mokum",
+    subtitle: "Citygames in Amsterdam",
     image: [ImageLarge, ImageLarge, ImageLarge],
     button: {
       title: "Lees meer",
@@ -380,7 +365,7 @@ const CardsSecondary = [
       label: "10 - 1000 personen"
     },
     content:
-      "Dagje uit met kinderen. De Julianatoren in 10 - 1000 personen is het gezelligste, veiligste en meest overzichtelijke familiepretpark van Nederland. Het pretpark, met méér dan 60 te gekke attracties, biedt een heerlijk dagje uitaan gezinnen met kinderen…"
+      "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
   }
 ];
 export { LocationsData, Cards, CardsSecondary };

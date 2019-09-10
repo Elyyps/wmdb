@@ -18,3 +18,4 @@ export * from "./breadcrumbs";
 export * from "./label";
 export * from "./advertise";
 export * from "./card-event";
+export * from "./collapse";
