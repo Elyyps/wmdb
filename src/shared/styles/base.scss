@@ -3,11 +3,14 @@
   -webkit-backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
 
+html {
   @media (max-width: $breakpoint-small-max) {
     font-size: 14px;
   }
 }
+
 #app{
   overflow: hidden;
 }
