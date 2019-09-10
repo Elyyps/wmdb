@@ -10,7 +10,7 @@ export interface IPaginationComponentProps {}
 const PaginationComponent = (props: IPaginationComponentProps) => (
   <div className="pagination">
     <Link to="#" className="prev">
-      <IconComponent icon={ArrowLeft} size={"13px"} />
+      <IconComponent icon={ArrowLeft} size={"13px"} stroke />
       <span className={"uk-visible@s"}>Vorige</span>
     </Link>
     <ul className="pagination-list">
@@ -38,7 +38,7 @@ const PaginationComponent = (props: IPaginationComponentProps) => (
     </ul>
     <Link to="#" className="next">
       <span className={"uk-visible@s"}>Volgende</span>
-      <IconComponent icon={ArrowRight} size={"13px"} />
+      <IconComponent icon={ArrowRight} size={"13px"} stroke />
     </Link>
   </div>
 );
