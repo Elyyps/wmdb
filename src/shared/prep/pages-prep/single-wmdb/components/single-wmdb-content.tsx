@@ -6,42 +6,39 @@ export interface ISingleWmdkContentComponentProps {}
 const SingleWmdbContent = (props: ISingleWmdkContentComponentProps) => (
   <>
     <p>
-      De Julianatoren in Apeldoorn is het gezelligste, veiligste en meest overzichtelijke familiepretpark van Nederland.
-      Het pretpark, met méér dan 60 te gekke attracties, biedt een heerlijk dagje uit aan gezinnen met kinderen van 2
-      tot circa 12 jaar.
+      Maak kennis met het spel Wie is de Mol? Leuk, leukst en nog veel leuker. Het spel boordevol met verrassingen, wie
+      o wie bedriegt het gezelschap?
     </p>
     <p>
-      Maak een spannende tocht door Jul’s Dino Toer waar je oog in oog komt te staan met levensechte dinosaurussen! Rijd
-      met je hippe cabrio door Jul’s Safari en maak een snelle rit met scherpe bochten in Jul’s Rollerskates! Vaar samen
-      over de hoge golven in de Moby Dick en spuit elkaar nat in de Piratenbootjes.
+      Na het welkomstwoord volgt er een uitleg over het spel. De deelnemers van het bedrijfsuitje / teamuitje worden in
+      subgroepen verdeeld. De mol zit zonder dat de gasten het weten al in elke groep. Anoniem vanuit een ander team in
+      uw groep geplaatst met als doel saboteren!! De Mol zal de hele dag meeloeren over uw schouders terwijl de ludieke
+      opdrachten uitgevoerd worden. Wie vertrouwd u in uw team om de opdrachten namens uw team uit te laten voeren?
     </p>
     <p>
-      Aan de allerkleinsten heeft de Julianatoren ook gedacht. Als een echte cowboy op je eigen paard over de
-      Paardenbaan en sta versteld van alle zingende en muziek makende kabouters in Kabouterwonderland.
+      Na de uitleg lopen de deelnemers een route door het centrum van Best. Tijdens deze tocht proberen de groepen geld
+      te verdienen, door goed uitgevoerde opdrachten. Zonder Creativiteit en samenwerking zal men de opdrachten niet
+      kunnen vervullen. In elke groep zit een MOL. Deze behoort eigenlijk bij een andere sub groep van uw gezelschap. De
+      MOL probeert opdrachten dwars te bomen. Hoe meer hij hier in slaagt hoe meer geld hij verdient voor zijn eigen
+      groep.
     </p>
     <h5>Kinderfeestje</h5>
-    <p>Vier je verjaardag bij de Julianatoren en het wordt gegarandeerd een te gek feestje!</p>
-    <p>Vier je verjaardag bij de Julianatoren en het wordt gegarandeerd een te gek feestje!</p>
-    Jul’s Kinderfeestje bestaat uit:
-    <ul>
-      <li>Entree tot de Julianatoren</li>
-      <li>Drankje naar keuze en een heerlijke donut</li>
-      <li>Een kidsbox bestaande uit: een frietje, een snack, een drankje en een verrassing</li>
-      <li>Een terugkom kaart.</li>
-    </ul>
-    <p>Dit alles voor slechts € 15,95 p.p.</p>
-    <h5>Schoolreis en ligging</h5>
     <p>
-      Voor het leukste schoolreisje ga je naar de Julianatoren. In de meer dan 60 te gekke attracties beleven de
-      kinderen, jong en oud, de dag van hun leven!
+      Als iedereen is voorzien van een natje vervolgen we de tocht van Wie is de MOL. Na deze pauze zijn er al
+      deelnemers die een vermoeden hebben van wie de MOL nu eigenlijk is. Deze gasten "proberen" dit nog even voor zich
+      te houden. Het rest jullie nu nog enkele opdrachten te doen voordat de antwoorden bekend worden gemaakt.
     </p>
     <p>
-      Aan de rand van Apeldoorn. Het park staat op alle invalswegen aangegeven. Via openbaar vervoer vanaf NS-station
-      Apeldoorn lijn 102 of 104. De bus stopt voor de ingang van het pretpark.
+      Uiteraard zal de prijsuitreiking voor verrassingen zorgen. De mollen worden ontmaskerd en de reacties komen los!!
+      Niet gedacht, wel gedacht etc. etc. Tijdens de borrel krijgen de Mollen de kans om hun 'teamgenoten' te vertellen
+      hoe zij de gehele dag zijn misleid. Het perfecte bedrijfsuitje om uw collega's beter te leren kennen. Een van de
+      vele mooie momenten van deze dag.
     </p>
+
+    <h5>Ligging</h5>
     <p>
-      Er zijn twee ruime parkeerterreinen waar je je auto kunt parkeren. Wanneer parkeerterrein 1 (naast het pretpark)
-      vol is, word je door onze medewerkers. en bewegwijzering doorverwezen naar parkeerterrein 2 aan de J.C. Wilslaan.
+      Op ongeveer de helft van de tocht zal de Mol jullie naar een horecagelegenheid proberen te loodsen. De meeste
+      deelnemers zijn op dit moment Mister X al tegen gekomen.
     </p>
     <Button title={"Ontvang informatie / offerte"} variant={"primary full large"} />
   </>

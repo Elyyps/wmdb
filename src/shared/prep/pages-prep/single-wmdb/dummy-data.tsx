@@ -7,11 +7,11 @@ const BreadcrumbsData = [
     link: "#"
   },
   {
-    title: "Schoolreisjes in Amsterdam",
+    title: "Citygames in Amsterdam",
     link: "#"
   },
   {
-    title: "Julianatoren"
+    title: "Wie is de mol?"
   }
 ];
 const SliderImages = [Oasis, Image, Oasis, Image, Image, Oasis, Oasis, Oasis, Oasis, Oasis, Oasis];

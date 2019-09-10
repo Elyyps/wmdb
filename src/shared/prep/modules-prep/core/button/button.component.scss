@@ -66,15 +66,7 @@
       color: $global-inverse-color;
     }
   }
-  &--secondary {
-    background: $brand-secondary;
-    color: $global-inverse-color;
-    border-color: $brand-primary-dark;
-    &:hover {
-      background-color: $brand-primary-dark;
-      color: $global-inverse-color;
-    }
-  }
+
   
   &--icon-left {
     > .icon-svg {
