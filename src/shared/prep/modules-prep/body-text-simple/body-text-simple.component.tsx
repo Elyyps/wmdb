@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import styles from "./body-text-simple-component.module.scss";
+import { Button } from "@app/prep/modules-prep/core";
 
 export interface IBodyTextSimpleComponentProps {
   bgImage?: string;
@@ -30,6 +31,8 @@ const BodyTextSimpleComponent = (props: IBodyTextSimpleComponentProps) => {
           <br />
           Nog niet alles duidelijk? Stel je vraag!
         </div>
+        <br />
+        <Button title={"Stel je vraag"} variant={"primary"} href={"#"} />
       </div>
     </div>
   );

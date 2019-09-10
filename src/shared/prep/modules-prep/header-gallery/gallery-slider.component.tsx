@@ -3,7 +3,7 @@ import "./header-gallery-component.scss";
 import { ImageComponent } from "@app/prep/modules-prep/core";
 import Slider, { Settings } from "react-slick";
 import { BasicArrow } from "./basic-arrow.component";
-import { SliderImages } from "../../pages-prep/single-wmdk/dummy-data";
+import { SliderImages } from "../../pages-prep/single-wmdb/dummy-data";
 
 export interface IGallerySliderComponentProps {
   afterChange: any;

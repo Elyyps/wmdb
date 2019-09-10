@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
     <defs>
-        <path id="a" d="M30.224 4H1.778C.795 4 0 4.795 0 5.778v21.334c0 .982.795 1.778 1.778 1.778h28.446c.983 0 1.777-.796 1.777-1.778V5.778c0-.982-.794-1.778-1.777-1.778zm-8.445 6.222a2.223 2.223 0 1 1-.002 4.447 2.223 2.223 0 0 1 .002-4.447zM5.334 23.556l5.891-13.545 6.701 10.848 5.744-2.853 2.998 5.55H5.334z"/>
+        <path id="a-phone" d="M30.224 4H1.778C.795 4 0 4.795 0 5.778v21.334c0 .982.795 1.778 1.778 1.778h28.446c.983 0 1.777-.796 1.777-1.778V5.778c0-.982-.794-1.778-1.777-1.778zm-8.445 6.222a2.223 2.223 0 1 1-.002 4.447 2.223 2.223 0 0 1 .002-4.447zM5.334 23.556l5.891-13.545 6.701 10.848 5.744-2.853 2.998 5.55H5.334z"/>
     </defs>
     <g fill="none" fill-rule="evenodd">
-        <mask id="b" fill="#fff">
-            <use xlink:href="#a"/>
+        <mask id="b-phone" fill="#fff">
+            <use xlink:href="#a-phone"/>
         </mask>
-        <use fill="#000" fill-rule="nonzero" xlink:href="#a"/>
-        <g fill="#101010" mask="url(#b)">
+        <use fill="#000" fill-rule="nonzero" xlink:href="#a-phone"/>
+        <g fill="#101010" mask="url(#b-phone)">
             <path d="M0 0h32v32H0z"/>
         </g>
     </g>

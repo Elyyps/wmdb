@@ -30,6 +30,9 @@
   &.full{
     width: 100%;
   }
+  &.large{
+    padding: 14px 26px;
+  }
   &:hover {
     text-decoration: none;
     background-color: #eaeaea;
@@ -63,6 +66,7 @@
       color: $global-inverse-color;
     }
   }
+
   
   &--icon-left {
     > .icon-svg {

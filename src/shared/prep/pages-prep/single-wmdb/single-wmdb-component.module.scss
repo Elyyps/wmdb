@@ -1,14 +1,15 @@
-.single-wmdk {
+.single-wmdb {
   &-grid {
     display: flex;
     @media(max-width: $breakpoint-medium-max) {
       flex-wrap: wrap;
     }
   }
+
   &-modal {
     display: block;
     width: 100%;
-    @media(min-width: $breakpoint-medium){
+    @media(min-width: $breakpoint-medium) {
       margin: 24px 0;
     }
     @media(max-width: $breakpoint-small-max) {
@@ -46,9 +47,9 @@
       }
     }
   }
-  &-form{
+  &-form {
     &-label {
-      background-color: #fff8ed;
+      background-color: #e8f2fc;
       padding: 16px;
       margin: 0 -16px 16px -16px;
       display: none;
@@ -61,38 +62,38 @@
         justify-content: center;
       }
     }
-    &-radio-label{
+    &-radio-label {
       margin-bottom: 8px;
       font-weight: 600;
     }
-    &-bottom{
+    &-bottom {
       margin-top: 16px;
-      button{
+      button {
         margin-top: 24px;
       }
     }
-    &-head{
+    &-head {
       display: flex;
       margin: 0 -16px 0 -16px;
-      >*{
+      > * {
         padding: 0 16px;
       }
     }
   }
-  &-data{
+  &-data {
     font-size: 14px;
     padding: 16px 0;
     display: flex;
     flex-direction: column;
-    p{
+    p {
       margin-bottom: 16px;
     }
-    &-bottom{
+    &-bottom {
       margin-top: 28px;
       display: flex;
       justify-content: center;
     }
-    &-info{
+    &-info {
       display: flex;
       padding: 16px;
       flex-direction: column;
@@ -104,7 +105,7 @@
       align-items: center;
       line-height: 1.57;
       font-size: 14px;
-      a{
+      a {
         color: #e69c27;
         text-decoration: none;
       }
@@ -113,6 +114,22 @@
   &-main {
     flex-basis: 640px;
     flex-shrink: 0;
+    position: relative;
+    &:after{
+      display: none;
+    }
+    @media(max-width: $breakpoint-small-max){
+      &:after{
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-image: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0));
+      }
+    }
     @media(max-width: $breakpoint-large-max) {
       flex-basis: 50%;
     }
@@ -122,9 +139,11 @@
     @media(max-width: $breakpoint-small-max) {
       height: 520px;
       overflow: hidden;
-      padding-bottom: 24px;
-      &.fullheight{
+      &.fullheight {
         height: 100%;
+        &:after{
+          display: none;
+        }
       }
     }
     &-head {
@@ -161,12 +180,13 @@
   &-body {
     padding: 42px 0;
     position: relative;
+    background-size: 5%;
     @media(max-width: $breakpoint-small-max) {
       padding: 24px 0 0;
     }
     &:after {
       content: '';
-      background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0));
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7));
       position: absolute;
       left: 0;
       right: 0;
@@ -177,22 +197,7 @@
   &-actions {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -9px;
     margin-bottom: 24px;
-    &-item {
-      width: 50%;
-      padding: 0 9px;
-      margin-bottom: 18px;
-      box-sizing: border-box;
-      @media(max-width: $breakpoint-small-max) {
-        display: none;
-      }
-      > a, button {
-        padding-left: 5px;
-        padding-right: 5px;
-        width: 100%;
-      }
-    }
   }
   &-list {
     margin: 0;
@@ -207,6 +212,14 @@
       padding: 0 18px;
       position: relative;
       line-height: 1;
+      display: flex;
+      > div {
+        color: $gray;
+        margin-right: 10px;
+        svg {
+          fill: $gray;
+        }
+      }
       &:not(:first-child) {
         &:after {
           content: '';
@@ -225,10 +238,15 @@
   }
   &-mobile-actions {
     background: linear-gradient(to top, #ffffff, rgba(255, 255, 255, .6));
-    height: 170px;
+    //height: 170px;
     display: none;
     width: calc(100% + 32px);
     margin: 0 -16px;
+    &-contact{
+      display: flex;
+      flex-direction: column;
+      padding: 0 16px;
+    }
     @media(max-width: $breakpoint-small-max) {
       display: flex;
       flex-direction: column;
@@ -236,12 +254,12 @@
     }
   }
   &-mobile {
-    &-head {
+    &-bottom {
       background-color: $global-inverse-color;
       display: flex;
-      margin: 0 -4px;
       padding: 16px 16px 16px;
       border-top: 1px solid $global-border;
+      justify-content: center;
     }
     &-item {
       width: 50%;
@@ -252,18 +270,49 @@
         padding-right: 0;
       }
     }
-    &-bottom {
+    &-head {
       display: flex;
       justify-content: center;
-      padding: 10px 16px 24px;
+      padding: 0 16px;
       background-color: $global-inverse-color;
-      >button{
+      > button {
         background-color: transparent;
         border: none;
         outline: transparent;
-        &:hover{
+        &:hover {
           background-color: transparent;
         }
+      }
+    }
+  }
+  &-contact{
+    margin-top: 50px;
+    h2{
+      margin-bottom: 24px;
+    }
+    p{
+      margin-bottom: 16px;
+    }
+    a{
+      display: flex;
+      align-items: center;
+      text-decoration: underline;
+      span{
+        margin-left: 8px;
+      }
+    }
+    @media(max-width: $breakpoint-small-max){
+      margin: 32px 0 24px 0;
+      h2{
+        margin-bottom: 8px;
+      }
+      p{
+        margin: 0;
+      }
+    }
+    &-bottom{
+      @media(max-width: $breakpoint-small-max){
+        margin-top: 16px;
       }
     }
   }

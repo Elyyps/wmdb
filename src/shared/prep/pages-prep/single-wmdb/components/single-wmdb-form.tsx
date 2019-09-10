@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../single-wmdk-component.module.scss";
+import styles from "../single-wmdb-component.module.scss";
 
 import { Button, ListCheckComponent, Checkbox, RadioButton, Input, TextArea } from "@app/prep/modules-prep/core";
 
@@ -8,7 +8,7 @@ export interface ISingleWmdkFormComponentProps {}
 const formOnChange = () => {
   return;
 };
-const SingleWmdkForm = (props: ISingleWmdkFormComponentProps) => {
+const SingleWmdbForm = (props: ISingleWmdkFormComponentProps) => {
   const checkedObject: any = {};
   const [checkedItems, setCheckedItems] = useState(checkedObject);
   const handleChange = (event: any) => {
@@ -22,12 +22,12 @@ const SingleWmdkForm = (props: ISingleWmdkFormComponentProps) => {
   };
 
   return (
-    <form action="#" className={styles["single-wmdk-form"]} onChange={formOnChange}>
-      <div className={styles["single-wmdk-form-label"]}>
+    <form action="#" className={styles["single-wmdb-form"]} onChange={formOnChange}>
+      <div className={styles["single-wmdb-form-label"]}>
         <ListCheckComponent labels={["Kwalitatief aanbod van uitjes"]} />
       </div>
-      <div className={styles["single-wmdk-form-radio-label"]}>Aanhef</div>
-      <div className={styles["single-wmdk-form-head"]}>
+      <div className={styles["single-wmdb-form-radio-label"]}>Aanhef</div>
+      <div className={styles["single-wmdb-form-head"]}>
         <RadioButton
           isChecked
           id={"from-radio-dhr"}
@@ -44,17 +44,17 @@ const SingleWmdkForm = (props: ISingleWmdkFormComponentProps) => {
       <Input label={"Bedrijfsnaam"} name={"bedrijfsnaam"} />
       <Input label={"Titel v/d advertentie"} name={"advertentie"} />
       <TextArea label={"Vraag of opmerking (optioneel)"} name={"textarea"} />
-      <div className={styles["single-wmdk-form-bottom"]}>
+      <div className={styles["single-wmdb-form-bottom"]}>
         <Checkbox
           isChecked={true}
           name={"privacy"}
           label={"Aanmelden voor de WMDK nieuwsbrief"}
           onChange={handleChange}
         />
-        <Button title={"Gebruik maken van de proefperiode"} variant={"primary full"} />
+        <Button title={"Gebruik maken van de proefperiode"} variant={"secondary full large"} />
       </div>
     </form>
   );
 };
 
-export { SingleWmdkForm };
+export { SingleWmdbForm };
