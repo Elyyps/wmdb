@@ -19,6 +19,14 @@
       transform: translateX(-50%);
     }
   }
+  
+  &__columns {
+    @media (max-width: $breakpoint-xsmall-max) {
+      > div {
+        margin-bottom: 16px;
+      }
+    }
+  }
 
   &--center {
     text-align: center;
