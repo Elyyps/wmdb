@@ -1,6 +1,7 @@
 import PlaceholderImage from "@assets/img02.png";
 import SPEL from "@assets/icons/spel.svg";
 import ETEN from "@assets/icons/eten.svg";
+import ROOMS from "@assets/icons/rooms.svg";
 
 const CategoryOverviewData = {
   backgroundColor: "#e8f2fc",
@@ -67,6 +68,39 @@ const CategoryOverviewData = {
     }
   ]
 };
+
+const Cards = [
+  {
+    title: "Escape City - Het ontsnappingsspel van Mokum",
+    subtitle: "Citygames in Amsterdam",
+    image: [PlaceholderImage, PlaceholderImage, PlaceholderImage],
+    button: {
+      title: "Lees meer",
+      href: "#"
+    },
+    data: {
+      icon: ROOMS,
+      label: "10 - 1000 personen"
+    },
+    content:
+      "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
+  },
+  {
+    title: "Escape City - Het ontsnappingsspel van Mokum",
+    subtitle: "Citygames in Amsterdam",
+    image: [PlaceholderImage, PlaceholderImage, PlaceholderImage],
+    button: {
+      title: "Lees meer",
+      href: "#"
+    },
+    data: {
+      icon: ROOMS,
+      label: "10 - 1000 personen"
+    },
+    content:
+      "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
+  }
+];
 
 const FAQOverviewData = {
   backgroundColor: "#e8f2fc",
@@ -633,4 +667,4 @@ const LocationsData = {
   ]
 };
 
-export { CategoryOverviewData, FAQOverviewData, FeaturedPostsData, LocationsData, MostViewedLocations };
+export { CategoryOverviewData, FAQOverviewData, FeaturedPostsData, LocationsData, MostViewedLocations, Cards };

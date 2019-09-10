@@ -19,19 +19,21 @@ interface ICardPostProps {
     start: string;
   };
   image?: any;
+  modify?: string;
   subtitle?: string;
   title?: string;
 }
 
-const CardPost = ({ title, image, button, data, content, subtitle, date }: ICardPostProps) => {
+const CardPost = ({ title, image, button, data, content, subtitle, date, modify }: ICardPostProps) => {
   const [isOpen, setIsOpened] = React.useState(false);
   const toggleOpened = () => {
     setIsOpened(!isOpen);
   };
 
   const styleOpen = isOpen ? "show" : "hide";
+  const modifyCard = modify ? `card-post--${modify}` : "";
 
-  const classModify = classNames("card-post", { "card-post--event": date }, styleOpen);
+  const classModify = classNames("card-post", { "card-post--event": date }, modifyCard, styleOpen);
 
   return (
     <div className={classModify}>
