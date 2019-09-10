@@ -2,7 +2,7 @@ import ImageLarge from "@assets/img02.png";
 import ROOMS from "@assets/icons/rooms.svg";
 
 const LocationsData = {
-  backgroundColor: "#fff8ed",
+  backgroundColor: "#e8f2fc",
   paddingBottom: "72px",
   paddingTop: "72px",
   title: "Andere locaties",

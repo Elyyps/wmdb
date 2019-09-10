@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../single-wmdk-component.module.scss";
+import styles from "../single-wmdb-component.module.scss";
 
 import { IconComponent } from "@app/prep/modules-prep/core";
 
@@ -11,10 +11,10 @@ export interface ISingleWmdkModalComponentProps {
   title: string;
 }
 
-const SingleWmdkModal = (props: ISingleWmdkModalComponentProps) => (
-  <div className={styles["single-wmdk-modal"]}>
-    <div className={styles["single-wmdk-modal-head"]}>
-      <button onClick={props.onClick} className={styles["single-wmdk-modal-close"]}>
+const SingleWmdbModal = (props: ISingleWmdkModalComponentProps) => (
+  <div className={styles["single-wmdb-modal"]}>
+    <div className={styles["single-wmdb-modal-head"]}>
+      <button onClick={props.onClick} className={styles["single-wmdb-modal-close"]}>
         <IconComponent icon={CLOSE} size={"16px"} />
       </button>
       <h5>{props.title}</h5>
@@ -23,4 +23,4 @@ const SingleWmdkModal = (props: ISingleWmdkModalComponentProps) => (
   </div>
 );
 
-export { SingleWmdkModal };
+export { SingleWmdbModal };

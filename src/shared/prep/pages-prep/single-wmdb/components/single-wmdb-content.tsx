@@ -3,7 +3,7 @@ import { Button } from "@app/prep/modules-prep/core";
 
 export interface ISingleWmdkContentComponentProps {}
 
-const SingleWmdkContent = (props: ISingleWmdkContentComponentProps) => (
+const SingleWmdbContent = (props: ISingleWmdkContentComponentProps) => (
   <>
     <p>
       De Julianatoren in Apeldoorn is het gezelligste, veiligste en meest overzichtelijke familiepretpark van Nederland.
@@ -43,8 +43,8 @@ const SingleWmdkContent = (props: ISingleWmdkContentComponentProps) => (
       Er zijn twee ruime parkeerterreinen waar je je auto kunt parkeren. Wanneer parkeerterrein 1 (naast het pretpark)
       vol is, word je door onze medewerkers. en bewegwijzering doorverwezen naar parkeerterrein 2 aan de J.C. Wilslaan.
     </p>
-    <Button title={"Prijsindicatie aanvragen"} variant={"primary"} />
+    <Button title={"Ontvang informatie / offerte"} variant={"primary full large"} />
   </>
 );
 
-export { SingleWmdkContent };
+export { SingleWmdbContent };

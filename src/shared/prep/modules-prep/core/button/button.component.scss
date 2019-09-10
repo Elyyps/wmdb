@@ -30,6 +30,9 @@
   &.full{
     width: 100%;
   }
+  &.large{
+    padding: 14px 26px;
+  }
   &:hover {
     text-decoration: none;
     background-color: #eaeaea;
@@ -60,6 +63,15 @@
     border-color: $brand-secondary-dark;
     &:hover {
       background-color: $brand-secondary-dark;
+      color: $global-inverse-color;
+    }
+  }
+  &--secondary {
+    background: $brand-secondary;
+    color: $global-inverse-color;
+    border-color: $brand-primary-dark;
+    &:hover {
+      background-color: $brand-primary-dark;
       color: $global-inverse-color;
     }
   }

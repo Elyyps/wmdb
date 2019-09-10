@@ -1,4 +1,4 @@
-.single-wmdk {
+.single-wmdb {
   &-grid {
     display: flex;
     @media(max-width: $breakpoint-medium-max) {
@@ -161,12 +161,13 @@
   &-body {
     padding: 42px 0;
     position: relative;
+    background-size: 5%;
     @media(max-width: $breakpoint-small-max) {
       padding: 24px 0 0;
     }
     &:after {
       content: '';
-      background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0));
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.7));
       position: absolute;
       left: 0;
       right: 0;

@@ -4,7 +4,7 @@ import IconImage from "@assets/icons/images.svg";
 import IconPlay from "@assets/icons/play.svg";
 import { IconComponent, ImageComponent } from "@app/prep/modules-prep/core";
 import { GallerySliderComponent } from "./gallery-slider.component";
-import { SliderImages } from "../../pages-prep/single-wmdk/dummy-data";
+import { SliderImages } from "../../pages-prep/single-wmdb/dummy-data";
 
 export interface IHeaderGalleryComponentProps {}
 
