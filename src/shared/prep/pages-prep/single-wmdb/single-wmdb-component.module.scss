@@ -5,7 +5,25 @@
       flex-wrap: wrap;
     }
   }
-
+  &-back{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: $global-link-color;
+    padding: 16px 0;
+    >div{
+      margin-right: 8px;
+    }
+    *{
+      stroke: $global-link-color;
+    }
+    &:hover{
+      text-decoration: none;
+      *{
+        stroke: $global-link-hover-color;
+      }
+    }
+  }
   &-modal {
     display: block;
     width: 100%;
