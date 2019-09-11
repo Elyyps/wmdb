@@ -12,10 +12,12 @@ import { BreadcrumbsData } from "@app/prep/pages-prep/single-wmdb/dummy-data";
 import LOCATION from "@assets/icons/location.svg";
 import PATTERNT from "@assets/pattern/pattern-wmdb.png";
 import Arrow from "@assets/icons/chevron-right.svg";
+import ArrowLeft from "@assets/icons/chevron-left.svg";
 import ROOMS from "@assets/icons/rooms.svg";
 import Image from "@assets/img-big.jpg";
 import classNames from "classnames";
 import { SingleWmdbData } from "@app/prep/pages-prep/single-wmdb/components/single-wmdb-data";
+import { Link } from "react-router-dom";
 
 export interface ISingleWmdbComponentProps {}
 
@@ -41,6 +43,14 @@ const SingleWmdbComponent = (props: ISingleWmdbComponentProps) => {
       <NavBarComponent />
       <div className="uk-visible@m">
         <Breadcrumbs breadcrumbs={BreadcrumbsData} />
+      </div>
+      <div className="uk-container">
+        <div className="uk-hidden@m">
+          <Link to={"#"} className={styles["single-wmdb-back"]}>
+            <IconComponent stroke icon={ArrowLeft} size={"12px"} />
+            Terug
+          </Link>
+        </div>
       </div>
       <HeaderGalleryComponent />
       <div className={styles["single-wmdb-body"]} style={{ backgroundImage: `url(${PATTERNT})` }}>
