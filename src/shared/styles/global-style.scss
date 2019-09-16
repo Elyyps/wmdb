@@ -1,6 +1,15 @@
+@import 'input-range';
 .icon-svg {
   :first-child {
     display: block;
     height: 100%;
+  }
+  svg{
+    *{
+      color: inherit;
+    }
+    g,path,use{
+      fill:inherit;
+    }
   }
 }

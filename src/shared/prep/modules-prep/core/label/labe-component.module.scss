@@ -1,0 +1,45 @@
+.label {
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  color: $global-inverse-color;
+  background-color: $brand-secondary;
+  padding: 2px 8px;
+  border-radius: $global-border-radius;
+  span{
+    padding-right: 8px;
+  }
+  &-icon{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: $global-inverse-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+  }
+  &-info{
+    position: absolute;
+    background-color: $brand-secondary;
+    min-width: 300px;
+    padding: 16px 32px 16px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    bottom: calc(100% + 20px);
+    box-sizing: border-box;
+    &:after{
+      content: '';
+      width:30px;
+      height: 30px;
+      background-color: $brand-secondary;
+      transform: rotate(45deg) translateX(-50%);
+      bottom: -15px;
+      left: 50%;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+}

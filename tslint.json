@@ -30,7 +30,7 @@
     "prefer-method-signature": false,
     "no-inferrable-types": true,
     "typedef": false,
-    "no-unused-expression": true,
+    "no-unused-expression": false,
     "no-unused-variable": true,
     "no-magic-numbers": true,
     "match-default-export-name": false,
@@ -49,7 +49,7 @@
     "no-import-side-effect": [
       true,
       {
-        "ignore-module": "(\\.html|\\.scss)$"
+        "ignore-module": "(\\.html|\\.scss|\\.css)$"
       }
     ],
     "max-func-body-length": 10,

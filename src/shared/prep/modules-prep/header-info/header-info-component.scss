@@ -1,0 +1,46 @@
+.header-info {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(45deg, #34AADF 0%, #02906F 100%);
+  color: $global-inverse-color;
+  @media(min-width: $breakpoint-large) {
+    font-size: 20px;
+  }
+  @media(max-width: $breakpoint-small-max) {
+    text-align: center;
+  }
+  @media(max-width: $breakpoint-xsmall-max) {
+    font-size: 14px;
+  }
+  
+  &__holder {
+    @media(min-width: $breakpoint-medium) {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__image {
+    @media(min-width: $breakpoint-medium) {
+      width: 30%;
+      flex: 0 0 33%;
+      height: 252px;
+      display: flex;
+      align-items: center;
+      order: -1;
+    }
+    @media(max-width: $breakpoint-small-max) {
+      max-width: 200px;
+      height: 100px;
+    }
+  }
+  &__body {
+    padding: 32px 0;
+    flex: 1 1 auto;
+    @media(max-width: $breakpoint-small-max) {
+      padding-bottom: 0;
+    }
+    h1 {
+      color: $global-inverse-color;
+    }
+  }
+}

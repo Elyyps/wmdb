@@ -1,0 +1,37 @@
+.body-text-simple {
+  text-align: center;
+  @media(max-width: $breakpoint-xsmall-max){
+    text-align: left;
+    padding: 32px 0!important;
+  }
+  .body-text {
+    &__title {
+      padding-bottom: 24px;
+      margin-bottom: 40px;
+      position: relative;
+      display: inline-flex;
+      h1, h2, h3, h4, h5 {
+        margin-bottom: 0;
+      }
+      &:after {
+        content: '';
+        width: 90%;
+        height: 2px;
+        background-color: $global-color;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        @media(max-width: $breakpoint-xsmall-max){
+          left: 0;
+          transform: translateX(0);
+        }
+      }
+    }
+    &__content{
+      @media(max-width: $breakpoint-xsmall-max){
+        font-size: 14px;
+      }
+    }
+  }
+}

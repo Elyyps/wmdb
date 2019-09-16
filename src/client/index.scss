@@ -1,10 +1,18 @@
 @import "~uikit/src/scss/mixins.scss";
 
+
 @import "~uikit/src/scss/variables.scss";
 @import "~uikit/src/scss/components/base.scss";
 
+@import "~uikit/src/scss/components/container.scss";
+@import "~uikit/src/scss/components/grid.scss";
+@import "~uikit/src/scss/components/width.scss";
+@import "~uikit/src/scss/components/visibility.scss";
+
 @import "./src/shared/styles/fonts.scss";
 @import "./src/shared/styles/base.scss";
+
+@import "./src/shared/styles/slick.scss";
 
 body {
   margin: 0;

@@ -1,0 +1,47 @@
+.section {
+  &__title {
+    margin: 0 0 56px;
+    padding: 0 0 26px;
+    position: relative;
+    text-align: center;
+    @media (max-width: $breakpoint-small-max) {
+      margin: 0 0 32px;
+      padding: 0 0 20px;
+    }
+    &::after {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      content: '';
+      width: 150px;
+      height: 2px;
+      background: currentColor;
+      transform: translateX(-50%);
+    }
+  }
+  
+  &__columns {
+    @media (max-width: $breakpoint-xsmall-max) {
+      > div {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  &--center {
+    text-align: center;
+  }
+  
+  &--patern {
+    background-color: $global-background;
+  }
+
+  &--small {
+    .uk-container {
+      max-width: $breakpoint-small-medium;
+    }
+  }
+  img {
+    border-radius: 4px;
+  }
+}
