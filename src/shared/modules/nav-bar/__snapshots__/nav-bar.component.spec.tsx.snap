@@ -17,23 +17,29 @@ exports[`[NavBar] should render component without crashing 1`] = `
         <ul
           className="nav-bar__links uk-visible@m"
         >
-          <li>
+          <li
+            key="0"
+          >
             <LinkComponent
-              to="#"
+              to=""
             >
               Helpdesk
             </LinkComponent>
           </li>
-          <li>
+          <li
+            key="1"
+          >
             <LinkComponent
-              to="#"
+              to=""
             >
               Nieuwsbrief
             </LinkComponent>
           </li>
-          <li>
+          <li
+            key="2"
+          >
             <LinkComponent
-              to="#"
+              to=""
             >
               Mijn uitjes
             </LinkComponent>
@@ -45,7 +51,24 @@ exports[`[NavBar] should render component without crashing 1`] = `
           iconSize="20px"
           title="Menu"
         >
-          <HamburgerMenuComponent />
+          <HamburgerMenuComponent
+            menuItems={
+              Array [
+                Object {
+                  "title": "Lorem1",
+                  "url": "",
+                },
+                Object {
+                  "title": "Lorem2",
+                  "url": "",
+                },
+                Object {
+                  "title": "Lorem3",
+                  "url": "",
+                },
+              ]
+            }
+          />
         </NavBarModalComponent>
       </div>
     </div>

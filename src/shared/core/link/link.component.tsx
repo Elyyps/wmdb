@@ -12,7 +12,10 @@ export interface ILinkComponentProps {
   to: string;
   variant?: "primary" | "secondary" | "tertiary" | "quaternary";
 }
-
+export interface ILink {
+  title: string;
+  url: string;
+}
 const LinkComponent = (props: ILinkComponentProps) => {
   const { icon, to, target, variant, animated } = props;
   const defaultVariant = variant || "primary";
