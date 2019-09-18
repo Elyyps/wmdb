@@ -5,8 +5,11 @@ import { LinkComponent } from "@app/core/link";
 import { HamburgerMenuComponent } from "@app/prep/modules-prep/hamburger-menu";
 import MENU_ICON from "@assets/icons/menu.svg";
 import { ModalNavBar } from "@app/prep/modules-prep/core/modal-navbar";
+import { INavBarModule } from "@app/api/modules/nav-bar/nav-bar.module";
 
-export interface INavBarComponentProps {}
+export interface INavBarComponentProps {
+  navbar: INavBarModule;
+}
 
 const NavBarComponent = (props: INavBarComponentProps) => (
   <div className={styles["nav-bar"]}>
@@ -18,20 +21,16 @@ const NavBarComponent = (props: INavBarComponentProps) => (
 
         <div>
           <ul className={`${styles["nav-bar__links"]} uk-visible@m`}>
-            <li>
-              <LinkComponent to={"#"}>Helpdesk</LinkComponent>
-            </li>
-            <li>
-              <LinkComponent to={"#"}>Nieuwsbrief</LinkComponent>
-            </li>
-            <li>
-              <LinkComponent to={"#"}>Mijn uitjes</LinkComponent>
-            </li>
+            {props.navbar.links.map(link => (
+              <li>
+                <LinkComponent to={link.url}>{link.title}</LinkComponent>
+              </li>
+            ))}
           </ul>
           <ModalNavBar
             className={`${styles["nav-bar-modal__toggle"]}`}
-            title={"Menu"}
-            close={"Sluiten"}
+            title={props.navbar.title}
+            close={props.navbar.closeText}
             icon={MENU_ICON}
             iconSize="20px"
           >

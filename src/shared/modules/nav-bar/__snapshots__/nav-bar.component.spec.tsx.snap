@@ -19,21 +19,21 @@ exports[`[NavBar] should render component without crashing 1`] = `
         >
           <li>
             <LinkComponent
-              to="#"
+              to=""
             >
               Helpdesk
             </LinkComponent>
           </li>
           <li>
             <LinkComponent
-              to="#"
+              to=""
             >
               Nieuwsbrief
             </LinkComponent>
           </li>
           <li>
             <LinkComponent
-              to="#"
+              to=""
             >
               Mijn uitjes
             </LinkComponent>
