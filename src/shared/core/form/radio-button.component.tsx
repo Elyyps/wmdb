@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./form.component.scss";
+import styles from "./form-component.module.scss";
 
 interface ICheckboxProps {
   count?: number;
@@ -9,27 +9,27 @@ interface ICheckboxProps {
   label?: string;
   name: string;
   onChange?: any;
-  value: string;
+  value?: string;
 }
 
 const RadioButton = ({ name, label, id, onChange, isChecked, count, value }: ICheckboxProps) => (
   <React.Fragment>
-    <div className="radio-button">
+    <div className={styles["radio-button"]}>
       <label htmlFor={id} className={"radio-button__label"}>
         <input
           checked={isChecked}
           type="radio"
           name={name}
-          className={"radio-button__input"}
+          className={styles["radio-button__input"]}
           aria-checked="false"
           id={id}
           onChange={onChange}
           value={value}
         />
-        <div className="radio-button__check" />
-        <div className="radio-button__check-label">
+        <div className={styles["radio-button__check"]} />
+        <div className={styles["radio-button__check-label"]}>
           <span>{label}</span>
-          {count ? <span className="radio-button-count">({count})</span> : ""}
+          {count && <span className={styles["radio-button-count"]}>({count})</span>}
         </div>
       </label>
     </div>
