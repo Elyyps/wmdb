@@ -5,6 +5,7 @@ import { HomepageComponent } from "@app/prep/pages-prep/homepage/homepage.compon
 import { OverzichtComponent } from "@app/prep/pages-prep/overzicht/overzicht.component";
 import { SingleWmdbComponent } from "@app/prep/pages-prep/single-wmdb/single-wmdb.component";
 import { InfoPageComponent } from "@app/prep/pages-prep/info-page/info-page.component";
+import { PlaygroundComponent } from "./modules/playground";
 
 const Routes: React.FunctionComponent = props => (
   <React.Fragment>
@@ -12,6 +13,7 @@ const Routes: React.FunctionComponent = props => (
     <Route exact path="/overzicht" component={OverzichtComponent} />
     <Route exact path="/single-wmdb" component={SingleWmdbComponent} />
     <Route exact path="/info-page" component={InfoPageComponent} />
+    <Route exact path="/playground" component={PlaygroundComponent} />
   </React.Fragment>
 );
 
