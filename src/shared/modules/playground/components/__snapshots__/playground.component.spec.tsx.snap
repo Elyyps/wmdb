@@ -4,9 +4,9 @@ exports[`[PlaygroundComponent] should render without crashing 1`] = `
 <div
   className="uk-container"
 >
-  <IconComponent
-    icon="chevron-down.svg"
-    size="24px"
+  <ImageComponent
+    errorImage="chevron-down.svg"
+    src="chevron-down.svg"
   />
 </div>
 `;
