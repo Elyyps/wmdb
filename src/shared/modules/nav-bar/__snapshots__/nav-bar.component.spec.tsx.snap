@@ -39,7 +39,7 @@ exports[`[NavBar] should render component without crashing 1`] = `
             </LinkComponent>
           </li>
         </ul>
-        <NavBarModalComponent
+        <ModalNavBar
           className="nav-bar-modal__toggle"
           close="Sluiten"
           icon="menu.svg"
@@ -47,7 +47,7 @@ exports[`[NavBar] should render component without crashing 1`] = `
           title="Menu"
         >
           <HamburgerMenuComponent />
-        </NavBarModalComponent>
+        </ModalNavBar>
       </div>
     </div>
   </div>
