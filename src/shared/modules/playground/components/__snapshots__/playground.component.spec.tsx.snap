@@ -4,6 +4,9 @@ exports[`[PlaygroundComponent] should render without crashing 1`] = `
 <div
   className="uk-container"
 >
-  <NavBarComponent />
+  <IconComponent
+    icon="chevron-down.svg"
+    size="24px"
+  />
 </div>
 `;
