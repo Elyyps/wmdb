@@ -4,7 +4,7 @@ import { LogoComponent } from "@app/prep/modules-prep/core";
 import { LinkComponent } from "@app/core/link";
 import { HamburgerMenuComponent } from "@app/prep/modules-prep/hamburger-menu";
 import MENU_ICON from "@assets/icons/menu.svg";
-import { ModalNavBar } from "@app/prep/modules-prep/core/modal-navbar";
+import { NavBarModalComponent } from "../nav-bar-modal";
 
 export interface INavBarComponentProps {}
 
@@ -28,15 +28,9 @@ const NavBarComponent = (props: INavBarComponentProps) => (
               <LinkComponent to={"#"}>Mijn uitjes</LinkComponent>
             </li>
           </ul>
-          <ModalNavBar
-            className={`${styles["nav-bar-modal__toggle"]}`}
-            title={"Menu"}
-            close={"Sluiten"}
-            icon={MENU_ICON}
-            iconSize="20px"
-          >
+          <NavBarModalComponent title={"Menu"} close={"Sluiten"} icon={MENU_ICON} iconSize="20px">
             <HamburgerMenuComponent />
-          </ModalNavBar>
+          </NavBarModalComponent>
         </div>
       </div>
     </div>
