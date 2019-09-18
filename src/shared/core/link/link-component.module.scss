@@ -1,0 +1,88 @@
+.link {
+  display: inline-flex;
+  align-items: baseline;
+  width: 100%;
+  svg {
+    width: 6px;
+    margin-left: 8px;
+    transition: transform 150ms ease-in-out;
+  }
+  &--animated {
+    &:hover {
+      color: black;
+      svg {
+        transform: translateX(4px);
+        * {
+          stroke: black;
+        }
+      }
+    }
+  }
+  &--primary {
+    color: black;
+    svg {
+      * {
+        stroke: $gray-light;
+      }
+    }
+    &:hover {
+      color: $brand-primary;
+      svg {
+        * {
+          stroke: $brand-primary;
+        }
+      }
+    }
+  }
+  &--tertiary {
+    color: $brand-secondary;
+    svg {
+      * {
+        stroke: $brand-secondary;
+      }
+    }
+    &:hover {
+      color: $brand-secondary-dark;
+      svg {
+        * {
+          stroke: $brand-secondary-dark;
+        }
+      }
+    }
+  }
+  &--secondary {
+    color: $brand-primary;
+    svg {
+      * {
+        stroke: $brand-primary;
+      }
+    }
+    &:hover {
+      color: $brand-primary-dark;
+      svg {
+        * {
+          stroke: $brand-primary-dark;
+        }
+      }
+    }
+  }
+
+  &--quaternary {
+    color: #fff;
+    svg {
+      * {
+        stroke: #fff;
+      }
+    }
+    &:hover {
+      opacity: 0.9;
+      color: #fff;
+      svg {
+        * {
+          opacity: 0.9;
+          stroke: #fff;
+        }
+      }
+    }
+  }
+}

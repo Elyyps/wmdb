@@ -8,8 +8,8 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  transition: .2s all ease-in-out;
-  background: rgba(0,0,0,.35);
+  transition: 0.2s all ease-in-out;
+  background: rgba(0, 0, 0, 0.35);
   &.opened {
     opacity: 1;
     visibility: visible;
@@ -31,7 +31,7 @@
       stroke: currentColor;
     }
     .modal-search & {
-      top: 30px;;
+      top: 30px;
       @media (max-width: $breakpoint-small-max) {
         top: 24px;
         color: $gray-dark;
@@ -41,7 +41,7 @@
       }
     }
   }
-  
+
   &__open {
     padding: 0;
     border: 0;
@@ -59,7 +59,7 @@
       }
     }
   }
-  
+
   &__holder {
     background: $gray-dark;
     .modal-menu & {
@@ -85,7 +85,7 @@
       padding-left: 32px;
       padding-right: 32px;
     }
-  
+
     .modal-menu & {
       padding-top: 48px;
       padding-bottom: 40px;

@@ -1,14 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`[PlaygroundComponent] should render without crashing 1`] = `
-<div>
-  <div
-    className="main"
-  >
-     Playground!! 
-  </div>
-  <div>
-     Test Items:1111 
-  </div>
+<div
+  className="uk-container"
+>
+  <NavBarComponent />
 </div>
 `;
