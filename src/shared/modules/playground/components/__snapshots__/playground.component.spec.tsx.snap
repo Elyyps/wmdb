@@ -2,42 +2,33 @@
 
 exports[`[PlaygroundComponent] should render without crashing 1`] = `
 <div
-  className="uk-container"
+  className=""
 >
-  <NavBarComponent
-    navbar={
+  <FooterComponent
+    footer={
       Object {
-        "closeText": "Sluiten",
         "links": Array [
           Object {
-            "title": "Helpdesk",
-            "url": "",
+            "title": "info@wmdb.nl",
+            "url": "/",
           },
           Object {
-            "title": "Nieuwsbrief",
-            "url": "",
+            "title": "Web-Effects",
+            "url": "/",
           },
           Object {
-            "title": "Mijn uitjes",
-            "url": "",
+            "title": "Algemene voorwaarden",
+            "url": "/",
+          },
+          Object {
+            "title": "Privacystatement",
+            "url": "/",
+          },
+          Object {
+            "title": "Disclaimer",
+            "url": "/",
           },
         ],
-        "logo": "",
-        "menuItems": Array [
-          Object {
-            "title": "Lorem1",
-            "url": "",
-          },
-          Object {
-            "title": "Lorem2",
-            "url": "",
-          },
-          Object {
-            "title": "Lorem3",
-            "url": "",
-          },
-        ],
-        "title": "Menu",
       }
     }
   />
