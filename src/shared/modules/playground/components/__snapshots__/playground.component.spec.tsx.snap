@@ -4,11 +4,23 @@ exports[`[PlaygroundComponent] should render without crashing 1`] = `
 <div>
   <div
     className="main"
+    style={
+      Object {
+        "backgroundColor": "#e8f2fc",
+      }
+    }
   >
-     Playground!! 
-  </div>
-  <div>
-     Test Items:1111 
+    Playground!!
+    <div>
+      <ArrowPanel
+        link="/"
+        title="Title #1"
+      />
+      <ArrowPanel
+        link="/"
+        title="Title #2"
+      />
+    </div>
   </div>
 </div>
 `;

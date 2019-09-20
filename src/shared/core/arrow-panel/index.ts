@@ -1,1 +1,1 @@
-export * from "./simple-card.component";
+export * from "./arrow-panel.component";
