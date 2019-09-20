@@ -5,6 +5,7 @@ import { withA11y } from "@storybook/addon-a11y";
 import { withProvider } from "@app/util";
 import { IconComponent } from "./icon.component";
 import IconDefault from "@assets/icons/chevron-down.svg";
+
 storiesOf("Icon", module)
   .addDecorator(withA11y)
   .addDecorator(withProvider)

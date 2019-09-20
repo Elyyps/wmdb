@@ -2,35 +2,57 @@
 
 exports[`[PlaygroundComponent] should render without crashing 1`] = `
 <div
-  className=""
+  className="uk-container"
 >
-  <FooterComponent
-    footer={
+  <OutingCardComponent
+    button={
       Object {
-        "links": Array [
-          Object {
-            "title": "info@wmdb.nl",
-            "url": "/",
-          },
-          Object {
-            "title": "Web-Effects",
-            "url": "/",
-          },
-          Object {
-            "title": "Algemene voorwaarden",
-            "url": "/",
-          },
-          Object {
-            "title": "Privacystatement",
-            "url": "/",
-          },
-          Object {
-            "title": "Disclaimer",
-            "url": "/",
-          },
-        ],
+        "href": "#",
+        "title": "Lees meer",
       }
     }
+    content="Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
+    data={
+      Object {
+        "icon": "rooms.svg",
+        "label": "10 - 1000 personen",
+      }
+    }
+    image={
+      Array [
+        "img01.png",
+        "img02.png",
+        "img01.png",
+        "img02.png",
+      ]
+    }
+    subtitle="Citygames in Amsterdam"
+    title="Escape City - Het ontsnappingsspel van Mokum"
+  />
+  <CardPost
+    button={
+      Object {
+        "href": "#",
+        "title": "Lees meer",
+      }
+    }
+    content="Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
+    data={
+      Object {
+        "icon": "rooms.svg",
+        "label": "10 - 1000 personen",
+      }
+    }
+    image={
+      Array [
+        "img01.png",
+        "img02.png",
+        "img01.png",
+        "img02.png",
+      ]
+    }
+    subtitle="Citygames in Amsterdam"
+    title="Escape City - Het ontsnappingsspel van Mokum"
   />
 </div>
 `;
