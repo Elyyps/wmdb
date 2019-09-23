@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[PlaygroundPedroComponent] should render without crashing 1`] = `
+<div>
+  <div
+    className="main"
+  >
+     Playground Pedro 
+  </div>
+  <div>
+     Hello World 
+  </div>
+  <Dropdown
+    options={
+      Array [
+        Object {
+          "label": "label1",
+          "value": "value",
+        },
+      ]
+    }
+    placeholder="placeholder"
+  />
+</div>
+`;

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[PlaygroundAhmedComponent] should render without crashing 1`] = `
+<div>
+  <div
+    className="main"
+  >
+     Playground Ahmed 
+  </div>
+  <div>
+     Hello World 
+  </div>
+</div>
+`;
