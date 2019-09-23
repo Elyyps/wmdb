@@ -1,1 +1,46 @@
-.arrow-panel-list{}
+.arrow-panel-list {
+  &__posts {
+    @media (min-width: $breakpoint-small) {
+      margin-bottom: -24px;
+    }
+    @media (min-width: $breakpoint-medium) {
+      margin-bottom: -40px;
+    }
+    > div {
+      @media (min-width: $breakpoint-small) {
+        padding-bottom: 24px;
+      }
+      @media (min-width: $breakpoint-medium) {
+        padding-bottom: 40px;
+      }
+    }
+    @media (max-width: $breakpoint-xsmall-max) {
+      > div:not(:first-child) {
+        display: none;
+      }
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    @media (max-width: $breakpoint-xsmall-max) {
+      margin-bottom: 16px;
+    }
+    > h3 {
+      margin: 0;
+    }
+    .icon-svg {
+      margin-right: 16px;
+      @media (max-width: $breakpoint-xsmall-max) {
+        width: 24px !important;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &__item {
+    margin-bottom: 1px;
+  }
+}
