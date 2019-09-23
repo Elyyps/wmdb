@@ -31,11 +31,13 @@
     > h3 {
       margin: 0;
     }
-    .icon-svg {
+    &__icon {
       margin-right: 16px;
       @media (max-width: $breakpoint-xsmall-max) {
-        width: 24px !important;
         margin-right: 8px;
+        > * {
+          width: 24px !important;
+        }
       }
     }
   }

@@ -1,47 +1,38 @@
 import * as React from "react";
 import styles from "./arrow-panel-list-component.module.scss";
 import { IconComponent } from "../icon";
-import { ArrowPanel } from "../arrow-panel/arrow-panel.component";
+import { ArrowPanel, IArrowPanelProps } from "../arrow-panel/arrow-panel.component";
 import { SeeMorePanel } from "../see-more-panel";
 
-
 export interface IArrowPanelListComponentProps {
-  backgroundColor?: string;
   icon?: string;
-  items?: any[];
-  paddingBottom?: string;
-  paddingTop?: string;
-  pattern?: boolean;
+  items?: IArrowPanelProps[];
+  linkMore?: IArrowPanelProps;
   title: string;
 }
 
 const ArrowPanelListComponent = (props: IArrowPanelListComponentProps) => {
-  const { items } = props;
+  const { items, title, icon, linkMore } = props;
 
   return (
     <div className={styles["arrow-panel-list"]}>
-      {items && (
-        <div className="faq-overview__posts uk-grid uk-child-width-1-2@s">
-          {items.map((row, key) => (
-            <div key={key}>
-              <div className="faq-overview__head">
-                {row.icon && <IconComponent icon={row.icon} size="34px" />}
-
-                <h3>{row.title}</h3>
-              </div>
-              {row.items.map((item: any, i: number) => (
-                <div key={i} className="faq-overview__item">
-                  <ArrowPanel {...item} />
-                </div>
-              ))}
-
-              {row.linkMore && (
-                <div className="faq-overview__item">
-                  <SeeMorePanel {...row.linkMore} />
-                </div>
-              )}
-            </div>
-          ))}
+      <div className={styles["arrow-panel-list__head"]}>
+        {icon && (
+          <div className={styles["arrow-panel-list__head__icon"]}>
+            <IconComponent icon={icon} size="34px" />
+          </div>
+        )}
+        <h3>{title}</h3>
+      </div>
+      {items &&
+        items.map((item: IArrowPanelProps, key: number) => (
+          <div key={key} className={styles["arrow-panel-list__item"]}>
+            <ArrowPanel title={item.title} link={item.link} />
+          </div>
+        ))}
+      {linkMore && (
+        <div className={styles["arrow-panel-list__item"]}>
+          <SeeMorePanel title={linkMore.title} link={linkMore.link} />
         </div>
       )}
     </div>

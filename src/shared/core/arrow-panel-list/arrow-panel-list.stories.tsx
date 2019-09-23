@@ -1,4 +1,3 @@
-
 import * as React from "react";
 
 import { storiesOf } from "@storybook/react";
@@ -9,8 +8,4 @@ import { ArrowPanelListComponent } from "./arrow-panel-list.component";
 storiesOf("ArrowPanelList", module)
   .addDecorator(withA11y)
   .addDecorator(withProvider)
-  .add("Basic implementation", () => (
-    <ArrowPanelListComponent />
-  ));
-
-  
+  .add("Basic implementation", () => <ArrowPanelListComponent title="title" />);
