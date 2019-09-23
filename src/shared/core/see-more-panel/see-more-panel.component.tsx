@@ -10,9 +10,9 @@ interface ISeeMorePanelProps {
 }
 
 const SeeMorePanel = ({ link, title }: ISeeMorePanelProps) => (
-  <Link to={link} className={styles["see-more-card"]}>
-    <div className={styles["see-more-card__title"]}>{title}</div>
-    <div className={styles["see-more-card__arrow"]}>
+  <Link to={link} className={styles["see-more-panel"]}>
+    <div className={styles["see-more-panel__title"]}>{title}</div>
+    <div className={styles["see-more-panel__arrow"]}>
       <IconComponent icon={Arrow} size={"14px"} stroke />
     </div>
   </Link>

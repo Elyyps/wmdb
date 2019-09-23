@@ -1,4 +1,4 @@
-.see-more-card {
+.see-more-panel {
   display: block;
   position: relative;
   background-color: $global-muted-background;
@@ -36,7 +36,7 @@
     text-decoration: none;
     color: currentColor;
     background-color: $gray-lighter;
-    .simple-card__arrow {
+    .arrow-panel_arrow {
       color: currentColor;
     }
   }

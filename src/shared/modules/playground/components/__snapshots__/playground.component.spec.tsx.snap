@@ -11,16 +11,6 @@ exports[`[PlaygroundComponent] should render without crashing 1`] = `
     }
   >
     Playground!!
-    <div>
-      <ArrowPanel
-        link="/"
-        title="Title #1"
-      />
-      <ArrowPanel
-        link="/"
-        title="Title #2"
-      />
-    </div>
   </div>
 </div>
 `;
