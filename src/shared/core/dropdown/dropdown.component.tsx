@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import classNames from "classnames";
 import styles from "./dropdown-component.module.scss";
 
+interface IDropdownItemProps {
+  label: string;
+  value: any;
+}
 interface IDropdownProps {
   classModify?: string;
   errorMessage?: string;
@@ -9,7 +13,7 @@ interface IDropdownProps {
   isSuccess?: boolean;
   label?: string;
   name?: string;
-  options?: any[];
+  options?: IDropdownItemProps[];
   placeholder?: string;
 }
 
