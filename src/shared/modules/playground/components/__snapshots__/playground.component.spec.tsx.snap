@@ -3,10 +3,23 @@
 exports[`[PlaygroundComponent] should render without crashing 1`] = `
 <div
   className="uk-container"
+  style={
+    Object {
+      "height": "247",
+      "width": "472px",
+    }
+  }
 >
-  <IconComponent
-    icon="chevron-down.svg"
-    size="24px"
+  <AdBannerComponent
+    advertisement="Advertentie"
+    backgroundImage="rectangle.png"
+    button={
+      Object {
+        "title": "Meer info",
+        "url": "/",
+      }
+    }
+    content="Surfen? Dat doe je in Zeeland."
   />
 </div>
 `;
