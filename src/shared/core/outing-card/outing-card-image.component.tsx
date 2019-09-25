@@ -3,11 +3,11 @@ import styles from "./outing-card-component.module.scss";
 import Slider, { Settings } from "react-slick";
 import { ImageComponent } from "../image";
 
-interface ICardPostImageProps {
+interface IOutingCardImageProps {
   images: string[];
 }
 
-const OutingCardImage = ({ images }: ICardPostImageProps) => {
+const OutingCardImage = ({ images }: IOutingCardImageProps) => {
   const ref: any = React.createRef();
   ref.current = "slick";
 
@@ -30,7 +30,7 @@ const OutingCardImage = ({ images }: ICardPostImageProps) => {
   };
 
   const numberSlide = 3;
-  const [currentImage, setCurrentImage] = React.useState<string>(images[0]);
+  const [currentImage, setCurrentImage] = React.useState(0);
 
   return (
     <div
@@ -40,7 +40,9 @@ const OutingCardImage = ({ images }: ICardPostImageProps) => {
     >
       <div className={styles["card-images"]}>
         <Slider ref={ref} {...settings}>
-          <ImageComponent src={currentImage} />
+          {images.slice(currentImage, images.length).map(image => (
+            <ImageComponent src={image} />
+          ))}
         </Slider>
       </div>
       {images.length >= numberSlide ? (
@@ -49,8 +51,8 @@ const OutingCardImage = ({ images }: ICardPostImageProps) => {
             <div
               key={key}
               className={styles["card-image"]}
-              onMouseEnter={() => setCurrentImage(item)}
-              onMouseLeave={() => setCurrentImage(images[0])}
+              onMouseEnter={() => setCurrentImage(key)}
+              onMouseLeave={() => setCurrentImage(0)}
             >
               <ImageComponent src={item} />
             </div>

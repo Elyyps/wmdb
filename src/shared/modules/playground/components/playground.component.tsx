@@ -8,8 +8,8 @@ import { generateNavbarData } from "@app/api/modules/nav-bar/end-point";
 import { FooterComponent } from "@app/modules/footer";
 import { generateFooterData } from "@app/api/modules/footer/end-point";
 import { OutingCardComponent } from "@app/core/outing-card";
-import PlaceholderImage from "@assets/img01.png";
-import PlaceholderImage1 from "@assets/img02.png";
+import PlaceholderImage from "@assets/img-big.jpg";
+import PlaceholderImage1 from "@assets/img-center.jpg";
 
 import SPEL from "@assets/icons/spel.svg";
 import ETEN from "@assets/icons/eten.svg";

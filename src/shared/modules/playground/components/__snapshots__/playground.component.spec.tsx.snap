@@ -20,10 +20,10 @@ exports[`[PlaygroundComponent] should render without crashing 1`] = `
     }
     image={
       Array [
-        "img01.png",
-        "img02.png",
-        "img01.png",
-        "img02.png",
+        "img-big.jpg",
+        "img-center.jpg",
+        "img-big.jpg",
+        "img-center.jpg",
       ]
     }
     subtitle="Citygames in Amsterdam"
@@ -45,10 +45,10 @@ exports[`[PlaygroundComponent] should render without crashing 1`] = `
     }
     image={
       Array [
-        "img01.png",
-        "img02.png",
-        "img01.png",
-        "img02.png",
+        "img-big.jpg",
+        "img-center.jpg",
+        "img-big.jpg",
+        "img-center.jpg",
       ]
     }
     subtitle="Citygames in Amsterdam"
