@@ -53,6 +53,7 @@
         }
         .card-images {
           flex: 1 1 auto;
+
           padding: 0 0 4px;
           cursor: pointer;
 
@@ -122,11 +123,13 @@
   .card-image {
     padding: 2px 0;
     height: 33.3%;
+
     box-sizing: border-box;
     cursor: pointer;
     @media (max-width: $breakpoint-medium-max) {
       height: 56px;
       padding: 0 2px;
+      width: 33.3%;
     }
   }
 
