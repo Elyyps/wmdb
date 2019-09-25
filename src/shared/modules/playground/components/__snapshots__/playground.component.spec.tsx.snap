@@ -4,9 +4,17 @@ exports[`[PlaygroundComponent] should render without crashing 1`] = `
 <div
   className="uk-container"
 >
-  <IconComponent
-    icon="chevron-down.svg"
-    size="24px"
+  <HeaderGalleryComponent
+    images={
+      Array [
+        "oasis.jpg",
+        "img02.png",
+        "oasis.jpg",
+        "img-big.jpg",
+        "img-grid.png",
+        "rectangle.png",
+      ]
+    }
   />
 </div>
 `;

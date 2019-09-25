@@ -19,6 +19,7 @@
         width: 100%;
       }
     }
+
     &.small {
       flex: 1;
     }
@@ -53,13 +54,14 @@
         padding: 0 8px;
         display: flex;
         align-items: center;
-        .icon-svg {
+
+        span {
           margin-right: 8px;
         }
       }
       .photo {
         color: $brand-primary;
-        .icon-svg {
+        svg {
           path {
             fill: $brand-primary;
           }
