@@ -2,7 +2,6 @@ import * as React from "react";
 import styles from "./category-overview-component.module.scss";
 import { CategoryCard } from "@app/core/category-card";
 import { ICategoryOverviewModule } from "@app/api/modules/category-overview/category-overview.model";
-import { IconComponent } from "@app/prep/modules-prep/core";
 
 export interface ICategoryOverviewComponentProps {
   categoryOverviewModule: ICategoryOverviewModule;

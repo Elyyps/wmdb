@@ -1,8 +1,6 @@
 import PlaceholderImage from "@assets/img02.png";
-import SPEL from "@assets/icons/spel.svg";
-import ETEN from "@assets/icons/eten.svg";
-import ROOMS from "@assets/icons/rooms.svg";
 import { ICategoryOverviewModule } from "./category-overview.model";
+import SPEL from "@assets/icons/spel.svg";
 
 const CategoryOverviewDummyData: ICategoryOverviewModule = {
   backgroundColor: "#e8f2fc",

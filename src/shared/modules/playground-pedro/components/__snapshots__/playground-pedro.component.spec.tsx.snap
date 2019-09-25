@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[PlaygroundPedroComponent] should render without crashing 1`] = `
+<div>
+  <div
+    className="main"
+  >
+     Playground Pedro 
+  </div>
+  <div>
+     Hello World 
+  </div>
+  <CategoryOverviewComponent
+    categoryOverviewModule={
+      Object {
+        "backgroundColor": "#e8f2fc",
+        "items": Array [
+          Object {
+            "count": 200,
+            "icon": "spel.svg",
+            "image": "img02.png",
+            "link": "/",
+            "title": "Musea",
+          },
+          Object {
+            "count": 200,
+            "icon": "spel.svg",
+            "image": "img02.png",
+            "link": "/",
+            "title": "Musea",
+          },
+          Object {
+            "count": 200,
+            "icon": "spel.svg",
+            "image": "img02.png",
+            "link": "/",
+            "title": "Musea",
+          },
+          Object {
+            "count": 200,
+            "icon": "spel.svg",
+            "image": "img02.png",
+            "link": "/",
+            "title": "Musea",
+          },
+          Object {
+            "count": 200,
+            "icon": "spel.svg",
+            "image": "img02.png",
+            "link": "/",
+            "title": "Musea",
+          },
+          Object {
+            "count": 20,
+            "icon": "spel.svg",
+            "image": "img02.png",
+            "link": "/",
+            "title": "Musea",
+          },
+          Object {
+            "image": "img02.png",
+            "link": "/",
+            "title": "Musea",
+          },
+          Object {
+            "image": "img02.png",
+            "link": "/",
+            "title": "Musea",
+          },
+          Object {
+            "image": "img02.png",
+            "link": "/",
+            "title": "Musea",
+          },
+        ],
+        "paddingBottom": "72px",
+        "paddingTop": "72px",
+        "title": "Kies direct een categorie om het aanbod te bekijken!",
+      }
+    }
+  />
+</div>
+`;
