@@ -1,0 +1,30 @@
+.icon-svg {
+  span,
+  svg,
+  path {
+    display: flex;
+    width: inherit;
+    height: inherit;
+  }
+  &--outline {
+    span,
+    svg,
+    path {
+      stroke: inherit;
+    }
+  }
+  &--stroke-width {
+    span,
+    svg,
+    path {
+      stroke-width: inherit;
+    }
+  }
+  &--filled {
+    span,
+    svg,
+    path {
+      fill: inherit;
+    }
+  }
+}
