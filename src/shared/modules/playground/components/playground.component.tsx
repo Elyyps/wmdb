@@ -13,11 +13,17 @@ import Rectangle from "@assets/rectangle.png";
 import Big from "@assets/img-big.jpg";
 import Grid from "@assets/img-grid.png";
 
+import SPEL from "@assets/icons/spel.svg";
+import ETEN from "@assets/icons/eten.svg";
+import ROOMS from "@assets/icons/rooms.svg";
+import { CardPost } from "@app/prep/modules-prep/core";
+import { FooterComponent } from "@app/modules/footer";
+import { generateFooterData } from "@app/api/modules/footer/end-point";
 export interface IPlaygroundComponentProps {}
 const imageList = [Oasis, Image, Oasis, Big, Grid, Rectangle];
 const PlaygroundComponent = (props: IPlaygroundComponentProps & PlaygroundContainerProps) => (
-  <div className={"uk-container"}>
-    <HeaderGalleryComponent images={imageList} />
+  <div className={""}>
+    <FooterComponent footer={generateFooterData()} />
   </div>
 );
 

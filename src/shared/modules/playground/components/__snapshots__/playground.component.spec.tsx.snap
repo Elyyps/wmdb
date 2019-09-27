@@ -2,18 +2,34 @@
 
 exports[`[PlaygroundComponent] should render without crashing 1`] = `
 <div
-  className="uk-container"
+  className=""
 >
-  <HeaderGalleryComponent
-    images={
-      Array [
-        "oasis.jpg",
-        "img02.png",
-        "oasis.jpg",
-        "img-big.jpg",
-        "img-grid.png",
-        "rectangle.png",
-      ]
+  <FooterComponent
+    footer={
+      Object {
+        "links": Array [
+          Object {
+            "title": "info@wmdb.nl",
+            "url": "/",
+          },
+          Object {
+            "title": "Web-Effects",
+            "url": "/",
+          },
+          Object {
+            "title": "Algemene voorwaarden",
+            "url": "/",
+          },
+          Object {
+            "title": "Privacystatement",
+            "url": "/",
+          },
+          Object {
+            "title": "Disclaimer",
+            "url": "/",
+          },
+        ],
+      }
     }
   />
 </div>
