@@ -2,7 +2,7 @@
 
 exports[`[PlaygroundComponent] should render without crashing 1`] = `
 <div
-  className=""
+  className="uk-container"
 >
   <HeaderGalleryComponent
     images={
