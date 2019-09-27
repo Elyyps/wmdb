@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import "./form.component.scss";
-import styles from "./form-component.module.scss";
+
+import styles from "./input-component.module.scss";
 import classNames from "classnames";
-import { IconComponent } from "@app/prep/modules-prep/core";
 import Cross from "@assets/icons/cross.svg";
 import Check from "@assets/icons/check.svg";
+import { IconComponent } from "@app/core/icon";
 
 interface IInputProps {
   classModify?: string;
@@ -14,6 +14,7 @@ interface IInputProps {
   isSuccess?: boolean;
   label?: string;
   name: string;
+  onChange?: (text: string) => void;
   onClick?: any;
   placeholder?: string;
   type?: string;
@@ -30,9 +31,12 @@ const Input = (props: IInputProps) => {
     [styles["isIcon"]]: icon,
     [styles["success"]]: isSuccess
   });
-  const handelChange = (event: any) => {
+  const handleChange = (event: any) => {
     {
       setValue(event.target.value);
+      if (props.onChange) {
+        props.onChange(event.target.value);
+      }
     }
   };
 
@@ -50,7 +54,7 @@ const Input = (props: IInputProps) => {
         )}
         <div className={styles["form__item-holder"]}>
           <input
-            onChange={handelChange}
+            onChange={handleChange}
             type={type ? type : "text"}
             placeholder={placeholder}
             className={inputClassName}

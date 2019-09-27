@@ -20,6 +20,7 @@
   color: $global-color;
   border-radius: 3px;
   background-color: $bg-muted;
+  white-space: nowrap;
   &:active{
     opacity: 0.8;
   }
