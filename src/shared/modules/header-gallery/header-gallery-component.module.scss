@@ -7,6 +7,9 @@
   }
   &__col {
     box-sizing: border-box;
+    .alice-carousel__next-btn {
+      background-color: red !important;
+    }
     img {
       object-fit: cover;
       width: 100%;

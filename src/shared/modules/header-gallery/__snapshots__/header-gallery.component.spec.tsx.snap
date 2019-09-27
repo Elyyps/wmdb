@@ -13,33 +13,40 @@ exports[`[HeaderGallery] should render component without crashing 1`] = `
       <div
         className="header-gallery__col large"
       >
-        <Slider
-          arrows={true}
-          beforeChange={[Function]}
-          dots={false}
+        <AliceCarousel
+          autoHeight={false}
+          autoPlay={false}
+          autoPlayDirection="ltr"
+          autoPlayInterval={250}
+          buttonsDisabled={false}
+          disableAutoPlayOnAction={false}
+          dotsDisabled={true}
+          duration={250}
+          fadeOutAnimation={false}
           infinite={true}
-          nextArrow={<BasicArrow />}
-          prevArrow={
-            <BasicArrow
-              prev={true}
-            />
-          }
+          items={Array []}
+          keysControlDisabled={false}
+          mouseDragEnabled={false}
+          onSlideChanged={[Function]}
+          playButtonEnabled={false}
+          preventEventOnTouchMove={false}
           responsive={
-            Array [
-              Object {
-                "breakpoint": 1199,
-                "settings": Object {
-                  "arrows": false,
-                  "dots": true,
-                  "slidesToScroll": 1,
-                  "slidesToShow": 1,
+            Object {
+              "desktop": Object {
+                "breakpoint": Object {
+                  "max": 3000,
+                  "min": 1024,
                 },
+                "items": 1,
               },
-            ]
+            }
           }
-          slidesToScroll={1}
-          slidesToShow={1}
-          speed={500}
+          showSlideInfo={false}
+          slideToIndex={0}
+          stagePadding={Object {}}
+          startIndex={0}
+          stopAutoPlayOnHover={true}
+          swipeDisabled={false}
         >
           <ImageComponent
             key="0"
@@ -65,9 +72,9 @@ exports[`[HeaderGallery] should render component without crashing 1`] = `
             key="5"
             src="rectangle.png"
           />
-        </Slider>
+        </AliceCarousel>
         <div
-          className=" header-gallery__info uk-visible@l "
+          className="header-gallery__info uk-visible@l"
         >
           <div
             className="slider-info"
