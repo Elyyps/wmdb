@@ -4,9 +4,9 @@ import { IconComponent } from "@app/core/icon";
 import { ImageComponent } from "@app/core/image";
 import IconImage from "@assets/icons/images.svg";
 import IconPlay from "@assets/icons/play.svg";
-
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
+import { getArrow } from "@app/constants/icons";
 
 export interface IHeaderGalleryComponentProps {
   images: string[];
@@ -33,20 +33,35 @@ const HeaderGalleryComponent = (props: IHeaderGalleryComponentProps) => {
       <div className="uk-container">
         <div className={styles["header-gallery__container"]}>
           <div className={`${styles["header-gallery__col"]} ${styles["large"]}`}>
-            {/* <GallerySliderComponent currentIndex={currentImage} images={props.images} /> */}
-
-            <AliceCarousel
-              onSlideChanged={e => setCurrentImage(e.slide)}
-              dotsDisabled={true}
-              startIndex={currentImage}
-              responsive={responsive}
-              infinite={true}
-            >
-              {props.images.map((item: string, key: number) => (
-                <ImageComponent src={item} key={key} />
-              ))}
-            </AliceCarousel>
-
+            <div className={styles["header-gallery__slider_images"]}>
+              <AliceCarousel
+                onSlideChanged={e => setCurrentImage(e.slide)}
+                dotsDisabled
+                startIndex={currentImage}
+                responsive={responsive}
+                infinite={true}
+                buttonsDisabled
+                items={props.images.map((item: string, key: number) => (
+                  <ImageComponent src={item} key={key} />
+                ))}
+              />
+              <div className={styles["header-gallery__slider_arrows"]}>
+                <div
+                  className={styles["header-gallery__slider_arrows_prev"]}
+                  onClick={() => setCurrentImage(currentImage - 1)}
+                  role="button"
+                >
+                  <IconComponent icon={getArrow(true)} size={"8px"} strokeColor={"white"} fillColor={"none"} />
+                </div>
+                <div
+                  className={styles["header-gallery__slider_arrows_next"]}
+                  onClick={() => setCurrentImage(currentImage + 1)}
+                  role="button"
+                >
+                  <IconComponent icon={getArrow(false)} size={"8px"} strokeColor={"white"} fillColor={"none"} />
+                </div>
+              </div>
+            </div>
             <div className={`${styles["header-gallery__info"]} ${"uk-visible@l"}`}>
               <div className={styles["slider-info"]}>
                 <div className={styles["photo"]}>

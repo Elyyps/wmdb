@@ -45,9 +45,9 @@ const navbarData = generateNavbarData();
 const footerData = generateFooterData();
 const PlaygroundComponent = (props: IPlaygroundComponentProps & PlaygroundContainerProps) => (
   <React.Fragment>
-    {/* <div className={""}>
+    <div className={""}>
       <NavBarComponent navbar={navbarData} />
-    </div> */}
+    </div>
     {/* <div className={""}>
       <FooterComponent footer={footerData} />
     </div> */}

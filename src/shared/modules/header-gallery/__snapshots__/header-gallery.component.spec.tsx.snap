@@ -13,66 +13,106 @@ exports[`[HeaderGallery] should render component without crashing 1`] = `
       <div
         className="header-gallery__col large"
       >
-        <AliceCarousel
-          autoHeight={false}
-          autoPlay={false}
-          autoPlayDirection="ltr"
-          autoPlayInterval={250}
-          buttonsDisabled={false}
-          disableAutoPlayOnAction={false}
-          dotsDisabled={true}
-          duration={250}
-          fadeOutAnimation={false}
-          infinite={true}
-          items={Array []}
-          keysControlDisabled={false}
-          mouseDragEnabled={false}
-          onSlideChanged={[Function]}
-          playButtonEnabled={false}
-          preventEventOnTouchMove={false}
-          responsive={
-            Object {
-              "desktop": Object {
-                "breakpoint": Object {
-                  "max": 3000,
-                  "min": 1024,
-                },
-                "items": 1,
-              },
-            }
-          }
-          showSlideInfo={false}
-          slideToIndex={0}
-          stagePadding={Object {}}
-          startIndex={0}
-          stopAutoPlayOnHover={true}
-          swipeDisabled={false}
+        <div
+          className="header-gallery__slider_images"
         >
-          <ImageComponent
-            key="0"
-            src="oasis.jpg"
+          <AliceCarousel
+            autoHeight={false}
+            autoPlay={false}
+            autoPlayDirection="ltr"
+            autoPlayInterval={250}
+            buttonsDisabled={true}
+            disableAutoPlayOnAction={false}
+            dotsDisabled={true}
+            duration={250}
+            fadeOutAnimation={false}
+            infinite={true}
+            items={
+              Array [
+                <ImageComponent
+                  src="oasis.jpg"
+                />,
+                <ImageComponent
+                  src="img02.png"
+                />,
+                <ImageComponent
+                  src="oasis.jpg"
+                />,
+                <ImageComponent
+                  src="img-big.jpg"
+                />,
+                <ImageComponent
+                  src="img-grid.png"
+                />,
+                <ImageComponent
+                  src="rectangle.png"
+                />,
+              ]
+            }
+            keysControlDisabled={false}
+            mouseDragEnabled={false}
+            onSlideChanged={[Function]}
+            playButtonEnabled={false}
+            preventEventOnTouchMove={false}
+            responsive={
+              Object {
+                "desktop": Object {
+                  "breakpoint": Object {
+                    "max": 3000,
+                    "min": 1024,
+                  },
+                  "items": 1,
+                },
+              }
+            }
+            showSlideInfo={false}
+            slideToIndex={0}
+            stagePadding={Object {}}
+            startIndex={0}
+            stopAutoPlayOnHover={true}
+            swipeDisabled={false}
           />
-          <ImageComponent
-            key="1"
-            src="img02.png"
-          />
-          <ImageComponent
-            key="2"
-            src="oasis.jpg"
-          />
-          <ImageComponent
-            key="3"
-            src="img-big.jpg"
-          />
-          <ImageComponent
-            key="4"
-            src="img-grid.png"
-          />
-          <ImageComponent
-            key="5"
-            src="rectangle.png"
-          />
-        </AliceCarousel>
+          <div
+            className="header-gallery__slider_arrows"
+          >
+            <div
+              className="header-gallery__slider_arrows_prev"
+              onClick={[Function]}
+              role="button"
+            >
+              <IconComponent
+                fillColor="none"
+                icon={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "chevron-left.svg",
+                  }
+                }
+                size="8px"
+                strokeColor="white"
+              />
+            </div>
+            <div
+              className="header-gallery__slider_arrows_next"
+              onClick={[Function]}
+              role="button"
+            >
+              <IconComponent
+                fillColor="none"
+                icon={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "chevron-right.svg",
+                  }
+                }
+                size="8px"
+                strokeColor="white"
+              />
+            </div>
+          </div>
+        </div>
         <div
           className="header-gallery__info uk-visible@l"
         >
