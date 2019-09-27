@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[HamburgerMenu] should render component without crashing 1`] = `
+<div
+  className="hamburger-menu"
+>
+  <ul
+    className="hamburger-menu__navigation"
+  />
+</div>
+`;

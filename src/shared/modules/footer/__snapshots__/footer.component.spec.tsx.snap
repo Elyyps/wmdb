@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Footer] should render component without crashing 1`] = `
+<div
+  className="footer"
+>
+  <div
+    className="uk-container"
+  >
+    <div
+      className="footer__holder"
+    >
+      <div
+        className="footer__logo"
+      >
+        <LogoComponent />
+      </div>
+      <div
+        className="footer__side"
+      >
+        <ul
+          className="footer__nav"
+        >
+          <li
+            key="0"
+          >
+            <LinkComponent
+              to="/"
+            >
+              info@wmdb.nl
+            </LinkComponent>
+          </li>
+          <li
+            key="1"
+          >
+            <LinkComponent
+              to="/"
+            >
+              Web-Effects
+            </LinkComponent>
+          </li>
+          <li
+            key="2"
+          >
+            <LinkComponent
+              to="/"
+            >
+              Algemene voorwaarden
+            </LinkComponent>
+          </li>
+          <li
+            key="3"
+          >
+            <LinkComponent
+              to="/"
+            >
+              Privacystatement
+            </LinkComponent>
+          </li>
+          <li
+            key="4"
+          >
+            <LinkComponent
+              to="/"
+            >
+              Disclaimer
+            </LinkComponent>
+          </li>
+        </ul>
+        <LinkComponent
+          to="/"
+        >
+          <IconComponent
+            fillColor="#3b5998"
+            icon="facebook.svg"
+            size="24px"
+          />
+        </LinkComponent>
+      </div>
+    </div>
+  </div>
+</div>
+`;
