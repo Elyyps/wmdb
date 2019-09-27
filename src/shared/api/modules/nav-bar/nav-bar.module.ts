@@ -1,4 +1,4 @@
-import { ILink } from "@app/core/link";
+import { ILink } from "@app/api/core/link";
 
 export interface INavBarModule {
   closeText: string;
