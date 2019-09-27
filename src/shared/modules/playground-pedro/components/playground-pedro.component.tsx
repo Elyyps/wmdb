@@ -1,5 +1,5 @@
+/* tslint:disable */
 import React from "react";
-
 import style from "./playground-pedro-component.module.scss";
 import { HeroComponent } from "@app/modules/hero";
 import { generateDummyHeroModule } from "@app/api/modules/hero/hero-module";
