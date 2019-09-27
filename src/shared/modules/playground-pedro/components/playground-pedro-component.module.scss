@@ -1,11 +1,10 @@
 .main {
   min-width: 100vw;
   min-height: 100vh;
-  text-align: center;
-  background-color: #dedede;
+  background-color: #e8f2fc;
+  box-sizing: border-box;
   > * {
-    width: 500px;
-    max-width: 80%;
+    max-width: 100%;
     margin: auto;
     margin-bottom: 32px;
   }

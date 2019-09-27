@@ -3,11 +3,11 @@
   position: relative;
   background-color: $global-background;
   border-left: 4px solid $brand-primary;
-  padding: 13px 30px 14px 13px;
+  padding: 13px 40px 14px 13px;
   margin-bottom: 1px;
   text-align: left;
   color: $global-color;
-  transition: background-color .2s;
+  transition: background-color 0.2s;
   @media (min-width: $breakpoint-small) {
     padding: 20px 30px 20px 20px;
   }
@@ -26,6 +26,7 @@
     right: 16px;
     transform: translateY(-50%) rotate(-90deg);
     color: $brand-primary;
+
     path {
       stroke: currentColor;
     }

@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import styles from "./arrow-panel-component.module.scss";
-import { IconComponent } from "@app/prep/modules-prep/core";
 import Arrow from "@assets/icons/chevron-down.svg";
+import { IconComponent } from '@app/core/icon';
 
 interface IArrowPanelProps {
   link: string;
@@ -13,7 +13,7 @@ const ArrowPanel = ({ link, title }: IArrowPanelProps) => (
   <Link to={link} className={styles["arrow-panel"]}>
     <div className={styles["arrow-panel__title"]}>{title}</div>
     <div className={styles["arrow-panel__arrow"]}>
-      <IconComponent icon={Arrow} size={"14px"} stroke />
+      <IconComponent fillColor="white" icon={Arrow} size={"14px"} />
     </div>
   </Link>
 );
