@@ -1,10 +1,6 @@
-import PlaceholderImage from "@assets/img02.png";
-import SPEL from "@assets/icons/spel.svg";
 import ETEN from "@assets/icons/eten.svg";
-import ROOMS from "@assets/icons/rooms.svg";
-import { IArrowPanelListComponentProps } from "../../core/arrow-panel-list/arrow-panel-list.component";
 
-export const GenerateDummyArrowPanelListData = () => ({
+export const generateDummyArrowPanelListData = () => ({
   title: "Spel & Ontspanning",
   icon: ETEN,
   items: [

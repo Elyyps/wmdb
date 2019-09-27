@@ -56,7 +56,7 @@ const HeroComponent = (props: IHeroComponentProps) => {
     if (isValid) {
       if (props.onSubmit) {
         props.onSubmit({
-          companyText,
+          companyValue: companyText,
           provincieText,
           keywordText,
           numberPersonText

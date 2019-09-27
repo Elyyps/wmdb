@@ -7,6 +7,7 @@ import classNames from "classnames";
 
 export interface IButtonProps {
   children?: any;
+  fullWidth?: boolean;
   href?: string;
   icon?: any;
   onClick?: any;
@@ -18,7 +19,7 @@ export interface IButtonProps {
 }
 
 const Button = (props: IButtonProps) => {
-  const { onClick, href, variant, target, title, type, icon, position, ...other } = props;
+  const { onClick, href, variant, target, title, type, icon, position, fullWidth, ...other } = props;
   const classModify = variant || "default";
   const buttonClassName = classNames(styles["button"], {
     [styles[`button--${classModify}`]]: classModify,
@@ -33,7 +34,13 @@ const Button = (props: IButtonProps) => {
           {icon && <IconComponent icon={icon} size="14px" />}
         </Link>
       ) : (
-        <button onClick={onClick} {...other} type={type} className={buttonClassName}>
+        <button
+          style={{ width: fullWidth ? "100%" : "auto" }}
+          onClick={onClick}
+          {...other}
+          type={type}
+          className={buttonClassName}
+        >
           <span>{title}</span>
           {icon && <IconComponent icon={icon} size="14px" />}
           {variant === "dropdown" && (
