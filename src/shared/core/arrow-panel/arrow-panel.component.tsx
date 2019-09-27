@@ -18,4 +18,4 @@ const ArrowPanel = ({ link, title }: IArrowPanelProps) => (
   </Link>
 );
 
-export { ArrowPanel };
+export { ArrowPanel, IArrowPanelProps };
