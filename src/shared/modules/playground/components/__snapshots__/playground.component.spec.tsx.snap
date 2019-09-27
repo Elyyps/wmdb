@@ -1,38 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`[PlaygroundComponent] should render without crashing 1`] = `
-<Fragment>
-  <div
-    className=""
-  >
-    <FooterComponent
-      footer={
-        Object {
-          "links": Array [
-            Object {
-              "title": "info@wmdb.nl",
-              "url": "/",
-            },
-            Object {
-              "title": "Web-Effects",
-              "url": "/",
-            },
-            Object {
-              "title": "Algemene voorwaarden",
-              "url": "/",
-            },
-            Object {
-              "title": "Privacystatement",
-              "url": "/",
-            },
-            Object {
-              "title": "Disclaimer",
-              "url": "/",
-            },
-          ],
-        }
-      }
-    />
-  </div>
-</Fragment>
-`;
+exports[`[PlaygroundComponent] should render without crashing 1`] = `<Fragment />`;

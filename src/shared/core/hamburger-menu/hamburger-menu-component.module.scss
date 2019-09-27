@@ -4,6 +4,7 @@
   &__navigation {
     li {
       margin-bottom: 8px;
+      width: fit-content;
       a {
         text-decoration: none;
         color: $global-inverse-color;

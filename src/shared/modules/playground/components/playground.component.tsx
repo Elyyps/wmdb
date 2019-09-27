@@ -48,9 +48,9 @@ const PlaygroundComponent = (props: IPlaygroundComponentProps & PlaygroundContai
     {/* <div className={""}>
       <NavBarComponent navbar={navbarData} />
     </div> */}
-    <div className={""}>
+    {/* <div className={""}>
       <FooterComponent footer={footerData} />
-    </div>
+    </div> */}
     {/* <div className={"uk-container"}>
       <OutingCardComponent {...card} />
     </div> */}
