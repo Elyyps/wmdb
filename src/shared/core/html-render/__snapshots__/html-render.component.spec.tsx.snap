@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[HtmlRender] should render component without crashing 1`] = `
+<Fragment>
+  <h1
+    key="0"
+  >
+    HTML rendered
+  </h1>
+  <br
+    key="1"
+  />
+  From a string/&gt;
+   
+</Fragment>
+`;
