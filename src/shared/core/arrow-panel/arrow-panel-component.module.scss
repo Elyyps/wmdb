@@ -29,6 +29,7 @@
 
     path {
       stroke: currentColor;
+      fill: none !important;
     }
   }
 
@@ -38,6 +39,9 @@
     background-color: $brand-primary;
     .arrow-panel__arrow {
       color: $global-inverse-color;
+      path {
+        fill: none;
+      }
     }
   }
 }

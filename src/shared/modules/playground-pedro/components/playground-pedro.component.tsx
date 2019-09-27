@@ -27,9 +27,11 @@ const PlaygroundPedroComponent = (props: IPlaygroundPedroComponentProps) => (
       <ArrowPanelListComponent {...generateDummyArrowPanelListData()} />
       <BodyTextComponent html={generateDummyBodyText()} />
       <Checkbox label="Checkbox Label" />
-      <Checkbox isChecked label="Checkbox checked" />
+      <Checkbox onChange={()=>{
+        console.log("checkbox changed")
+      }} isChecked label="Checkbox checked" />
       <div className={style["components"]} style={{ display: "flex", flexDirection: "column" }}>
-        <Button title="Button primary" />
+        <Button variant="primary" title="Button primary" />
         <Button variant="secondary" title="Button secondary" />
       </div>
     </div>
