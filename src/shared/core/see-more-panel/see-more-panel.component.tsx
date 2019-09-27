@@ -13,7 +13,7 @@ const SeeMorePanel = ({ link, title }: ISeeMorePanelProps) => (
   <Link to={link} className={styles["see-more-panel"]}>
     <div className={styles["see-more-panel__title"]}>{title}</div>
     <div className={styles["see-more-panel__arrow"]}>
-      <IconComponent icon={Arrow} size={"14px"} stroke />
+      <IconComponent icon={Arrow} size={"14px"} strokeColor="#b7b7b7" />
     </div>
   </Link>
 );
