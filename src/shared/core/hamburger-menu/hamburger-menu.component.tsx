@@ -1,6 +1,7 @@
 import * as React from "react";
 import styles from "./hamburger-menu-component.module.scss";
-import { LinkComponent, ILink } from "../link";
+import { LinkComponent } from "../link";
+import { ILink } from "@app/api/core/link";
 
 export interface IHamburgerMenuComponentProps {
   menuItems: ILink[];
