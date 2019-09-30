@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[CompanyOutingCard] should render component without crashing 1`] = `
+<div
+  className="company-outing-card"
+>
+  <div
+    className="blog-card__head"
+  >
+    <div
+      className="blog-card__date"
+    />
+  </div>
+  <div
+    className="blog-card__image"
+  >
+    <ImageComponent />
+  </div>
+  <h4
+    className="blog-card__title"
+  />
+  <div
+    className="blog-card__content"
+  />
+  <Button
+    icon="chevron-right.svg"
+    position="left"
+  />
+</div>
+`;
