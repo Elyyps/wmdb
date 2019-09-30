@@ -3,5 +3,24 @@
 exports[`[PlaygroundComponent] should render without crashing 1`] = `
 <div
   className="uk-container"
-/>
+  style={
+    Object {
+      "width": "360px",
+    }
+  }
+>
+  <CompanyOutingCardComponent
+    button={
+      Object {
+        "link": "#",
+        "title": "Lees meer",
+      }
+    }
+    content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc…"
+    data="18 sep. 2017"
+    icon="eten.svg"
+    image="img02.png"
+    title="Blog titel"
+  />
+</div>
 `;
