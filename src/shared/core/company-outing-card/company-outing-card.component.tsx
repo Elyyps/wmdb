@@ -3,11 +3,12 @@ import styles from "./company-outing-card-component.module.scss";
 import { IconComponent } from "../icon";
 import { ImageComponent } from "../image";
 import Arrow from "@assets/icons/chevron-right.svg";
-import { Button } from "../button";
+import { ILink } from "@app/api/core/link/link";
+import { Button } from "@app/prep/modules-prep/core";
 
 export interface ICompanyOutingCardComponentProps {
-  button?: any;
-  content?: any;
+  button?: ILink;
+  content?: string;
   data?: string;
   icon?: string;
   image?: string;
@@ -32,7 +33,7 @@ const CompanyOutingCardComponent = ({
     </div>
     <h4 className={styles["company-outing-card__title"]}>{title}</h4>
     <div className={styles["company-outing-card__content"]}>{content}</div>
-    <Button icon={Arrow} {...button} position={"left"} />
+    {button && <Button icon={Arrow} title={button.title} href={button.url} position={"left"} />}
   </div>
 );
 

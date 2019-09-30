@@ -24,7 +24,7 @@ const FeaturedPostsData = {
   data: "18 sep. 2017",
   button: {
     title: "Lees meer",
-    link: "#"
+    url: "#"
   }
 };
 const PlaygroundComponent = (props: IPlaygroundComponentProps & PlaygroundContainerProps) => (

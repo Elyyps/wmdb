@@ -12,8 +12,8 @@ exports[`[PlaygroundComponent] should render without crashing 1`] = `
   <CompanyOutingCardComponent
     button={
       Object {
-        "link": "#",
         "title": "Lees meer",
+        "url": "#",
       }
     }
     content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc…"

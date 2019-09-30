@@ -22,9 +22,5 @@ exports[`[CompanyOutingCard] should render component without crashing 1`] = `
   <div
     className="company-outing-card__content"
   />
-  <Button
-    icon="chevron-right.svg"
-    position="left"
-  />
 </div>
 `;
