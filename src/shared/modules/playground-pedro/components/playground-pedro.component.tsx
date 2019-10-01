@@ -11,6 +11,7 @@ import { BodyTextComponent } from "@app/core/bodytext";
 import { generateDummyBodyText } from "@app/api/core/bodytext";
 import { Checkbox } from "@app/core/checkbox/checkbox.component";
 import { Button } from "@app/core/button";
+import { Breadcrumb } from "@app/core/breadcrumb";
 
 export interface IPlaygroundPedroComponentProps {}
 
@@ -22,18 +23,14 @@ const PlaygroundPedroComponent = (props: IPlaygroundPedroComponentProps) => (
       }}
       heroModule={generateDummyHeroModule()}
     />
-    <CategoryOverviewComponent categoryOverviewModule={CategoryOverviewDummyData} />
     <div style={{ maxWidth: "500px" }} className="uk-container">
-      <ArrowPanelListComponent {...generateDummyArrowPanelListData()} />
-      <BodyTextComponent html={generateDummyBodyText()} />
-      <Checkbox label="Checkbox Label" />
-      <Checkbox onChange={()=>{
-        console.log("checkbox changed")
-      }} isChecked label="Checkbox checked" />
-      <div className={style["components"]} style={{ display: "flex", flexDirection: "column" }}>
-        <Button variant="primary" title="Button primary" />
-        <Button variant="secondary" title="Button secondary" />
-      </div>
+      <Breadcrumb
+        breadcrumbs={[
+          { title: "Home", url: "/" },
+          { title: "Citygames in Amasterdam", url: "/" },
+          { title: "Second page", url: "" }
+        ]}
+      />
     </div>
   </div>
 );
