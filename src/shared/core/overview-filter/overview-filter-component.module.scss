@@ -1,0 +1,39 @@
+.overview-filter {
+  &__header {
+    padding-bottom: 12px;
+    > * {
+      margin: 8px 0 !important;
+    }
+  }
+  &__item {
+    > * {
+      margin: 8px 0;
+    }
+    padding: 12px 0;
+    position: relative;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-bottom: 4px;
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-top: 16px;
+    &:after {
+      content: "";
+      height: 1px;
+      background-color: $global-border;
+      width: 110%;
+      top: 0;
+      margin-left: -16px;
+      position: absolute;
+      left: 0;
+    }
+  }
+}

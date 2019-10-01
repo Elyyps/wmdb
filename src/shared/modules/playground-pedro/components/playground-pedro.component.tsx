@@ -11,31 +11,51 @@ import { BodyTextComponent } from "@app/core/bodytext";
 import { generateDummyBodyText } from "@app/api/core/bodytext";
 import { Checkbox } from "@app/core/checkbox/checkbox.component";
 import { Button } from "@app/core/button";
+import { OverviewFilterComponent } from "@app/core/overview-filter";
+import { dummyOverviewFilterData } from "@app/api/core/overview-filter";
 
 export interface IPlaygroundPedroComponentProps {}
 
-const PlaygroundPedroComponent = (props: IPlaygroundPedroComponentProps) => (
-  <div className={style["main"]}>
-    <HeroComponent
-      onSubmit={obj => {
-        console.log(obj);
-      }}
-      heroModule={generateDummyHeroModule()}
-    />
-    <CategoryOverviewComponent categoryOverviewModule={CategoryOverviewDummyData} />
-    <div style={{ maxWidth: "500px" }} className="uk-container">
-      <ArrowPanelListComponent {...generateDummyArrowPanelListData()} />
-      <BodyTextComponent html={generateDummyBodyText()} />
-      <Checkbox label="Checkbox Label" />
-      <Checkbox onChange={()=>{
-        console.log("checkbox changed")
-      }} isChecked label="Checkbox checked" />
-      <div className={style["components"]} style={{ display: "flex", flexDirection: "column" }}>
-        <Button variant="primary" title="Button primary" />
-        <Button variant="secondary" title="Button secondary" />
+const PlaygroundPedroComponent = (props: IPlaygroundPedroComponentProps) => {
+  const CheckboxObject: any = {};
+  const [checkedItems, setCheckedItems] = React.useState(CheckboxObject);
+  const [range, setRange] = React.useState(0);
+  const handleOnChangeRange = (value: any) => {
+    setRange(value);
+  };
+  const handleChange = (event: any) => {
+    setCheckedItems({
+      ...checkedItems,
+      [event.target.name]: {
+        isChecked: event.target.checked,
+        value: event.target.value
+      }
+    });
+  };
+  return (
+    <div className={style["main"]}>
+      <HeroComponent
+        onSubmit={obj => {
+          console.log(obj);
+        }}
+        heroModule={generateDummyHeroModule()}
+      />
+      <CategoryOverviewComponent categoryOverviewModule={CategoryOverviewDummyData} />
+
+      <div className="uk-grid">
+        <div style={{ background: "white", padding: 24 }} className="uk-width-1-4@m">
+          <OverviewFilterComponent
+            searchPlaceholder="Plaats, regio of provincie"
+            rangeOnChange={handleOnChangeRange}
+            range={range}
+            checkboxOnChange={handleChange}
+            stateCheckboxes={checkedItems}
+            {...dummyOverviewFilterData}
+          />
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export { PlaygroundPedroComponent };

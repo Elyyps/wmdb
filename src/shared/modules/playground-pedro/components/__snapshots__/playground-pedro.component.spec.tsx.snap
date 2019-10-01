@@ -102,82 +102,163 @@ exports[`[PlaygroundPedroComponent] should render without crashing 1`] = `
     }
   />
   <div
-    className="uk-container"
-    style={
-      Object {
-        "maxWidth": "500px",
-      }
-    }
+    className="uk-grid"
   >
-    <ArrowPanelListComponent
-      icon="eten.svg"
-      items={
-        Array [
-          Object {
-            "link": "/",
-            "title": "Wat is Lorem Ipsum?",
-          },
-          Object {
-            "link": "/",
-            "title": "Hoe lang zijn mijn aanbiedingen of vacatures zichtbaar op indebuurt?",
-          },
-          Object {
-            "link": "/",
-            "title": "Hoe kan ik mijn (wekelijkse) aanbieding of vacature aanleveren?",
-          },
-          Object {
-            "link": "/",
-            "title": "Hoe lang staat mijn artikel op de homepagina, waar komt het vandaan?",
-          },
-          Object {
-            "link": "/",
-            "title": "Waar kan ik het vinden?",
-          },
-          Object {
-            "link": "/",
-            "title": "Waar kan ik het vinden?",
-          },
-        ]
-      }
-      linkMore={
-        Object {
-          "link": "/",
-          "title": "Alle veelgestelde vragen over musea",
-        }
-      }
-      title="Spel & Ontspanning"
-    />
-    <BodyTextComponent
-      html="
-<div style=\\"padding-bottom: 64px\\">
-<h1 style=\\"margin-top: 64px\\">I'm the BodyText Module</h1>
-<h2>I came from a plein HTML string</h2>
-<span style=\\" backgroundColor: red; min-width: 100%; width: 100%; color: white; text-align: center;\\">And I support inline style</span> 
-</div>
-"
-    />
-    <Checkbox
-      label="Checkbox Label"
-    />
-    <Checkbox
-      isChecked={true}
-      label="Checkbox checked"
-    />
     <div
-      className="components"
+      className="uk-width-1-4@m"
       style={
         Object {
-          "display": "flex",
-          "flexDirection": "column",
+          "background": "white",
+          "padding": 24,
         }
       }
     >
-      <Button
-        title="Button primary"
-      />
-      <Button
-        title="Button secondary"
-        variant="secondary"
+      <OverviewFilterComponent
+        checkboxOnChange={[Function]}
+        filterItems={
+          Array [
+            Object {
+              "checkboxes": Array [
+                Object {
+                  "label": "Citygames",
+                  "name": "citygames",
+                },
+                Object {
+                  "label": "Beachgames",
+                  "name": "Beachgames",
+                },
+                Object {
+                  "label": "Indoor Spel en Ontspanning",
+                  "name": "IndoorSpelenOntspanning",
+                },
+                Object {
+                  "label": "Outdoor Spel en Ontspanning",
+                  "name": "Outdoor Spel en Ontspanning",
+                },
+              ],
+              "title": "Spen & Ontspanning",
+            },
+            Object {
+              "checkboxes": Array [
+                Object {
+                  "label": "Fun op Wielen",
+                  "name": "Funopwielen",
+                },
+                Object {
+                  "label": "Outdoor Lucht",
+                  "name": "Outdoor Lucht",
+                },
+                Object {
+                  "label": "Outdoor Water",
+                  "name": "outdoorwater",
+                },
+                Object {
+                  "label": "Indoor Sport en Actie",
+                  "name": "indorsportenactie",
+                },
+              ],
+              "title": "Sportief & Actie(f)",
+            },
+            Object {
+              "checkboxes": Array [
+                Object {
+                  "label": "Creatief",
+                  "name": "creatief",
+                },
+                Object {
+                  "label": "Theater",
+                  "name": "theater",
+                },
+                Object {
+                  "label": "Muziek en Daans",
+                  "name": "muziekendaans",
+                },
+              ],
+              "title": "Creatieve Uitjes",
+            },
+            Object {
+              "checkboxes": Array [
+                Object {
+                  "label": "Kookworkshops",
+                  "name": "kookworkshops",
+                },
+                Object {
+                  "label": "Kunst en Cultuur",
+                  "name": "kunstencultuur",
+                },
+                Object {
+                  "label": "Body en Spirit",
+                  "name": "bodyenspirit",
+                },
+              ],
+              "title": "Workshops",
+            },
+            Object {
+              "checkboxes": Array [
+                Object {
+                  "label": "Eten en drinken",
+                  "name": "etenendrinken",
+                },
+                Object {
+                  "label": "Themafeesten",
+                  "name": "Themafeesten",
+                },
+                Object {
+                  "label": "Totaalprogramma",
+                  "name": "totaalprogramma",
+                },
+                Object {
+                  "label": "Attracties en Entertainment",
+                  "name": "Attractiesenentertainment",
+                },
+              ],
+              "title": "Eten, Drinken & Feesten",
+            },
+            Object {
+              "checkboxes": Array [
+                Object {
+                  "label": "Teamtraining",
+                  "name": "Teamtraining",
+                },
+                Object {
+                  "label": "Teambuilding",
+                  "name": "Teambuilding",
+                },
+                Object {
+                  "label": "Uit Vergaderen",
+                  "name": "Uit Vergaderen",
+                },
+              ],
+              "title": "Teambuilden",
+            },
+            Object {
+              "checkboxes": Array [
+                Object {
+                  "label": "Wintersport",
+                  "name": "wintersport",
+                },
+                Object {
+                  "label": "Stedentrips",
+                  "name": "stedentrips",
+                },
+                Object {
+                  "label": "Adventure & Outdoor",
+                  "name": "adventureeoutdoor",
+                },
+                Object {
+                  "label": "Reizen Buitenland",
+                  "name": "reizenbuitenland",
+                },
+              ],
+              "title": "Incentives",
+            },
+          ]
+        }
+        range={0}
+        rangeMax={100}
+        rangeOnChange={[Function]}
+        searchPlaceholder="Plaats, regio of provincie"
+        stateCheckboxes={Object {}}
       />
     </div>
   </div>
