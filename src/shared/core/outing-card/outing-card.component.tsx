@@ -3,23 +3,25 @@ import styles from "./outing-card-component.module.scss";
 import { IconComponent } from "../icon";
 import { LinkComponent } from "../link";
 import { OutingCardImage } from "./outing-card-image.component";
-import { IButtonProps, Button } from "@app/prep/modules-prep/core";
+import { Button } from "@app/prep/modules-prep/core";
 import IconCalendar from "@assets/icons/calendar.svg";
 import classNames from "classnames";
 import IconDown from "@assets/icons/chevron-down.svg";
+import { ILink } from "@app/api/core/link";
 
 export interface IOutingCardComponentProps {
-  button: IButtonProps;
-  content?: any;
+  button: ILink;
+  content?: string;
   data: {
     icon?: string;
-    label: string;
+    label?: string;
+    unit?: string;
   };
   date?: {
     end: string;
     start: string;
   };
-  image?: any;
+  image?: string[];
   modify?: string;
   subtitle?: string;
   title?: string;
@@ -41,7 +43,7 @@ const OutingCardComponent = ({
   };
 
   const styleOpen = isOpen ? "show" : "hide";
-  const modifyCard = modify ? `${styles["outing-card--"]}${modify}` : "";
+  const modifyCard = modify ? styles[`outing-card--${modify}`] : "";
 
   const classModify = classNames(styles["outing-card"], { "outing-card--event": date }, modifyCard, styleOpen);
 
@@ -52,7 +54,7 @@ const OutingCardComponent = ({
       <div className={styles["card-body"]}>
         <div className={styles["card-head"]}>
           <div className={styles["card-title"]}>
-            <h3>{button.href ? <LinkComponent to={button.href}>{title}</LinkComponent> : { title }}</h3>
+            <h3>{button.url ? <LinkComponent to={button.url}>{title}</LinkComponent> : { title }}</h3>
           </div>
           <div className={styles["card-subtitle"]}>{subtitle}</div>
           {date ? (
@@ -79,11 +81,13 @@ const OutingCardComponent = ({
             ) : null}
             <div className={styles["card-label"]}>
               <IconComponent icon={data.icon} size={"20px"} />
-              <span>{data.label}</span>
+              <span>
+                {data.label} <span className={styles["card-label-unit"]}>{data.unit}</span>
+              </span>
             </div>
           </div>
           <div className={styles["card-action"]}>
-            <Button title={button.title} href={button.href} />
+            <Button title={button.title} href={button.url} />
           </div>
         </div>
       </div>

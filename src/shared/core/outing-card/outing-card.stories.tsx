@@ -13,11 +13,12 @@ const card = {
   image: [PlaceholderImage, PlaceholderImage1, PlaceholderImage, PlaceholderImage1],
   button: {
     title: "Lees meer",
-    href: "#"
+    url: "#"
   },
   data: {
     icon: ROOMS,
-    label: "10 - 1000 personen"
+    label: "10 - 1000",
+    unit: "personen"
   },
   content:
     "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
