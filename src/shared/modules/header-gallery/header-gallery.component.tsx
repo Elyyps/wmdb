@@ -4,7 +4,7 @@ import { IconComponent } from "@app/core/icon";
 import { ImageComponent } from "@app/core/image";
 import IconImage from "@assets/icons/images.svg";
 import IconPlay from "@assets/icons/play.svg";
-import AliceCarousel from "react-alice-carousel";
+import AliceCarousel, { EventObject } from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { getArrow } from "@app/constants/icons";
 
@@ -35,7 +35,7 @@ const HeaderGalleryComponent = (props: IHeaderGalleryComponentProps) => {
           <div className={`${styles["header-gallery__col"]} ${styles["large"]}`}>
             <div className={styles["header-gallery__slider_images"]}>
               <AliceCarousel
-                onSlideChanged={e => setCurrentImage(e.slide)}
+                onSlideChanged={(e: EventObject) => setCurrentImage(e.slide)}
                 dotsDisabled
                 startIndex={currentImage}
                 responsive={responsive}
