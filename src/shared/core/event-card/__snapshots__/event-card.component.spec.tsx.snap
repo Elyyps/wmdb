@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[EventCard] should render component without crashing 1`] = `
+<div
+  className="event-card"
+>
+  <div
+    className="event-card-head"
+  >
+    <LinkComponent
+      to=""
+    >
+      <img
+        alt="image"
+      />
+    </LinkComponent>
+    <div
+      className="event-card-title"
+    >
+      <h4 />
+    </div>
+  </div>
+</div>
+`;
