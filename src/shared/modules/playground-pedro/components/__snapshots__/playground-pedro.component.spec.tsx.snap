@@ -4,103 +4,6 @@ exports[`[PlaygroundPedroComponent] should render without crashing 1`] = `
 <div
   className="main"
 >
-  <HeroComponent
-    heroModule={
-      Object {
-        "buttonTitle": "Toon 500 uijtes",
-        "dropdownCompanyItems": Array [
-          Object {
-            "text": "Item #1",
-            "value": 1,
-          },
-          Object {
-            "text": "Item #2",
-            "value": 2,
-          },
-          Object {
-            "text": "Item #3",
-            "value": 3,
-          },
-        ],
-        "dropdownCompanyPlaceholder": "Kies een bedrijfsuitje categorie",
-        "image": "img01.png",
-        "keywordPlaceholder": "Zoekwoord",
-        "numberPersonsPlaceholder": "Aantal personen",
-        "provincePlaceholder": "Provincie of Plaats",
-        "title": "Wat gaan we dít jaar doen?! Vergelijk online gemakkelijk álle bedrijfsuitjes van Nederland",
-      }
-    }
-    onSubmit={[Function]}
-  />
-  <CategoryOverviewComponent
-    categoryOverviewModule={
-      Object {
-        "backgroundColor": "#e8f2fc",
-        "items": Array [
-          Object {
-            "count": 200,
-            "icon": "spel.svg",
-            "image": "img02.png",
-            "link": "/",
-            "title": "Musea",
-          },
-          Object {
-            "count": 200,
-            "icon": "spel.svg",
-            "image": "img02.png",
-            "link": "/",
-            "title": "Musea",
-          },
-          Object {
-            "count": 200,
-            "icon": "spel.svg",
-            "image": "img02.png",
-            "link": "/",
-            "title": "Musea",
-          },
-          Object {
-            "count": 200,
-            "icon": "spel.svg",
-            "image": "img02.png",
-            "link": "/",
-            "title": "Musea",
-          },
-          Object {
-            "count": 200,
-            "icon": "spel.svg",
-            "image": "img02.png",
-            "link": "/",
-            "title": "Musea",
-          },
-          Object {
-            "count": 20,
-            "icon": "spel.svg",
-            "image": "img02.png",
-            "link": "/",
-            "title": "Musea",
-          },
-          Object {
-            "image": "img02.png",
-            "link": "/",
-            "title": "Musea",
-          },
-          Object {
-            "image": "img02.png",
-            "link": "/",
-            "title": "Musea",
-          },
-          Object {
-            "image": "img02.png",
-            "link": "/",
-            "title": "Musea",
-          },
-        ],
-        "paddingBottom": "72px",
-        "paddingTop": "72px",
-        "title": "Kies direct een categorie om het aanbod te bekijken!",
-      }
-    }
-  />
   <div
     className="uk-grid"
   >
@@ -114,7 +17,14 @@ exports[`[PlaygroundPedroComponent] should render without crashing 1`] = `
       }
     >
       <OverviewFilterComponent
-        checkboxOnChange={[Function]}
+        clearFilter={[Function]}
+        currentFilter={
+          Object {
+            "checkedItems": Array [],
+            "filterText": "",
+            "range": 0,
+          }
+        }
         filterItems={
           Array [
             Object {
@@ -254,11 +164,11 @@ exports[`[PlaygroundPedroComponent] should render without crashing 1`] = `
             },
           ]
         }
+        filterText=""
+        onFilterChange={[Function]}
         range={0}
         rangeMax={100}
-        rangeOnChange={[Function]}
         searchPlaceholder="Plaats, regio of provincie"
-        stateCheckboxes={Object {}}
       />
     </div>
   </div>

@@ -14,7 +14,7 @@ interface IInputProps {
   isSuccess?: boolean;
   label?: string;
   name: string;
-  onChange?: (text: string) => void;
+  onChange?: (e: string) => void;
   onClick?: any;
   placeholder?: string;
   type?: string;

@@ -13,12 +13,13 @@ import { Checkbox } from "@app/core/checkbox/checkbox.component";
 import { Button } from "@app/core/button";
 import { OverviewFilterComponent } from "@app/core/overview-filter";
 import { dummyOverviewFilterData } from "@app/api/core/overview-filter";
+import { IOverviewFilterItem } from "../../../core/overview-filter/overview-filter.component";
 
 export interface IPlaygroundPedroComponentProps {}
 
 const PlaygroundPedroComponent = (props: IPlaygroundPedroComponentProps) => {
-  const CheckboxObject: any = {};
-  const [checkedItems, setCheckedItems] = React.useState(CheckboxObject);
+  const CheckboxObject: IOverviewFilterItem = { checkedItems: [], filterText: "", range: 0 };
+  const [checkedItems, setCheckedItems] = React.useState<any>(CheckboxObject);
   const [range, setRange] = React.useState(0);
   const [filterText, setFilterText] = React.useState("");
   const handleOnChangeRange = (value: any) => {
@@ -39,14 +40,15 @@ const PlaygroundPedroComponent = (props: IPlaygroundPedroComponentProps) => {
         <div style={{ background: "white", padding: 24 }} className="uk-width-1-4@m">
           <OverviewFilterComponent
             searchPlaceholder="Plaats, regio of provincie"
-            rangeOnChange={handleOnChangeRange}
             range={range}
             filterText={filterText}
-            filterTextOnChange={setFilterText}
-            checkboxOnChange={handleChange}
-            stateCheckboxes={checkedItems}
+            currentFilter={checkedItems}
+            onFilterChange={(obj: object) => {
+              setCheckedItems(obj);
+            }}
+            // stateCheckboxes={checkedItems}
             clearFilter={() => {
-              setFilterText('');
+              setFilterText("");
               setCheckedItems([]);
               setRange(100);
             }}

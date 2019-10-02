@@ -11,6 +11,12 @@ import { Button } from "../button";
 import CROSS from "@assets/icons/cross.svg";
 import { IconComponent } from "@app/core/icon";
 
+export interface IOverviewFilterItem {
+  checkedItems: string[];
+  filterText: string;
+  range: number;
+}
+
 export interface IOverviewFilterCategoryItem {
   checkboxes: ICheckbox[];
   title: string;
@@ -18,25 +24,51 @@ export interface IOverviewFilterCategoryItem {
 
 export interface IOverviewFilterComponentProps {
   checkboxCount?: number;
-  checkboxOnChange?: any;
+  checkedItems?: any;
   clearFilter?: () => void;
+  currentFilter?: IOverviewFilterItem;
   date?: any;
   dateOnchange?: any;
   filterItems?: IOverviewFilterCategoryItem[];
   filterText?: string;
-  filterTextOnChange?: (text: string) => void;
-  onFilterChange?: (event: React.ChangeEvent) => void;
+  onFilterChange: (filterOptions: IOverviewFilterItem) => void;
   range?: number;
   rangeMax?: number;
-  rangeOnChange: (event: any) => void;
   searchPlaceholder: string;
-  selectOptions?: any;
   sidebarList?: any;
-  stateCheckboxes?: any;
 }
 
 const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
   const [isActive, setIsActive] = React.useState(false);
+  const CheckboxObject: any = {};
+  const [checkedItems, setCheckedItems] = React.useState(CheckboxObject);
+  const [range, setRange] = React.useState<any>(null);
+  const [filterText, setFilterText] = React.useState("");
+
+  const {
+    onFilterChange,
+    searchPlaceholder,
+    checkboxCount,
+    rangeMax,
+    filterItems,
+    dateOnchange,
+    date,
+    sidebarList,
+    currentFilter
+  } = props;
+
+  const clearFilter = () => {
+    setCheckedItems([]);
+    setFilterText("");
+    setRange(0);
+  };
+  const initializeFilter = () => {
+    if (currentFilter) {
+      if (currentFilter.checkedItems) setCheckedItems(currentFilter.checkedItems);
+      if (currentFilter.range) setRange(currentFilter.range);
+      if (currentFilter.filterText) setFilterText(currentFilter.filterText);
+    }
+  };
   const handelClick = () => {
     setIsActive(!isActive);
   };
@@ -44,29 +76,21 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
     if (isActive) {
       document.documentElement.style.overflow = "hidden";
       document.body.style.overflowY = "scroll";
+      initializeFilter();
     }
 
     return () => {
       document.documentElement.style.overflow = "auto";
       document.body.style.overflow = "auto";
+      clearFilter();
     };
   }, [isActive]);
-  const {
-    searchPlaceholder,
-    stateCheckboxes,
-    filterText,
-    filterTextOnChange,
-    checkboxCount,
-    range,
-    rangeMax,
-    filterItems,
-    checkboxOnChange,
-    dateOnchange,
-    date,
-    sidebarList,
-    rangeOnChange,
-    clearFilter
-  } = props;
+  React.useEffect(() => {
+    initializeFilter();
+  }, []);
+  React.useEffect(() => {
+    initializeFilter();
+  }, [currentFilter]);
 
   return (
     <div className={styles["overview-filter-wrapper"]}>
@@ -84,9 +108,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
             <h2>Filters</h2>
             <span
               onClick={() => {
-                if (clearFilter) {
-                  clearFilter();
-                }
+                clearFilter();
               }}
               role="button"
               className={"uk-hidden@m"}
@@ -99,7 +121,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
             <h2>Filters</h2>
             <Input
               value={filterText}
-              onChange={filterTextOnChange}
+              onChange={setFilterText}
               placeholder={searchPlaceholder}
               icon={Search}
               name={"search"}
@@ -108,7 +130,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
         )}
         {isActive && (
           <Input
-            onChange={filterTextOnChange}
+            onChange={setFilterText}
             value={filterText}
             placeholder={searchPlaceholder}
             icon={Search}
@@ -122,13 +144,21 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
               {filterItem.checkboxes.map((item, itemKey) => (
                 <Checkbox
                   key={itemKey}
-                  isChecked={stateCheckboxes[item.name] ? stateCheckboxes[item.name].isChecked : false}
+                  isChecked={checkedItems[item.name] ? checkedItems[item.name].isChecked : false}
                   id={key}
                   label={item.label}
                   name={item.name}
                   value={item.label}
                   count={checkboxCount}
-                  onChange={checkboxOnChange}
+                  onChange={(event: any) => {
+                    setCheckedItems({
+                      ...checkedItems,
+                      [event.target.name]: {
+                        isChecked: event.target.checked,
+                        value: event.target.value
+                      }
+                    });
+                  }}
                 />
               ))}
             </div>
@@ -137,7 +167,14 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
           <div className={styles["overview-filter__item"]}>
             <h5>Personen</h5>
             <div className="input-range__wrapper">
-              <InputRange maxValue={rangeMax} minValue={0} value={range ? range : 0} onChange={rangeOnChange} />
+              <InputRange
+                maxValue={rangeMax}
+                minValue={0}
+                value={range ? range : 0}
+                onChange={event => {
+                  setRange(event);
+                }}
+              />
               <div className="input-range__items">
                 <span>{range}+</span>
                 <span>{rangeMax}+</span>
@@ -164,7 +201,17 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
           </div>
         )}
         <div className={`${styles["overview-filter__footer"]} uk-hidden@m`}>
-          <Button fullWidth title={"Toon uitjes"} variant={"primary"} />
+          <Button
+            onClick={() => {
+              if (onFilterChange) {
+                onFilterChange({ checkedItems, filterText, range });
+                setIsActive(false);
+              }
+            }}
+            fullWidth
+            title={"Toon uitjes"}
+            variant={"primary"}
+          />
         </div>
       </div>
     </div>

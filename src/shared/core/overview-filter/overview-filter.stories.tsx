@@ -12,10 +12,8 @@ storiesOf("OverviewFilter", module)
   .add("Basic implementation", () => (
     <OverviewFilterComponent
       searchPlaceholder="Plaats, regio of provincie"
-      rangeOnChange={jest.fn()}
       range={0}
-      checkboxOnChange={jest.fn()}
-      stateCheckboxes={[]}
+      onFilterChange={jest.fn()}
       {...dummyOverviewFilterData}
     />
   ));
