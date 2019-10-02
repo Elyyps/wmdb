@@ -18,14 +18,15 @@ interface IInputProps {
   onClick?: any;
   placeholder?: string;
   type?: string;
+  value?: string;
 }
 
 const Input = (props: IInputProps) => {
-  const { name, type, placeholder, classModify, icon, label, isError, isSuccess } = props;
+  const { name, type, placeholder, classModify, value, icon, label, isError, isSuccess } = props;
   const inputClassName = classNames(styles["input"], {
     [styles[`input--${classModify}`]]: classModify
   });
-  const [value, setValue] = useState("");
+  const [valueLocal, setValueLocal] = useState("");
   const wrapperClassnames = classNames({
     [styles["error"]]: isError,
     [styles["isIcon"]]: icon,
@@ -33,15 +34,19 @@ const Input = (props: IInputProps) => {
   });
   const handleChange = (event: any) => {
     {
-      setValue(event.target.value);
+      setValueLocal(event.target.value);
       if (props.onChange) {
         props.onChange(event.target.value);
       }
     }
   };
 
+  React.useEffect(() => {
+    if (value !== undefined) setValueLocal(value);
+  }, [value]);
+
   const handelClear = () => {
-    setValue("");
+    setValueLocal("");
   };
 
   return (
@@ -59,7 +64,7 @@ const Input = (props: IInputProps) => {
             placeholder={placeholder}
             className={inputClassName}
             name={name}
-            value={value}
+            value={valueLocal}
           />
           {icon && <IconComponent icon={icon} size={"15px"} />}
           {value && !isSuccess && (

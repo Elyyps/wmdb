@@ -20,6 +20,7 @@ const PlaygroundPedroComponent = (props: IPlaygroundPedroComponentProps) => {
   const CheckboxObject: any = {};
   const [checkedItems, setCheckedItems] = React.useState(CheckboxObject);
   const [range, setRange] = React.useState(0);
+  const [filterText, setFilterText] = React.useState("");
   const handleOnChangeRange = (value: any) => {
     setRange(value);
   };
@@ -34,22 +35,21 @@ const PlaygroundPedroComponent = (props: IPlaygroundPedroComponentProps) => {
   };
   return (
     <div className={style["main"]}>
-      <HeroComponent
-        onSubmit={obj => {
-          console.log(obj);
-        }}
-        heroModule={generateDummyHeroModule()}
-      />
-      <CategoryOverviewComponent categoryOverviewModule={CategoryOverviewDummyData} />
-
       <div className="uk-grid">
         <div style={{ background: "white", padding: 24 }} className="uk-width-1-4@m">
           <OverviewFilterComponent
             searchPlaceholder="Plaats, regio of provincie"
             rangeOnChange={handleOnChangeRange}
             range={range}
+            filterText={filterText}
+            filterTextOnChange={setFilterText}
             checkboxOnChange={handleChange}
             stateCheckboxes={checkedItems}
+            clearFilter={() => {
+              setFilterText('');
+              setCheckedItems([]);
+              setRange(100);
+            }}
             {...dummyOverviewFilterData}
           />
         </div>

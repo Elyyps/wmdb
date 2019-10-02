@@ -1,11 +1,12 @@
+
 .sidebar {
   background-color: $global-inverse-color;
-  @media(max-width: $breakpoint-small-max){
+  @media (max-width: $breakpoint-small-max) {
     padding: 16px;
     display: none;
   }
-  &-wrapper{
-    .button-search{
+  &-wrapper {
+    .button-search {
       cursor: pointer;
       background-color: $global-background;
       height: 45px;
@@ -20,7 +21,7 @@
       padding-left: 48px;
       position: relative;
       color: #6a6a6a;
-      .icon-svg{
+      .icon-svg {
         position: absolute;
         left: 16px;
         top: 50%;
@@ -28,13 +29,13 @@
       }
     }
   }
-  &__title{
-    button{
+  &__title {
+    button {
       background-color: transparent;
-      border:none;
+      border: none;
       cursor: pointer;
     }
-    @media(max-width: $breakpoint-small-max){
+    @media (max-width: $breakpoint-small-max) {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -44,8 +45,8 @@
       padding-bottom: 16px;
       margin-bottom: 16px;
       position: relative;
-      &:after{
-        content: '';
+      &:after {
+        content: "";
         position: absolute;
         left: 0;
         width: 110%;
@@ -55,26 +56,35 @@
         margin: 0 -16px;
       }
     }
-    h1,h2,h3,h4,h5{
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
       margin-bottom: 16px;
-      @media(max-width: $breakpoint-small-max){
+      @media (max-width: $breakpoint-small-max) {
         font-size: 14px;
         margin: 0;
       }
     }
   }
-   > * {
-     &:not(:last-child) {
-       margin-bottom: 24px;
-     }
-   }
-  &__item{
+  > * {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+  &__item {
     position: relative;
-    h1,h2,h3,h4,h5,h6{
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       margin-bottom: 4px;
     }
   }
-  &.isActive{
+  &.isActive {
     display: block;
     position: fixed;
     left: 0;
@@ -85,13 +95,13 @@
     overflow-y: scroll;
     overflow-x: hidden;
   }
-  &-action{
+  &-action {
     display: flex;
     justify-content: center;
     position: relative;
     padding-top: 16px;
-    &:after{
-      content: '';
+    &:after {
+      content: "";
       height: 1px;
       background-color: $global-border;
       width: 110%;
@@ -101,14 +111,14 @@
       left: 0;
     }
   }
-  &-list{
+  &-list {
     margin: 0;
     padding: 0;
     list-style: none;
     font-size: 14px;
-    a{
+    a {
       text-decoration: none;
       line-height: 1.71;
     }
   }
- }
+}
