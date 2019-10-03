@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[RadioButton] should render component without crashing 1`] = `
+<div
+  className="radio-button"
+>
+  <label
+    className="radio-button__label"
+    htmlFor="2"
+  >
+    <input
+      aria-checked="false"
+      className="radio-button__input"
+      id="2"
+      name="name"
+      type="radio"
+      value="value"
+    />
+    <div
+      className="radio-button__check"
+    />
+    <div
+      className="radio-button__check-label"
+    >
+      <span />
+    </div>
+  </label>
+</div>
+`;

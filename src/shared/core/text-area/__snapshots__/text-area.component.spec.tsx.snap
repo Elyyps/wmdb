@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[TextArea] should render component without crashing 1`] = `
+<div
+  className="text-area"
+>
+  <div
+    className=" form__item "
+  >
+    <div
+      className="form__item-holder"
+    >
+      <textarea
+        className="textarea"
+        name="name"
+        onChange={[Function]}
+        value=""
+      />
+    </div>
+     
+  </div>
+</div>
+`;

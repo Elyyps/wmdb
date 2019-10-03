@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[ContactForm] should render component without crashing 1`] = `
+<form
+  action="#"
+  className="contact-form"
+  onChange={[Function]}
+>
+  <h2>
+    Vrijblijvende offerte / prijsindicatie
+  </h2>
+  Vraag vrijblijvend een prijsindicatie aan en ontvang informatie op maat!
+  <div
+    className="contact-form-radio-label"
+  >
+    Aanhef
+  </div>
+  <div
+    className="contact-form-head"
+  >
+    <RadioButtonComponent
+      id="from-radio-dhr"
+      isChecked={true}
+      label="Dhr."
+      name="radio"
+      onChange={[Function]}
+      value="Dhr."
+    />
+    <RadioButtonComponent
+      id="from-radio-mevr"
+      label="Mevr."
+      name="radio"
+      onChange={[Function]}
+      value="Mevr."
+    />
+  </div>
+  <Input
+    label="Naam"
+    name="Naam"
+  />
+  <Input
+    label="E-mailadres"
+    name="e-mail"
+  />
+  <Input
+    label="Telefoonnummer"
+    name="phone"
+  />
+  <Input
+    label="Aantal personen"
+    name="aantal-personen"
+  />
+  <Input
+    label="Geplande datum"
+    name="geplande-datum"
+  />
+  <TextAreaComponent
+    label="Vraag of opmerking (optioneel)"
+    name="textarea"
+  />
+  <div
+    className="contact-form-bottom"
+  >
+    <Checkbox
+      isChecked={true}
+      label="Aanmelden voor de WMDK nieuwsbrief"
+      name="privacy"
+      onChange={[Function]}
+    />
+    <Button
+      title="Verstuur aanvraag"
+      variant="secondary full large"
+    />
+  </div>
+</form>
+`;
