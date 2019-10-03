@@ -2,7 +2,7 @@
 
 exports[`[ModuleSection] should render component without crashing 1`] = `
 <div
-  className="section"
+  className=" section "
   style={
     Object {
       "backgroundColor": undefined,

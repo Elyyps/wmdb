@@ -14,6 +14,7 @@ export interface IModuleSectionComponentProps {
   size?: string;
   title?: string;
   titleColor?: string;
+  visibility?: string;
 }
 
 const ModuleSectionComponent = (props: IModuleSectionComponentProps) => {
@@ -30,7 +31,7 @@ const ModuleSectionComponent = (props: IModuleSectionComponentProps) => {
   };
 
   return (
-    <div className={sectionClassName} style={style}>
+    <div className={` ${sectionClassName} ${props.visibility ? props.visibility : ""}`} style={style}>
       {props.backgroundImage && (
         <div className={styles["module-section__background"]}>
           <ImageComponent src={props.backgroundImage} />

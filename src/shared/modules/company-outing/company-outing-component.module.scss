@@ -1,0 +1,29 @@
+.company-outing {
+  &__list {
+    margin-bottom: 40px;
+  }
+  &__actions {
+    text-align: center;
+  }
+  &__title {
+    color: $global-inverse-color;
+    margin: 0 0 56px;
+    padding: 0 0 26px;
+    position: relative;
+    text-align: center;
+    @media (max-width: $breakpoint-small-max) {
+      margin: 0 0 32px;
+      padding: 0 0 20px;
+    }
+    &::after {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      content: "";
+      width: 150px;
+      height: 2px;
+      background: currentColor;
+      transform: translateX(-50%);
+    }
+  }
+}

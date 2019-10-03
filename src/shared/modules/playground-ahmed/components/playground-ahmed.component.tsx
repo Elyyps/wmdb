@@ -8,11 +8,13 @@ import { OutingCardComponent } from "@app/core/outing-card";
 import PlaceholderImage1 from "@assets/img-big.jpg";
 import PlaceholderImage from "@assets/img02.png";
 import ROOMS from "@assets/icons/rooms.svg";
+import { CompanyOutingComponent } from "@app/modules/company-outing";
+import { generateCompanyOutingData } from "@app/api/modules/company-outing/end-point";
 export interface IPlaygroundAhmedComponentProps {}
 
 const PlaygroundAhmedComponent = (props: IPlaygroundAhmedComponentProps) => (
   <div className={"uk-container"}>
-    <NewActivityComponent newActivity={generateNewActivityData()} />
+    <CompanyOutingComponent companyOuting={generateCompanyOutingData()} />
     {/* <OutingCardComponent
       {...{
         title: "Escape City - Het ontsnappingsspel van Mokum",
