@@ -15,7 +15,7 @@ export interface IPlaygroundAhmedComponentProps {}
 
 const PlaygroundAhmedComponent = (props: IPlaygroundAhmedComponentProps) => (
   <div className={"uk-container"}>
-    <ContactFormComponent />
+    <ContactFormComponent onSubmit={() => alert("submitted")} />
     {/* <OutingCardComponent
       {...{
         title: "Escape City - Het ontsnappingsspel van Mokum",

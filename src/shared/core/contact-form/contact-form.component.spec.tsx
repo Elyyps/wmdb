@@ -4,7 +4,7 @@ import { ContactFormComponent } from "./contact-form.component";
 
 describe("[ContactForm]", () => {
   it("should render component without crashing", () => {
-    const renderedComponent = shallow(<ContactFormComponent />);
+    const renderedComponent = shallow(<ContactFormComponent onSubmit={() => ""} />);
     expect(renderedComponent).toMatchSnapshot();
   });
 });
