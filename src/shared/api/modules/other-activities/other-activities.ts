@@ -1,4 +1,4 @@
-import { ILink } from "@app/api/core/link/link";
+import { ILink } from "@app/api/core/link";
 import { IEventCard } from "@app/api/core/event-card";
 
 export interface IOtherActivities {

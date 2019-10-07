@@ -15,14 +15,15 @@ import { Button } from "@app/prep/modules-prep/core";
 import { ContactModalComponent } from "./contact-modal.component";
 import { ContactTelephoneComponent } from "./contact-telephone.component";
 import { ContactDataComponent } from "./contact-data.component";
+import RECTANGLE from "@assets/rectangle.png";
+import { AdBannerComponent } from "@app/core/ad-banner";
+
 export interface IContactComponentProps {}
 
 const ContactComponent = (props: IContactComponentProps) => {
-  const count = 6;
   const [isActive, setIsActive] = React.useState(false);
   const [isData, setIsData] = React.useState(false);
   const [fullHeight, setFullHeight] = React.useState(false);
-  const [countPosts] = React.useState(count);
   const toggleForm = () => {
     setIsData(false);
     setIsActive(!isActive);
@@ -83,10 +84,17 @@ const ContactComponent = (props: IContactComponentProps) => {
             </div>
             {isActive && (
               <ContactModalComponent title={"Informatie aanvraag"} onClick={toggleForm}>
-                <ContactFormComponent onSubmit={() => ""} />
+                <ContactFormComponent onSubmit={() => alert("submitted")} />
               </ContactModalComponent>
             )}
-            <div className="uk-visible@m">{/* <Advertise /> */}</div>
+            <div className="uk-visible@m">
+              <AdBannerComponent
+                content={"Surfen? Dat doe je in Zeeland."}
+                backgroundImage={RECTANGLE}
+                button={{ title: "Meer info", url: "/" }}
+                advertisement={"Advertentie"}
+              />
+            </div>
           </div>
           <div className={styles["contact-mobile-actions"]}>
             <div className={styles["contact-mobile-head"]}>
