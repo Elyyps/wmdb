@@ -3,7 +3,7 @@ import { CalendarComponent } from "@app/prep/modules-prep/core";
 import InputRange from "react-input-range";
 import { Link } from "react-router-dom";
 import { Checkbox } from "../checkbox/checkbox.component";
-import { ICheckbox } from "@app/api/core/checkbox";
+import { ICheckbox, ICheckboxUnique } from "@app/api/core/checkbox";
 import styles from "./overview-filter-component.module.scss";
 import Search from "@assets/icons/search.svg";
 import { Input } from "../input";
@@ -12,13 +12,13 @@ import CROSS from "@assets/icons/cross.svg";
 import { IconComponent } from "@app/core/icon";
 
 export interface IOverviewFilterItem {
-  checkedItems: string[];
+  checkedItems: any;
   filterText: string;
   range: number;
 }
 
 export interface IOverviewFilterCategoryItem {
-  checkboxes: ICheckbox[];
+  checkboxes: any;
   title: string;
 }
 
@@ -44,7 +44,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
   const [checkedItems, setCheckedItems] = React.useState(CheckboxObject);
   const [range, setRange] = React.useState<any>(null);
   const [filterText, setFilterText] = React.useState("");
-
+  const MEDIUM_BREAKPOINT = 960;
   const {
     onFilterChange,
     searchPlaceholder,
@@ -71,7 +71,17 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
   };
   const handelClick = () => {
     setIsActive(!isActive);
+    initializeFilter();
   };
+
+  const sendFilterOptions = (filter: IOverviewFilterItem) => {
+    if (onFilterChange) {
+      if (window.outerWidth >= MEDIUM_BREAKPOINT) {
+        onFilterChange(filter);
+      }
+    }
+  };
+
   React.useEffect(() => {
     if (isActive) {
       document.documentElement.style.overflow = "hidden";
@@ -85,12 +95,14 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
       clearFilter();
     };
   }, [isActive]);
+
   React.useEffect(() => {
     initializeFilter();
   }, []);
+
   React.useEffect(() => {
     initializeFilter();
-  }, [currentFilter]);
+  }, [currentFilter, isActive]);
 
   return (
     <div className={styles["overview-filter-wrapper"]}>
@@ -121,7 +133,10 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
             <h2>Filters</h2>
             <Input
               value={filterText}
-              onChange={setFilterText}
+              onChange={value => {
+                setFilterText(value);
+                sendFilterOptions({ checkedItems, filterText: value, range });
+              }}
               placeholder={searchPlaceholder}
               icon={Search}
               name={"search"}
@@ -130,7 +145,10 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
         )}
         {isActive && (
           <Input
-            onChange={setFilterText}
+            onChange={value => {
+              setFilterText(value);
+              sendFilterOptions({ checkedItems, filterText: value, range });
+            }}
             value={filterText}
             placeholder={searchPlaceholder}
             icon={Search}
@@ -141,23 +159,26 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
           filterItems.map((filterItem, key) => (
             <div key={key} className={styles["overview-filter__item"]}>
               <h5>{filterItem.title}</h5>
-              {filterItem.checkboxes.map((item, itemKey) => (
+              {filterItem.checkboxes.map((item: any, itemKey: any) => (
                 <Checkbox
                   key={itemKey}
-                  isChecked={checkedItems[item.name] ? checkedItems[item.name].isChecked : false}
+                  isChecked={checkedItems[item.id] ? checkedItems[item.id].isChecked : false}
                   id={key}
                   label={item.label}
-                  name={item.name}
+                  name={item.id}
                   value={item.label}
                   count={checkboxCount}
                   onChange={(event: any) => {
-                    setCheckedItems({
+                    const newCheckedItems = {
                       ...checkedItems,
                       [event.target.name]: {
                         isChecked: event.target.checked,
+                        id: item.id,
                         value: event.target.value
                       }
-                    });
+                    };
+                    setCheckedItems(newCheckedItems);
+                    sendFilterOptions({ checkedItems: newCheckedItems, filterText, range });
                   }}
                 />
               ))}
@@ -205,8 +226,8 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
             onClick={() => {
               if (onFilterChange) {
                 onFilterChange({ checkedItems, filterText, range });
-                setIsActive(false);
               }
+              setIsActive(false);
             }}
             fullWidth
             title={"Toon uitjes"}

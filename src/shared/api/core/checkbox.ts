@@ -4,3 +4,7 @@ export interface ICheckbox {
   label: string;
   name: string;
 }
+
+export interface ICheckboxUnique extends ICheckbox{
+  id: number;
+}

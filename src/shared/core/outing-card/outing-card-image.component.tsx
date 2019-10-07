@@ -45,7 +45,7 @@ const OutingCardImage = ({ images }: IOutingCardImageProps) => {
           ))}
         </Slider>
       </div>
-      {images.length >= numberSlide ? (
+      {images.length >= numberSlide && (
         <div className={`${styles["card-images__grid"]} uk-visible@s `}>
           {images.slice(0, numberSlide).map((item: string, key: number) => (
             <div
@@ -58,8 +58,6 @@ const OutingCardImage = ({ images }: IOutingCardImageProps) => {
             </div>
           ))}
         </div>
-      ) : (
-        ""
       )}
     </div>
   );

@@ -1,0 +1,101 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: $brand-primary;
+  margin-top: 30px;
+  @media (min-width: $breakpoint-medium) {
+    margin-top: 60px;
+  }
+  @media (max-width: $breakpoint-small) {
+    width: 100%;
+    justify-content: space-between;
+  }
+  &-list {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0 10px;
+    list-style: none;
+    padding: 0 6px;
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    @media (min-width: $breakpoint-small) {
+      margin: 0 32px;
+    }
+    @media (max-width: $breakpoint-small) {
+      width: 60%;
+      justify-content: space-between;
+    }
+    li {
+      @media (min-width: $breakpoint-small) {
+        padding: 0 10px;
+      }
+      @media (max-width: $breakpoint-small) {
+        display: contents;
+      }
+    }
+  }
+  &-item {
+    padding: 3px 5px;
+    display: block;
+    position: relative;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      border-radius: 2px;
+      background: $brand-primary;
+      opacity: 0;
+      content: "";
+      transform: opacity 0.2s;
+    }
+    &:hover {
+      color: $brand-primary;
+      text-decoration: none;
+      &::after {
+        opacity: 1;
+      }
+    }
+    &--current {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+  &-prev,
+  &-next {
+    display: block;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    background: $global-primary-background;
+    color: #fff;
+    border-radius: 50%;
+    flex: 0 0 auto;
+    svg {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      path {
+        fill: $global-inverse-color;
+      }
+    }
+    &:hover {
+      background: $button-primary-hover-background;
+    }
+  }
+  &-prev {
+    svg {
+      transform: translate(-50%, -50%) rotate(-180deg);
+    }
+  }
+}
