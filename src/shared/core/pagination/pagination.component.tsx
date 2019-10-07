@@ -23,7 +23,6 @@ const PaginationComponent = ({
 }: IPaginationComponentProps) => {
   const pagesString = (): string[] => {
     const pages = calculatePages(totalPages, currentPage);
-
     const pagesReturn: string[] = [];
     const pagesLength = pages.length;
     for (let i = 0; i < pagesLength; i += 1) {

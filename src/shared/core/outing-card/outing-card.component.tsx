@@ -69,14 +69,14 @@ const OutingCardComponent = ({
         </div>
         <div className={` ${styles["card-bottom"]} ${"uk-visible@s"}`}>
           <div className={styles["card-labels"]}>
-            {date ? (
+            {date && (
               <div className={`${styles["card-label"]} ${"uk-visible@m"}`}>
                 <IconComponent icon={IconCalendar} size={"16px"} />
                 <span>
                   {date.start} - {date.end}
                 </span>
               </div>
-            ) : null}
+            )}
             <div className={styles["card-label"]}>
               <IconComponent icon={data.icon} size={"20px"} />
               <span>{data.label}</span>

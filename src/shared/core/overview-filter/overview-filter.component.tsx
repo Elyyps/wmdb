@@ -10,17 +10,9 @@ import { Input } from "../input";
 import { Button } from "../button";
 import CROSS from "@assets/icons/cross.svg";
 import { IconComponent } from "@app/core/icon";
+import { IOverviewFilterCategoryItem, IOverviewFilterItem } from "@app/api/modules/overview";
 
-export interface IOverviewFilterItem {
-  checkedItems: any;
-  filterText: string;
-  range: number;
-}
 
-export interface IOverviewFilterCategoryItem {
-  checkboxes: any;
-  title: string;
-}
 
 export interface IOverviewFilterComponentProps {
   checkboxCount?: number;
@@ -104,6 +96,8 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
     initializeFilter();
   }, [currentFilter, isActive]);
 
+
+
   return (
     <div className={styles["overview-filter-wrapper"]}>
       <button className={`${styles["button-search"]} uk-hidden@m`} onClick={handelClick}>
@@ -174,7 +168,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
                       [event.target.name]: {
                         isChecked: event.target.checked,
                         id: item.id,
-                        value: event.target.value
+                        label: event.target.value
                       }
                     };
                     setCheckedItems(newCheckedItems);

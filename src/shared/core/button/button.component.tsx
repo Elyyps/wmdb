@@ -6,11 +6,10 @@ import ArrowDown from "@assets/icons/chevron-down.svg";
 import classNames from "classnames";
 
 export interface IButtonProps {
-  children?: any;
   fullWidth?: boolean;
   href?: string;
-  icon?: any;
-  onClick?: any;
+  icon?: string;
+  onClick?: () => void;
   position?: string;
   target?: string;
   title: string;

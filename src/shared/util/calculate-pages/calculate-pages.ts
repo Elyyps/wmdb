@@ -14,8 +14,6 @@ export function calculatePages(totalPages: number, currentPage: number): number[
   const pageNeighbours = 1;
   const totalNumbers = pageNeighbours * 2 + 3;
   const totalBlocks = totalNumbers;
-  console.log("totalPagesRounded", totalPagesRounded);
-  console.log("totalBlocks", totalBlocks);
   if (totalPagesRounded > totalBlocks) {
     const startPage = Math.max(2, CURRENT_PAGE - pageNeighbours);
     const endPage = Math.min(totalPagesRounded - 1, CURRENT_PAGE + pageNeighbours);

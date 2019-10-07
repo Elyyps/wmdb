@@ -9,11 +9,10 @@ interface ICardContainerProps {
 
 const CardContainer = ({ Cards }: ICardContainerProps) => (
   <div className={"card-post-wrapper"}>
-    {Cards
-      ? Cards.map((card: any, key: number) =>
-          card.variant ? <CardAdvertise key={key} {...card} /> : <OutingCardComponent key={key} {...card} />
-        )
-      : ""}
+    {Cards &&
+      Cards.map((card: any, key: number) =>
+        card.variant ? <CardAdvertise key={key} {...card} /> : <OutingCardComponent key={key} {...card} />
+      )}
   </div>
 );
 

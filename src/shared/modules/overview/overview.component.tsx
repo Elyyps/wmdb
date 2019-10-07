@@ -1,6 +1,6 @@
 import * as React from "react";
 import styles from "./overview-component.module.scss";
-import { OverviewFilterComponent, IOverviewFilterItem } from "@app/core/overview-filter";
+import { OverviewFilterComponent } from "@app/core/overview-filter";
 import { dummyOverviewFilterData } from "@app/api/core/overview-filter";
 import { LabelComponent } from "./label/label.component";
 
@@ -11,41 +11,12 @@ import { ICheckbox, ICheckboxUnique } from "@app/api/core/checkbox";
 import { CardContainer } from "@app/core/card-post";
 import { PaginationComponent } from "@app/core/pagination";
 import { ListCheckComponent } from "@app/core/list-check";
-
-const CARDS = [
-  {
-    title: "Escape City - Het ontsnappingsspel van Mokum",
-    subtitle: "Citygames in Amsterdam",
-    image: [PlaceholderImage, PlaceholderImage1, PlaceholderImage, PlaceholderImage1],
-    button: {
-      title: "Lees meer",
-      href: "#"
-    },
-    data: {
-      icon: ROOMS,
-      label: "10 - 1000 personen"
-    },
-    content:
-      "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
-  },
-  {
-    title: "The Hangover",
-    subtitle: "Citygames in Amsterdam",
-    image: [PlaceholderImage, PlaceholderImage1, PlaceholderImage, PlaceholderImage1],
-    button: {
-      title: "Lees meer",
-      href: "#"
-    },
-    data: {
-      icon: ROOMS,
-      label: "10 - 200 personen"
-    },
-    content:
-      "TB Events: Met een flinke kater: verloren spullen, lippenstift op vreemde plaatsen, blauwe plekken... Net als de vier hoofdrol-spelers in de briljante speelfilm ‘The Hangover’. TB Events biedt je de mogelijkheid om The Hangover nu zelf real time..."
-  }
-];
+import { IOverviewFilterItem, IOutingCard, getCardsPaginated } from "@app/api/modules/overview";
+import { GenerateDummyFilterOverview } from "../../api/modules/overview/dummy-data";
 
 export interface IOverviewComponentProps {}
+
+const TAKE = 10;
 
 const OverviewComponent = (props: IOverviewComponentProps) => {
   const testCount = 30;
@@ -57,7 +28,7 @@ const OverviewComponent = (props: IOverviewComponentProps) => {
   const [currentPage, setCurrentPage] = React.useState(1);
   const [totalPages, setTotalPages] = React.useState(7);
   const [checkedItems, setCheckedItems] = React.useState(CheckboxObject);
-
+  const [cards, setCards] = React.useState<IOutingCard[]>([]);
   const [currentFilter, setCurrentFilter] = React.useState<IOverviewFilterItem>({
     checkedItems: [],
     filterText: "",
@@ -90,7 +61,6 @@ const OverviewComponent = (props: IOverviewComponentProps) => {
   };
   const handleClose = (item: any) => {
     const newObjState = { ...currentFilter };
-    console.log(item);
     newObjState.checkedItems[item].isChecked = false;
     setCurrentFilter({ ...newObjState });
   };
@@ -109,6 +79,25 @@ const OverviewComponent = (props: IOverviewComponentProps) => {
     getSelectedItems(checkedItems);
   });
 
+  React.useEffect(() => {
+    const cardsFiltered = getCardsPaginated(0, TAKE, { filterText: "", checkedItems: [], range: rangeMax });
+    setTotalPages(cardsFiltered.total);
+    setCards(cardsFiltered.cards);
+  }, []);
+  React.useEffect(() => {
+    const skip = (currentPage - 1) * TAKE;
+    const cardsFiltered = getCardsPaginated(skip, TAKE, currentFilter);
+    setTotalPages(cardsFiltered.total);
+    setCards(cardsFiltered.cards);
+  }, [currentPage]);
+
+  React.useEffect(() => {
+    const skip = (currentPage - 1) * TAKE;
+    const cardsFiltered = getCardsPaginated(skip, TAKE, currentFilter);
+    setTotalPages(cardsFiltered.total);
+    setCards(cardsFiltered.cards);
+  }, [currentFilter]);
+
   return (
     <div className="overview">
       <div className="uk-container">
@@ -121,7 +110,8 @@ const OverviewComponent = (props: IOverviewComponentProps) => {
               onFilterChange={changed => {
                 setCurrentFilter(changed);
               }}
-              {...dummyOverviewFilterData}
+              filterItems={GenerateDummyFilterOverview()}
+              rangeMax={rangeMax}
             />
           </div>
           <div className="uk-width-3-4@m">
@@ -140,7 +130,7 @@ const OverviewComponent = (props: IOverviewComponentProps) => {
                         <li key={key}>
                           <LabelComponent
                             onClick={() => handleClose(item)}
-                            label={currentFilter.checkedItems[item].value}
+                            label={currentFilter.checkedItems[item].label}
                           />
                         </li>
                       )
@@ -151,7 +141,7 @@ const OverviewComponent = (props: IOverviewComponentProps) => {
               <ListCheckComponent
                 labels={["Kwalitatief aanbod van uitjes", "Direct contact", "Unieke content van uitjes"]}
               />
-              <CardContainer Cards={CARDS} />
+              <CardContainer Cards={cards} />
               <ListCheckComponent
                 labels={["Kwalitatief aanbod van uitjes", "Direct contact", "Unieke content van uitjes"]}
               />
