@@ -6,92 +6,130 @@ import ROOMS from "@assets/icons/rooms.svg";
 import LOCATION from "@assets/icons/location.svg";
 import PATTERNT from "@assets/pattern/pattern-wmdb.png";
 import Arrow from "@assets/icons/chevron-right.svg";
-import ArrowLeft from "@assets/icons/chevron-left.svg";
 import { BodyTextComponent } from "@app/core/bodytext";
 import { generateContactData } from "@app/api/modules/contact/end-point";
-import { Button } from "@app/core/button";
 import { ContactFormComponent } from "@app/core/contact-form";
+import { OtherActivitiesComponent } from "../other-activities";
+import { generateOtherActivitiesData } from "@app/api/modules/other-activities/end-points";
+import { Button } from "@app/prep/modules-prep/core";
+import { ContactModalComponent } from "./contact-modal.component";
+import { ContactTelephoneComponent } from "./contact-telephone.component";
+import { ContactDataComponent } from "./contact-data.component";
 export interface IContactComponentProps {}
 
-const ContactComponent = (props: IContactComponentProps) => (
-  // <div className={styles["contact"]}>
-  <div className={styles["single-wmdb-body"]} style={{ backgroundImage: `url(${PATTERNT})` }}>
-    <div className="uk-container">
-      <div className={styles["single-wmdb-grid"]}>
-        <div className={classNames(styles["single-wmdb-main"])}>
-          <div className={styles["single-wmdb-title"]}>
-            <h2>Wie is de mol?</h2>
-          </div>
-          <ul className={styles["single-wmdb-list"]}>
-            <li>BE Eventgroup</li>
-            <li>
-              <IconComponent icon={ROOMS} size={"14px"} />
-              10 - 1000 personen
-            </li>
-          </ul>
-          <BodyTextComponent html={generateContactData().content} />
+const ContactComponent = (props: IContactComponentProps) => {
+  const count = 6;
+  const [isActive, setIsActive] = React.useState(false);
+  const [isData, setIsData] = React.useState(false);
+  const [fullHeight, setFullHeight] = React.useState(false);
+  const [countPosts] = React.useState(count);
+  const toggleForm = () => {
+    setIsData(false);
+    setIsActive(!isActive);
+  };
+  const toggleData = () => {
+    setIsData(!isData);
+  };
+  const toggleMainContent = () => {
+    setFullHeight(!fullHeight);
+  };
 
-          {/* <SingleWmdbContent /> */}
-          {/*   ajoutez les 4 cartes */}
-          <div className={styles["single-wmdb-bottom"]}>
-            <ContactFormComponent onSubmit={() => ""} />
+  return (
+    <div className={styles["contact-body"]} style={{ backgroundImage: `url(${PATTERNT})` }}>
+      <div className="uk-container">
+        <div className={styles["contact-grid"]}>
+          <div className={classNames(styles["contact-main"], { [styles["fullheight"]]: fullHeight })}>
+            <div className={styles["contact-title"]}>
+              <h2>Wie is de mol?</h2>
+            </div>
+            <ul className={styles["contact-list"]}>
+              <li>BE Eventgroup</li>
+              <li>
+                <IconComponent icon={ROOMS} size={"14px"} />
+                10 - 1000 personen
+              </li>
+            </ul>
+            <div className={styles["contact-content"]}>
+              <BodyTextComponent html={generateContactData().content} />
+            </div>
+            <Button title={"Ontvang informatie / offerte"} variant={"primary full large"} />
+            <div className={styles["other-activities"]}>
+              <OtherActivitiesComponent otherActivities={generateOtherActivitiesData()} />
+            </div>
+            <div className={styles["contact-bottom"]}>
+              <ContactTelephoneComponent
+                title={"Telefonisch contact"}
+                content={"Ook al zijn wij vaak op pad met een groep, wij doen altijd ons best u te woord te staan."}
+                button={{ title: "Toon telefoonnummer", url: "" }}
+              />
+            </div>
           </div>
-        </div>
-        <div className={styles["single-wmdb-aside"]}>
-          <div className="uk-visible@m">
-            <h2>Vrijblijvende offerte / prijsindicatie</h2>
-            <p>Vraag vrijblijvend een prijsindicatie aan en ontvang informatie op maat!</p>
-            {true ? (
-              <div className={styles["single-wmdb-actions"]}>
-                <Button
-                  title={"Ontvang informatie / offerte"}
-                  variant={"primary full large"}
-                  icon={LOCATION}
-                  position={"left"}
-                  onClick={() => ""}
-                  type={"button"}
+          <div className={styles["contact-aside"]}>
+            <div className="uk-visible@m">
+              <h2>Vrijblijvende offerte / prijsindicatie</h2>
+              <p>Vraag vrijblijvend een prijsindicatie aan en ontvang informatie op maat!</p>
+              {!isActive && (
+                <div className={styles["contact-actions"]}>
+                  <Button
+                    title={"Ontvang informatie / offerte"}
+                    variant={"primary full large"}
+                    icon={LOCATION}
+                    position={"left"}
+                    onClick={toggleForm}
+                    type={"button"}
+                  />
+                </div>
+              )}
+            </div>
+            {isActive && (
+              <ContactModalComponent title={"Informatie aanvraag"} onClick={toggleForm}>
+                <ContactFormComponent onSubmit={() => ""} />
+              </ContactModalComponent>
+            )}
+            <div className="uk-visible@m">{/* <Advertise /> */}</div>
+          </div>
+          <div className={styles["contact-mobile-actions"]}>
+            <div className={styles["contact-mobile-head"]}>
+              <Button
+                icon={Arrow}
+                title={fullHeight ? " Lees meer " : "Read more"}
+                position={"left"}
+                onClick={toggleMainContent}
+              />
+            </div>
+            {!fullHeight && (
+              <div className={styles["contact-mobile-actions-contact"]}>
+                <ContactTelephoneComponent
+                  title={"Telefonisch contact"}
+                  content={"Ook al zijn wij vaak op pad met een groep, wij doen altijd ons best u te woord te staan."}
+                  button={{ title: "Toon telefoonnummer", url: "" }}
                 />
               </div>
-            ) : (
-              ""
             )}
-          </div>
-          {true ? (
-            // <SingleWmdbModal title={"Informatie aanvraag"} onClick={toggleForm}>
-            <ContactFormComponent onSubmit={() => ""} />
-          ) : (
-            // </SingleWmdbModal>
-            ""
-          )}
-          <div className="uk-visible@m">{/* <Advertise /> */}</div>
-        </div>
-        <div className={styles["single-wmdb-mobile-actions"]}>
-          <div className={styles["single-wmdb-mobile-head"]}>
-            <Button icon={Arrow} title={" Lees meer "} position={"left"} onClick={() => ""} />
-          </div>
-          {false ? (
-            <div className={styles["single-wmdb-mobile-actions-contact"]}>
-              <ContactFormComponent onSubmit={() => ""} />
-            </div>
-          ) : (
-            ""
-          )}
-          <div className={styles["single-wmdb-mobile-bottom"]}>
-            <div className={styles["single-wmdb-mobile-item"]}>
-              <Button title={"Aanvragen"} variant={"primary"} onClick={() => ""} />
+            <div className={styles["contact-mobile-bottom"]}>
+              <div className={styles["contact-mobile-item"]}>
+                <Button title={"Aanvragen"} variant={"primary"} onClick={toggleForm} />
+              </div>
             </div>
           </div>
         </div>
       </div>
+      {isData && (
+        <ContactModalComponent title={"Gegevens"} onClick={toggleData}>
+          <ContactDataComponent
+            phoneButton={{ title: "Toon telefoonnummer", url: "" }}
+            content={
+              "Wij zouden het op prijs stellen dat wanneer u via ons contact zoekt of belt, u WegmetdeBaas vermeldt!"
+            }
+            phone={{ title: "024 1234 5678", url: "tel:024 1234 5678" }}
+            contactName={"Marie Autenbach"}
+            priceButton={{ title: "Prijsindicatie aanvragen", url: "" }}
+            onClick={toggleForm}
+          />
+        </ContactModalComponent>
+      )}
     </div>
-    {/* {isData ? (
-      <SingleWmdbModal title={"Gegevens"} onClick={()=>""}>
-        <SingleWmdbData onClick={toggleForm} />
-      </SingleWmdbModal>
-    ) : (
-      ""
-    )} */}
-  </div>
-);
+  );
+};
 
 export { ContactComponent };

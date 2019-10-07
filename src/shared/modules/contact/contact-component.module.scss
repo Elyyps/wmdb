@@ -1,4 +1,10 @@
-.single-wmdb {
+.other-activities {
+  margin-top: 40px;
+}
+.contact {
+  &-content {
+    margin: 20px 0 20px 0;
+  }
   &-grid {
     display: flex;
     @media (max-width: $breakpoint-medium-max) {
@@ -230,12 +236,12 @@
     color: $gray;
     font-size: 14px;
     margin: 0 -18px;
-    > li {
+    li {
       padding: 0 18px;
       position: relative;
       line-height: 1;
       display: flex;
-      > div {
+      > * {
         color: $gray;
         margin-right: 10px;
         svg {
@@ -307,7 +313,7 @@
       }
     }
   }
-  &-contact {
+  &-telephone {
     margin-top: 50px;
     h2 {
       margin-bottom: 24px;

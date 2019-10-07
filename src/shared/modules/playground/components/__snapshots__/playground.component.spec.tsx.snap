@@ -5,6 +5,7 @@ exports[`[PlaygroundComponent] should render without crashing 1`] = `
   className="uk-container"
   style={
     Object {
+<<<<<<< HEAD
       "width": "360px",
     }
   }
@@ -21,6 +22,44 @@ exports[`[PlaygroundComponent] should render without crashing 1`] = `
     icon="eten.svg"
     image="img02.png"
     title="Blog titel"
+=======
+      "width": "580px",
+    }
+  }
+>
+  <OtherActivitiesComponent
+    otherActivities={
+      Object {
+        "button": Object {
+          "title": "Bekijk 6 meer activiteiten",
+          "url": "/",
+        },
+        "cards": Array [
+          Object {
+            "buttonText": "",
+            "image": "oasis.jpg",
+            "title": "U Deugt Wij Deugen",
+          },
+          Object {
+            "buttonText": "",
+            "image": "img02.png",
+            "title": "The Ultimate Expedition",
+          },
+          Object {
+            "buttonText": "",
+            "image": "rectangle.png",
+            "title": "Het Mislukte Feest",
+          },
+          Object {
+            "buttonText": "",
+            "image": "img-big.jpg",
+            "title": "Hou van Holland Stadsspel",
+          },
+        ],
+        "title": "Andere activiteiten van dit bedrijf",
+      }
+    }
+>>>>>>> WE-618-other_activities
   />
 </div>
 `;

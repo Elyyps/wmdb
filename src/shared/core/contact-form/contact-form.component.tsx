@@ -46,8 +46,6 @@ const InnerForm = (props: FormikProps<IContactFormValues>) => {
 
   return (
     <Form action={"#"} className={styles["contact-form"]} onChange={formOnChange}>
-      <h2>Vrijblijvende offerte / prijsindicatie</h2>
-      Vraag vrijblijvend een prijsindicatie aan en ontvang informatie op maat!
       <div className={styles["contact-form-radio-label"]}>Aanhef</div>
       <div className={styles["contact-form-head"]}>
         <RadioButtonComponent

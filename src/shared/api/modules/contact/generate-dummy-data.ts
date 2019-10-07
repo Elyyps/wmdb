@@ -35,5 +35,7 @@ vele mooie momenten van deze dag.
 <p>
 Op ongeveer de helft van de tocht zal de Mol jullie naar een horecagelegenheid proberen te loodsen. De meeste
 deelnemers zijn op dit moment Mister X al tegen gekomen.
-</p>`
+</p>
+
+`
 });
