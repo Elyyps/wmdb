@@ -10,9 +10,13 @@ exports[`[EventCard] should render component without crashing 1`] = `
     <LinkComponent
       to=""
     >
-      <img
-        alt="image"
-      />
+      <div
+        className="event-card-image"
+      >
+        <img
+          alt="image"
+        />
+      </div>
     </LinkComponent>
     <div
       className="event-card-title"

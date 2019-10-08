@@ -12,7 +12,9 @@ const EventCardComponent = ({ title, image, link }: IEventCardComponentProps) =>
   <div className={styles["event-card"]}>
     <div className={styles["event-card-head"]}>
       <LinkComponent to={link}>
-        <img src={image} alt="image" />
+        <div className={styles["event-card-image"]}>
+          <img src={image} alt="image" />
+        </div>
       </LinkComponent>
       <div className={styles["event-card-title"]}>
         <h4>{title}</h4>

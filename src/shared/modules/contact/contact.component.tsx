@@ -7,7 +7,6 @@ import LOCATION from "@assets/icons/location.svg";
 import PATTERNT from "@assets/pattern/pattern-wmdb.png";
 import Arrow from "@assets/icons/chevron-right.svg";
 import { BodyTextComponent } from "@app/core/bodytext";
-import { generateContactData } from "@app/api/modules/contact/end-point";
 import { ContactFormComponent } from "@app/core/contact-form";
 import { OtherActivitiesComponent } from "../other-activities";
 import { generateOtherActivitiesData } from "@app/api/modules/other-activities/end-points";
@@ -17,6 +16,7 @@ import { ContactTelephoneComponent } from "./contact-telephone.component";
 import { ContactDataComponent } from "./contact-data.component";
 import RECTANGLE from "@assets/rectangle.png";
 import { AdBannerComponent } from "@app/core/ad-banner";
+import { generateContactData } from "@app/api/modules/contact/end-point";
 
 export interface IContactComponentProps {}
 

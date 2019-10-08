@@ -1,28 +1,33 @@
 .cards-event {
-  &-container{
+  &-container {
     margin-top: 52px;
-    .card{
-      &-event{
+    .card {
+      &-event {
         margin-bottom: 46px;
       }
-      &-image{
-        display: flex;
-        img{
+      &-image {
+        height: 100%;
+        img {
           object-fit: cover;
           width: 100%;
           height: 100%;
         }
       }
-      &-title{
+      &-title {
         margin-top: 8px;
-        h1,h2,h3,h4,h5,h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
           margin-bottom: 0;
           font-family: $global-font-family-secondary;
         }
       }
     }
   }
-  &-head{
+  &-head {
     margin-bottom: 32px;
   }
 }

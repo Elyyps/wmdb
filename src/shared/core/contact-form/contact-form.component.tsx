@@ -33,6 +33,8 @@ const formOnChange = () => {
 const InnerForm = (props: FormikProps<IContactFormValues>) => {
   const { touched, errors } = props;
   const [isChecked, setIsChecked] = React.useState(true);
+  const [isMan, setIsMan] = React.useState(true);
+
   const onDatePickerChange = (date: Date | null, id: string) => {
     let newValue: Date | null | string = date;
 
@@ -43,25 +45,34 @@ const InnerForm = (props: FormikProps<IContactFormValues>) => {
     props.handleChange(newValue);
     props.setFieldValue(id, newValue);
   };
+  const handleChange = (event: EventListener, isWoman: boolean) => {
+    if (isWoman) {
+      setIsMan(false);
+    } else {
+      setIsMan(true);
+    }
+    props.handleChange(event);
+  };
 
   return (
     <Form action={"#"} className={styles["contact-form"]} onChange={formOnChange}>
       <div className={styles["contact-form-radio-label"]}>Aanhef</div>
       <div className={styles["contact-form-head"]}>
         <RadioButtonComponent
-          isChecked
+          isChecked={isMan ? true : false}
           id={"from-radio-dhr"}
           name={"radio"}
-          value={"Dhr."}
+          value={props.values.gender}
           label={"Dhr."}
-          onChange={props.handleChange}
+          onChange={(e: EventListener) => handleChange(e, false)}
         />
         <RadioButtonComponent
+          isChecked={!isMan ? true : false}
           id={"from-radio-mevr"}
           name={"radio"}
-          value={"Mevr."}
+          value={props.values.gender}
           label={"Mevr."}
-          onChange={props.handleChange}
+          onChange={(e: EventListener) => handleChange(e, true)}
         />
       </div>
       <Input
