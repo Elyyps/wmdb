@@ -11,8 +11,7 @@ import { Button } from "../button";
 import CROSS from "@assets/icons/cross.svg";
 import { IconComponent } from "@app/core/icon";
 import { IOverviewFilterCategoryItem, IOverviewFilterItem } from "@app/api/modules/overview";
-
-
+import { arrayRemoveElement } from "@app/util/array";
 
 export interface IOverviewFilterComponentProps {
   checkboxCount?: number;
@@ -33,7 +32,7 @@ export interface IOverviewFilterComponentProps {
 const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
   const [isActive, setIsActive] = React.useState(false);
   const CheckboxObject: any = {};
-  const [checkedItems, setCheckedItems] = React.useState(CheckboxObject);
+  const [checkedItems, setCheckedItems] = React.useState<ICheckboxUnique[]>([]);
   const [range, setRange] = React.useState<any>(null);
   const [filterText, setFilterText] = React.useState("");
   const MEDIUM_BREAKPOINT = 960;
@@ -74,6 +73,22 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
     }
   };
 
+  const handleCheckboxChange = (event: React.ChangeEvent, item: ICheckboxUnique) => {
+    let newCheckedItems = [...checkedItems];
+    const currentItem = newCheckedItems.find(filter => filter.id === item.id);
+    if (currentItem) {
+      newCheckedItems = arrayRemoveElement(newCheckedItems, currentItem);
+    } else {
+      newCheckedItems.push({
+        isChecked: true,
+        id: item.id,
+        label: item.label,
+      });
+    }
+    setCheckedItems(newCheckedItems);
+    sendFilterOptions({ checkedItems: newCheckedItems, filterText, range });
+  };
+
   React.useEffect(() => {
     if (isActive) {
       document.documentElement.style.overflow = "hidden";
@@ -95,8 +110,6 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
   React.useEffect(() => {
     initializeFilter();
   }, [currentFilter, isActive]);
-
-
 
   return (
     <div className={styles["overview-filter-wrapper"]}>
@@ -153,26 +166,17 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
           filterItems.map((filterItem, key) => (
             <div key={key} className={styles["overview-filter__item"]}>
               <h5>{filterItem.title}</h5>
-              {filterItem.checkboxes.map((item: any, itemKey: any) => (
+              {filterItem.checkboxes.map((item: ICheckboxUnique, itemKey: any) => (
                 <Checkbox
                   key={itemKey}
-                  isChecked={checkedItems[item.id] ? checkedItems[item.id].isChecked : false}
+                  isChecked={checkedItems.find(filter => filter.id === item.id)}
                   id={key}
                   label={item.label}
                   name={item.id}
                   value={item.label}
                   count={checkboxCount}
                   onChange={(event: any) => {
-                    const newCheckedItems = {
-                      ...checkedItems,
-                      [event.target.name]: {
-                        isChecked: event.target.checked,
-                        id: item.id,
-                        label: event.target.value
-                      }
-                    };
-                    setCheckedItems(newCheckedItems);
-                    sendFilterOptions({ checkedItems: newCheckedItems, filterText, range });
+                    handleCheckboxChange(event, item);
                   }}
                 />
               ))}

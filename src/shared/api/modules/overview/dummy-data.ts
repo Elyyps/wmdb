@@ -257,7 +257,7 @@ const DummyOutingCards: IOutingCard[] = [
       title: "Lees meer",
       href: "#"
     },
-    categoriesId: [1, 14],
+    categoriesId: [1, 14, 17],
     data: {
       icon: ROOMS,
       label: "10 - 1000 personen"
@@ -278,7 +278,7 @@ const DummyOutingCards: IOutingCard[] = [
       title: "Lees meer",
       href: "#"
     },
-    categoriesId: [1, 5, 11],
+    categoriesId: [1, 5, 18, 19, 20, 11],
     data: {
       icon: ROOMS,
       label: "10 - 1000 personen"
@@ -299,7 +299,7 @@ const DummyOutingCards: IOutingCard[] = [
       title: "Lees meer",
       href: "#"
     },
-    categoriesId: [1, 4, 10, 2],
+    categoriesId: [1, 4, 22, 10, 2],
     data: {
       icon: ROOMS,
       label: "10 - 1000 personen"
@@ -320,7 +320,7 @@ const DummyOutingCards: IOutingCard[] = [
       title: "Lees meer",
       href: "#"
     },
-    categoriesId: [5, 3, 7],
+    categoriesId: [5, 3, 20, 7],
     data: {
       icon: ROOMS,
       label: "10 - 1000 personen"
@@ -341,7 +341,7 @@ const DummyOutingCards: IOutingCard[] = [
       title: "Lees meer",
       href: "#"
     },
-    categoriesId: [7],
+    categoriesId: [7, 24],
     data: {
       icon: ROOMS,
       label: "10 - 1000 personen"
@@ -425,7 +425,7 @@ const DummyOutingCards: IOutingCard[] = [
       title: "Lees meer",
       href: "#"
     },
-    categoriesId: [13],
+    categoriesId: [13, 25],
     data: {
       icon: ROOMS,
       label: "10 - 1000 personen"
@@ -488,7 +488,7 @@ const DummyOutingCards: IOutingCard[] = [
       title: "Lees meer",
       href: "#"
     },
-    categoriesId: [4, 9],
+    categoriesId: [4, 9, 23],
     data: {
       icon: ROOMS,
       label: "10 - 1000 personen"
@@ -516,7 +516,8 @@ export const getCardsAmount = (amount: number): IOutingCard[] => {
     return newItem;
   });
 
-  return toReturn.slice(0, amount);
-};
+  toReturn = toReturn.slice(0, amount);
+  toReturn[toReturn.length-1].title += "x";
 
-// https://source.unsplash.com/random
+  return toReturn;
+};

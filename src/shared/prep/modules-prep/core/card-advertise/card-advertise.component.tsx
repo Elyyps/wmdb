@@ -5,7 +5,7 @@ import { Button, IButtonProps } from "@app/prep/modules-prep/core";
 
 interface ICardAdvertiseProps {
   button: IButtonProps;
-  image?: string;
+  image: string[];
   title?: string;
   variant: string;
 }
@@ -13,7 +13,7 @@ interface ICardAdvertiseProps {
 const CardAdvertise = ({ title, image, button }: ICardAdvertiseProps) => (
   <div className="card-advertise uk-invert">
     <div className="card-image">
-      <img src={ImageAdvertise} alt="ImageAdvertise" />
+      <img src={image.length > 0 ? image[0] : ImageAdvertise} alt="ImageAdvertise" />
     </div>
     <div className="card-body">
       <div className="card-title">

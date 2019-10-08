@@ -1,13 +1,7 @@
 import * as React from "react";
-import styles from "./overview-component.module.scss";
 import { OverviewFilterComponent } from "@app/core/overview-filter";
-import { dummyOverviewFilterData } from "@app/api/core/overview-filter";
 import { LabelComponent } from "./label/label.component";
 
-import PlaceholderImage from "@assets/img01.png";
-import PlaceholderImage1 from "@assets/img02.png";
-import ROOMS from "@assets/icons/rooms.svg";
-import { ICheckbox, ICheckboxUnique } from "@app/api/core/checkbox";
 import { CardContainer } from "@app/core/card-post";
 import { PaginationComponent } from "@app/core/pagination";
 import { ListCheckComponent } from "@app/core/list-check";
@@ -16,26 +10,21 @@ import { GenerateDummyFilterOverview } from "../../api/modules/overview/dummy-da
 
 export interface IOverviewComponentProps {}
 
-const TAKE = 10;
+const TAKE = 8;
 
-const OverviewComponent = (props: IOverviewComponentProps) => {
-  const testCount = 30;
+const OverviewComponent = () => {
   const CheckboxObject: any = {};
-  const [range, setRange] = React.useState(0);
-  const [checkboxCount] = React.useState(testCount);
   const rangeMax = 200;
   const [totalSelected, setTotalSelected] = React.useState(0);
   const [currentPage, setCurrentPage] = React.useState(1);
   const [totalPages, setTotalPages] = React.useState(7);
-  const [checkedItems, setCheckedItems] = React.useState(CheckboxObject);
+  const [checkedItems] = React.useState(CheckboxObject);
   const [cards, setCards] = React.useState<IOutingCard[]>([]);
   const [currentFilter, setCurrentFilter] = React.useState<IOverviewFilterItem>({
     checkedItems: [],
     filterText: "",
     range: 0
   });
-
-  const [date, setDate] = React.useState(new Date());
 
   const nextPage = () => {
     if (currentPage < totalPages) setCurrentPage(currentPage + 1);
@@ -46,35 +35,22 @@ const OverviewComponent = (props: IOverviewComponentProps) => {
 
   const getSelectedItems = (state: any) => {
     let count = 0;
-    Object.keys(state).map((item, index) => {
+    Object.keys(state).map(item => {
       if (checkedItems[item].isChecked) {
         count += 1;
       }
     });
     setTotalSelected(count);
   };
-  const handleOnChangeRange = (value: any) => {
-    setRange(value);
-  };
-  const handelChangeDate = (dateObj: any) => {
-    setDate(dateObj);
-  };
+
   const handleClose = (item: any) => {
-    const newObjState = { ...currentFilter };
-    newObjState.checkedItems[item].isChecked = false;
-    setCurrentFilter({ ...newObjState });
+    const newCheckedItems = [...currentFilter.checkedItems];
+    newCheckedItems.splice(item, 1);
+    setCurrentFilter({ ...currentFilter, checkedItems: newCheckedItems });
   };
 
   const total = false;
-  const handleChange = (event: any) => {
-    setCheckedItems({
-      ...checkedItems,
-      [event.target.name]: {
-        isChecked: event.target.checked,
-        value: event.target.value
-      }
-    });
-  };
+
   React.useEffect(() => {
     getSelectedItems(checkedItems);
   });
@@ -123,37 +99,42 @@ const OverviewComponent = (props: IOverviewComponentProps) => {
               )}
               <ul className="overview-head__list" data-uk-margin>
                 {currentFilter.checkedItems &&
-                  Object.keys(currentFilter.checkedItems).map(
-                    (item: any, key: number) =>
-                      currentFilter.checkedItems &&
-                      currentFilter.checkedItems[item].isChecked && (
-                        <li key={key}>
-                          <LabelComponent
-                            onClick={() => handleClose(item)}
-                            label={currentFilter.checkedItems[item].label}
-                          />
-                        </li>
-                      )
-                  )}
+                  Object.keys(currentFilter.checkedItems).map((item: any, key: number) => (
+                    <li key={key}>
+                      <LabelComponent
+                        onClick={() => handleClose(item)}
+                        label={currentFilter.checkedItems[item].label}
+                      />
+                    </li>
+                  ))}
               </ul>
             </div>
-            <div className="overview-body">
-              <ListCheckComponent
-                labels={["Kwalitatief aanbod van uitjes", "Direct contact", "Unieke content van uitjes"]}
-              />
-              <CardContainer Cards={cards} />
-              <ListCheckComponent
-                labels={["Kwalitatief aanbod van uitjes", "Direct contact", "Unieke content van uitjes"]}
-              />
-              <CardContainer Cards={[]} />
-            </div>
-            <PaginationComponent
-              changePage={setCurrentPage}
-              previousPage={previousPage}
-              nextPage={nextPage}
-              currentPage={currentPage}
-              totalPages={totalPages}
-            />
+
+            {totalPages ? (
+              <div className="overview-body">
+                <ListCheckComponent
+                  labels={["Kwalitatief aanbod van uitjes", "Direct contact", "Unieke content van uitjes"]}
+                />
+                <CardContainer Cards={cards.slice(0, 6)} />
+                {cards.length >= 6 && (
+                  <>
+                    <ListCheckComponent
+                      labels={["Kwalitatief aanbod van uitjes", "Direct contact", "Unieke content van uitjes"]}
+                    />
+                    <CardContainer Cards={cards.slice(6, cards.length)} />
+                  </>
+                )}
+                <PaginationComponent
+                  changePage={setCurrentPage}
+                  previousPage={previousPage}
+                  nextPage={nextPage}
+                  currentPage={currentPage}
+                  totalPages={totalPages}
+                />
+              </div>
+            ) : 
+                  'Nothing to show'
+            }
           </div>
         </div>
       </div>

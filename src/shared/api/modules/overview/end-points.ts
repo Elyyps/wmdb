@@ -21,10 +21,8 @@ export const getCardsPaginated = (skip: number, take: number, filter: IOverviewF
           .includes(filterTextCapitalized)
     );
   }
-  console.log("filter", filter.checkedItems);
   if (filter.checkedItems.length > 0) {
     const checkedCategories = filter.checkedItems.filter(item => item.isChecked).map(item => item.id);
-    console.log(checkedCategories);
     cards = cards.filter(
       card => card.categoriesId && card.categoriesId.some(item => checkedCategories.indexOf(item) >= 0)
     );
@@ -32,6 +30,22 @@ export const getCardsPaginated = (skip: number, take: number, filter: IOverviewF
 
   const total = cards.length / take;
   cards = cards.slice(skip, skip + take);
+
+  const cardAd: IOutingCard = {
+    variant: "Ad",
+    title: "Herfstspecial - bekijk nu de nieuwsbrief!",
+    subtitle: "Citygames in Amsterdam",
+    image: [
+      "https://picsum.photos/id/103/1200/800",
+    ],
+    button: {
+      title: "Lees meer",
+      href: "#"
+    },
+  };
+  if (cards.length === 8) {
+    cards = [...cards.slice(0, 2), cardAd, ...cards.slice(2, cards.length)];
+  }
 
   return {
     cards,

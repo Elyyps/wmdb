@@ -37,10 +37,13 @@ const PaginationComponent = ({
 
   return (
     <div className="pagination">
-      <Link onClick={previousPage} to="#" className="prev">
-        <IconComponent icon={ArrowLeft} size={"13px"} stroke />
-        <span className={"uk-visible@s"}>Vorige</span>
-      </Link>
+      {totalPages > 1 && (
+        <Link onClick={previousPage} to="#" className="prev">
+          <IconComponent icon={ArrowLeft} size={"13px"} stroke />
+          <span className={"uk-visible@s"}>Vorige</span>
+        </Link>
+      )}
+
       <ul className="pagination-list">
         {pagesString().map((item, key) => {
           if (item === currentPage.toString()) {
@@ -79,10 +82,13 @@ const PaginationComponent = ({
           );
         })}
       </ul>
-      <Link onClick={nextPage} to="#" className="next">
-        <span className={"uk-visible@s"}>Volgende</span>
-        <IconComponent icon={ArrowRight} size={"13px"} stroke />
-      </Link>
+
+      {totalPages > 1 && (
+        <Link onClick={nextPage} to="#" className="next">
+          <span className={"uk-visible@s"}>Volgende</span>
+          <IconComponent icon={ArrowRight} size={"13px"} stroke />
+        </Link>
+      )}
     </div>
   );
 };

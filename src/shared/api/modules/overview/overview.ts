@@ -19,9 +19,9 @@ export interface IOverviewFilterItem {
 
 export interface IOutingCard {
   button: IButton;
-  categoriesId?: number[],
+  categoriesId?: number[];
   content?: any;
-  data: {
+  data?: {
     icon?: string;
     label: string;
   };
@@ -33,4 +33,5 @@ export interface IOutingCard {
   modify?: string;
   subtitle?: string;
   title?: string;
+  variant?: string;
 }
