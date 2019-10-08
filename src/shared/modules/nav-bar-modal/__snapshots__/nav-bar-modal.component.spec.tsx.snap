@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[NavBarModal] should render component without crashing 1`] = `
+<div
+  className="nav-bar-modal__toggle"
+>
+  <button
+    className="nav-bar-modal__open"
+    onClick={[Function]}
+    type="button"
+  >
+    <IconComponent />
+  </button>
+  <Portal
+    containerInfo={<body />}
+  >
+    <div
+      className="nav-bar-modal__closed nav-bar-modal "
+      onClick={[Function]}
+      role="role"
+    >
+      <div
+        className="nav-bar-modal__holder nav-bar-modal__holder__menu__close  "
+      >
+        <div
+          className="nav-bar-modal__container nav-bar-modal__container__menu"
+        >
+          <div
+            aria-label="closeButton"
+            className="nav-bar-modal__close nav-bar-modal__close__menu"
+            onClick={[Function]}
+            role="button"
+          >
+            <IconComponent
+              icon={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "cross.svg",
+                }
+              }
+              size="12px"
+            />
+            <span
+              className="uk-visible@m"
+            />
+          </div>
+          <div
+            className="nav-bar-modal__items"
+          />
+        </div>
+      </div>
+    </div>
+  </Portal>
+</div>
+`;

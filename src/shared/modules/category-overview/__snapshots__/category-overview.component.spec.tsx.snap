@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[CategoryOverview] should render component without crashing 1`] = `
+<div
+  className="category-overview"
+  style={
+    Object {
+      "backgroundColor": "#e8f2fc",
+      "paddingBottom": "72px",
+      "paddingTop": "72px",
+    }
+  }
+>
+  <div
+    className="uk-container"
+  >
+    <h2
+      className="category-overview__title"
+    >
+      Kies direct een categorie om het aanbod te bekijken!
+    </h2>
+    <div
+      className="category-overview__posts uk-grid uk-child-width-1-2@s uk-child-width-1-3@m"
+    >
+      <div
+        key="0"
+      >
+        <CategoryCard
+          count={200}
+          icon="spel.svg"
+          image="img02.png"
+          link="/"
+          title="Musea"
+        />
+      </div>
+      <div
+        key="1"
+      >
+        <CategoryCard
+          count={200}
+          icon="spel.svg"
+          image="img02.png"
+          link="/"
+          title="Musea"
+        />
+      </div>
+      <div
+        key="2"
+      >
+        <CategoryCard
+          count={200}
+          icon="spel.svg"
+          image="img02.png"
+          link="/"
+          title="Musea"
+        />
+      </div>
+      <div
+        key="3"
+      >
+        <CategoryCard
+          count={200}
+          icon="spel.svg"
+          image="img02.png"
+          link="/"
+          title="Musea"
+        />
+      </div>
+      <div
+        key="4"
+      >
+        <CategoryCard
+          count={200}
+          icon="spel.svg"
+          image="img02.png"
+          link="/"
+          title="Musea"
+        />
+      </div>
+      <div
+        key="5"
+      >
+        <CategoryCard
+          count={20}
+          icon="spel.svg"
+          image="img02.png"
+          link="/"
+          title="Musea"
+        />
+      </div>
+      <div
+        key="6"
+      >
+        <CategoryCard
+          image="img02.png"
+          link="/"
+          title="Musea"
+        />
+      </div>
+      <div
+        key="7"
+      >
+        <CategoryCard
+          image="img02.png"
+          link="/"
+          title="Musea"
+        />
+      </div>
+      <div
+        key="8"
+      >
+        <CategoryCard
+          image="img02.png"
+          link="/"
+          title="Musea"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

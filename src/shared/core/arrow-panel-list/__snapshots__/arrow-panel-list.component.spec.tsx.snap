@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[ArrowPanelList] should render component without crashing 1`] = `
+<div
+  className="arrow-panel-list"
+>
+  <div
+    className="arrow-panel-list__head"
+  >
+    <h3>
+      Title
+    </h3>
+  </div>
+</div>
+`;

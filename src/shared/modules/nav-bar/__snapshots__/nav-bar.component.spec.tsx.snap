@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[NavBar] should render component without crashing 1`] = `
+<div
+  className="nav-bar"
+>
+  <div
+    className="uk-container"
+  >
+    <div
+      className="nav-bar__holder"
+    >
+      <div>
+        <LogoComponent />
+      </div>
+      <div>
+        <ul
+          className="nav-bar__links uk-visible@m"
+        >
+          <li
+            key="0"
+          >
+            <LinkComponent
+              to=""
+            >
+              Helpdesk
+            </LinkComponent>
+          </li>
+          <li
+            key="1"
+          >
+            <LinkComponent
+              to=""
+            >
+              Nieuwsbrief
+            </LinkComponent>
+          </li>
+          <li
+            key="2"
+          >
+            <LinkComponent
+              to=""
+            >
+              Mijn uitjes
+            </LinkComponent>
+          </li>
+        </ul>
+        <NavBarModalComponent
+          close="Sluiten"
+          icon="menu.svg"
+          iconSize="20px"
+          title="Menu"
+        >
+          <HamburgerMenuComponent
+            menuItems={
+              Array [
+                Object {
+                  "title": "Lorem1",
+                  "url": "",
+                },
+                Object {
+                  "title": "Lorem2",
+                  "url": "",
+                },
+                Object {
+                  "title": "Lorem3",
+                  "url": "",
+                },
+              ]
+            }
+          />
+        </NavBarModalComponent>
+      </div>
+    </div>
+  </div>
+</div>
+`;

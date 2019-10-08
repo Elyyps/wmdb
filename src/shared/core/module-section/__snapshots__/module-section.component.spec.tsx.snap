@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[ModuleSection] should render component without crashing 1`] = `
+<div
+  className="section"
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "paddingBottom": undefined,
+      "paddingTop": undefined,
+    }
+  }
+>
+  <div
+    className="uk-container"
+  >
+    <div />
+  </div>
+</div>
+`;

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[BodyText] should render component without crashing 1`] = `
+<div
+  className="uk-container body-text body-text--center body-text--full"
+>
+  <HtmlRenderComponent
+    html="<h1>Plein HTML here</h1>"
+  />
+</div>
+`;

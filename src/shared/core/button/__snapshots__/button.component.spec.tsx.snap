@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Button] should render without crashing 1`] = `
+<Fragment>
+  <button
+    className="button button--default"
+    style={
+      Object {
+        "width": "auto",
+      }
+    }
+  >
+    <span>
+      Primary
+    </span>
+  </button>
+</Fragment>
+`;
+
+exports[`[Button] should render without crashing 2`] = `
+<Fragment>
+  <button
+    className="button button--secondary"
+    style={
+      Object {
+        "width": "auto",
+      }
+    }
+  >
+    <span>
+      Secondary
+    </span>
+  </button>
+</Fragment>
+`;
+
+exports[`[Button] should render without crashing 3`] = `
+<Fragment>
+  <button
+    className="button button--default"
+    style={
+      Object {
+        "width": "auto",
+      }
+    }
+  >
+    <span>
+      Primary
+    </span>
+    <IconComponent
+      icon="chevron-down.svg"
+      size="14px"
+    />
+  </button>
+</Fragment>
+`;

@@ -5,36 +5,36 @@
   border-bottom: 1px solid $gray-light-secondary;
   font-size: 14px;
   text-decoration: none;
-  @media(max-width: $breakpoint-xsmall-max){
+  @media (max-width: $breakpoint-xsmall-max) {
     flex-direction: column;
     padding: 12px 0;
     border-bottom: none;
   }
-  
-  &:hover{
+
+  &:hover {
     text-decoration: none;
   }
-  >*{
+  > * {
     padding: 0 12px;
     box-sizing: border-box;
   }
-  
+
   .card-images {
     border-radius: $global-border-radius;
     flex: 1 1 auto;
     max-width: 100%;
-    @media(max-width: $breakpoint-small-max) {
+    @media (max-width: $breakpoint-small-max) {
       margin: 0;
     }
-  
+
     &__wrapper {
       overflow: hidden;
       position: relative;
       display: flex;
-      @media(max-width: $breakpoint-medium-max) {
+      @media (max-width: $breakpoint-medium-max) {
         flex-direction: column;
       }
-      @media(min-width: $breakpoint-large) {
+      @media (min-width: $breakpoint-large) {
         width: 332px;
       }
       img {
@@ -44,58 +44,58 @@
         border-radius: $global-border-radius;
       }
       &--large {
-        @media(min-width: $breakpoint-small) {
+        @media (min-width: $breakpoint-small) {
           width: 38%;
         }
-        @media(min-width: $breakpoint-large) {
+        @media (min-width: $breakpoint-large) {
           width: 393px;
         }
         .card-images {
           flex: 1 1 auto;
           padding: 0 0 4px;
-          @media(min-width: $breakpoint-large) {
+          @media (min-width: $breakpoint-large) {
             width: 74%;
             padding: 0 4px 0 0;
           }
         }
         img {
-          @media(min-width: $breakpoint-small) {
+          @media (min-width: $breakpoint-small) {
             border-radius: 4px 4px 0 0;
           }
-          @media(min-width: $breakpoint-large) {
+          @media (min-width: $breakpoint-large) {
             border-radius: 4px 0 0 4px;
           }
         }
       }
     }
-      
+
     .slick-dots {
-      @media(min-width: $breakpoint-small) {
+      @media (min-width: $breakpoint-small) {
         display: none !important;
       }
     }
-    
+
     .slick-slide {
       padding: 0;
       > div > div {
-       height: inherit;
+        height: inherit;
       }
     }
-    
+
     &__grid {
       margin: -2px 0;
-      @media(max-width: $breakpoint-medium-max) {
+      @media (max-width: $breakpoint-medium-max) {
         display: flex;
         margin: 0 -2px;
       }
       > div {
-        img  {
+        img {
           border-radius: 0;
         }
         &:first-child {
           img {
             border-top-right-radius: 4px;
-            @media(max-width: $breakpoint-medium-max) {
+            @media (max-width: $breakpoint-medium-max) {
               border-top-right-radius: 0;
               border-bottom-left-radius: 4px;
             }
@@ -109,28 +109,31 @@
       }
     }
   }
-  
+
   .card-image {
     padding: 2px 0;
     height: 33.3%;
     box-sizing: border-box;
-    @media(max-width: $breakpoint-medium-max) {
+    @media (max-width: $breakpoint-medium-max) {
       height: 56px;
       padding: 0 2px;
     }
   }
-  
+
   .card {
-    &-body{
+    &-body {
       flex: 1;
       color: $global-color;
-      @media(max-width: $breakpoint-medium-max){
+      @media (max-width: $breakpoint-medium-max) {
         margin-top: 10px;
       }
-
     }
-    &-title{
-      h1,h2,h3,h4,h5{
+    &-title {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
         margin: 0;
       }
       a {
@@ -138,28 +141,27 @@
         text-decoration: none;
       }
     }
-    &-subtitle{
+    &-subtitle {
       color: $brand-secondary;
-
     }
-    &-head{
+    &-head {
       margin-bottom: 16px;
-      @media(max-width: $breakpoint-xsmall-max){
+      @media (max-width: $breakpoint-xsmall-max) {
         margin: 0;
       }
     }
-    &-bottom{
+    &-bottom {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    &-label{
+    &-label {
       display: flex;
       align-items: center;
-      &:not(:first-child){
+      &:not(:first-child) {
         margin-top: 10px;
       }
-      .icon-svg{
+      .icon-svg {
         margin-right: 8px;
       }
     }
@@ -167,12 +169,12 @@
       display: none;
     }
   }
-  &-wrapper{
+  &-wrapper {
     overflow: hidden;
   }
-  
+
   &--event {
-    @media(max-width: $breakpoint-small-max) {
+    @media (max-width: $breakpoint-small-max) {
       .card-subtitle {
         display: none;
       }
@@ -185,15 +187,15 @@
       }
     }
   }
-  
+
   &--small {
-    @media(min-width: $breakpoint-medium) {
+    @media (min-width: $breakpoint-medium) {
       border: 0;
       padding: 0;
     }
-    
+
     .card-images__wrapper {
-      @media(min-width: $breakpoint-small) {
+      @media (min-width: $breakpoint-small) {
         width: 38%;
         flex-direction: column;
         .card-images {
@@ -206,23 +208,23 @@
         }
       }
     }
-  
+
     .card-image {
-      @media(min-width: $breakpoint-small) {
+      @media (min-width: $breakpoint-small) {
         height: 56px;
         padding: 0 2px;
       }
     }
-  
+
     .card-images__grid {
-      @media(min-width: $breakpoint-small) {
+      @media (min-width: $breakpoint-small) {
         display: flex;
         margin: 0 -2px;
       }
       > div {
         &:first-child {
           img {
-            @media(min-width: $breakpoint-small) {
+            @media (min-width: $breakpoint-small) {
               border-top-right-radius: 0;
               border-bottom-left-radius: 4px;
             }
@@ -231,10 +233,9 @@
       }
     }
   }
-  
-  
+
   &.hide {
-    @media(max-width: $breakpoint-xsmall-max) {
+    @media (max-width: $breakpoint-xsmall-max) {
       .card-content,
       .card-bottom {
         display: none;
