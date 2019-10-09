@@ -14,7 +14,7 @@ import { Button } from "@app/core/button";
 import { OverviewFilterComponent } from "@app/core/overview-filter";
 import { dummyOverviewFilterData } from "@app/api/core/overview-filter";
 import { OverviewComponent } from "@app/modules/overview";
-import { IOverviewFilterItem } from "@app/api/modules/overview";
+import { IOverviewFilterItem, generateDummyOverviewModule } from "@app/api/modules/overview";
 
 export interface IPlaygroundPedroComponentProps {}
 
@@ -37,7 +37,7 @@ const PlaygroundPedroComponent = (props: IPlaygroundPedroComponentProps) => {
   };
   return (
     <div className={style["main"]}>
-      <OverviewComponent />
+      <OverviewComponent  overviewModule={generateDummyOverviewModule()} />
     </div>
   );
 };

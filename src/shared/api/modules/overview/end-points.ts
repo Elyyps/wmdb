@@ -9,7 +9,7 @@ interface ICardsPaginatedReturn {
 export const getCardsPaginated = (skip: number, take: number, filter: IOverviewFilterItem): ICardsPaginatedReturn => {
   const CARDS_AMOUNT = 200;
   let cards = getCardsAmount(CARDS_AMOUNT);
-
+  console.log("filter", filter)
   if (filter.filterText) {
     const filterTextCapitalized = filter.filterText.toUpperCase();
     cards = cards.filter(

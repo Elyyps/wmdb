@@ -5,14 +5,16 @@ import { CardContainer } from "@app/core/card-post";
 import { PaginationComponent } from "@app/core/pagination";
 import { ListCheckComponent } from "@app/core/list-check";
 import { IOverviewFilterItem, IOutingCard, getCardsPaginated } from "@app/api/modules/overview";
-import { GenerateDummyFilterOverview } from "../../api/modules/overview/dummy-data";
+import { IOverviewModule } from "../../api/modules/overview/overview";
 
-export interface IOverviewComponentProps {}
+export interface IOverviewComponentProps {
+  overviewModule: IOverviewModule;
+}
 
 const TAKE = 8;
 const AD_POSITION = 6;
 
-const OverviewComponent = () => {
+const OverviewComponent = ({ overviewModule }: IOverviewComponentProps) => {
   const rangeMax = 200;
   const [currentPage, setCurrentPage] = React.useState(1);
   const [totalPages, setTotalPages] = React.useState(0);
@@ -93,7 +95,7 @@ const OverviewComponent = () => {
               onFilterChange={changed => {
                 setCurrentFilter(changed);
               }}
-              filterItems={GenerateDummyFilterOverview()}
+              filterItems={overviewModule.filter}
               rangeMax={rangeMax}
             />
           </div>

@@ -2,7 +2,6 @@ import { IButton } from "@app/api/core/button";
 import { ICheckboxUnique } from "@app/api/core/checkbox";
 
 export interface IOverviewModule {
-  cards: IOutingCard[];
   filter: IOverviewFilterCategoryItem[];
 }
 

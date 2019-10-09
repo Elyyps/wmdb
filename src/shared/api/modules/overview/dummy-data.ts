@@ -1,6 +1,6 @@
 import PlaceholderImage from "@assets/img01.png";
 import PlaceholderImage1 from "@assets/img02.png";
-import { IOutingCard } from "./overview";
+import { IOutingCard, IOverviewModule } from "./overview";
 import ROOMS from "@assets/icons/rooms.svg";
 import { IOverviewFilterCategoryItem } from "@app/api/modules/overview";
 
@@ -526,3 +526,5 @@ export const getCardsAmount = (amount: number): IOutingCard[] => {
 
   return toReturn;
 };
+
+export const generateDummyOverviewModule = (): IOverviewModule => ({ filter: GenerateDummyFilterOverview() });
