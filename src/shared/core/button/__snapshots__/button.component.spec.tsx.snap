@@ -35,6 +35,7 @@ exports[`[Button] should render without crashing 3`] = `
     <IconComponent
       icon="chevron-down.svg"
       size="14px"
+      stroke={true}
     />
   </button>
 </Fragment>
