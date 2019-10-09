@@ -15,13 +15,12 @@
   justify-content: center;
   position: relative;
   padding: 9px 26px;
-  transition: opacity,background-color 0.3s;
+  transition: opacity, background-color 0.3s;
   cursor: pointer;
   color: $global-color;
   border-radius: 3px;
   background-color: $bg-muted;
-  white-space: nowrap;
-  &:active{
+  &:active {
     opacity: 0.8;
   }
   @media (max-width: $breakpoint-small-max) {
@@ -31,10 +30,10 @@
   @media (max-width: $breakpoint-xsmall-max) {
     width: 100%;
   }
-  &.full{
+  &.full {
     width: 100%;
   }
-  &.large{
+  &.large {
     padding: 14px 26px;
   }
   &:hover {
@@ -42,9 +41,9 @@
     background-color: #eaeaea;
     color: $global-color;
   }
-  
-  .icon-svg {
-    line-height: .5;
+
+  svg {
+    line-height: 0.5;
     margin-left: 8px;
     path {
       fill: currentColor;
@@ -71,12 +70,11 @@
     }
   }
 
-  
   &--icon-left {
-    > .icon-svg {
-      order: -1;
-      margin-left: 0;
-      margin-right: 8px;
+    > span {
+      order: 1;
+      margin-right: 0;
+      margin-left: 8px;
     }
   }
 }

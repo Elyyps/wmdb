@@ -1,10 +1,10 @@
 import * as React from "react";
 import styles from "./faq-form-component.module.scss";
-import { Input } from "@app/core/input";
 import { TextAreaComponent } from "@app/core/text-area";
-import { Button } from "@app/prep/modules-prep/core";
 import { withFormik, FormikProps, FormikErrors, Form } from "formik";
 import { validateEmail } from "@app/util/validate-email";
+import { Button } from "../button";
+import { Input } from "../input";
 
 interface IFAQFormErrorMessages {
   emailAddress: string;
@@ -38,7 +38,7 @@ const InnerForm = (props: FormikProps<IFAQFormValues>) => {
         />
         <TextAreaComponent label={"Vraag of opmerking (optioneel)"} name={"textarea"} />
         <div className="form__item">
-          <Button title={"Verstuur mijn vraag"} variant={"secondary full"} />
+          <Button title={"Verstuur mijn vraag"} variant={"secondary"} fullWidth />
         </div>
       </Form>
     </div>
