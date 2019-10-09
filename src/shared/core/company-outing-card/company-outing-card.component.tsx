@@ -4,7 +4,7 @@ import { IconComponent } from "../icon";
 import { ImageComponent } from "../image";
 import Arrow from "@assets/icons/chevron-right.svg";
 import { ILink } from "@app/api/core/link/link";
-import { Button } from "@app/prep/modules-prep/core";
+import { Button } from "../button";
 
 export interface ICompanyOutingCardComponentProps {
   button?: ILink;
