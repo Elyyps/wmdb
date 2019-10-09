@@ -16,6 +16,7 @@ const OverviewComponent = () => {
   const rangeMax = 200;
   const [currentPage, setCurrentPage] = React.useState(1);
   const [totalPages, setTotalPages] = React.useState(0);
+  const [totalCards, setTotalCards] = React.useState(0);
   const [cards, setCards] = React.useState<IOutingCard[]>([]);
   const [currentFilter, setCurrentFilter] = React.useState<IOverviewFilterItem>({
     keyword: "",
@@ -56,20 +57,26 @@ const OverviewComponent = () => {
       checkedItems: [],
       range: rangeMax
     });
-    setTotalPages(cardsFiltered.total);
+    const totalPagesCalculated = cardsFiltered.total / TAKE;
+    setTotalCards(cardsFiltered.total);
+    setTotalPages(totalPagesCalculated);
     setCards(cardsFiltered.cards);
   }, []);
   React.useEffect(() => {
     const skip = (currentPage - 1) * TAKE;
     const cardsFiltered = getCardsPaginated(skip, TAKE, currentFilter);
-    setTotalPages(cardsFiltered.total);
+    setTotalCards(cardsFiltered.total);
+    const totalPagesCalculated = cardsFiltered.total / TAKE;
+    setTotalPages(totalPagesCalculated);
     setCards(cardsFiltered.cards);
   }, [currentPage]);
 
   React.useEffect(() => {
     const skip = (currentPage - 1) * TAKE;
     const cardsFiltered = getCardsPaginated(skip, TAKE, currentFilter);
-    setTotalPages(cardsFiltered.total);
+    const totalPagesCalculated = cardsFiltered.total / TAKE;
+    setTotalCards(cardsFiltered.total);
+    setTotalPages(totalPagesCalculated);
     setCards(cardsFiltered.cards);
   }, [currentFilter]);
 
@@ -94,9 +101,7 @@ const OverviewComponent = () => {
             <div className="overview-head uk-visible@m">
               {currentFilter.checkedItems.length > 0 && (
                 <div className="overview-head__subtitle">
-                  {`${currentFilter.checkedItems.length +
-                    (currentFilter.filterText ? 1 : 0) +
-                    (currentFilter.range ? 1 : 0)}  uitjes gevonden gebaseerd op de volgende filters:`}
+                  {`${totalCards}  uitjes gevonden gebaseerd op de volgende filters:`}
                 </div>
               )}
 

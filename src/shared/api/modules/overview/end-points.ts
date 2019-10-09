@@ -41,7 +41,7 @@ export const getCardsPaginated = (skip: number, take: number, filter: IOverviewF
     cards = cards.filter(card => card.minimumPersons <= filter.range && card.maximumPersons >= filter.range);
   }
 
-  const total = cards.length / take;
+  const total = cards.length;
   cards = cards.slice(skip, skip + take);
 
   const cardAd: IOutingCard = {
@@ -60,7 +60,7 @@ export const getCardsPaginated = (skip: number, take: number, filter: IOverviewF
   if (cards.length === 8) {
     cards = [...cards.slice(0, 2), cardAd, ...cards.slice(2, cards.length)];
   }
-
+  console.log(total)
   return {
     cards,
     total
