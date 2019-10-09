@@ -10,13 +10,13 @@ import { BodyTextComponent } from "@app/core/bodytext";
 import { ContactFormComponent } from "@app/core/contact-form";
 import { OtherActivitiesComponent } from "../other-activities";
 import { generateOtherActivitiesData } from "@app/api/modules/other-activities/end-points";
-import { Button } from "@app/prep/modules-prep/core";
 import { ContactModalComponent } from "./contact-modal.component";
 import { ContactTelephoneComponent } from "./contact-telephone.component";
 import { ContactDataComponent } from "./contact-data.component";
 import RECTANGLE from "@assets/rectangle.png";
 import { AdBannerComponent } from "@app/core/ad-banner";
 import { generateContactData } from "@app/api/modules/contact/end-point";
+import { Button } from "@app/core/button";
 
 export interface IContactComponentProps {}
 
@@ -53,7 +53,7 @@ const ContactComponent = (props: IContactComponentProps) => {
             <div className={styles["contact-content"]}>
               <BodyTextComponent html={generateContactData().content} />
             </div>
-            <Button title={"Ontvang informatie / offerte"} variant={"primary full large"} />
+            <Button title={"Ontvang informatie / offerte"} variant={"primary"} fullWidth large />
             <div className={styles["other-activities"]}>
               <OtherActivitiesComponent otherActivities={generateOtherActivitiesData()} />
             </div>
@@ -73,7 +73,9 @@ const ContactComponent = (props: IContactComponentProps) => {
                 <div className={styles["contact-actions"]}>
                   <Button
                     title={"Ontvang informatie / offerte"}
-                    variant={"primary full large"}
+                    variant={"primary"}
+                    fullWidth
+                    large
                     icon={LOCATION}
                     position={"left"}
                     onClick={toggleForm}

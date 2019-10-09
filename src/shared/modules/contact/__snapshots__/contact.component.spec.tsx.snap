@@ -83,8 +83,10 @@ deelnemers zijn op dit moment Mister X al tegen gekomen.
           />
         </div>
         <Button
+          fullWidth={true}
+          large={true}
           title="Ontvang informatie / offerte"
-          variant="primary full large"
+          variant="primary"
         />
         <div
           className="other-activities"
@@ -154,12 +156,14 @@ deelnemers zijn op dit moment Mister X al tegen gekomen.
             className="contact-actions"
           >
             <Button
+              fullWidth={true}
               icon="location.svg"
+              large={true}
               onClick={[Function]}
               position="left"
               title="Ontvang informatie / offerte"
               type="button"
-              variant="primary full large"
+              variant="primary"
             />
           </div>
         </div>
