@@ -10,6 +10,8 @@ export interface IButtonProps {
   fullWidth?: boolean;
   href?: string;
   icon?: any;
+  iconStroke?: boolean;
+  large?: boolean;
   onClick?: any;
   position?: string;
   target?: string;
@@ -19,7 +21,7 @@ export interface IButtonProps {
 }
 
 const Button = (props: IButtonProps) => {
-  const { onClick, href, variant, target, title, type, icon, position, fullWidth, ...other } = props;
+  const { onClick, href, variant, target, title, type, icon, position, large, fullWidth, ...other } = props;
   const classModify = variant || "default";
   const buttonClassName = classNames(styles["button"], {
     [styles[`button--${classModify}`]]: classModify,
@@ -35,7 +37,7 @@ const Button = (props: IButtonProps) => {
         </Link>
       ) : (
         <button
-          style={{ width: fullWidth ? "100%" : "auto" }}
+          style={{ width: fullWidth ? "100%" : "auto", padding: large ? "14px 26px" : "" }}
           onClick={onClick}
           {...other}
           type={type}

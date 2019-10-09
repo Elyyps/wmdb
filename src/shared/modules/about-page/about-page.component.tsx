@@ -3,7 +3,7 @@ import styles from "./about-page-component.module.scss";
 import { Section } from "@app/core/section";
 import { BodyTextComponent } from "@app/core/bodytext";
 import { IAboutPage } from "@app/api/modules/about-page/about-page";
-import { Button } from "@app/prep/modules-prep/core";
+import { Button } from "@app/core/button";
 
 export interface IAboutPageComponentProps {
   aboutPage: IAboutPage;
