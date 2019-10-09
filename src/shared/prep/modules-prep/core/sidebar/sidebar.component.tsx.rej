@@ -1,0 +1,7 @@
+diff a/src/shared/prep/modules-prep/core/sidebar/sidebar.component.tsx b/src/shared/prep/modules-prep/core/sidebar/sidebar.component.tsx	(rejected hunks)
+@@ -8 +8 @@ import { Button } from "@app/core/button";
+-import { IconComponent } from '@app/core/icon';
++import { IconComponent } from "@app/core/icon";
+@@ -48 +48 @@ const Sidebar = ({ title, children, searchPlaceholder }: ISidebarProps) => {
+-          <Input placeholder={searchPlaceholder}  icon={Search} name={"search"} />
++          <Input placeholder={searchPlaceholder} icon={Search} name={"search"} />

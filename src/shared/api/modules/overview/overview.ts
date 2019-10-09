@@ -14,24 +14,24 @@ export interface IOverviewFilterCategoryItem {
 export interface IOverviewFilterItem {
   checkedItems: ICheckboxUnique[];
   filterText: string;
+  keyword: string;
   range: number;
 }
 
 export interface IOutingCard {
   button: IButton;
   categoriesId?: number[];
-  content?: any;
-  data?: {
-    icon?: string;
-    label: string;
-  };
+  content: string;
+  dataIcon?: string;
   date?: {
     end: string;
     start: string;
   };
   image?: string[];
+  maximumPersons: number;
+  minimumPersons: number;
   modify?: string;
-  subtitle?: string;
-  title?: string;
+  subtitle: string;
+  title: string;
   variant?: string;
 }

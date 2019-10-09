@@ -1,0 +1,220 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Overview] should render component without crashing 1`] = `
+<div
+  className="overview"
+>
+  <div
+    className="uk-container"
+  >
+    <div
+      className="uk-grid"
+    >
+      <div
+        className="uk-width-1-4@m"
+      >
+        <OverviewFilterComponent
+          currentFilter={
+            Object {
+              "checkedItems": Array [],
+              "filterText": "",
+              "keyword": "",
+              "range": 0,
+            }
+          }
+          filterItems={
+            Array [
+              Object {
+                "checkboxes": Array [
+                  Object {
+                    "id": 1,
+                    "label": "Citygames",
+                    "name": "citygames",
+                  },
+                  Object {
+                    "id": 2,
+                    "label": "Beachgames",
+                    "name": "Beachgames",
+                  },
+                  Object {
+                    "id": 3,
+                    "label": "Indoor Spel en Ontspanning",
+                    "name": "IndoorSpelenOntspanning",
+                  },
+                  Object {
+                    "id": 4,
+                    "label": "Outdoor Spel en Ontspanning",
+                    "name": "Outdoor Spel en Ontspanning",
+                  },
+                ],
+                "title": "Spen & Ontspanning",
+              },
+              Object {
+                "checkboxes": Array [
+                  Object {
+                    "id": 5,
+                    "label": "Fun op Wielen",
+                    "name": "Funopwielen",
+                  },
+                  Object {
+                    "id": 6,
+                    "label": "Outdoor Lucht",
+                    "name": "Outdoor Lucht",
+                  },
+                  Object {
+                    "id": 7,
+                    "label": "Outdoor Water",
+                    "name": "outdoorwater",
+                  },
+                  Object {
+                    "id": 8,
+                    "label": "Indoor Sport en Actie",
+                    "name": "indorsportenactie",
+                  },
+                ],
+                "title": "Sportief & Actie(f)",
+              },
+              Object {
+                "checkboxes": Array [
+                  Object {
+                    "id": 9,
+                    "label": "Creatief",
+                    "name": "creatief",
+                  },
+                  Object {
+                    "id": 10,
+                    "label": "Theater",
+                    "name": "theater",
+                  },
+                  Object {
+                    "id": 11,
+                    "label": "Muziek en Daans",
+                    "name": "muziekendaans",
+                  },
+                ],
+                "title": "Creatieve Uitjes",
+              },
+              Object {
+                "checkboxes": Array [
+                  Object {
+                    "id": 12,
+                    "label": "Kookworkshops",
+                    "name": "kookworkshops",
+                  },
+                  Object {
+                    "id": 13,
+                    "label": "Kunst en Cultuur",
+                    "name": "kunstencultuur",
+                  },
+                  Object {
+                    "id": 14,
+                    "label": "Body en Spirit",
+                    "name": "bodyenspirit",
+                  },
+                ],
+                "title": "Workshops",
+              },
+              Object {
+                "checkboxes": Array [
+                  Object {
+                    "id": 15,
+                    "label": "Eten en drinken",
+                    "name": "etenendrinken",
+                  },
+                  Object {
+                    "id": 16,
+                    "label": "Themafeesten",
+                    "name": "Themafeesten",
+                  },
+                  Object {
+                    "id": 17,
+                    "label": "Totaalprogramma",
+                    "name": "totaalprogramma",
+                  },
+                  Object {
+                    "id": 18,
+                    "label": "Attracties en Entertainment",
+                    "name": "Attractiesenentertainment",
+                  },
+                ],
+                "title": "Eten, Drinken & Feesten",
+              },
+              Object {
+                "checkboxes": Array [
+                  Object {
+                    "id": 19,
+                    "label": "Teamtraining",
+                    "name": "Teamtraining",
+                  },
+                  Object {
+                    "id": 20,
+                    "label": "Teambuilding",
+                    "name": "Teambuilding",
+                  },
+                  Object {
+                    "id": 21,
+                    "label": "Uit Vergaderen",
+                    "name": "Uit Vergaderen",
+                  },
+                ],
+                "title": "Teambuilden",
+              },
+              Object {
+                "checkboxes": Array [
+                  Object {
+                    "id": 22,
+                    "label": "Wintersport",
+                    "name": "wintersport",
+                  },
+                  Object {
+                    "id": 23,
+                    "label": "Stedentrips",
+                    "name": "stedentrips",
+                  },
+                  Object {
+                    "id": 24,
+                    "label": "Adventure & Outdoor",
+                    "name": "adventureeoutdoor",
+                  },
+                  Object {
+                    "id": 25,
+                    "label": "Reizen Buitenland",
+                    "name": "reizenbuitenland",
+                  },
+                ],
+                "title": "Incentives",
+              },
+            ]
+          }
+          onFilterChange={[Function]}
+          range={0}
+          rangeMax={200}
+          searchPlaceholder="Plaats, regio of provincie"
+          sidebarList={
+            Object {
+              "list": Array [
+                "Link 1",
+                "Link 2",
+              ],
+              "title": "Handige links",
+            }
+          }
+        />
+      </div>
+      <div
+        className="uk-width-3-4@m"
+      >
+        <div
+          className="overview-head uk-visible@m"
+        >
+          <ul
+            className="overview-head__list"
+            data-uk-margin={true}
+          />
+        </div>
+        Nothing to show
+      </div>
+    </div>
+  </div>
+</div>
+`;

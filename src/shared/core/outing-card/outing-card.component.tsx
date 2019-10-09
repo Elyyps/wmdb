@@ -3,33 +3,37 @@ import styles from "./outing-card-component.module.scss";
 import { IconComponent } from "../icon";
 import { LinkComponent } from "../link";
 import { OutingCardImage } from "./outing-card-image.component";
-import { IButtonProps, Button } from "@app/prep/modules-prep/core";
+import { Button } from "@app/prep/modules-prep/core";
 import IconCalendar from "@assets/icons/calendar.svg";
 import classNames from "classnames";
 import IconDown from "@assets/icons/chevron-down.svg";
+import { IButton } from "@app/api/core/button";
 
 export interface IOutingCardComponentProps {
-  button: IButtonProps;
-  content?: any;
-  data: {
-    icon?: string;
-    label: string;
-  };
+  button: IButton;
+  categoriesId?: number[];
+  content: string;
+  dataIcon?: string;
   date?: {
     end: string;
     start: string;
   };
-  image?: any;
+  image?: string[];
+  maximumPersons: number;
+  minimumPersons: number;
   modify?: string;
-  subtitle?: string;
-  title?: string;
+  subtitle: string;
+  title: string;
+  variant?: string;
 }
 
 const OutingCardComponent = ({
   title,
   image,
   button,
-  data,
+  dataIcon,
+  minimumPersons,
+  maximumPersons,
   content,
   subtitle,
   date,
@@ -78,8 +82,8 @@ const OutingCardComponent = ({
               </div>
             )}
             <div className={styles["card-label"]}>
-              <IconComponent icon={data.icon} size={"20px"} />
-              <span>{data.label}</span>
+              <IconComponent icon={dataIcon} size={"20px"} />
+              <span>{`${minimumPersons} - ${maximumPersons} personen`}</span>
             </div>
           </div>
           <div className={styles["card-action"]}>

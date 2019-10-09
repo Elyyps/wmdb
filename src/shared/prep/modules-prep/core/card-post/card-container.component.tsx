@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./card-post.component.scss";
-import { CardAdvertise, CardPost } from "@app/prep/modules-prep/core";
+import { CardAdvertise } from "@app/prep/modules-prep/core";
 import { OutingCardComponent } from "@app/core/outing-card";
 
 interface ICardContainerProps {
@@ -9,11 +9,10 @@ interface ICardContainerProps {
 
 const CardContainer = ({ Cards }: ICardContainerProps) => (
   <div className={"card-post-wrapper"}>
-    {Cards
-      ? Cards.map((card: any, key: number) =>
-          card.variant ? <CardAdvertise key={key} {...card} /> : <OutingCardComponent key={key} {...card} />
-        )
-      : ""}
+    {Cards &&
+      Cards.map((card: any, key: number) =>
+        card.variant ? <CardAdvertise key={key} {...card} /> : <OutingCardComponent key={key} {...card} />
+      )}
   </div>
 );
 
