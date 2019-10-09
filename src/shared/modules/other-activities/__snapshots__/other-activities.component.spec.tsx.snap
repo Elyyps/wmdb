@@ -15,34 +15,38 @@ exports[`[OtherActivities] should render component without crashing 1`] = `
     className="uk-grid uk-child-width-1-2@s uk-grid-medium"
     data-uk-margin={true}
   >
-    <div>
+    <div
+      key="0"
+    >
       <EventCardComponent
         image="oasis.jpg"
-        key="0"
         link=""
         title="U Deugt Wij Deugen"
       />
     </div>
-    <div>
+    <div
+      key="1"
+    >
       <EventCardComponent
         image="img02.png"
-        key="1"
         link=""
         title="The Ultimate Expedition"
       />
     </div>
-    <div>
+    <div
+      key="2"
+    >
       <EventCardComponent
         image="rectangle.png"
-        key="2"
         link=""
         title="Het Mislukte Feest"
       />
     </div>
-    <div>
+    <div
+      key="3"
+    >
       <EventCardComponent
         image="img-big.jpg"
-        key="3"
         link=""
         title="Hou van Holland Stadsspel"
       />

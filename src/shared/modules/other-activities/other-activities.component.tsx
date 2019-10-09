@@ -17,8 +17,8 @@ const OtherActivitiesComponent = (props: IOtherActivitiesComponentProps) => (
     <div className="uk-grid uk-child-width-1-2@s uk-grid-medium" data-uk-margin>
       {props.otherActivities.cards &&
         props.otherActivities.cards.map((item: IEventCard, key: number) => (
-          <div>
-            <EventCardComponent key={key} image={item.image} link={item.buttonText} title={item.title} />
+          <div key={key}>
+            <EventCardComponent image={item.image} link={item.buttonText} title={item.title} />
           </div>
         ))}
     </div>
