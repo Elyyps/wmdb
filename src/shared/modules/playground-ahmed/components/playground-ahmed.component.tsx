@@ -11,11 +11,13 @@ import ROOMS from "@assets/icons/rooms.svg";
 import { CompanyOutingComponent } from "@app/modules/company-outing";
 import { generateCompanyOutingData } from "@app/api/modules/company-outing/end-point";
 import { ContactFormComponent } from "@app/core/contact-form";
+import { FAQComponent } from "@app/modules/faq";
+import { generateFAQData } from "@app/api/modules/faq/end-point";
 export interface IPlaygroundAhmedComponentProps {}
 
 const PlaygroundAhmedComponent = (props: IPlaygroundAhmedComponentProps) => (
   <div className={"uk-container"}>
-    <ContactFormComponent />
+    <FAQComponent faq={generateFAQData()} />
     {/* <OutingCardComponent
       {...{
         title: "Escape City - Het ontsnappingsspel van Mokum",

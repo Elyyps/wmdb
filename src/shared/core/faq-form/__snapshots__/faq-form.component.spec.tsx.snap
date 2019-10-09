@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[FAQForm] should render component without crashing 1`] = `
+<Formik
+  enableReinitialize={false}
+  handleSubmit={[Function]}
+  initialValues={
+    Object {
+      "emailAddress": "",
+      "name": "",
+    }
+  }
+  isInitialValid={false}
+  onSubmit={[Function]}
+  render={[Function]}
+  validate={[Function]}
+  validateOnBlur={true}
+  validateOnChange={true}
+/>
+`;
