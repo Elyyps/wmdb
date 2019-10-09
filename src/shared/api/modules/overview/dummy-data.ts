@@ -4,6 +4,7 @@ import { IOutingCard } from "./overview";
 import ROOMS from "@assets/icons/rooms.svg";
 import { IOverviewFilterCategoryItem } from "@app/api/modules/overview";
 
+/* tslint:disable */
 export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => [
   {
     title: "Spen & Ontspanning",
@@ -179,10 +180,9 @@ const DummyOutingCards: IOutingCard[] = [
       href: "#"
     },
     categoriesId: [1],
-    data: {
-      icon: ROOMS,
-      label: "10 - 1000 personen"
-    },
+    dataIcon: ROOMS,
+    minimumPersons: 10,
+    maximumPersons: 100,
     content:
       "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
   },
@@ -195,10 +195,9 @@ const DummyOutingCards: IOutingCard[] = [
       href: "#"
     },
     categoriesId: [1],
-    data: {
-      icon: ROOMS,
-      label: "10 - 200 personen"
-    },
+    dataIcon: ROOMS,
+    minimumPersons: 20,
+    maximumPersons: 100,
     content:
       "TB Events: Met een flinke kater: verloren spullen, lippenstift op vreemde plaatsen, blauwe plekken... Net als de vier hoofdrol-spelers in de briljante speelfilm ‘The Hangover’. TB Events biedt je de mogelijkheid om The Hangover nu zelf real time..."
   },
@@ -216,10 +215,9 @@ const DummyOutingCards: IOutingCard[] = [
       href: "#"
     },
     categoriesId: [1],
-    data: {
-      icon: ROOMS,
-      label: "10 - 1000 personen"
-    },
+    dataIcon: ROOMS,
+    minimumPersons: 10,
+    maximumPersons: 100,
     content:
       "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
   },
@@ -237,10 +235,9 @@ const DummyOutingCards: IOutingCard[] = [
       href: "#"
     },
     categoriesId: [2],
-    data: {
-      icon: ROOMS,
-      label: "10 - 1000 personen"
-    },
+    dataIcon: ROOMS,
+    minimumPersons: 10,
+    maximumPersons: 100,
     content:
       "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
   },
@@ -258,10 +255,9 @@ const DummyOutingCards: IOutingCard[] = [
       href: "#"
     },
     categoriesId: [1, 14, 17],
-    data: {
-      icon: ROOMS,
-      label: "10 - 1000 personen"
-    },
+    dataIcon: ROOMS,
+    minimumPersons: 40,
+    maximumPersons: 100,
     content:
       "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
   },
@@ -279,10 +275,9 @@ const DummyOutingCards: IOutingCard[] = [
       href: "#"
     },
     categoriesId: [1, 5, 18, 19, 20, 11],
-    data: {
-      icon: ROOMS,
-      label: "10 - 1000 personen"
-    },
+    dataIcon: ROOMS,
+    minimumPersons: 10,
+    maximumPersons: 100,
     content:
       "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
   },
@@ -300,10 +295,9 @@ const DummyOutingCards: IOutingCard[] = [
       href: "#"
     },
     categoriesId: [1, 4, 22, 10, 2],
-    data: {
-      icon: ROOMS,
-      label: "10 - 1000 personen"
-    },
+    dataIcon: ROOMS,
+    minimumPersons: 5,
+    maximumPersons: 20,
     content:
       "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
   },
@@ -321,10 +315,9 @@ const DummyOutingCards: IOutingCard[] = [
       href: "#"
     },
     categoriesId: [5, 3, 20, 7],
-    data: {
-      icon: ROOMS,
-      label: "10 - 1000 personen"
-    },
+    dataIcon: ROOMS,
+    minimumPersons: 10,
+    maximumPersons: 200,
     content:
       "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
   },
@@ -342,10 +335,9 @@ const DummyOutingCards: IOutingCard[] = [
       href: "#"
     },
     categoriesId: [7, 24],
-    data: {
-      icon: ROOMS,
-      label: "10 - 1000 personen"
-    },
+    dataIcon: ROOMS,
+    minimumPersons: 10,
+    maximumPersons: 100,
     content:
       "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
   },
@@ -363,10 +355,9 @@ const DummyOutingCards: IOutingCard[] = [
       href: "#"
     },
     categoriesId: [8],
-    data: {
-      icon: ROOMS,
-      label: "10 - 1000 personen"
-    },
+    dataIcon: ROOMS,
+    minimumPersons: 100,
+    maximumPersons: 150,
     content:
       "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
   },
@@ -384,10 +375,9 @@ const DummyOutingCards: IOutingCard[] = [
       href: "#"
     },
     categoriesId: [10],
-    data: {
-      icon: ROOMS,
-      label: "10 - 1000 personen"
-    },
+    dataIcon: ROOMS,
+    minimumPersons: 10,
+    maximumPersons: 100,
     content:
       "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
   },
@@ -405,10 +395,9 @@ const DummyOutingCards: IOutingCard[] = [
       href: "#"
     },
     categoriesId: [11],
-    data: {
-      icon: ROOMS,
-      label: "10 - 1000 personen"
-    },
+    dataIcon: ROOMS,
+    minimumPersons: 10,
+    maximumPersons: 100,
     content:
       "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
   },
@@ -426,10 +415,9 @@ const DummyOutingCards: IOutingCard[] = [
       href: "#"
     },
     categoriesId: [13, 25],
-    data: {
-      icon: ROOMS,
-      label: "10 - 1000 personen"
-    },
+    dataIcon: ROOMS,
+    minimumPersons: 1,
+    maximumPersons: 30,
     content:
       "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
   },
@@ -447,10 +435,9 @@ const DummyOutingCards: IOutingCard[] = [
       href: "#"
     },
     categoriesId: [7, 6],
-    data: {
-      icon: ROOMS,
-      label: "10 - 1000 personen"
-    },
+    dataIcon: ROOMS,
+    minimumPersons: 1,
+    maximumPersons: 10,
     content:
       "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
   },
@@ -468,10 +455,9 @@ const DummyOutingCards: IOutingCard[] = [
       href: "#"
     },
     categoriesId: [3, 4],
-    data: {
-      icon: ROOMS,
-      label: "10 - 1000 personen"
-    },
+    dataIcon: ROOMS,
+    minimumPersons: 10,
+    maximumPersons: 40,
     content:
       "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
   },
@@ -489,10 +475,29 @@ const DummyOutingCards: IOutingCard[] = [
       href: "#"
     },
     categoriesId: [4, 9, 23],
-    data: {
-      icon: ROOMS,
-      label: "10 - 1000 personen"
+    dataIcon: ROOMS,
+    minimumPersons: 5,
+    maximumPersons: 20,
+    content:
+      "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
+  },
+  {
+    title: "Escape City - Het ontsnappingsspel van Mokum",
+    subtitle: "Citygames in Amsterdam",
+    image: [
+      "https://picsum.photos/id/74/300/200",
+      "https://picsum.photos/id/75/300/200",
+      "https://picsum.photos/id/76/300/200",
+      "https://picsum.photos/id/77/300/200"
+    ],
+    button: {
+      title: "Lees meer",
+      href: "#"
     },
+    categoriesId: [4, 9, 23],
+    dataIcon: ROOMS,
+    minimumPersons: 15,
+    maximumPersons: 35,
     content:
       "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
   }
@@ -506,7 +511,6 @@ export const getCardsAmount = (amount: number): IOutingCard[] => {
   }
 
   let count = 1;
-  const newArray: IOutingCard[] = [];
 
   toReturn = toReturn.map(item => {
     const newItem = { ...item };
@@ -517,7 +521,8 @@ export const getCardsAmount = (amount: number): IOutingCard[] => {
   });
 
   toReturn = toReturn.slice(0, amount);
-  toReturn[toReturn.length-1].title += "x";
+  toReturn[toReturn.length - 1].title += "x";
+  toReturn[toReturn.length - 1].content += "KEYWORD";
 
   return toReturn;
 };

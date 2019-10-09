@@ -3,7 +3,7 @@ import { CalendarComponent } from "@app/prep/modules-prep/core";
 import InputRange from "react-input-range";
 import { Link } from "react-router-dom";
 import { Checkbox } from "../checkbox/checkbox.component";
-import { ICheckbox, ICheckboxUnique } from "@app/api/core/checkbox";
+import { ICheckboxUnique } from "@app/api/core/checkbox";
 import styles from "./overview-filter-component.module.scss";
 import Search from "@assets/icons/search.svg";
 import { Input } from "../input";
@@ -31,10 +31,10 @@ export interface IOverviewFilterComponentProps {
 
 const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
   const [isActive, setIsActive] = React.useState(false);
-  const CheckboxObject: any = {};
   const [checkedItems, setCheckedItems] = React.useState<ICheckboxUnique[]>([]);
   const [range, setRange] = React.useState<any>(null);
   const [filterText, setFilterText] = React.useState("");
+  const [keywordText, setKeywordText] = React.useState("");
   const MEDIUM_BREAKPOINT = 960;
   const {
     onFilterChange,
@@ -51,13 +51,15 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
   const clearFilter = () => {
     setCheckedItems([]);
     setFilterText("");
+    setKeywordText("");
     setRange(0);
   };
   const initializeFilter = () => {
     if (currentFilter) {
-      if (currentFilter.checkedItems) setCheckedItems(currentFilter.checkedItems);
-      if (currentFilter.range) setRange(currentFilter.range);
-      if (currentFilter.filterText) setFilterText(currentFilter.filterText);
+      setCheckedItems(currentFilter.checkedItems);
+      setRange(currentFilter.range);
+      setKeywordText(currentFilter.keyword);
+      setFilterText(currentFilter.filterText);
     }
   };
   const handelClick = () => {
@@ -73,7 +75,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
     }
   };
 
-  const handleCheckboxChange = (event: React.ChangeEvent, item: ICheckboxUnique) => {
+  const handleCheckboxChange = (item: ICheckboxUnique) => {
     let newCheckedItems = [...checkedItems];
     const currentItem = newCheckedItems.find(filter => filter.id === item.id);
     if (currentItem) {
@@ -82,11 +84,11 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
       newCheckedItems.push({
         isChecked: true,
         id: item.id,
-        label: item.label,
+        label: item.label
       });
     }
     setCheckedItems(newCheckedItems);
-    sendFilterOptions({ checkedItems: newCheckedItems, filterText, range });
+    sendFilterOptions({ checkedItems: newCheckedItems, keyword: keywordText, filterText, range });
   };
 
   React.useEffect(() => {
@@ -142,7 +144,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
               value={filterText}
               onChange={value => {
                 setFilterText(value);
-                sendFilterOptions({ checkedItems, filterText: value, range });
+                sendFilterOptions({ checkedItems, keyword: keywordText, filterText: value, range });
               }}
               placeholder={searchPlaceholder}
               icon={Search}
@@ -154,7 +156,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
           <Input
             onChange={value => {
               setFilterText(value);
-              sendFilterOptions({ checkedItems, filterText: value, range });
+              sendFilterOptions({ checkedItems, keyword: keywordText, filterText: value, range });
             }}
             value={filterText}
             placeholder={searchPlaceholder}
@@ -175,13 +177,26 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
                   name={item.id}
                   value={item.label}
                   count={checkboxCount}
-                  onChange={(event: any) => {
-                    handleCheckboxChange(event, item);
+                  onChange={() => {
+                    handleCheckboxChange(item);
                   }}
                 />
               ))}
             </div>
           ))}
+
+        <div className={styles["overview-filter__item"]}>
+          <h5>Zoekwoord</h5>
+          <Input
+            value={keywordText}
+            onChange={value => {
+              setKeywordText(value);
+              sendFilterOptions({ checkedItems, keyword: value, filterText, range });
+            }}
+            name="zoekwoord"
+            placeholder="Zoekwoord"
+          />
+        </div>
         {rangeMax && (
           <div className={styles["overview-filter__item"]}>
             <h5>Personen</h5>
@@ -192,10 +207,17 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
                 value={range ? range : 0}
                 onChange={event => {
                   setRange(event);
+                  const numberRange = parseInt(event.toString(), 0);
+                  sendFilterOptions({
+                    checkedItems,
+                    keyword: keywordText,
+                    filterText,
+                    range: numberRange
+                  });
                 }}
               />
               <div className="input-range__items">
-                <span>{range}+</span>
+                <span>{range ? range : 0}+</span>
                 <span>{rangeMax}+</span>
               </div>
             </div>
@@ -206,8 +228,9 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
             <CalendarComponent onChange={dateOnchange} date={date} />
           </div>
         )}
+
         {sidebarList && (
-          <div className={styles["overview-filter__item"]}>
+          <div className={`${styles["overview-filter__item"]} ${styles["divider"]}`}>
             <h5>{sidebarList.title}</h5>
             <ul className={"sidebar-list"}>
               {sidebarList.list &&
@@ -223,7 +246,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
           <Button
             onClick={() => {
               if (onFilterChange) {
-                onFilterChange({ checkedItems, filterText, range });
+                onFilterChange({ checkedItems, keyword: keywordText, filterText, range });
               }
               setIsActive(false);
             }}

@@ -1,7 +1,6 @@
 import * as React from "react";
 import { OverviewFilterComponent } from "@app/core/overview-filter";
 import { LabelComponent } from "./label/label.component";
-
 import { CardContainer } from "@app/core/card-post";
 import { PaginationComponent } from "@app/core/pagination";
 import { ListCheckComponent } from "@app/core/list-check";
@@ -11,16 +10,15 @@ import { GenerateDummyFilterOverview } from "../../api/modules/overview/dummy-da
 export interface IOverviewComponentProps {}
 
 const TAKE = 8;
+const AD_POSITION = 6;
 
 const OverviewComponent = () => {
-  const CheckboxObject: any = {};
   const rangeMax = 200;
-  const [totalSelected, setTotalSelected] = React.useState(0);
   const [currentPage, setCurrentPage] = React.useState(1);
-  const [totalPages, setTotalPages] = React.useState(7);
-  const [checkedItems] = React.useState(CheckboxObject);
+  const [totalPages, setTotalPages] = React.useState(0);
   const [cards, setCards] = React.useState<IOutingCard[]>([]);
   const [currentFilter, setCurrentFilter] = React.useState<IOverviewFilterItem>({
+    keyword: "",
     checkedItems: [],
     filterText: "",
     range: 0
@@ -33,30 +31,31 @@ const OverviewComponent = () => {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
 
-  const getSelectedItems = (state: any) => {
-    let count = 0;
-    Object.keys(state).map(item => {
-      if (checkedItems[item].isChecked) {
-        count += 1;
-      }
-    });
-    setTotalSelected(count);
-  };
-
   const handleClose = (item: any) => {
     const newCheckedItems = [...currentFilter.checkedItems];
     newCheckedItems.splice(item, 1);
     setCurrentFilter({ ...currentFilter, checkedItems: newCheckedItems });
   };
-
-  const total = false;
+  const handleCloseTextFilter = () => {
+    const newCheckedItems = { ...currentFilter };
+    setCurrentFilter({ ...newCheckedItems, filterText: "" });
+  };
+  const handleCloseKeyword = () => {
+    const newCheckedItems = { ...currentFilter };
+    setCurrentFilter({ ...newCheckedItems, keyword: "" });
+  };
+  const handleCloseRange = () => {
+    const newCheckedItems = { ...currentFilter };
+    setCurrentFilter({ ...newCheckedItems, range: 0 });
+  };
 
   React.useEffect(() => {
-    getSelectedItems(checkedItems);
-  });
-
-  React.useEffect(() => {
-    const cardsFiltered = getCardsPaginated(0, TAKE, { filterText: "", checkedItems: [], range: rangeMax });
+    const cardsFiltered = getCardsPaginated(0, TAKE, {
+      keyword: "",
+      filterText: "",
+      checkedItems: [],
+      range: rangeMax
+    });
     setTotalPages(cardsFiltered.total);
     setCards(cardsFiltered.cards);
   }, []);
@@ -82,6 +81,7 @@ const OverviewComponent = () => {
             <OverviewFilterComponent
               searchPlaceholder="Plaats, regio of provincie"
               range={0}
+              sidebarList={{ title: "Handige links", list: ["Link 1", "Link 2"] }}
               currentFilter={currentFilter}
               onFilterChange={changed => {
                 setCurrentFilter(changed);
@@ -92,12 +92,33 @@ const OverviewComponent = () => {
           </div>
           <div className="uk-width-3-4@m">
             <div className="overview-head uk-visible@m">
-              {total && (
+              {currentFilter.checkedItems.length > 0 && (
                 <div className="overview-head__subtitle">
-                  {totalSelected} uitjes gevonden gebaseerd op de volgende filters:
+                  {`${currentFilter.checkedItems.length +
+                    (currentFilter.filterText ? 1 : 0) +
+                    (currentFilter.range ? 1 : 0)}  uitjes gevonden gebaseerd op de volgende filters:`}
                 </div>
               )}
+
               <ul className="overview-head__list" data-uk-margin>
+                {currentFilter.filterText && (
+                  <li>
+                    <LabelComponent
+                      onClick={handleCloseTextFilter}
+                      label={`Plaats, regio of provincie: ${currentFilter.filterText}`}
+                    />
+                  </li>
+                )}
+                {currentFilter.keyword && (
+                  <li>
+                    <LabelComponent onClick={handleCloseKeyword} label={`Keyword: ${currentFilter.keyword}`} />
+                  </li>
+                )}
+                {currentFilter.range > 0 && (
+                  <li>
+                    <LabelComponent onClick={handleCloseRange} label={`${currentFilter.range} personen`} />
+                  </li>
+                )}
                 {currentFilter.checkedItems &&
                   Object.keys(currentFilter.checkedItems).map((item: any, key: number) => (
                     <li key={key}>
@@ -115,26 +136,28 @@ const OverviewComponent = () => {
                 <ListCheckComponent
                   labels={["Kwalitatief aanbod van uitjes", "Direct contact", "Unieke content van uitjes"]}
                 />
-                <CardContainer Cards={cards.slice(0, 6)} />
-                {cards.length >= 6 && (
+                <CardContainer Cards={cards.slice(0, AD_POSITION)} />
+                {cards.length >= AD_POSITION && (
                   <>
                     <ListCheckComponent
                       labels={["Kwalitatief aanbod van uitjes", "Direct contact", "Unieke content van uitjes"]}
                     />
-                    <CardContainer Cards={cards.slice(6, cards.length)} />
+                    <CardContainer Cards={cards.slice(AD_POSITION, cards.length)} />
                   </>
                 )}
-                <PaginationComponent
-                  changePage={setCurrentPage}
-                  previousPage={previousPage}
-                  nextPage={nextPage}
-                  currentPage={currentPage}
-                  totalPages={totalPages}
-                />
+                {totalPages > 1 && (
+                  <PaginationComponent
+                    changePage={setCurrentPage}
+                    previousPage={previousPage}
+                    nextPage={nextPage}
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                  />
+                )}
               </div>
-            ) : 
-                  'Nothing to show'
-            }
+            ) : (
+              "Nothing to show"
+            )}
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./card-post.component.scss";
-import { CardAdvertise, CardPost } from "@app/prep/modules-prep/core";
+import { CardAdvertise } from "@app/prep/modules-prep/core";
 import { OutingCardComponent } from "@app/core/outing-card";
 
 interface ICardContainerProps {

@@ -1,3 +1,4 @@
+/* tslint:disable */
 export function calculatePages(totalPages: number, currentPage: number): number[] {
   let totalPagesRounded = 0;
   const CURRENT_PAGE = currentPage;

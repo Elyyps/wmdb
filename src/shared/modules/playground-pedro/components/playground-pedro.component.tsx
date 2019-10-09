@@ -13,13 +13,13 @@ import { Checkbox } from "@app/core/checkbox/checkbox.component";
 import { Button } from "@app/core/button";
 import { OverviewFilterComponent } from "@app/core/overview-filter";
 import { dummyOverviewFilterData } from "@app/api/core/overview-filter";
-import { IOverviewFilterItem } from "../../../core/overview-filter/overview-filter.component";
 import { OverviewComponent } from "@app/modules/overview";
+import { IOverviewFilterItem } from "@app/api/modules/overview";
 
 export interface IPlaygroundPedroComponentProps {}
 
 const PlaygroundPedroComponent = (props: IPlaygroundPedroComponentProps) => {
-  const CheckboxObject: IOverviewFilterItem = { checkedItems: [], filterText: "", range: 0 };
+  const CheckboxObject: IOverviewFilterItem = { checkedItems: [], keyword: "", filterText: "", range: 0 };
   const [checkedItems, setCheckedItems] = React.useState<any>(CheckboxObject);
   const [range, setRange] = React.useState(0);
   const [filterText, setFilterText] = React.useState("");

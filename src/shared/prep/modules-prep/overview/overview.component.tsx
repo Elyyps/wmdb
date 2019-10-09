@@ -113,7 +113,6 @@ const OverviewComponent = ({ total, Cards, CardsSecondary, sidebar }: IOverviewC
               />
               <CardContainer Cards={CardsSecondary} />
             </div>
-            <PaginationComponent />
           </div>
         </div>
       </div>

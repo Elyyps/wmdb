@@ -7,6 +7,7 @@ import { OutingCardComponent } from "./outing-card.component";
 import PlaceholderImage from "@assets/img01.png";
 import PlaceholderImage1 from "@assets/img02.png";
 import ROOMS from "@assets/icons/rooms.svg";
+import { GenerateDummyFilterOverview, getCardsAmount } from "@app/api/modules/overview";
 const card = {
   title: "Escape City - Het ontsnappingsspel van Mokum",
   subtitle: "Citygames in Amsterdam",
@@ -25,4 +26,4 @@ const card = {
 storiesOf("OutingCard", module)
   .addDecorator(withA11y)
   .addDecorator(withProvider)
-  .add("Basic implementation", () => <OutingCardComponent {...card} />);
+  .add("Basic implementation", () => <OutingCardComponent {...getCardsAmount(1)[0]} />);
