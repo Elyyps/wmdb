@@ -20,6 +20,9 @@ import { FAQComponent } from "@app/modules/faq";
 import { generateFAQData } from "@app/api/modules/faq/end-point";
 import { OtherLocationsComponent } from "@app/modules/other-locations";
 import { generateOtherLocationsData } from "@app/api/modules/other-locations/end-point";
+import { FAQHeaderComponent } from "@app/modules/faq-header";
+import PlaceholderImage2 from "@assets/img03.png";
+
 export interface IPlaygroundAhmedComponentProps {}
 
 const PlaygroundAhmedComponent = (props: IPlaygroundAhmedComponentProps) => (
@@ -29,7 +32,11 @@ const PlaygroundAhmedComponent = (props: IPlaygroundAhmedComponentProps) => (
     <FooterComponent footer={generateFooterData()} />
     <CompanyOutingComponent companyOuting={generateCompanyOutingData()} />
     <OtherActivitiesComponent otherActivities={generateOtherActivitiesData()} />
-
+    <FAQHeaderComponent
+      title={"Veelgestelde vragen"}
+      content={"Alle vragen omtrent WegmetdeBaas. Hoe vind je zo snel mogelijk het perfecte uitje?"}
+      image={PlaceholderImage2}
+    />
     <FAQComponent faq={generateFAQData()} />
     <OtherLocationsComponent otherLocations={generateOtherLocationsData()} />
     <OutingCardComponent
