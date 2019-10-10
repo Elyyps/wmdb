@@ -11,28 +11,53 @@ import { BodyTextComponent } from "@app/core/bodytext";
 import { generateDummyBodyText } from "@app/api/core/bodytext";
 import { Checkbox } from "@app/core/checkbox/checkbox.component";
 import { Button } from "@app/core/button";
-import { Breadcrumb } from "@app/core/breadcrumb";
+import { OverviewFilterComponent } from "@app/core/overview-filter";
+import { dummyOverviewFilterData } from "@app/api/core/overview-filter";
+import { IOverviewFilterItem } from "../../../core/overview-filter/overview-filter.component";
 
 export interface IPlaygroundPedroComponentProps {}
 
-const PlaygroundPedroComponent = (props: IPlaygroundPedroComponentProps) => (
-  <div className={style["main"]}>
-    <HeroComponent
-      onSubmit={obj => {
-        console.log(obj);
-      }}
-      heroModule={generateDummyHeroModule()}
-    />
-    <div style={{ maxWidth: "500px" }} className="uk-container">
-      <Breadcrumb
-        breadcrumbs={[
-          { title: "Home", url: "/" },
-          { title: "Citygames in Amasterdam", url: "/" },
-          { title: "Second page", url: "" }
-        ]}
-      />
+const PlaygroundPedroComponent = (props: IPlaygroundPedroComponentProps) => {
+  const CheckboxObject: IOverviewFilterItem = { checkedItems: [], filterText: "", range: 0 };
+  const [checkedItems, setCheckedItems] = React.useState<any>(CheckboxObject);
+  const [range, setRange] = React.useState(0);
+  const [filterText, setFilterText] = React.useState("");
+  const handleOnChangeRange = (value: any) => {
+    setRange(value);
+  };
+  const handleChange = (event: any) => {
+    setCheckedItems({
+      ...checkedItems,
+      [event.target.name]: {
+        isChecked: event.target.checked,
+        value: event.target.value
+      }
+    });
+  };
+  return (
+    <div className={style["main"]}>
+      <div className="uk-grid">
+        <div style={{ background: "white", padding: 24 }} className="uk-width-1-4@m">
+          <OverviewFilterComponent
+            searchPlaceholder="Plaats, regio of provincie"
+            range={range}
+            filterText={filterText}
+            currentFilter={checkedItems}
+            onFilterChange={(obj: object) => {
+              setCheckedItems(obj);
+            }}
+            // stateCheckboxes={checkedItems}
+            clearFilter={() => {
+              setFilterText("");
+              setCheckedItems([]);
+              setRange(100);
+            }}
+            {...dummyOverviewFilterData}
+          />
+        </div>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export { PlaygroundPedroComponent };

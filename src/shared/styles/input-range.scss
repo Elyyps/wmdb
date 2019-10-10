@@ -12,11 +12,8 @@
     outline: none;
     position: absolute;
     top: 0;
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+
     width: 1rem;
-    &-container {
-      transition: left 0.3s ease-out;
-    }
   }
   &__wrapper {
     margin-top: 22px;
@@ -33,7 +30,6 @@
   &__track {
     height: 2px;
     background-color: $gray-light-secondary;
-    transition: left 0.3s ease-out, width 0.3s ease-out;
     &--active {
       background-color: $brand-primary;
     }

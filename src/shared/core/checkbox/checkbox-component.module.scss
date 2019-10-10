@@ -2,16 +2,22 @@
   -webkit-appearance: none;
   background-color: $global-background;
   border: 1px solid $gray-lighter;
-  border-radius: 2px;
+  cursor: pointer;
+
+  border-radius: 4px;
   width: 14px;
   height: 14px;
   display: inline-block;
   position: relative;
   margin: 0 8px 0 0;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  outline: none !important;
   &-label {
     font-size: 14px;
     display: flex;
     align-items: center;
+    cursor: pointer;
     color: $global-color;
     &:not(:last-child) {
       margin-bottom: 2px;
