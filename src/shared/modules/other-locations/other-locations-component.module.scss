@@ -1,0 +1,33 @@
+.other-locations {
+  &:not(:first-child) {
+    margin-top: 42px;
+  }
+
+  &__list {
+    font-size: 12px;
+    @media (min-width: $breakpoint-small) {
+      column-count: 3;
+      column-gap: 20px;
+    }
+    @media (min-width: $breakpoint-medium) {
+      column-count: 5;
+      font-size: 14px;
+    }
+    li {
+      width: fit-content;
+      margin-bottom: 12px;
+      text-decoration: underline;
+      @media (min-width: $breakpoint-small) {
+        margin-bottom: 9px;
+      }
+      @media (max-width: $breakpoint-xsmall-max) {
+        &:nth-child(n + 5) {
+          display: none;
+        }
+      }
+    }
+    a {
+      color: $gray;
+    }
+  }
+}

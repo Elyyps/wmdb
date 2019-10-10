@@ -18,6 +18,8 @@ import { OtherActivitiesComponent } from "@app/modules/other-activities";
 import { generateOtherActivitiesData } from "@app/api/modules/other-activities/end-points";
 import { FAQComponent } from "@app/modules/faq";
 import { generateFAQData } from "@app/api/modules/faq/end-point";
+import { OtherLocationsComponent } from "@app/modules/other-locations";
+import { generateOtherLocationsData } from "@app/api/modules/other-locations/end-point";
 export interface IPlaygroundAhmedComponentProps {}
 
 const PlaygroundAhmedComponent = (props: IPlaygroundAhmedComponentProps) => (
@@ -27,8 +29,9 @@ const PlaygroundAhmedComponent = (props: IPlaygroundAhmedComponentProps) => (
     <FooterComponent footer={generateFooterData()} />
     <CompanyOutingComponent companyOuting={generateCompanyOutingData()} />
     <OtherActivitiesComponent otherActivities={generateOtherActivitiesData()} />
-    <FAQComponent faq={generateFAQData()} />
 
+    <FAQComponent faq={generateFAQData()} />
+    <OtherLocationsComponent otherLocations={generateOtherLocationsData()} />
     <OutingCardComponent
       {...{
         title: "Escape City - Het ontsnappingsspel van Mokum",
