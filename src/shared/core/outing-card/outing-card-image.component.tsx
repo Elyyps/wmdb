@@ -40,12 +40,12 @@ const OutingCardImage = ({ images }: IOutingCardImageProps) => {
     >
       <div className={styles["card-images"]}>
         <Slider ref={ref} {...settings}>
-          {images.slice(currentImage, images.length).map(image => (
-            <ImageComponent src={image} />
+          {images.slice(currentImage, images.length).map((image, key) => (
+            <ImageComponent key={key} src={image} />
           ))}
         </Slider>
       </div>
-      {images.length >= numberSlide ? (
+      {images.length >= numberSlide && (
         <div className={`${styles["card-images__grid"]} uk-visible@s `}>
           {images.slice(0, numberSlide).map((item: string, key: number) => (
             <div
@@ -58,8 +58,6 @@ const OutingCardImage = ({ images }: IOutingCardImageProps) => {
             </div>
           ))}
         </div>
-      ) : (
-        ""
       )}
     </div>
   );

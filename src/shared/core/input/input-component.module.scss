@@ -20,10 +20,6 @@
   }
 
   &__item {
-    &:not(:first-child) {
-      margin-top: 24px;
-    }
-
     &.isIcon {
       input {
         padding-left: 48px;

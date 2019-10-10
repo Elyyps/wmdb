@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import "./sidebar.component.scss";
 import Search from "@assets/icons/search.svg";
 import CROSS from "@assets/icons/cross.svg";
-import { Button, IconComponent, Input } from "@app/prep/modules-prep/core";
 import classNames from "classnames";
+import { Input } from "@app/core/input";
+import { Button } from "@app/core/button";
+import { IconComponent } from "@app/core/icon";
 
 interface ISidebarProps {
   children?: any;

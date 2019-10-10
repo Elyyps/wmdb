@@ -66,7 +66,7 @@ const Input = (props: IInputProps) => {
             name={name}
             value={valueLocal}
           />
-          {icon && <IconComponent icon={icon} size={"15px"} />}
+          {icon && <IconComponent fillColor="black" icon={icon} size={"15px"} />}
           {value && !isSuccess && (
             <div role={"button"} className={styles["form__item-icon"]} onClick={handelClear}>
               <IconComponent icon={Cross} size={"10px"} />

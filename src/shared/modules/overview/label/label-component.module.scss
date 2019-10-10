@@ -1,0 +1,19 @@
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: solid 1px $brand-primary;
+  background: rgba($brand-primary, 0.2);
+  padding: 3px 6px 3px 8px;
+  font-size: 14px;
+  border-radius: 2px;
+  &-close {
+    padding: 6px 6px 6px 8px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+  }
+}

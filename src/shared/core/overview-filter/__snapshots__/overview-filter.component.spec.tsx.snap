@@ -42,37 +42,33 @@ exports[`[OverviewFilter] should render component without crashing 1`] = `
       </h5>
       <Checkbox
         id={0}
-        isChecked={false}
         key="0"
         label="Citygames"
-        name="citygames"
+        name={1}
         onChange={[Function]}
         value="Citygames"
       />
       <Checkbox
         id={0}
-        isChecked={false}
         key="1"
         label="Beachgames"
-        name="Beachgames"
+        name={2}
         onChange={[Function]}
         value="Beachgames"
       />
       <Checkbox
         id={0}
-        isChecked={false}
         key="2"
         label="Indoor Spel en Ontspanning"
-        name="IndoorSpelenOntspanning"
+        name={3}
         onChange={[Function]}
         value="Indoor Spel en Ontspanning"
       />
       <Checkbox
         id={0}
-        isChecked={false}
         key="3"
         label="Outdoor Spel en Ontspanning"
-        name="Outdoor Spel en Ontspanning"
+        name={4}
         onChange={[Function]}
         value="Outdoor Spel en Ontspanning"
       />
@@ -86,37 +82,33 @@ exports[`[OverviewFilter] should render component without crashing 1`] = `
       </h5>
       <Checkbox
         id={1}
-        isChecked={false}
         key="0"
         label="Fun op Wielen"
-        name="Funopwielen"
+        name={5}
         onChange={[Function]}
         value="Fun op Wielen"
       />
       <Checkbox
         id={1}
-        isChecked={false}
         key="1"
         label="Outdoor Lucht"
-        name="Outdoor Lucht"
+        name={6}
         onChange={[Function]}
         value="Outdoor Lucht"
       />
       <Checkbox
         id={1}
-        isChecked={false}
         key="2"
         label="Outdoor Water"
-        name="outdoorwater"
+        name={7}
         onChange={[Function]}
         value="Outdoor Water"
       />
       <Checkbox
         id={1}
-        isChecked={false}
         key="3"
         label="Indoor Sport en Actie"
-        name="indorsportenactie"
+        name={8}
         onChange={[Function]}
         value="Indoor Sport en Actie"
       />
@@ -130,28 +122,25 @@ exports[`[OverviewFilter] should render component without crashing 1`] = `
       </h5>
       <Checkbox
         id={2}
-        isChecked={false}
         key="0"
         label="Creatief"
-        name="creatief"
+        name={9}
         onChange={[Function]}
         value="Creatief"
       />
       <Checkbox
         id={2}
-        isChecked={false}
         key="1"
         label="Theater"
-        name="theater"
+        name={10}
         onChange={[Function]}
         value="Theater"
       />
       <Checkbox
         id={2}
-        isChecked={false}
         key="2"
         label="Muziek en Daans"
-        name="muziekendaans"
+        name={11}
         onChange={[Function]}
         value="Muziek en Daans"
       />
@@ -165,28 +154,25 @@ exports[`[OverviewFilter] should render component without crashing 1`] = `
       </h5>
       <Checkbox
         id={3}
-        isChecked={false}
         key="0"
         label="Kookworkshops"
-        name="kookworkshops"
+        name={12}
         onChange={[Function]}
         value="Kookworkshops"
       />
       <Checkbox
         id={3}
-        isChecked={false}
         key="1"
         label="Kunst en Cultuur"
-        name="kunstencultuur"
+        name={13}
         onChange={[Function]}
         value="Kunst en Cultuur"
       />
       <Checkbox
         id={3}
-        isChecked={false}
         key="2"
         label="Body en Spirit"
-        name="bodyenspirit"
+        name={14}
         onChange={[Function]}
         value="Body en Spirit"
       />
@@ -200,37 +186,33 @@ exports[`[OverviewFilter] should render component without crashing 1`] = `
       </h5>
       <Checkbox
         id={4}
-        isChecked={false}
         key="0"
         label="Eten en drinken"
-        name="etenendrinken"
+        name={15}
         onChange={[Function]}
         value="Eten en drinken"
       />
       <Checkbox
         id={4}
-        isChecked={false}
         key="1"
         label="Themafeesten"
-        name="Themafeesten"
+        name={16}
         onChange={[Function]}
         value="Themafeesten"
       />
       <Checkbox
         id={4}
-        isChecked={false}
         key="2"
         label="Totaalprogramma"
-        name="totaalprogramma"
+        name={17}
         onChange={[Function]}
         value="Totaalprogramma"
       />
       <Checkbox
         id={4}
-        isChecked={false}
         key="3"
         label="Attracties en Entertainment"
-        name="Attractiesenentertainment"
+        name={18}
         onChange={[Function]}
         value="Attracties en Entertainment"
       />
@@ -244,28 +226,25 @@ exports[`[OverviewFilter] should render component without crashing 1`] = `
       </h5>
       <Checkbox
         id={5}
-        isChecked={false}
         key="0"
         label="Teamtraining"
-        name="Teamtraining"
+        name={19}
         onChange={[Function]}
         value="Teamtraining"
       />
       <Checkbox
         id={5}
-        isChecked={false}
         key="1"
         label="Teambuilding"
-        name="Teambuilding"
+        name={20}
         onChange={[Function]}
         value="Teambuilding"
       />
       <Checkbox
         id={5}
-        isChecked={false}
         key="2"
         label="Uit Vergaderen"
-        name="Uit Vergaderen"
+        name={21}
         onChange={[Function]}
         value="Uit Vergaderen"
       />
@@ -279,39 +258,48 @@ exports[`[OverviewFilter] should render component without crashing 1`] = `
       </h5>
       <Checkbox
         id={6}
-        isChecked={false}
         key="0"
         label="Wintersport"
-        name="wintersport"
+        name={22}
         onChange={[Function]}
         value="Wintersport"
       />
       <Checkbox
         id={6}
-        isChecked={false}
         key="1"
         label="Stedentrips"
-        name="stedentrips"
+        name={23}
         onChange={[Function]}
         value="Stedentrips"
       />
       <Checkbox
         id={6}
-        isChecked={false}
         key="2"
         label="Adventure & Outdoor"
-        name="adventureeoutdoor"
+        name={24}
         onChange={[Function]}
         value="Adventure & Outdoor"
       />
       <Checkbox
         id={6}
-        isChecked={false}
         key="3"
         label="Reizen Buitenland"
-        name="reizenbuitenland"
+        name={25}
         onChange={[Function]}
         value="Reizen Buitenland"
+      />
+    </div>
+    <div
+      className="overview-filter__item"
+    >
+      <h5>
+        Zoekwoord
+      </h5>
+      <Input
+        name="zoekwoord"
+        onChange={[Function]}
+        placeholder="Zoekwoord"
+        value=""
       />
     </div>
     <div
@@ -350,6 +338,7 @@ exports[`[OverviewFilter] should render component without crashing 1`] = `
           className="input-range__items"
         >
           <span>
+            0
             +
           </span>
           <span>

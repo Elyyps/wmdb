@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./overview-component.scss";
-import { Sidebar, CardContainer, PaginationComponent, ListCheckComponent } from "@app/prep/modules-prep/core";
+import { Sidebar, CardContainer, ListCheckComponent } from "@app/prep/modules-prep/core";
 import { LabelComponent } from "./label/label.component";
 import { CheckBoxes, CheckBoxesSpecial, SidebarList } from "./dummy-overview";
 import { SidebarFormComponent } from "./sidebarform/sidebar-form.component";
@@ -113,7 +113,6 @@ const OverviewComponent = ({ total, Cards, CardsSecondary, sidebar }: IOverviewC
               />
               <CardContainer Cards={CardsSecondary} />
             </div>
-            <PaginationComponent />
           </div>
         </div>
       </div>
