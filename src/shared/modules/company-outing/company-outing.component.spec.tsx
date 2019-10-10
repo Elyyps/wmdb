@@ -5,7 +5,7 @@ import { generateCompanyOutingData } from "@app/api/modules/company-outing/end-p
 
 describe("[CompanyOuting]", () => {
   it("should render component without crashing", () => {
-    const renderedComponent = shallow(<CompanyOutingComponent companyOuting={generateCompanyOutingData()} />);
+    const renderedComponent = shallow(<CompanyOutingComponent companyOutingModule={generateCompanyOutingData()} />);
     expect(renderedComponent).toMatchSnapshot();
   });
 });

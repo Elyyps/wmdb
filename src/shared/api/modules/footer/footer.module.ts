@@ -1,5 +1,6 @@
 import { ILink } from "@app/api/core/link";
 
-export interface IFooter {
+export interface IFooterModule {
   links: ILink[];
+  logo: string;
 }

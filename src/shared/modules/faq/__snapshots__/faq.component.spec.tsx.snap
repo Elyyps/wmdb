@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`[FAQ] should render component without crashing 1`] = `
-<Section
+<ModuleSectionComponent
   paddingBottom="72px"
   paddingTop="72px"
 >
@@ -44,5 +44,5 @@ exports[`[FAQ] should render component without crashing 1`] = `
       />
     </div>
   </div>
-</Section>
+</ModuleSectionComponent>
 `;

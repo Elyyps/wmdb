@@ -9,4 +9,4 @@ import { generateAboutPageData } from "@app/api/modules/about-page/end-point";
 storiesOf("AboutPage", module)
   .addDecorator(withA11y)
   .addDecorator(withProvider)
-  .add("Basic implementation", () => <AboutPageComponent aboutPage={generateAboutPageData()} />);
+  .add("Basic implementation", () => <AboutPageComponent aboutPageModule={generateAboutPageData()} />);

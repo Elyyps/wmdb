@@ -1,6 +1,6 @@
-import { IFAQ } from "./faq";
+import { IFAQModule } from "./faq";
 
-export const generateFAQDummyData = (): IFAQ => ({
+export const generateFAQDummyData = (): IFAQModule => ({
   items: [
     {
       title: "Wat is de prijs van het uitje?",

@@ -1,8 +1,8 @@
-import { ICompanyOuting } from "./company-outing";
+import { ICompanyOutingModule } from "./company-outing";
 import ETEN from "@assets/icons/eten.svg";
 import Image from "@assets/img02.png";
 
-export const generateCompanyOutingDummyData = (): ICompanyOuting => ({
+export const generateCompanyOutingDummyData = (): ICompanyOutingModule => ({
   title: "Alles over het kiezen van een bedrijfsuitje",
   button: { title: "Bekijk álle blogs", url: "#" },
   cards: [

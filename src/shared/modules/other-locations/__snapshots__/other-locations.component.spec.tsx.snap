@@ -1,8 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`[OtherLocations] should render component without crashing 1`] = `
-<Section
+<ModuleSectionComponent
   backgroundColor="#e8f2fc"
+  paddingBottom="40px"
+  paddingTop="40px"
   title="Andere locaties"
 >
   <div
@@ -581,5 +583,5 @@ exports[`[OtherLocations] should render component without crashing 1`] = `
       </li>
     </ul>
   </div>
-</Section>
+</ModuleSectionComponent>
 `;

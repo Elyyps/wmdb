@@ -9,21 +9,21 @@ export interface IOtherActivitiesComponentProps {
   otherActivities: IOtherActivities;
 }
 
-const OtherActivitiesComponent = (props: IOtherActivitiesComponentProps) => (
+const OtherActivitiesComponent = ({ otherActivities }: IOtherActivitiesComponentProps) => (
   <div className={styles["other-activities"]}>
     <div className={styles["other-activities-head"]}>
-      <h2>{props.otherActivities.title}</h2>
+      <h2>{otherActivities.title}</h2>
     </div>
     <div className="uk-grid uk-child-width-1-2@s uk-grid-medium" data-uk-margin>
-      {props.otherActivities.cards &&
-        props.otherActivities.cards.map((item: IEventCard, key: number) => (
+      {otherActivities.cards &&
+        otherActivities.cards.map((item: IEventCard, key: number) => (
           <div key={key}>
             <EventCardComponent image={item.image} link={item.buttonText} title={item.title} />
           </div>
         ))}
     </div>
     <div className={styles["other-activities-action"]}>
-      <Button title={props.otherActivities.button.title} href={props.otherActivities.button.url} />
+      <Button title={otherActivities.button.title} href={otherActivities.button.url} />
     </div>
   </div>
 );

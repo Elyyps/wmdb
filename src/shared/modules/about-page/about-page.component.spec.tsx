@@ -5,7 +5,7 @@ import { generateAboutPageData } from "@app/api/modules/about-page/end-point";
 
 describe("[AboutPage]", () => {
   it("should render component without crashing", () => {
-    const renderedComponent = shallow(<AboutPageComponent aboutPage={generateAboutPageData()} />);
+    const renderedComponent = shallow(<AboutPageComponent aboutPageModule={generateAboutPageData()} />);
     expect(renderedComponent).toMatchSnapshot();
   });
 });

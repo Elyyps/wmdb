@@ -1,6 +1,6 @@
-import { IOtherLocations } from "./other-locations";
+import { IOtherLocationsModule } from "./other-locations";
 
-export const generateOtherLocationsDummyData = (): IOtherLocations => ({
+export const generateOtherLocationsDummyData = (): IOtherLocationsModule => ({
   locations: [
     {
       title: "Locaties per plaats",

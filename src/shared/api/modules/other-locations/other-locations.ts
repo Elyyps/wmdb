@@ -1,5 +1,5 @@
 import { ILocation } from "@app/api/core/location";
 
-export interface IOtherLocations {
+export interface IOtherLocationsModule {
   locations: ILocation[];
 }

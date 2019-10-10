@@ -5,7 +5,7 @@ import { generateOtherLocationsData } from "@app/api/modules/other-locations/end
 
 describe("[OtherLocations]", () => {
   it("should render component without crashing", () => {
-    const renderedComponent = shallow(<OtherLocationsComponent otherLocations={generateOtherLocationsData()} />);
+    const renderedComponent = shallow(<OtherLocationsComponent otherLocationsModule={generateOtherLocationsData()} />);
     expect(renderedComponent).toMatchSnapshot();
   });
 });

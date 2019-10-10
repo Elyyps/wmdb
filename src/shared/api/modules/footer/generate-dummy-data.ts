@@ -1,6 +1,7 @@
-import { IFooter } from "./footer.module";
+import { IFooterModule } from "./footer.module";
+import Logo from "@assets/WMDB.svg";
 
-export const generateDummyFooterData = (): IFooter => ({
+export const generateDummyFooterData = (): IFooterModule => ({
   links: [
     {
       title: "info@wmdb.nl",
@@ -22,5 +23,6 @@ export const generateDummyFooterData = (): IFooter => ({
       title: "Disclaimer",
       url: "/"
     }
-  ]
+  ],
+  logo: Logo
 });

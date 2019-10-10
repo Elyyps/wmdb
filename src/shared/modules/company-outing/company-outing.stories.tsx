@@ -9,4 +9,4 @@ import { generateCompanyOutingData } from "@app/api/modules/company-outing/end-p
 storiesOf("CompanyOuting", module)
   .addDecorator(withA11y)
   .addDecorator(withProvider)
-  .add("Basic implementation", () => <CompanyOutingComponent companyOuting={generateCompanyOutingData()} />);
+  .add("Basic implementation", () => <CompanyOutingComponent companyOutingModule={generateCompanyOutingData()} />);

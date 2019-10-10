@@ -1,5 +1,5 @@
 import { IExpendableItem } from "@app/api/core/expendable-item";
-export interface IFAQ {
+export interface IFAQModule {
   formContent: string;
   formTitle: string;
   items: IExpendableItem[];

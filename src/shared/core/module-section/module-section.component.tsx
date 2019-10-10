@@ -18,10 +18,10 @@ export interface IModuleSectionComponentProps {
 }
 
 const ModuleSectionComponent = (props: IModuleSectionComponentProps) => {
-  const sectionClassName = classNames("section", {
-    [`section--pattern`]: props.pattern,
-    [`section--${props.align}`]: props.align,
-    [`section--${props.size}`]: props.size
+  const sectionClassName = classNames(styles["module-section"], {
+    [styles[`module-section--pattern`]]: props.pattern,
+    [styles[`module-section--${props.align}`]]: props.align,
+    [styles[`module-section--${props.size}`]]: props.size
   });
 
   const style = {

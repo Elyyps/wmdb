@@ -5,7 +5,7 @@ import { generateFAQData } from "@app/api/modules/faq/end-point";
 
 describe("[FAQ]", () => {
   it("should render component without crashing", () => {
-    const renderedComponent = shallow(<FAQComponent faq={generateFAQData()} />);
+    const renderedComponent = shallow(<FAQComponent FAQModule={generateFAQData()} />);
     expect(renderedComponent).toMatchSnapshot();
   });
 });

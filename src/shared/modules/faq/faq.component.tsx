@@ -1,28 +1,28 @@
 import * as React from "react";
 import styles from "./faq-component.module.scss";
-import { Section } from "@app/core/section";
 import { ExpendableComponent } from "@app/core/expendable";
-import { IFAQ } from "@app/api/modules/faq/faq";
+import { IFAQModule } from "@app/api/modules/faq/faq";
 import { FAQFormComponent } from "@app/core/faq-form";
+import { ModuleSectionComponent } from "@app/core/module-section";
 
 export interface IFAQComponentProps {
-  faq: IFAQ;
+  FAQModule: IFAQModule;
 }
 
 const FAQComponent = (props: IFAQComponentProps) => (
-  <Section paddingBottom={"72px"} paddingTop={"72px"}>
+  <ModuleSectionComponent paddingBottom={"72px"} paddingTop={"72px"}>
     <div className={` ${styles["faq__columns"]} uk-grid uk-child-width-1-2@s uk-grid-xlarge `}>
       <div>
-        <h2>{props.faq.title}</h2>
-        <ExpendableComponent modify="show-desktop" items={props.faq.items} />
+        <h2>{props.FAQModule.title}</h2>
+        <ExpendableComponent modify="show-desktop" items={props.FAQModule.items} />
       </div>
       <div>
-        <h2>{props.faq.formTitle}</h2>
-        <p>{props.faq.formContent}</p>
+        <h2>{props.FAQModule.formTitle}</h2>
+        <p>{props.FAQModule.formContent}</p>
         <FAQFormComponent onSubmit={() => alert("submitted")} />
       </div>
     </div>
-  </Section>
+  </ModuleSectionComponent>
 );
 
 export { FAQComponent };

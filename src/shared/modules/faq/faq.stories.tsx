@@ -9,4 +9,4 @@ import { generateFAQData } from "@app/api/modules/faq/end-point";
 storiesOf("FAQ", module)
   .addDecorator(withA11y)
   .addDecorator(withProvider)
-  .add("Basic implementation", () => <FAQComponent faq={generateFAQData()} />);
+  .add("Basic implementation", () => <FAQComponent FAQModule={generateFAQData()} />);

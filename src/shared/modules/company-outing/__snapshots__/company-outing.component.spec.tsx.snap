@@ -3,9 +3,10 @@
 exports[`[CompanyOuting] should render component without crashing 1`] = `
 <ModuleSectionComponent
   backgroundImage="img-big.jpg"
+  paddingBottom="40px"
   paddingTop="40px"
   title="Alles over het kiezen van een bedrijfsuitje"
-  titleColor="white"
+  titleColor="black"
   visibility="uk-visible@s"
 >
   <div

@@ -9,4 +9,4 @@ import { generateNewActivityData } from "@app/api/modules/new-activity/end-point
 storiesOf("NewActivity", module)
   .addDecorator(withA11y)
   .addDecorator(withProvider)
-  .add("Basic implementation", () => <NewActivityComponent newActivity={generateNewActivityData()} />);
+  .add("Basic implementation", () => <NewActivityComponent newActivityModule={generateNewActivityData()} />);

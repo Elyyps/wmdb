@@ -1,9 +1,9 @@
-import { INewActivity } from "./new-activity";
+import { INewActivityModule } from "./new-activity";
 import PlaceholderImage1 from "@assets/img-big.jpg";
 
 import PlaceholderImage from "@assets/img02.png";
 import ROOMS from "@assets/icons/rooms.svg";
-export const generateNewActivityDummyData = (): INewActivity => ({
+export const generateNewActivityDummyData = (): INewActivityModule => ({
   cards: [
     {
       title: "Escape City - Het ontsnappingsspel van Mokum",

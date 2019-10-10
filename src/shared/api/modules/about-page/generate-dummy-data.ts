@@ -1,6 +1,6 @@
-import { IAboutPage } from "./about-page";
+import { IAboutPageModule } from "./about-page";
 
-export const generateAboutPageDummyData = (): IAboutPage => ({
+export const generateAboutPageDummyData = (): IAboutPageModule => ({
   title: "Over deze pagina",
   content: `  
   <p>Er zijn heel veel citygames mogelijk in Amsterdam! U kunt zo de stad Amsterdam op een leuke manier beter leren

@@ -25,54 +25,6 @@ import PlaceholderImage2 from "@assets/img03.png";
 
 export interface IPlaygroundAhmedComponentProps {}
 
-const PlaygroundAhmedComponent = (props: IPlaygroundAhmedComponentProps) => (
-  <div className={"uk-container"}>
-    <NewActivityComponent newActivity={generateNewActivityData()} />
-    <br />
-    <br />
-    <NavBarComponent navbar={generateNavbarData()} />
-    <br />
-    <br />
-    <FooterComponent footer={generateFooterData()} />
-    <br />
-    <br />
-    <CompanyOutingComponent companyOuting={generateCompanyOutingData()} />
-    <br />
-    <br />
-    <OtherActivitiesComponent otherActivities={generateOtherActivitiesData()} />
-    <br />
-    <br />
-    <FAQHeaderComponent
-      title={"Veelgestelde vragen"}
-      content={"Alle vragen omtrent WegmetdeBaas. Hoe vind je zo snel mogelijk het perfecte uitje?"}
-      image={PlaceholderImage2}
-    />
-    <br />
-    <br />
-    <FAQComponent faq={generateFAQData()} />
-    <br />
-    <br />
-    <OtherLocationsComponent otherLocations={generateOtherLocationsData()} />
-    <br />
-    <br />
-    <OutingCardComponent
-      {...{
-        title: "Escape City - Het ontsnappingsspel van Mokum",
-        subtitle: "Citygames in Amsterdam",
-        image: [PlaceholderImage, PlaceholderImage1, PlaceholderImage, PlaceholderImage1],
-        button: {
-          title: "Lees meer",
-          url: "#"
-        },
-        data: {
-          icon: ROOMS,
-          label: "10 - 1000 personen"
-        },
-        content:
-          "Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
-      }}
-    />
-  </div>
-);
+const PlaygroundAhmedComponent = (props: IPlaygroundAhmedComponentProps) => <div className={"uk-container"} />;
 
 export { PlaygroundAhmedComponent };

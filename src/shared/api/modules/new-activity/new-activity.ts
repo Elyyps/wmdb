@@ -1,6 +1,6 @@
 import { IOutingCard } from "@app/api/core/outing-card";
 
-export interface INewActivity {
+export interface INewActivityModule {
   cards: IOutingCard[];
   title: string;
 }

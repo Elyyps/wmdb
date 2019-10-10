@@ -1,18 +1,23 @@
 import * as React from "react";
 import styles from "./other-locations-component.module.scss";
-import { Section } from "@app/core/section";
-import { IOtherLocations } from "@app/api/modules/other-locations/other-locations";
+import { IOtherLocationsModule } from "@app/api/modules/other-locations/other-locations";
 import { ILocation } from "@app/api/core/location";
 import { LinkComponent } from "@app/core/link";
 import { ILink } from "@app/api/core/link";
+import { ModuleSectionComponent } from "@app/core/module-section";
 
 export interface IOtherLocationsComponentProps {
-  otherLocations: IOtherLocations;
+  otherLocationsModule: IOtherLocationsModule;
 }
 
-const OtherLocationsComponent = (props: IOtherLocationsComponentProps) => (
-  <Section title="Andere locaties" backgroundColor={"#e8f2fc"}>
-    {props.otherLocations.locations.map((locations: ILocation, key: number) => (
+const OtherLocationsComponent = ({ otherLocationsModule }: IOtherLocationsComponentProps) => (
+  <ModuleSectionComponent
+    title="Andere locaties"
+    backgroundColor={"#e8f2fc"}
+    paddingTop={"40px"}
+    paddingBottom={"40px"}
+  >
+    {otherLocationsModule.locations.map((locations: ILocation, key: number) => (
       <div className={styles["other-locations"]} key={key}>
         <h5>{locations.title}</h5>
         {locations.links && (
@@ -26,7 +31,7 @@ const OtherLocationsComponent = (props: IOtherLocationsComponentProps) => (
         )}
       </div>
     ))}
-  </Section>
+  </ModuleSectionComponent>
 );
 
 export { OtherLocationsComponent };

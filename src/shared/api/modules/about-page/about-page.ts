@@ -1,6 +1,6 @@
 import { ILink } from "@app/api/core/link";
 
-export interface IAboutPage {
+export interface IAboutPageModule {
   button: ILink;
   content: string;
   title: string;

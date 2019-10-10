@@ -9,4 +9,4 @@ import { generateOtherLocationsData } from "@app/api/modules/other-locations/end
 storiesOf("OtherLocations", module)
   .addDecorator(withA11y)
   .addDecorator(withProvider)
-  .add("Basic implementation", () => <OtherLocationsComponent otherLocations={generateOtherLocationsData()} />);
+  .add("Basic implementation", () => <OtherLocationsComponent otherLocationsModule={generateOtherLocationsData()} />);

@@ -9,4 +9,4 @@ import { generateNavbarData } from "@app/api/modules/nav-bar/end-point";
 storiesOf("NavBar", module)
   .addDecorator(withA11y)
   .addDecorator(withProvider)
-  .add("Basic implementation", () => <NavBarComponent navbar={generateNavbarData()} />);
+  .add("Basic implementation", () => <NavBarComponent navbarModule={generateNavbarData()} />);

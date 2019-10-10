@@ -5,7 +5,7 @@ import { generateNewActivityData } from "@app/api/modules/new-activity/end-point
 
 describe("[NewActivity]", () => {
   it("should render component without crashing", () => {
-    const renderedComponent = shallow(<NewActivityComponent newActivity={generateNewActivityData()} />);
+    const renderedComponent = shallow(<NewActivityComponent newActivityModule={generateNewActivityData()} />);
     expect(renderedComponent).toMatchSnapshot();
   });
 });
