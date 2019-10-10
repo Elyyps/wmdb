@@ -11,13 +11,14 @@ import { generateDummyOverviewModule } from "@app/api/modules/overview";
 import { FooterComponent } from "@app/modules/footer";
 import { generateDummyFooterData } from "@app/api/modules/footer/generate-dummy-data";
 import { HeaderSimpleComponent } from "@app/modules/header-simple";
+import { generateDummyHeaderSimpleModule } from "@app/api/modules/header-simple/";
 
 export interface IOverzichtComponentProps {}
 
 const OverviewPageComponent = (props: IOverzichtComponentProps) => (
   <div>
     <NavBarComponent navbarModule={generateDummyNavbarData()} />
-    <HeaderSimpleComponent title={"Leuke dagjes uit met de kinderen in Amsterdam"} />
+    <HeaderSimpleComponent headerSimpleModule={generateDummyHeaderSimpleModule()} />
     <OverviewComponent overviewModule={generateDummyOverviewModule()} />
     {/* location module */}
     {/* over deze pagina  */}
