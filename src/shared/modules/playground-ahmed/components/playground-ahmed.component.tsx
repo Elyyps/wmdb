@@ -28,17 +28,33 @@ export interface IPlaygroundAhmedComponentProps {}
 const PlaygroundAhmedComponent = (props: IPlaygroundAhmedComponentProps) => (
   <div className={"uk-container"}>
     <NewActivityComponent newActivity={generateNewActivityData()} />
+    <br />
+    <br />
     <NavBarComponent navbar={generateNavbarData()} />
+    <br />
+    <br />
     <FooterComponent footer={generateFooterData()} />
+    <br />
+    <br />
     <CompanyOutingComponent companyOuting={generateCompanyOutingData()} />
+    <br />
+    <br />
     <OtherActivitiesComponent otherActivities={generateOtherActivitiesData()} />
+    <br />
+    <br />
     <FAQHeaderComponent
       title={"Veelgestelde vragen"}
       content={"Alle vragen omtrent WegmetdeBaas. Hoe vind je zo snel mogelijk het perfecte uitje?"}
       image={PlaceholderImage2}
     />
+    <br />
+    <br />
     <FAQComponent faq={generateFAQData()} />
+    <br />
+    <br />
     <OtherLocationsComponent otherLocations={generateOtherLocationsData()} />
+    <br />
+    <br />
     <OutingCardComponent
       {...{
         title: "Escape City - Het ontsnappingsspel van Mokum",
