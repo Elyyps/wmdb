@@ -21,7 +21,7 @@ export interface IButtonProps {
 }
 
 const Button = (props: IButtonProps) => {
-  const { onClick, href, variant, target, title, type, icon, position, large, fullWidth, ...other } = props;
+  const { onClick, href, variant, target, title, type, icon, position, large, fullWidth, iconStroke, ...other } = props;
   const classModify = variant || "default";
   const buttonClassName = classNames(styles["button"], {
     [styles[`button--${classModify}`]]: classModify,
@@ -33,7 +33,7 @@ const Button = (props: IButtonProps) => {
       {href ? (
         <Link {...other} to={href} className={buttonClassName} target={target}>
           <span>{title}</span>
-          {icon && <IconComponent icon={icon} size="14px" />}
+          {icon && <IconComponent icon={icon} size="14px" stroke={iconStroke ? iconStroke : true} />}
         </Link>
       ) : (
         <button
@@ -44,10 +44,10 @@ const Button = (props: IButtonProps) => {
           className={buttonClassName}
         >
           <span>{title}</span>
-          {icon && <IconComponent icon={icon} size="14px" />}
+          {icon && <IconComponent icon={icon} size="14px" stroke={iconStroke ? iconStroke : true} />}
           {variant === "dropdown" && (
             <div className={styles["button__arrow"]}>
-              <IconComponent icon={ArrowDown} size={"12px"} />
+              <IconComponent icon={ArrowDown} size={"12px"} stroke={iconStroke ? iconStroke : true} />
             </div>
           )}
         </button>

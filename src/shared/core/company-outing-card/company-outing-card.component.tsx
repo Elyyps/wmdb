@@ -3,8 +3,8 @@ import styles from "./company-outing-card-component.module.scss";
 import { IconComponent } from "../icon";
 import { ImageComponent } from "../image";
 import Arrow from "@assets/icons/chevron-right.svg";
-import { Button } from "@app/prep/modules-prep/core";
 import { ILink } from "@app/api/core/link";
+import { Button } from "../button";
 
 export interface ICompanyOutingCardComponentProps {
   button?: ILink;
