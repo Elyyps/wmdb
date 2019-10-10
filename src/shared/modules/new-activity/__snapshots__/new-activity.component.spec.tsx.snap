@@ -2,6 +2,7 @@
 
 exports[`[NewActivity] should render component without crashing 1`] = `
 <ModuleSectionComponent
+  paddingTop="40px"
   title="Nieuwe activiteiten"
 >
   <div

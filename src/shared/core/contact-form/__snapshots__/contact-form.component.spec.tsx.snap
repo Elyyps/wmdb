@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[ContactForm] should render component without crashing 1`] = `
+<Formik
+  enableReinitialize={false}
+  handleSubmit={[Function]}
+  initialValues={
+    Object {
+      "comment": "",
+      "date": "",
+      "emailAddress": "",
+      "gender": "",
+      "name": "",
+      "numberPerson": 0,
+      "phone": "",
+      "subscribed": false,
+    }
+  }
+  isInitialValid={false}
+  onSubmit={[Function]}
+  render={[Function]}
+  validate={[Function]}
+  validateOnBlur={true}
+  validateOnChange={true}
+/>
+`;

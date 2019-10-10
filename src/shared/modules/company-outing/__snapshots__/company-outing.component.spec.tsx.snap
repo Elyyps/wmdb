@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[CompanyOuting] should render component without crashing 1`] = `
+<ModuleSectionComponent
+  backgroundImage="img-big.jpg"
+  paddingTop="40px"
+  title="Alles over het kiezen van een bedrijfsuitje"
+  titleColor="white"
+  visibility="uk-visible@s"
+>
+  <div
+    className=" company-outing "
+  >
+    <div
+      className="uk-container"
+    >
+      <div
+        className=" company-outing__list uk-grid uk-child-width-1-3@s "
+      >
+        <div
+          key="0"
+        >
+          <CompanyOutingCardComponent
+            button={
+              Object {
+                "title": "Lees meer",
+                "url": "#",
+              }
+            }
+            content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc…"
+            data="18 sep. 2017"
+            icon="eten.svg"
+            image="img02.png"
+            title="Blog titel"
+          />
+        </div>
+        <div
+          key="1"
+        >
+          <CompanyOutingCardComponent
+            button={
+              Object {
+                "title": "Lees meer",
+                "url": "#",
+              }
+            }
+            content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc…"
+            data="18 sep. 2017"
+            icon="eten.svg"
+            image="img02.png"
+            title="Blog titel"
+          />
+        </div>
+        <div
+          key="2"
+        >
+          <CompanyOutingCardComponent
+            button={
+              Object {
+                "title": "Lees meer",
+                "url": "#",
+              }
+            }
+            content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc…"
+            data="18 sep. 2017"
+            icon="eten.svg"
+            image="img02.png"
+            title="Blog titel"
+          />
+        </div>
+      </div>
+      <div
+        className="company-outing__actions"
+      >
+        <Button
+          href="#"
+          title="Bekijk álle blogs"
+        />
+      </div>
+    </div>
+  </div>
+</ModuleSectionComponent>
+`;

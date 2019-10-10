@@ -9,7 +9,7 @@ export interface INewActivityComponentProps {
 }
 
 const NewActivityComponent = (props: INewActivityComponentProps) => (
-  <ModuleSectionComponent title={props.newActivity.title}>
+  <ModuleSectionComponent title={props.newActivity.title} paddingTop={"40px"}>
     <div className={`${styles["new-activity__columns"]} uk-grid uk-child-width-1-2@m `}>
       {props.newActivity.cards.map((card, key) => (
         <div key={key}>

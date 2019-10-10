@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[DatePicker] should render component without crashing 1`] = `
+<div
+  className="date-picker"
+>
+  <div
+    className="datePickerWrapper"
+  >
+    <t
+      allowSameDay={false}
+      calendarClassName="calendarClassName"
+      className="inputField"
+      dateFormat="dd MMM yyyy - HH:mm"
+      dateFormatCalendar="LLLL yyyy"
+      disabled={false}
+      disabledKeyboardNavigation={false}
+      dropdownMode="scroll"
+      id=""
+      inlineFocusSelectedMonth={false}
+      isClearable={true}
+      locale="nl"
+      monthsShown={1}
+      nextMonthButtonLabel="Next Month"
+      nextYearButtonLabel="Next Year"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onClickOutside={[Function]}
+      onFocus={[Function]}
+      onInputClick={[Function]}
+      onInputError={[Function]}
+      onKeyDown={[Function]}
+      onMonthChange={[Function]}
+      onSelect={[Function]}
+      onYearChange={[Function]}
+      popperClassName="popperClassName"
+      preventOpenOnFocus={false}
+      previousMonthButtonLabel="Previous Month"
+      previousYearButtonLabel="Previous Year"
+      readOnly={false}
+      renderDayContents={[Function]}
+      selected={null}
+      shouldCloseOnSelect={true}
+      showMonthYearPicker={false}
+      showQuarterYearPicker={false}
+      showTimeInput={false}
+      showTimeSelect={false}
+      strictParsing={false}
+      timeCaption="Time"
+      timeInputLabel="Time"
+      timeIntervals={30}
+      withPortal={false}
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,25 @@
+.event-card {
+  &-head {
+    margin-bottom: 32px;
+  }
+  &-image {
+    height: 220px;
+    width: 100%;
+    @media (min-width: $breakpoint-large) {
+      width: 308px;
+      height: 148px;
+    }
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      border-radius: 4px;
+    }
+  }
+  &-title {
+    h4 {
+      margin-top: 10px;
+      font-family: $global-font-family-secondary;
+    }
+  }
+}
