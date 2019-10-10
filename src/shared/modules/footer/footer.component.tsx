@@ -7,7 +7,7 @@ import Facebook from "@assets/icons/facebook.svg";
 import { IFooter } from "@app/api/modules/footer/footer.module";
 
 export interface IFooterComponentProps {
-  footer: IFooter;
+  footerModule: IFooter;
 }
 
 const FooterComponent = (props: IFooterComponentProps) => (
@@ -20,7 +20,7 @@ const FooterComponent = (props: IFooterComponentProps) => (
 
         <div className={styles["footer__side"]}>
           <ul className={styles["footer__nav"]}>
-            {props.footer.links.map((item, key) => (
+            {props.footerModule.links.map((item, key) => (
               <li key={key}>
                 <LinkComponent to={item.url}>{item.title}</LinkComponent>
               </li>

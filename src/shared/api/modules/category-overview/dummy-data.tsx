@@ -2,7 +2,7 @@ import PlaceholderImage from "@assets/img02.png";
 import { ICategoryOverviewModule } from "./category-overview.model";
 import SPEL from "@assets/icons/spel.svg";
 
-const CategoryOverviewDummyData: ICategoryOverviewModule = {
+const GenerateDummyCategoryOverviewData = (): ICategoryOverviewModule => ({
   backgroundColor: "#e8f2fc",
   paddingBottom: "72px",
   paddingTop: "72px",
@@ -66,6 +66,6 @@ const CategoryOverviewDummyData: ICategoryOverviewModule = {
       link: "/"
     }
   ]
-};
+});
 
-export { CategoryOverviewDummyData };
+export { GenerateDummyCategoryOverviewData };

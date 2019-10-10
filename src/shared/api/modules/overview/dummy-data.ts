@@ -189,12 +189,17 @@ const DummyOutingCards: IOutingCard[] = [
   {
     title: "The Hangover",
     subtitle: "Citygames in Amsterdam",
-    image: [PlaceholderImage, PlaceholderImage1, PlaceholderImage, PlaceholderImage1],
+    image: [
+      "https://picsum.photos/id/115/300/200",
+      "https://picsum.photos/id/116/300/200",
+      "https://picsum.photos/id/117/300/200",
+      "https://picsum.photos/id/118/300/200"
+    ],
     button: {
       title: "Lees meer",
       href: "#"
     },
-    categoriesId: [1],
+    categoriesId: [2],
     dataIcon: ROOMS,
     minimumPersons: 20,
     maximumPersons: 100,
@@ -225,10 +230,10 @@ const DummyOutingCards: IOutingCard[] = [
     title: "Escape City - Het ontsnappingsspel van Mokum",
     subtitle: "Citygames in Amsterdam",
     image: [
-      "https://picsum.photos/id/5/300/200",
-      "https://picsum.photos/id/6/300/200",
-      "https://picsum.photos/id/7/300/200",
-      "https://picsum.photos/id/8/300/200"
+      "https://picsum.photos/id/220/300/200",
+      "https://picsum.photos/id/229/300/200",
+      "https://picsum.photos/id/208/300/200",
+      "https://picsum.photos/id/228/300/200"
     ],
     button: {
       title: "Lees meer",
@@ -245,10 +250,10 @@ const DummyOutingCards: IOutingCard[] = [
     title: "Escape City - Het ontsnappingsspel van Mokum",
     subtitle: "Citygames in Amsterdam",
     image: [
-      "https://picsum.photos/id/9/300/200",
-      "https://picsum.photos/id/10/300/200",
-      "https://picsum.photos/id/11/300/200",
-      "https://picsum.photos/id/12/300/200"
+      "https://picsum.photos/id/320/300/200",
+      "https://picsum.photos/id/310/300/200",
+      "https://picsum.photos/id/311/300/200",
+      "https://picsum.photos/id/312/300/200"
     ],
     button: {
       title: "Lees meer",

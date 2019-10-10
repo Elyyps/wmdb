@@ -9,7 +9,6 @@ interface ICardsPaginatedReturn {
 export const getCardsPaginated = (skip: number, take: number, filter: IOverviewFilterItem): ICardsPaginatedReturn => {
   const CARDS_AMOUNT = 200;
   let cards = getCardsAmount(CARDS_AMOUNT);
-  console.log("filter", filter)
   if (filter.filterText) {
     const filterTextCapitalized = filter.filterText.toUpperCase();
     cards = cards.filter(
@@ -60,7 +59,7 @@ export const getCardsPaginated = (skip: number, take: number, filter: IOverviewF
   if (cards.length === 8) {
     cards = [...cards.slice(0, 2), cardAd, ...cards.slice(2, cards.length)];
   }
-  console.log(total)
+
   return {
     cards,
     total
