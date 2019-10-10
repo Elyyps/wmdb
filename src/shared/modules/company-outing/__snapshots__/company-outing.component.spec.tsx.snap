@@ -6,7 +6,7 @@ exports[`[CompanyOuting] should render component without crashing 1`] = `
   paddingBottom="40px"
   paddingTop="40px"
   title="Alles over het kiezen van een bedrijfsuitje"
-  titleColor="black"
+  titleColor="white"
   visibility="uk-visible@s"
 >
   <div

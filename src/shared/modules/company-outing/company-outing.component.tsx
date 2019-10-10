@@ -12,7 +12,7 @@ export interface ICompanyOutingComponentProps {
 const CompanyOutingComponent = ({ companyOutingModule }: ICompanyOutingComponentProps) => (
   <ModuleSectionComponent
     title={companyOutingModule.title}
-    titleColor={"black"}
+    titleColor={"white"}
     backgroundImage={Big}
     paddingTop={"40px"}
     paddingBottom={"40px"}
