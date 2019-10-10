@@ -1,7 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`[PlaygroundComponent] should render without crashing 1`] = `
-<<<<<<< HEAD
 <div
   className="uk-container"
   style={
@@ -24,49 +23,4 @@ exports[`[PlaygroundComponent] should render without crashing 1`] = `
     title="Blog titel"
   />
 </div>
-=======
-<Fragment>
-  <div
-    className=""
-  >
-    <NavBarComponent
-      navbar={
-        Object {
-          "closeText": "Sluiten",
-          "links": Array [
-            Object {
-              "title": "Helpdesk",
-              "url": "",
-            },
-            Object {
-              "title": "Nieuwsbrief",
-              "url": "",
-            },
-            Object {
-              "title": "Mijn uitjes",
-              "url": "",
-            },
-          ],
-          "logo": "",
-          "menuItems": Array [
-            Object {
-              "title": "Lorem1",
-              "url": "",
-            },
-            Object {
-              "title": "Lorem2",
-              "url": "",
-            },
-            Object {
-              "title": "Lorem3",
-              "url": "",
-            },
-          ],
-          "title": "Menu",
-        }
-      }
-    />
-  </div>
-</Fragment>
->>>>>>> WE-761-other_locations
 `;
