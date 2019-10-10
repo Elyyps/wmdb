@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[FAQ] should render component without crashing 1`] = `
+<ModuleSectionComponent
+  paddingBottom="72px"
+  paddingTop="72px"
+>
+  <div
+    className=" faq__columns uk-grid uk-child-width-1-2@s uk-grid-xlarge "
+  >
+    <div>
+      <h2>
+        Veelgestelde vragen
+      </h2>
+      <ExpendableComponent
+        items={
+          Array [
+            Object {
+              "content": "Daarom is de prijs niet zomaar te noemen zonder uw informatie. Alle aanbieders maken voor u graag een offerte op maat. Indien u het aanvraagformulier onder het gekozen uitje invult, met uw wensen en aanvullingen, maken wij een offerte op maat voor u. Na het invullen ontvangt u ook direct het telefoonnummer van de organisator, zodat u indien gewenst ook direct telefonisch contact kunt opnemen.",
+              "title": "Wat is de prijs van het uitje?",
+            },
+            Object {
+              "content": "Daarom is de prijs niet zomaar te noemen zonder uw informatie. Alle aanbieders maken voor u graag een offerte op maat. Indien u het aanvraagformulier onder het gekozen uitje invult, met uw wensen en aanvullingen, maken wij een offerte op maat voor u. Na het invullen ontvangt u ook direct het telefoonnummer van de organisator, zodat u indien gewenst ook direct telefonisch contact kunt opnemen.",
+              "title": "Telefonisch contact",
+            },
+            Object {
+              "content": "Daarom is de prijs niet zomaar te noemen zonder uw informatie. Alle aanbieders maken voor u graag een offerte op maat. Indien u het aanvraagformulier onder het gekozen uitje invult, met uw wensen en aanvullingen, maken wij een offerte op maat voor u. Na het invullen ontvangt u ook direct het telefoonnummer van de organisator, zodat u indien gewenst ook direct telefonisch contact kunt opnemen.",
+              "title": "Kan WegmetdeBaas mij helpen een bedrijfsuitje samen te stellen?",
+            },
+          ]
+        }
+        modify="show-desktop"
+      />
+    </div>
+    <div>
+      <h2>
+        Andere vragen?
+      </h2>
+      <p>
+        Mail ons het aanvraagformulier of direct via info@wegmetdebaas.nl
+      </p>
+      <WithFormik(InnerForm)
+        onSubmit={[Function]}
+      />
+    </div>
+  </div>
+</ModuleSectionComponent>
+`;

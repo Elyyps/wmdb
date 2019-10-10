@@ -1,0 +1,587 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[OtherLocations] should render component without crashing 1`] = `
+<ModuleSectionComponent
+  backgroundColor="#e8f2fc"
+  paddingBottom="40px"
+  paddingTop="40px"
+  title="Andere locaties"
+>
+  <div
+    className="other-locations"
+    key="0"
+  >
+    <h5>
+      Locaties per plaats
+    </h5>
+    <ul
+      className="other-locations__list"
+    >
+      <li
+        key="0"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Egmond aan Zee
+        </LinkComponent>
+      </li>
+      <li
+        key="1"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Vijfhuizen
+        </LinkComponent>
+      </li>
+      <li
+        key="2"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Den Dolder
+        </LinkComponent>
+      </li>
+      <li
+        key="3"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Kollumerpomp
+        </LinkComponent>
+      </li>
+      <li
+        key="4"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Egmond aan Zee
+        </LinkComponent>
+      </li>
+      <li
+        key="5"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Vijfhuizen
+        </LinkComponent>
+      </li>
+      <li
+        key="6"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Den Dolder
+        </LinkComponent>
+      </li>
+      <li
+        key="7"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Kollumerpomp
+        </LinkComponent>
+      </li>
+      <li
+        key="8"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Egmond aan Zee
+        </LinkComponent>
+      </li>
+      <li
+        key="9"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Vijfhuizen
+        </LinkComponent>
+      </li>
+      <li
+        key="10"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Den Dolder
+        </LinkComponent>
+      </li>
+      <li
+        key="11"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Kollumerpomp
+        </LinkComponent>
+      </li>
+      <li
+        key="12"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Egmond aan Zee
+        </LinkComponent>
+      </li>
+      <li
+        key="13"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Vijfhuizen
+        </LinkComponent>
+      </li>
+      <li
+        key="14"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Den Dolder
+        </LinkComponent>
+      </li>
+      <li
+        key="15"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Kollumerpomp
+        </LinkComponent>
+      </li>
+      <li
+        key="16"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Egmond aan Zee
+        </LinkComponent>
+      </li>
+      <li
+        key="17"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Vijfhuizen
+        </LinkComponent>
+      </li>
+      <li
+        key="18"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Den Dolder
+        </LinkComponent>
+      </li>
+      <li
+        key="19"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Kollumerpomp
+        </LinkComponent>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="other-locations"
+    key="1"
+  >
+    <h5>
+      Locaties per provincie
+    </h5>
+    <ul
+      className="other-locations__list"
+    >
+      <li
+        key="0"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Egmond aan Zee
+        </LinkComponent>
+      </li>
+      <li
+        key="1"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Vijfhuizen
+        </LinkComponent>
+      </li>
+      <li
+        key="2"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Den Dolder
+        </LinkComponent>
+      </li>
+      <li
+        key="3"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Kollumerpomp
+        </LinkComponent>
+      </li>
+      <li
+        key="4"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Egmond aan Zee
+        </LinkComponent>
+      </li>
+      <li
+        key="5"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Vijfhuizen
+        </LinkComponent>
+      </li>
+      <li
+        key="6"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Den Dolder
+        </LinkComponent>
+      </li>
+      <li
+        key="7"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Kollumerpomp
+        </LinkComponent>
+      </li>
+      <li
+        key="8"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Egmond aan Zee
+        </LinkComponent>
+      </li>
+      <li
+        key="9"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Vijfhuizen
+        </LinkComponent>
+      </li>
+      <li
+        key="10"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Den Dolder
+        </LinkComponent>
+      </li>
+      <li
+        key="11"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Kollumerpomp
+        </LinkComponent>
+      </li>
+      <li
+        key="12"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Egmond aan Zee
+        </LinkComponent>
+      </li>
+      <li
+        key="13"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Vijfhuizen
+        </LinkComponent>
+      </li>
+      <li
+        key="14"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Den Dolder
+        </LinkComponent>
+      </li>
+      <li
+        key="15"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Kollumerpomp
+        </LinkComponent>
+      </li>
+      <li
+        key="16"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Egmond aan Zee
+        </LinkComponent>
+      </li>
+      <li
+        key="17"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Vijfhuizen
+        </LinkComponent>
+      </li>
+      <li
+        key="18"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Den Dolder
+        </LinkComponent>
+      </li>
+      <li
+        key="19"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Kollumerpomp
+        </LinkComponent>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="other-locations"
+    key="2"
+  >
+    <h5>
+      Locaties per speltype
+    </h5>
+    <ul
+      className="other-locations__list"
+    >
+      <li
+        key="0"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Egmond aan Zee
+        </LinkComponent>
+      </li>
+      <li
+        key="1"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Vijfhuizen
+        </LinkComponent>
+      </li>
+      <li
+        key="2"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Den Dolder
+        </LinkComponent>
+      </li>
+      <li
+        key="3"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Kollumerpomp
+        </LinkComponent>
+      </li>
+      <li
+        key="4"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Egmond aan Zee
+        </LinkComponent>
+      </li>
+      <li
+        key="5"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Vijfhuizen
+        </LinkComponent>
+      </li>
+      <li
+        key="6"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Den Dolder
+        </LinkComponent>
+      </li>
+      <li
+        key="7"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Kollumerpomp
+        </LinkComponent>
+      </li>
+      <li
+        key="8"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Egmond aan Zee
+        </LinkComponent>
+      </li>
+      <li
+        key="9"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Vijfhuizen
+        </LinkComponent>
+      </li>
+      <li
+        key="10"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Den Dolder
+        </LinkComponent>
+      </li>
+      <li
+        key="11"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Kollumerpomp
+        </LinkComponent>
+      </li>
+      <li
+        key="12"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Egmond aan Zee
+        </LinkComponent>
+      </li>
+      <li
+        key="13"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Vijfhuizen
+        </LinkComponent>
+      </li>
+      <li
+        key="14"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Den Dolder
+        </LinkComponent>
+      </li>
+      <li
+        key="15"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Kollumerpomp
+        </LinkComponent>
+      </li>
+      <li
+        key="16"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Egmond aan Zee
+        </LinkComponent>
+      </li>
+      <li
+        key="17"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Vijfhuizen
+        </LinkComponent>
+      </li>
+      <li
+        key="18"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Den Dolder
+        </LinkComponent>
+      </li>
+      <li
+        key="19"
+      >
+        <LinkComponent
+          to=""
+        >
+          Locaties Kollumerpomp
+        </LinkComponent>
+      </li>
+    </ul>
+  </div>
+</ModuleSectionComponent>
+`;

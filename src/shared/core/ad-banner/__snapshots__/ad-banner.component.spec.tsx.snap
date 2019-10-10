@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[AdBanner] should render component without crashing 1`] = `
+<div
+  className="ad-banner"
+  style={
+    Object {
+      "backgroundImage": "url(rectangle.png)",
+    }
+  }
+>
+  <div
+    className="ad-banner-item"
+  >
+    <div
+      className="ad-banner-title"
+    >
+      Surfen? Dat doe je in Zeeland.
+    </div>
+    <Button
+      href="/"
+      title="Meer info"
+    />
+  </div>
+  <div
+    className="ad-banner-label"
+  >
+    Advertentie
+  </div>
+</div>
+`;

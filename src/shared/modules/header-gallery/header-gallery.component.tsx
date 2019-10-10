@@ -4,7 +4,7 @@ import { IconComponent } from "@app/core/icon";
 import { ImageComponent } from "@app/core/image";
 import IconImage from "@assets/icons/images.svg";
 import IconPlay from "@assets/icons/play.svg";
-import AliceCarousel, { EventObject } from "react-alice-carousel";
+import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { getArrow } from "@app/constants/icons";
 
@@ -35,7 +35,7 @@ const HeaderGalleryComponent = (props: IHeaderGalleryComponentProps) => {
           <div className={`${styles["header-gallery__col"]} ${styles["large"]}`}>
             <div className={styles["header-gallery__slider_images"]}>
               <AliceCarousel
-                onSlideChanged={(e: EventObject) => setCurrentImage(e.slide)}
+                onSlideChanged={e => setCurrentImage(e.slide)}
                 dotsDisabled
                 startIndex={currentImage}
                 responsive={responsive}
@@ -79,11 +79,15 @@ const HeaderGalleryComponent = (props: IHeaderGalleryComponentProps) => {
             <div className={` uk-grid ${styles["uk-grid-small"]} data-uk-margin `}>
               {
                 <>
-                  <div className="uk-width-1-1" style={{ cursor: "pointer" }}>
+                  <div className={` ${styles["header-gallery__col-card"]} uk-width-1-1`} style={{ cursor: "pointer" }}>
                     <ImageComponent src={props.images[1]} onClick={() => setCurrentImage(1)} />
                   </div>
                   {props.images.slice(smallImagesStart, props.images.length).map((value: string, key: number) => (
-                    <div className="uk-width-1-2@s" key={key} style={{ cursor: "pointer" }}>
+                    <div
+                      className={` ${styles["header-gallery__col-cards"]} uk-width-1-2@s`}
+                      key={key}
+                      style={{ cursor: "pointer" }}
+                    >
                       <ImageComponent src={value} onClick={() => setCurrentImage(key + smallImagesStart)} />
                     </div>
                   ))}

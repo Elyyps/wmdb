@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link } from "react-router-dom";
 import styles from "./arrow-panel-component.module.scss";
 import Arrow from "@assets/icons/chevron-down.svg";
-import { IconComponent } from '@app/core/icon';
+import { IconComponent } from "@app/core/icon";
 
 interface IArrowPanelProps {
   link: string;

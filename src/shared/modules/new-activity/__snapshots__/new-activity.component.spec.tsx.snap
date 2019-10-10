@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[NewActivity] should render component without crashing 1`] = `
+<ModuleSectionComponent
+  paddingBottom="40px"
+  paddingTop="40px"
+  title="Nieuwe activiteiten"
+>
+  <div
+    className="new-activity__columns uk-grid uk-child-width-1-2@m "
+  >
+    <div
+      key="0"
+    >
+      <OutingCardComponent
+        button={
+          Object {
+            "title": "Lees meer",
+            "url": "#",
+          }
+        }
+        content="Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
+        data={
+          Object {
+            "icon": "rooms.svg",
+            "label": "10 - 1000",
+            "unit": "personen",
+          }
+        }
+        image={
+          Array [
+            "img02.png",
+            "img-big.jpg",
+            "img02.png",
+            "img-big.jpg",
+          ]
+        }
+        modify="small"
+        subtitle="Citygames in Amsterdam"
+        title="Escape City - Het ontsnappingsspel van Mokum"
+      />
+    </div>
+    <div
+      key="1"
+    >
+      <OutingCardComponent
+        button={
+          Object {
+            "title": "Lees meer",
+            "url": "#",
+          }
+        }
+        content="Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
+        data={
+          Object {
+            "icon": "rooms.svg",
+            "label": "10 - 1000",
+            "unit": "personen",
+          }
+        }
+        image={
+          Array [
+            "img02.png",
+            "img-big.jpg",
+            "img02.png",
+            "img02.png",
+          ]
+        }
+        modify="small"
+        subtitle="Citygames in Amsterdam"
+        title="Escape City - Het ontsnappingsspel van Mokum"
+      />
+    </div>
+  </div>
+</ModuleSectionComponent>
+`;

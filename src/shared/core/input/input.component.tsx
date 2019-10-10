@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import styles from "./input-component.module.scss";
 import classNames from "classnames";
@@ -13,40 +13,48 @@ interface IInputProps {
   isError?: string;
   isSuccess?: boolean;
   label?: string;
+  min?: number;
   name: string;
-  onChange?: (e: string) => void;
+  onBlur?: (text: string) => void;
+  onChange?: (text: string) => void;
   onClick?: any;
   placeholder?: string;
   type?: string;
-  value?: string;
+  value?: any;
 }
 
 const Input = (props: IInputProps) => {
-  const { name, type, placeholder, classModify, value, icon, label, isError, isSuccess } = props;
+  const { name, type, placeholder, classModify, icon, label, errorMessage, isSuccess, value, min } = props;
   const inputClassName = classNames(styles["input"], {
     [styles[`input--${classModify}`]]: classModify
   });
-  const [valueLocal, setValueLocal] = useState("");
+  const [values, setValues] = useState("");
   const wrapperClassnames = classNames({
-    [styles["error"]]: isError,
+    [styles["error"]]: errorMessage,
     [styles["isIcon"]]: icon,
     [styles["success"]]: isSuccess
   });
+  useEffect(() => {
+    setValues(value);
+  }, [value]);
   const handleChange = (event: any) => {
-    {
-      setValueLocal(event.target.value);
-      if (props.onChange) {
-        props.onChange(event.target.value);
-      }
+    if (props.onChange) {
+      props.onChange(event);
+    }
+    if (typeof value !== undefined) {
+      setValues(event.target.value);
     }
   };
-
-  React.useEffect(() => {
-    if (value !== undefined) setValueLocal(value);
-  }, [value]);
-
+  const handleBlur = (event: any) => {
+    if (props.onBlur) {
+      props.onBlur(event);
+    }
+    if (typeof value !== undefined) {
+      setValues(event.target.value);
+    }
+  };
   const handelClear = () => {
-    setValueLocal("");
+    setValues("");
   };
 
   return (
@@ -60,14 +68,16 @@ const Input = (props: IInputProps) => {
         <div className={styles["form__item-holder"]}>
           <input
             onChange={handleChange}
+            onBlur={handleBlur}
             type={type ? type : "text"}
             placeholder={placeholder}
             className={inputClassName}
             name={name}
-            value={valueLocal}
+            value={values}
+            min={min}
           />
-          {icon && <IconComponent fillColor="black" icon={icon} size={"15px"} />}
-          {value && !isSuccess && (
+          {icon && <IconComponent icon={icon} size={"15px"} />}
+          {values && !isSuccess && (
             <div role={"button"} className={styles["form__item-icon"]} onClick={handelClear}>
               <IconComponent icon={Cross} size={"10px"} />
             </div>
@@ -79,7 +89,7 @@ const Input = (props: IInputProps) => {
           )}
         </div>
 
-        {isError && <div className={styles["error-message"]}>{isError}</div>}
+        {errorMessage && <div className={styles["error-message"]}>{errorMessage}</div>}
       </div>
     </React.Fragment>
   );

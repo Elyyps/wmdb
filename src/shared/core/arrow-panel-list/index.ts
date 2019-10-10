@@ -1,1 +1,1 @@
-export * from './arrow-panel-list.component'
+export * from "./arrow-panel-list.component";

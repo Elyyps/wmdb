@@ -1,0 +1,35 @@
+.contact-form {
+  &-label {
+    background-color: #e8f2fc;
+    padding: 16px;
+    margin: 0 -16px 16px -16px;
+    // display: none;
+    @media (max-width: $breakpoint-small-max) {
+      display: block;
+    }
+    ul {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &-radio-label {
+    margin-top: 16px;
+
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  &-bottom {
+    margin-top: 16px;
+    button {
+      margin-top: 24px;
+    }
+  }
+  &-head {
+    display: flex;
+    margin: 0 -16px 0 -16px;
+    > * {
+      padding: 0 16px;
+    }
+  }
+}

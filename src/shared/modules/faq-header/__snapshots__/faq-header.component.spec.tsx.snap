@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[FAQHeader] should render component without crashing 1`] = `
+<div
+  className="faq-header"
+>
+  <div
+    className="uk-container"
+  >
+    <div
+      className="faq-header__holder"
+    >
+      <div
+        className="faq-header__body"
+      >
+        <h1>
+          Veelgestelde vragen
+        </h1>
+        Alle vragen omtrent WegmetdeBaas. Hoe vind je zo snel mogelijk het perfecte uitje?
+      </div>
+      <div
+        className="faq-header__image"
+      >
+        <img
+          alt="image"
+          src="img03.png"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

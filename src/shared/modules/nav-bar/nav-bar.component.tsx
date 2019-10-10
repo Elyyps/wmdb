@@ -11,29 +11,28 @@ export interface INavBarComponentProps {
   navbarModule: INavBarModule;
 }
 
-const NavBarComponent = (props: INavBarComponentProps) => (
+const NavBarComponent = ({ navbarModule }: INavBarComponentProps) => (
   <div className={styles["nav-bar"]}>
     <div className="uk-container">
       <div className={styles["nav-bar__holder"]}>
         <div>
           <LogoComponent />
         </div>
-
         <div>
           <ul className={`${styles["nav-bar__links"]} uk-visible@m`}>
-            {props.navbarModule.links.map((link, key) => (
+            {navbarModule.links.map((link, key) => (
               <li key={key}>
                 <LinkComponent to={link.url}>{link.title}</LinkComponent>
               </li>
             ))}
           </ul>
           <NavBarModalComponent
-            title={props.navbarModule.title}
-            close={props.navbarModule.closeText}
+            title={navbarModule.title}
+            close={navbarModule.closeText}
             icon={MENU_ICON}
             iconSize="20px"
           >
-            <HamburgerMenuComponent menuItems={props.navbarModule.menuItems} />
+            <HamburgerMenuComponent menuItems={navbarModule.menuItems} />
           </NavBarModalComponent>
         </div>
       </div>

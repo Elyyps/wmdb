@@ -4,7 +4,6 @@ import style from "./playground-pedro-component.module.scss";
 import { HeroComponent } from "@app/modules/hero";
 import { generateDummyHeroModule } from "@app/api/modules/hero/hero-module";
 import { CategoryOverviewComponent } from "@app/modules/category-overview";
-import { CategoryOverviewDummyData } from "@app/api/modules/category-overview/dummy-data";
 import { ArrowPanelListComponent } from "@app/core/arrow-panel-list";
 import { generateDummyArrowPanelListData } from "../../../api/core/arrow-panel-list";
 import { BodyTextComponent } from "@app/core/bodytext";
@@ -37,7 +36,7 @@ const PlaygroundPedroComponent = (props: IPlaygroundPedroComponentProps) => {
   };
   return (
     <div className={style["main"]}>
-      <OverviewComponent  overviewModule={generateDummyOverviewModule()} />
+      <OverviewComponent overviewModule={generateDummyOverviewModule()} />
     </div>
   );
 };

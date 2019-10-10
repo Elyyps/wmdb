@@ -1,0 +1,14 @@
+.logo {
+  width: 147px;
+  height: 40px;
+  display: block;
+  @media (min-width: $breakpoint-medium) {
+    width: 199px;
+    height: 54px;
+  }
+  svg,
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

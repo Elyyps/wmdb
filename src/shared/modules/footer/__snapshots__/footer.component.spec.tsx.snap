@@ -13,7 +13,9 @@ exports[`[Footer] should render component without crashing 1`] = `
       <div
         className="footer__logo"
       >
-        <LogoComponent />
+        <LogoComponent
+          logo="WMDB.svg"
+        />
       </div>
       <div
         className="footer__side"

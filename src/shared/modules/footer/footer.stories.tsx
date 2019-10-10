@@ -9,4 +9,4 @@ import { generateFooterData } from "@app/api/modules/footer/end-point";
 storiesOf("Footer", module)
   .addDecorator(withA11y)
   .addDecorator(withProvider)
-  .add("Basic implementation", () => <FooterComponent footer={generateFooterData()} />);
+  .add("Basic implementation", () => <FooterComponent footerModule={generateFooterData()} />);

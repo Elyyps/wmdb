@@ -41,7 +41,7 @@ const OutingCardImage = ({ images }: IOutingCardImageProps) => {
       <div className={styles["card-images"]}>
         <Slider ref={ref} {...settings}>
           {images.slice(currentImage, images.length).map((image, key) => (
-            <ImageComponent key={key} src={image} />
+            <ImageComponent src={image} key={key} />
           ))}
         </Slider>
       </div>

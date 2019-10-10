@@ -1,13 +1,13 @@
 import * as React from "react";
 import styles from "./footer-component.module.scss";
-import { LogoComponent } from "@app/prep/modules-prep/core";
 import { LinkComponent } from "@app/core/link";
 import { IconComponent } from "@app/core/icon";
 import Facebook from "@assets/icons/facebook.svg";
-import { IFooter } from "@app/api/modules/footer/footer.module";
+import { IFooterModule } from "@app/api/modules/footer/footer.module";
+import { LogoComponent } from "@app/core/logo/logo.component";
 
 export interface IFooterComponentProps {
-  footerModule: IFooter;
+  footerModule: IFooterModule;
 }
 
 const FooterComponent = (props: IFooterComponentProps) => (
@@ -15,7 +15,7 @@ const FooterComponent = (props: IFooterComponentProps) => (
     <div className="uk-container">
       <div className={styles["footer__holder"]}>
         <div className={styles["footer__logo"]}>
-          <LogoComponent />
+          <LogoComponent logo={props.footerModule.logo} />
         </div>
 
         <div className={styles["footer__side"]}>

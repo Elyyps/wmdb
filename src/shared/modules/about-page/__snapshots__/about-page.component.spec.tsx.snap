@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[AboutPage] should render component without crashing 1`] = `
+<ModuleSectionComponent
+  align="center"
+  paddingBottom="40px"
+  paddingTop="40px"
+  title="Over deze pagina"
+>
+  <div
+    className="about-page"
+  >
+    <BodyTextComponent
+      html="  
+  <p>Er zijn heel veel citygames mogelijk in Amsterdam! U kunt zo de stad Amsterdam op een leuke manier beter leren
+kennen. U kunt GPS tochten door de stad doen, moordtochten, puzzeltochten enz. U kunt lopend Amsterdam verkennen
+tijdens uw citygame, maar ook per step, tuktuk, waterfiets of solex! Kiest u voor bepaalde wijken zoals de
+Wallen, of gaat u liever Zuid.
+</p>
+
+<p>Nog niet alles duidelijk? Stel je vraag!</p>"
+    />
+    <div
+      className="about-page-button"
+    >
+      <Button
+        href="/"
+        title="Stel je vraag"
+        variant="primary"
+      />
+    </div>
+  </div>
+</ModuleSectionComponent>
+`;

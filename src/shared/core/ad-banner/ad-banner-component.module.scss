@@ -1,0 +1,44 @@
+.ad-banner {
+  padding: 40px;
+  min-height: 250px;
+  box-sizing: border-box;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: $global-border-radius;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+  @media (max-width: $breakpoint-small-max) {
+    min-height: 220px;
+    margin: 0 -16px;
+  }
+  &-title {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: $global-font-family-secondary;
+    font-weight: 600;
+    font-size: 32px;
+    color: $global-inverse-color;
+    padding-right: 20px;
+    margin-bottom: 32px;
+    line-height: 1.25;
+    @media (max-width: $breakpoint-small-max) {
+      margin-bottom: 24px;
+      padding-right: 0;
+      font-size: 24px;
+    }
+  }
+  &-label {
+    position: absolute;
+    padding: 8px 20px;
+    right: 0;
+    bottom: 0;
+    font-weight: 600;
+    color: $global-inverse-color;
+    border-top-left-radius: $global-border-radius;
+    background-color: rgba(0, 0, 0, 0.5);
+    @media (max-width: $breakpoint-small-max) {
+      padding: 6px 16px;
+    }
+  }
+}
