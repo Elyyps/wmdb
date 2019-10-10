@@ -1,0 +1,9 @@
+.faq {
+  &__columns {
+    @media (max-width: $breakpoint-xsmall-max) {
+      > div {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

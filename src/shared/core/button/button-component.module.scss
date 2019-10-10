@@ -20,7 +20,6 @@
   color: $global-color;
   border-radius: 3px;
   background-color: $bg-muted;
-  white-space: nowrap;
   &:active {
     opacity: 0.8;
   }
@@ -72,10 +71,10 @@
   }
 
   &--icon-left {
-    > .icon-svg {
-      order: -1;
-      margin-left: 0;
-      margin-right: 8px;
+    > span {
+      order: 1;
+      margin-right: 0;
+      margin-left: 8px;
     }
   }
 }
