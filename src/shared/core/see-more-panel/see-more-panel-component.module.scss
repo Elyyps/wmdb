@@ -1,0 +1,45 @@
+.see-more-panel {
+  display: block;
+  position: relative;
+  background-color: $global-muted-background;
+  border-left: 4px solid $brand-primary;
+  padding: 13px 13px 14px 32px;
+  color: $global-color;
+  text-align: left;
+  transition: background-color .2s;
+  @media (min-width: $breakpoint-small) {
+    padding: 20px 20px 20px 50px;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    left: 11px;
+    transform: translateY(-50%) rotate(-90deg);
+    @media (min-width: $breakpoint-small) {
+      left: 18px;
+    }
+    path {
+      stroke: currentColor;
+      fill: none !important; 
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: currentColor;
+    background-color: $gray-lighter;
+    .arrow-panel_arrow {
+      color: currentColor;
+    }
+  }
+}

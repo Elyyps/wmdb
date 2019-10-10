@@ -1,0 +1,15 @@
+.new-activity {
+  &__columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @media (max-width: $breakpoint-xsmall-max) {
+      > div {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  &__cards {
+    width: 45%;
+  }
+}

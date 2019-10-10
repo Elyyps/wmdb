@@ -15,7 +15,7 @@
     &.large {
       width: 760px;
       position: relative;
-      @media(max-width: $breakpoint-medium-max){
+      @media (max-width: $breakpoint-medium-max) {
         width: 100%;
       }
     }
@@ -40,7 +40,7 @@
     bottom: 24px;
     left: 24px;
     background-color: $global-inverse-color;
-    box-shadow: 0 6px 12px 0 rgba($black, .06);
+    box-shadow: 0 6px 12px 0 rgba($black, 0.06);
     padding: 12px 16px;
     border-radius: $global-border-radius;
     .slider-info {
@@ -61,7 +61,7 @@
         color: $brand-primary;
         .icon-svg {
           path {
-            fill: $brand-primary
+            fill: $brand-primary;
           }
         }
       }

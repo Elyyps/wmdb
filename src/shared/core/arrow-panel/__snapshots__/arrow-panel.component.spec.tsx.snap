@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[ArrowPanel] should render component without crashing 1`] = `
+<Link
+  className="arrow-panel"
+  to="./"
+>
+  <div
+    className="arrow-panel__title"
+  >
+    Title
+  </div>
+  <div
+    className="arrow-panel__arrow"
+  >
+    <IconComponent
+      fillColor="white"
+      icon="chevron-down.svg"
+      size="14px"
+    />
+  </div>
+</Link>
+`;

@@ -3,8 +3,8 @@ import styles from "./nav-bar-component.module.scss";
 import { LogoComponent } from "@app/prep/modules-prep/core";
 import { LinkComponent } from "@app/core/link";
 import MENU_ICON from "@assets/icons/menu.svg";
-import { NavBarModalComponent } from "../nav-bar-modal";
 import { INavBarModule } from "@app/api/modules/nav-bar/nav-bar.module";
+import { NavBarModalComponent } from "../nav-bar-modal";
 import { HamburgerMenuComponent } from "@app/core/hamburger-menu";
 
 export interface INavBarComponentProps {

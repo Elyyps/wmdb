@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Dropdown] should render component without crashing 1`] = `
+<Fragment>
+  <div
+    className="form__item "
+  >
+    <div
+      className="form__item-holder"
+    >
+      <select
+        className="dropdown"
+        onChange={[Function]}
+        value="all"
+      />
+    </div>
+  </div>
+</Fragment>
+`;

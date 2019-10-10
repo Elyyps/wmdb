@@ -1,0 +1,227 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[HeaderGallery] should render component without crashing 1`] = `
+<div
+  className="header-gallery"
+>
+  <div
+    className="uk-container"
+  >
+    <div
+      className="header-gallery__container"
+    >
+      <div
+        className="header-gallery__col large"
+      >
+        <div
+          className="header-gallery__slider_images"
+        >
+          <AliceCarousel
+            autoHeight={false}
+            autoPlay={false}
+            autoPlayDirection="ltr"
+            autoPlayInterval={250}
+            buttonsDisabled={true}
+            disableAutoPlayOnAction={false}
+            dotsDisabled={true}
+            duration={250}
+            fadeOutAnimation={false}
+            infinite={true}
+            items={
+              Array [
+                <ImageComponent
+                  src="oasis.jpg"
+                />,
+                <ImageComponent
+                  src="img02.png"
+                />,
+                <ImageComponent
+                  src="oasis.jpg"
+                />,
+                <ImageComponent
+                  src="img-big.jpg"
+                />,
+                <ImageComponent
+                  src="img-grid.png"
+                />,
+                <ImageComponent
+                  src="rectangle.png"
+                />,
+              ]
+            }
+            keysControlDisabled={false}
+            mouseDragEnabled={false}
+            onSlideChanged={[Function]}
+            playButtonEnabled={false}
+            preventEventOnTouchMove={false}
+            responsive={
+              Object {
+                "desktop": Object {
+                  "breakpoint": Object {
+                    "max": 3000,
+                    "min": 1024,
+                  },
+                  "items": 1,
+                },
+              }
+            }
+            showSlideInfo={false}
+            slideToIndex={0}
+            stagePadding={Object {}}
+            startIndex={0}
+            stopAutoPlayOnHover={true}
+            swipeDisabled={false}
+          />
+          <div
+            className="header-gallery__slider_arrows"
+          >
+            <div
+              className="header-gallery__slider_arrows_prev"
+              onClick={[Function]}
+              role="button"
+            >
+              <IconComponent
+                fillColor="none"
+                icon={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "chevron-left.svg",
+                  }
+                }
+                size="8px"
+                strokeColor="white"
+              />
+            </div>
+            <div
+              className="header-gallery__slider_arrows_next"
+              onClick={[Function]}
+              role="button"
+            >
+              <IconComponent
+                fillColor="none"
+                icon={
+                  Object {
+                    "ReactComponent": [Function],
+                    "__esModule": true,
+                    "default": "chevron-right.svg",
+                  }
+                }
+                size="8px"
+                strokeColor="white"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="header-gallery__info uk-visible@l"
+        >
+          <div
+            className="slider-info"
+          >
+            <div
+              className="photo"
+            >
+              <IconComponent
+                icon="images.svg"
+                size="15px"
+              />
+              Foto’s (
+              1
+              /
+              6
+              )
+            </div>
+            <div
+              className="video"
+            >
+              <IconComponent
+                icon="play.svg"
+                size="12px"
+              />
+              Video
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className=" header-gallery__col small uk-visible@l "
+      >
+        <div
+          className=" uk-grid uk-grid-small data-uk-margin "
+        >
+          <div
+            className="uk-width-1-1"
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+          >
+            <ImageComponent
+              onClick={[Function]}
+              src="img02.png"
+            />
+          </div>
+          <div
+            className="uk-width-1-2@s"
+            key="0"
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+          >
+            <ImageComponent
+              onClick={[Function]}
+              src="oasis.jpg"
+            />
+          </div>
+          <div
+            className="uk-width-1-2@s"
+            key="1"
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+          >
+            <ImageComponent
+              onClick={[Function]}
+              src="img-big.jpg"
+            />
+          </div>
+          <div
+            className="uk-width-1-2@s"
+            key="2"
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+          >
+            <ImageComponent
+              onClick={[Function]}
+              src="img-grid.png"
+            />
+          </div>
+          <div
+            className="uk-width-1-2@s"
+            key="3"
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+          >
+            <ImageComponent
+              onClick={[Function]}
+              src="rectangle.png"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
