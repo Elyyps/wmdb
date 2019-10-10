@@ -12,6 +12,12 @@ import { NavBarComponent } from "@app/modules/nav-bar";
 import { generateNavbarData } from "@app/api/modules/nav-bar/end-point";
 import { FooterComponent } from "@app/modules/footer";
 import { generateFooterData } from "@app/api/modules/footer/end-point";
+import { CompanyOutingComponent } from "@app/modules/company-outing";
+import { generateCompanyOutingData } from "@app/api/modules/company-outing/end-point";
+import { OtherActivitiesComponent } from "@app/modules/other-activities";
+import { generateOtherActivitiesData } from "@app/api/modules/other-activities/end-points";
+import { FAQComponent } from "@app/modules/faq";
+import { generateFAQData } from "@app/api/modules/faq/end-point";
 export interface IPlaygroundAhmedComponentProps {}
 
 const PlaygroundAhmedComponent = (props: IPlaygroundAhmedComponentProps) => (
@@ -19,6 +25,10 @@ const PlaygroundAhmedComponent = (props: IPlaygroundAhmedComponentProps) => (
     <NewActivityComponent newActivity={generateNewActivityData()} />
     <NavBarComponent navbar={generateNavbarData()} />
     <FooterComponent footer={generateFooterData()} />
+    <CompanyOutingComponent companyOuting={generateCompanyOutingData()} />
+    <OtherActivitiesComponent otherActivities={generateOtherActivitiesData()} />
+    <FAQComponent faq={generateFAQData()} />
+
     <OutingCardComponent
       {...{
         title: "Escape City - Het ontsnappingsspel van Mokum",
