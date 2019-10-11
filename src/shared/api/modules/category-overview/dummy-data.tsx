@@ -9,61 +9,61 @@ const GenerateDummyCategoryOverviewData = (): ICategoryOverviewModule => ({
   title: "Kies direct een categorie om het aanbod te bekijken!",
   items: [
     {
-      title: "Musea",
-      count: 200,
-      image: PlaceholderImage,
+      title: "Eten, Drinken & Feesten",
+      count: 500,
+      image: "https://picsum.photos/id/1/600/400",
       icon: SPEL,
-      link: "/"
+      link: "/single-wmdb"
     },
     {
-      title: "Musea",
-      count: 200,
-      image: PlaceholderImage,
+      title: "Teambuilden",
+      count: 430,
+      image: "https://picsum.photos/id/20/600/400",
       icon: SPEL,
-      link: "/"
+      link: "/single-wmdb"
     },
     {
-      title: "Musea",
-      count: 200,
-      image: PlaceholderImage,
+      title: "Incentives",
+      count: 430,
+      image: "https://picsum.photos/id/30/600/400",
       icon: SPEL,
-      link: "/"
+      link: "/single-wmdb"
     },
     {
-      title: "Musea",
-      count: 200,
-      image: PlaceholderImage,
+      title: "Spel & Ontspanning",
+      count: 430,
+      image: "https://picsum.photos/id/40/600/400",
       icon: SPEL,
-      link: "/"
+      link: "/single-wmdb"
     },
     {
-      title: "Musea",
-      count: 200,
-      image: PlaceholderImage,
+      title: "Sportief & Actie(f)",
+      count: 430,
+      image: "https://picsum.photos/id/50/600/400",
       icon: SPEL,
-      link: "/"
+      link: "/single-wmdb"
     },
     {
-      title: "Musea",
+      title: "Creative Uitjes",
       count: 20,
-      image: PlaceholderImage,
+      image: "https://picsum.photos/id/60/600/400",
       icon: SPEL,
-      link: "/"
+      link: "/single-wmdb"
     },
     {
-      title: "Musea",
-      image: PlaceholderImage,
-      link: "/"
+      title: "Workshops",
+      image: "https://picsum.photos/id/70/600/400",
+      link: "/single-wmdb"
     },
     {
-      title: "Musea",
-      image: PlaceholderImage,
-      link: "/"
+      title: "Helpdesk",
+      image: "https://picsum.photos/id/80/600/400",
+      link: "/single-wmdb"
     },
     {
-      title: "Musea",
-      image: PlaceholderImage,
-      link: "/"
+      title: "Niewsbrief",
+      image: "https://picsum.photos/id/90/600/400",
+      link: "/single-wmdb"
     }
   ]
 });
