@@ -9,6 +9,7 @@ export interface INewActivityComponentProps {
 }
 
 const NewActivityComponent = ({ newActivityModule }: INewActivityComponentProps) => (
+<<<<<<< HEAD
   <ModuleSectionComponent title={newActivityModule.title} paddingTop={"40px"} paddingBottom={"40px"}>
     <div className={`${styles["new-activity__columns"]} uk-grid uk-child-width-1-2@m `}>
       {newActivityModule.cards.map((card, key) => (
@@ -16,6 +17,19 @@ const NewActivityComponent = ({ newActivityModule }: INewActivityComponentProps)
       ))}
     </div>
   </ModuleSectionComponent>
+=======
+  <div className={styles["new-activity"]}>
+    <ModuleSectionComponent title={newActivityModule.title} paddingTop={"40px"} paddingBottom={"40px"}>
+      <div className={`${styles["new-activity__columns"]} uk-grid uk-child-width-1-2@m `}>
+        {newActivityModule.cards.map((card, key) => (
+          <div key={key}>
+            <OutingCardComponent modify={"small"} {...card} />
+          </div>
+        ))}
+      </div>
+    </ModuleSectionComponent>
+  </div>
+>>>>>>> 43d5ae81ba55d5176ba9b647bcff5bc816a59dd8
 );
 
 export { NewActivityComponent };

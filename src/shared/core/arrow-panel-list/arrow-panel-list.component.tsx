@@ -4,9 +4,12 @@ import { IconComponent } from "../icon";
 import { ArrowPanel, IArrowPanelProps } from "../arrow-panel/arrow-panel.component";
 import { SeeMorePanel } from "../see-more-panel";
 
+import { ILink } from '@app/api/core/link';
+
+
 export interface IArrowPanelListComponentProps {
   icon?: string;
-  items?: IArrowPanelProps[];
+  items: ILink[];
   linkMore?: IArrowPanelProps;
   title: string;
 }
@@ -25,14 +28,14 @@ const ArrowPanelListComponent = (props: IArrowPanelListComponentProps) => {
         <h3>{title}</h3>
       </div>
       {items &&
-        items.map((item: IArrowPanelProps, key: number) => (
+        items.map((item, key: number) => (
           <div key={key} className={styles["arrow-panel-list__item"]}>
-            <ArrowPanel title={item.title} link={item.link} />
+            <ArrowPanel title={item.title} url={item.url} />
           </div>
         ))}
       {linkMore && (
         <div className={styles["arrow-panel-list__item"]}>
-          <SeeMorePanel title={linkMore.title} link={linkMore.link} />
+          <SeeMorePanel title={linkMore.title} link={linkMore.url} />
         </div>
       )}
     </div>

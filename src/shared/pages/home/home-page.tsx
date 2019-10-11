@@ -9,11 +9,20 @@ import { CompanyOutingComponent } from "@app/modules/company-outing";
 import { generateCompanyOutingData } from "@app/api/modules/company-outing/end-point";
 import { OtherLocationsComponent } from "@app/modules/other-locations";
 import { generateOtherLocationsData } from "@app/api/modules/other-locations/end-point";
+import { HeroComponent } from "@app/modules/hero";
+import { generateDummyHeroModule } from "@app/api/modules/hero/hero-module";
+import { CategoryOverviewComponent } from "@app/modules/category-overview";
+import { GenerateDummyCategoryOverviewData } from "@app/api/modules/category-overview/dummy-data";
+import { FAQOverviewComponent } from "@app/modules/faq-overview";
+import { generateDummyFaqOverviewData } from "@app/api/modules/faq-overview";
 
 const HomePageComponent = () => (
   <React.Fragment>
     <NavBarComponent navbarModule={generateNavbarData()} />
+    <HeroComponent heroModule={generateDummyHeroModule()} />
+    <CategoryOverviewComponent categoryOverviewModule={GenerateDummyCategoryOverviewData()} />
     <NewActivityComponent newActivityModule={generateNewActivityData()} />
+    <FAQOverviewComponent faqOverviewModule={generateDummyFaqOverviewData()} />
     <CompanyOutingComponent companyOutingModule={generateCompanyOutingData()} />
     <OtherLocationsComponent otherLocationsModule={generateOtherLocationsData()} />
     <FooterComponent footerModule={generateFooterData()} />
