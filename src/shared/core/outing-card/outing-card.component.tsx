@@ -86,7 +86,8 @@ const OutingCardComponent = ({
             <div className={styles["card-label"]}>
               <IconComponent icon={dataIcon} size={"20px"} />
               <span>
-                {`${minimumPersons} - ${maximumPersons}`} <span className={styles["card-label-unit"]}>personen</span>
+                {`${minimumPersons} - ${maximumPersons}`}
+                <span className={styles[modify ? "card-label-unit" : ""]}> personen</span>
               </span>
             </div>
           </div>
