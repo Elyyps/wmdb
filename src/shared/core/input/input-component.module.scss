@@ -20,12 +20,16 @@
   }
 
   &__item {
+    &:not(:first-child) {
+      margin-top: 24px;
+    }
+
     &.isIcon {
       input {
         padding-left: 48px;
       }
       .form__item-holder {
-        svg {
+        > .icon-svg {
           position: absolute;
           left: 16px;
           top: 50%;
@@ -40,13 +44,13 @@
       }
 
       .input-icon {
-        svg {
+        .icon-svg {
+          svg,
           path {
             stroke: $global-danger-background;
           }
         }
       }
-
       .error-message {
         font-size: 14px;
         color: $global-danger-background;
@@ -54,7 +58,8 @@
     }
     &.success {
       .form__icon {
-        svg {
+        .icon-svg {
+          svg,
           path {
             stroke: #00a82f;
             fill: none;
@@ -63,7 +68,7 @@
       }
     }
     &.search {
-      svg {
+      .icon-svg {
         position: absolute;
         left: 16px;
         top: 50%;
@@ -74,7 +79,7 @@
 
   &__item-holder {
     position: relative;
-    svg {
+    .icon-svg {
       path {
         fill: transparent;
       }
@@ -96,7 +101,8 @@
     top: 50%;
     transform: translateY(-50%);
 
-    svg {
+    .icon-svg {
+      svg,
       path {
         fill: currentColor;
       }

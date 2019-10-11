@@ -118,7 +118,7 @@ const ContactComponent = (props: IContactComponentProps) => {
             )}
             <div className={styles["contact-mobile-bottom"]}>
               <div className={styles["contact-mobile-item"]}>
-                <Button title={"Aanvragen"} variant={"primary"} onClick={toggleForm} />
+                <Button title={"Aanvragen"} variant={"primary"} fullWidth onClick={toggleForm} />
               </div>
             </div>
           </div>
