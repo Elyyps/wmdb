@@ -8,9 +8,10 @@ import IconCalendar from "@assets/icons/calendar.svg";
 import classNames from "classnames";
 import IconDown from "@assets/icons/chevron-down.svg";
 import { IButton } from "@app/api/core/button";
+import { ILink } from '@app/api/core/link';
 
 export interface IOutingCardComponentProps {
-  button: IButton;
+  button: ILink;
   categoriesId?: number[];
   content: string;
   dataIcon?: string;
@@ -56,7 +57,7 @@ const OutingCardComponent = ({
       <div className={styles["card-body"]}>
         <div className={styles["card-head"]}>
           <div className={styles["card-title"]}>
-            <h3>{button.href ? <LinkComponent to={button.href}>{title}</LinkComponent> : { title }}</h3>
+            <h3>{button.url ? <LinkComponent to={button.url}>{title}</LinkComponent> : { title }}</h3>
           </div>
           <div className={styles["card-subtitle"]}>{subtitle}</div>
           {date && (
@@ -87,7 +88,7 @@ const OutingCardComponent = ({
             </div>
           </div>
           <div className={styles["card-action"]}>
-            <Button title={button.title} href={button.href} />
+            <Button title={button.title} href={button.url} />
           </div>
         </div>
       </div>
