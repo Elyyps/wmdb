@@ -1,6 +1,5 @@
-import { IOverviewFilterItem } from "./overview";
+import { IOverviewFilterItem, IOutingCard } from "./overview";
 import { getCardsAmount } from "./dummy-data";
-import { IOutingCard } from "@app/api/core/outing-card";
 /* tslint:disable */
 interface ICardsPaginatedReturn {
   cards: IOutingCard[];
@@ -11,6 +10,7 @@ export const getCardsPaginated = (skip: number, take: number, filter: IOverviewF
   const CARDS_AMOUNT = 200;
   let cards = getCardsAmount(CARDS_AMOUNT);
   if (filter.filterText) {
+    console.log(filter.filterText)
     const filterTextCapitalized = filter.filterText.toUpperCase();
     cards = cards.filter(
       item =>
@@ -54,7 +54,7 @@ export const getCardsPaginated = (skip: number, take: number, filter: IOverviewF
     image: ["https://picsum.photos/id/103/1200/800"],
     button: {
       title: "Lees meer",
-      url: "#"
+      url: "/single-wmdb"
     }
   };
   if (cards.length === 8) {

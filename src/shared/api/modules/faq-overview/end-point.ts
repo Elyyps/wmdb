@@ -1,3 +1,5 @@
-import { dummyFaqOverviewData } from "./dummy-data";
+import { dummyFaqOverviewData, dummyLocatieOverviewData } from "./dummy-data";
 
 export const generateDummyFaqOverviewData = () => dummyFaqOverviewData;
+
+export const generateDummyLocatieOverviewData = () => dummyLocatieOverviewData;

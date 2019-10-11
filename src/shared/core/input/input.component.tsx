@@ -39,7 +39,7 @@ const Input = (props: IInputProps) => {
   }, [value]);
   const handleChange = (event: any) => {
     if (props.onChange) {
-      props.onChange(event);
+      props.onChange(event.target.value);
     }
     if (typeof value !== undefined) {
       setValues(event.target.value);
@@ -47,7 +47,7 @@ const Input = (props: IInputProps) => {
   };
   const handleBlur = (event: any) => {
     if (props.onBlur) {
-      props.onBlur(event);
+      props.onBlur(event.target.value);
     }
     if (typeof value !== undefined) {
       setValues(event.target.value);

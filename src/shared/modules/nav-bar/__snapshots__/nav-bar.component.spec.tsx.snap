@@ -21,7 +21,7 @@ exports[`[NavBar] should render component without crashing 1`] = `
             key="0"
           >
             <LinkComponent
-              to=""
+              to="/contact"
             >
               Helpdesk
             </LinkComponent>
@@ -30,7 +30,7 @@ exports[`[NavBar] should render component without crashing 1`] = `
             key="1"
           >
             <LinkComponent
-              to=""
+              to="/info-page"
             >
               Nieuwsbrief
             </LinkComponent>
@@ -39,7 +39,7 @@ exports[`[NavBar] should render component without crashing 1`] = `
             key="2"
           >
             <LinkComponent
-              to=""
+              to="/overzicht"
             >
               Mijn uitjes
             </LinkComponent>

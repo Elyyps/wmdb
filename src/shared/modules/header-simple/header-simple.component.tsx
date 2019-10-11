@@ -1,6 +1,5 @@
 import * as React from "react";
 import "./header-simple-component.scss";
-import Oasis from "@assets/oasis.jpg";
 import { IHeaderSimpleModule } from "@app/api/modules/header-simple";
 
 export interface IHeaderSimpleComponentProps {

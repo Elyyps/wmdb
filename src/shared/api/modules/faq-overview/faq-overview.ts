@@ -2,6 +2,8 @@ import { ILink } from '@app/api/core/link';
 
 export interface IFaqOverviewModule {
   items: IFaqSection[];
+  paddingBottom: string;
+  paddingTop: string;
   title: string;
 }
 

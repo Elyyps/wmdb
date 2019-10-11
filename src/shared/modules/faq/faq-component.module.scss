@@ -5,5 +5,16 @@
         margin-bottom: 16px;
       }
     }
+    &__content {
+      width: 350px;
+    }
+    ul {
+      margin-top: 10px;
+      margin-left: 25px;
+
+      li {
+        list-style-type: disc;
+      }
+    }
   }
 }

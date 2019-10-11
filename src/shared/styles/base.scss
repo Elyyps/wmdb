@@ -47,9 +47,7 @@ ul {
       padding-left: 26px;
       position: relative;
       line-height: 1.29;
-      &:not(:last-child){
-        margin-bottom: 8px;
-      }
+      
       &::before,
       &::after {
         content: "";

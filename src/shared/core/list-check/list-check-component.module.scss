@@ -1,0 +1,33 @@
+.list-check {
+  
+  margin: 0;
+  padding: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid $gray-light-secondary;
+  border-bottom: 1px solid $gray-light-secondary;
+  @media (max-width: $breakpoint-xsmall-max) {
+    background-color: #e8f2fc;
+    margin: 16px -16px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+  > li {
+    margin: 0 20px;
+    @media (max-width: $breakpoint-medium-max) {
+      margin: 0 5px;
+    }
+    @media (max-width: $breakpoint-xsmall-max) {
+      margin: 0;
+      text-align: center;
+      justify-content: center;
+      &:not(:first-child) {
+        display: none;
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+}

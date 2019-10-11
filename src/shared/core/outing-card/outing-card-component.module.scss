@@ -136,8 +136,10 @@
 
   .card {
     &-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       flex: 1;
-      min-height: 90px;
       color: $global-color;
       @media (max-width: $breakpoint-medium-max) {
         margin-top: 10px;
@@ -159,6 +161,9 @@
     }
     &-subtitle {
       color: $brand-secondary;
+       @media (max-width: $breakpoint-xsmall-max) {
+        margin-top: 5px;
+      }
     }
     &-head {
       margin-bottom: 16px;
@@ -170,16 +175,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-    }
-    &-content {
-      p {
-        display: inline-block;
-        min-height: 60px;
-        max-height: 60px;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        margin-bottom: 16px;
-      }
     }
     &-label {
       display: flex;
@@ -244,6 +239,7 @@
     .card-image {
       @media (min-width: $breakpoint-small) {
         height: 56px;
+        width: 33.3%;
         padding: 0 2px;
       }
     }

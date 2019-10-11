@@ -4,8 +4,7 @@ import { IconComponent } from "../icon";
 import { ArrowPanel, IArrowPanelProps } from "../arrow-panel/arrow-panel.component";
 import { SeeMorePanel } from "../see-more-panel";
 
-import { ILink } from '@app/api/core/link';
-
+import { ILink } from "@app/api/core/link";
 
 export interface IArrowPanelListComponentProps {
   icon?: string;
@@ -25,7 +24,7 @@ const ArrowPanelListComponent = (props: IArrowPanelListComponentProps) => {
             <IconComponent icon={icon} size="34px" />
           </div>
         )}
-        <h3>{title}</h3>
+        {title && <h3>{title}></h3>}
       </div>
       {items &&
         items.map((item, key: number) => (

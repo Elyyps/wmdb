@@ -9,17 +9,13 @@ export interface INewActivityComponentProps {
 }
 
 const NewActivityComponent = ({ newActivityModule }: INewActivityComponentProps) => (
-  <div className={styles["new-activity"]}>
-    <ModuleSectionComponent title={newActivityModule.title} paddingTop={"40px"} paddingBottom={"40px"}>
-      <div className={`${styles["new-activity__columns"]} uk-grid uk-child-width-1-2@m `}>
-        {newActivityModule.cards.map((card, key) => (
-          <div key={key}>
-            <OutingCardComponent modify={"small"} {...card} />
-          </div>
-        ))}
-      </div>
-    </ModuleSectionComponent>
-  </div>
+  <ModuleSectionComponent title={newActivityModule.title} paddingTop={"40px"} paddingBottom={"40px"}>
+    <div className={`${styles["new-activity__columns"]} uk-grid uk-child-width-1-2@m `}>
+      {newActivityModule.cards.map((card, key) => (
+        <OutingCardComponent modify={"small"} {...card} key={key} />
+      ))}
+    </div>
+  </ModuleSectionComponent>
 );
 
 export { NewActivityComponent };

@@ -6,6 +6,7 @@ import { PaginationComponent } from "@app/core/pagination";
 import { ListCheckComponent } from "@app/core/list-check";
 import { IOverviewFilterItem, IOutingCard, getCardsPaginated } from "@app/api/modules/overview";
 import { IOverviewModule } from "../../api/modules/overview/overview";
+import styles from "./overview-component.module.scss";
 
 export interface IOverviewComponentProps {
   overviewModule: IOverviewModule;
@@ -83,7 +84,7 @@ const OverviewComponent = ({ overviewModule }: IOverviewComponentProps) => {
   }, [currentFilter]);
 
   return (
-    <div className="overview">
+    <div className={styles["overview"]}>
       <div className="uk-container">
         <div className="uk-grid">
           <div className="uk-width-1-4@m">
@@ -100,14 +101,14 @@ const OverviewComponent = ({ overviewModule }: IOverviewComponentProps) => {
             />
           </div>
           <div className="uk-width-3-4@m">
-            <div className="overview-head uk-visible@m">
+            <div className={`${styles["overview-head"]} uk-visible@m`}>
               {currentFilter.checkedItems.length > 0 && (
-                <div className="overview-head__subtitle">
+                <div className={styles["overview-head__subtitle"]}>
                   {`${totalCards}  uitjes gevonden gebaseerd op de volgende filters:`}
                 </div>
               )}
 
-              <ul className="overview-head__list" data-uk-margin>
+              <ul className={styles["overview-head__list"]} data-uk-margin>
                 {currentFilter.filterText && (
                   <li>
                     <LabelComponent
@@ -139,7 +140,7 @@ const OverviewComponent = ({ overviewModule }: IOverviewComponentProps) => {
             </div>
 
             {totalPages ? (
-              <div className="overview-body">
+              <div className={styles["overview-body"]}>
                 <ListCheckComponent
                   labels={["Kwalitatief aanbod van uitjes", "Direct contact", "Unieke content van uitjes"]}
                 />

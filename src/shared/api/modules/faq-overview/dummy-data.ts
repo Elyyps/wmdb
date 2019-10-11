@@ -4,6 +4,8 @@ import { IFaqOverviewModule } from "@app/api/modules/faq-overview";
 
 export const dummyFaqOverviewData: IFaqOverviewModule = {
   title: "Veelgestelde vragen",
+  paddingTop: "72px",
+  paddingBottom: "72px",
   items: [
     {
       icon: ETEN,
@@ -25,10 +27,7 @@ export const dummyFaqOverviewData: IFaqOverviewModule = {
           title: "Hoe lang staat mijn artikel op de homepagina, waar komt het vandaan?",
           url: "/"
         },
-        {
-          title: "Waar kan ik het vinden?",
-          url: "/"
-        },
+
         {
           title: "Waar kan ik het vinden?",
           url: "/"
@@ -59,10 +58,7 @@ export const dummyFaqOverviewData: IFaqOverviewModule = {
           title: "Hoe lang staat mijn artikel op de homepagina, waar komt het vandaan?",
           url: "/"
         },
-        {
-          title: "Waar kan ik het vinden?",
-          url: "/"
-        },
+
         {
           title: "Waar kan ik het vinden?",
           url: "/"
@@ -93,10 +89,7 @@ export const dummyFaqOverviewData: IFaqOverviewModule = {
           title: "Hoe lang staat mijn artikel op de homepagina, waar komt het vandaan?",
           url: "/"
         },
-        {
-          title: "Waar kan ik het vinden?",
-          url: "/"
-        },
+
         {
           title: "Waar kan ik het vinden?",
           url: "/"
@@ -127,10 +120,7 @@ export const dummyFaqOverviewData: IFaqOverviewModule = {
           title: "Hoe lang staat mijn artikel op de homepagina, waar komt het vandaan?",
           url: "/"
         },
-        {
-          title: "Waar kan ik het vinden?",
-          url: "/"
-        },
+
         {
           title: "Waar kan ik het vinden?",
           url: "/"
@@ -161,10 +151,7 @@ export const dummyFaqOverviewData: IFaqOverviewModule = {
           title: "Hoe lang staat mijn artikel op de homepagina, waar komt het vandaan?",
           url: "/"
         },
-        {
-          title: "Waar kan ik het vinden?",
-          url: "/"
-        },
+
         {
           title: "Waar kan ik het vinden?",
           url: "/"
@@ -195,10 +182,7 @@ export const dummyFaqOverviewData: IFaqOverviewModule = {
           title: "Hoe lang staat mijn artikel op de homepagina, waar komt het vandaan?",
           url: "/"
         },
-        {
-          title: "Waar kan ik het vinden?",
-          url: "/"
-        },
+
         {
           title: "Waar kan ik het vinden?",
           url: "/"
@@ -208,6 +192,64 @@ export const dummyFaqOverviewData: IFaqOverviewModule = {
         title: "Alle veelgestelde vragen over musea",
         url: "/"
       }
+    }
+  ]
+};
+
+export const dummyLocatieOverviewData: IFaqOverviewModule = {
+  title: "Meest bekeken locaties",
+  paddingTop: "72px",
+  paddingBottom: "72px",
+  items: [
+    {
+      title: "",
+      items: [
+        {
+          title: "Team vs Time - Citygames",
+          url: "/"
+        },
+        {
+          title: "Wie is de Mol - Citygames",
+          url: "/"
+        },
+        {
+          title: "Vliegeren - Beachgames",
+          url: "/"
+        },
+        {
+          title: "Powerkkiten - Beachgames",
+          url: "/"
+        },
+        {
+          title: "Bedrijfsuitje Harderwijk op het water - Outdoor Water",
+          url: "/"
+        }
+      ]
+    },
+    {
+      title: "",
+      items: [
+        {
+          title: "Team vs Time - Citygames",
+          url: "/"
+        },
+        {
+          title: "Wie is de Mol - Citygames",
+          url: "/"
+        },
+        {
+          title: "Vliegeren - Beachgames",
+          url: "/"
+        },
+        {
+          title: "Powerkkiten - Beachgames",
+          url: "/"
+        },
+        {
+          title: "Bedrijfsuitje Harderwijk op het water - Outdoor Water",
+          url: "/"
+        }
+      ]
     }
   ]
 };

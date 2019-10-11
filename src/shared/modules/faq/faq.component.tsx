@@ -18,7 +18,7 @@ const FAQComponent = (props: IFAQComponentProps) => (
       </div>
       <div>
         <h2>{props.FAQModule.formTitle}</h2>
-        <p>{props.FAQModule.formContent}</p>
+        <p className={styles["faq__columns__content"]}>{props.FAQModule.formContent}</p>
         <FAQFormComponent onSubmit={() => alert("submitted")} />
       </div>
     </div>

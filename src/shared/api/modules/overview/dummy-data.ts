@@ -174,10 +174,15 @@ const DummyOutingCards: IOutingCard[] = [
   {
     title: "Escape City - Het ontsnappingsspel van Mokum",
     subtitle: "Citygames in Amsterdam",
-    image: [PlaceholderImage, PlaceholderImage1, PlaceholderImage, PlaceholderImage1],
+    image: [
+      "https://picsum.photos/id/420/600/400",
+      "https://picsum.photos/id/421/600/400",
+      "https://picsum.photos/id/418/600/400",
+      "https://picsum.photos/id/360/600/400"
+    ],
     button: {
       title: "Lees meer",
-      url: "/"
+      url: "/single-wmdb"
     },
     categoriesId: [1],
     dataIcon: ROOMS,
@@ -197,7 +202,7 @@ const DummyOutingCards: IOutingCard[] = [
     ],
     button: {
       title: "Lees meer",
-      url: "/"
+      url: "/single-wmdb"
     },
     categoriesId: [2],
     dataIcon: ROOMS,
@@ -217,7 +222,7 @@ const DummyOutingCards: IOutingCard[] = [
     ],
     button: {
       title: "Lees meer",
-      url: "/"
+      url: "/single-wmdb"
     },
     categoriesId: [1],
     dataIcon: ROOMS,
@@ -237,7 +242,7 @@ const DummyOutingCards: IOutingCard[] = [
     ],
     button: {
       title: "Lees meer",
-      url: "/"
+      url: "/single-wmdb"
     },
     categoriesId: [2],
     dataIcon: ROOMS,
@@ -257,7 +262,7 @@ const DummyOutingCards: IOutingCard[] = [
     ],
     button: {
       title: "Lees meer",
-      url: "/"
+      url: "/single-wmdb"
     },
     categoriesId: [1, 14, 17],
     dataIcon: ROOMS,
@@ -277,7 +282,7 @@ const DummyOutingCards: IOutingCard[] = [
     ],
     button: {
       title: "Lees meer",
-      url: "/"
+      url: "/single-wmdb"
     },
     categoriesId: [1, 5, 18, 19, 20, 11],
     dataIcon: ROOMS,
@@ -297,7 +302,7 @@ const DummyOutingCards: IOutingCard[] = [
     ],
     button: {
       title: "Lees meer",
-      url: "/"
+      url: "/single-wmdb"
     },
     categoriesId: [1, 4, 22, 10, 2],
     dataIcon: ROOMS,
@@ -317,7 +322,7 @@ const DummyOutingCards: IOutingCard[] = [
     ],
     button: {
       title: "Lees meer",
-      url: "/"
+      url: "/single-wmdb"
     },
     categoriesId: [5, 3, 20, 7],
     dataIcon: ROOMS,
@@ -337,7 +342,7 @@ const DummyOutingCards: IOutingCard[] = [
     ],
     button: {
       title: "Lees meer",
-      url: "/"
+      url: "/single-wmdb"
     },
     categoriesId: [7, 24],
     dataIcon: ROOMS,
@@ -357,7 +362,7 @@ const DummyOutingCards: IOutingCard[] = [
     ],
     button: {
       title: "Lees meer",
-      url: "/"
+      url: "/single-wmdb"
     },
     categoriesId: [8],
     dataIcon: ROOMS,
@@ -377,7 +382,7 @@ const DummyOutingCards: IOutingCard[] = [
     ],
     button: {
       title: "Lees meer",
-      url: "/"
+      url: "/single-wmdb"
     },
     categoriesId: [10],
     dataIcon: ROOMS,
@@ -397,7 +402,7 @@ const DummyOutingCards: IOutingCard[] = [
     ],
     button: {
       title: "Lees meer",
-      url: "/"
+      url: "/single-wmdb"
     },
     categoriesId: [11],
     dataIcon: ROOMS,
@@ -417,7 +422,7 @@ const DummyOutingCards: IOutingCard[] = [
     ],
     button: {
       title: "Lees meer",
-      url: "/"
+      url: "/single-wmdb"
     },
     categoriesId: [13, 25],
     dataIcon: ROOMS,
@@ -437,7 +442,7 @@ const DummyOutingCards: IOutingCard[] = [
     ],
     button: {
       title: "Lees meer",
-      url: "/"
+      url: "/single-wmdb"
     },
     categoriesId: [7, 6],
     dataIcon: ROOMS,
@@ -457,7 +462,7 @@ const DummyOutingCards: IOutingCard[] = [
     ],
     button: {
       title: "Lees meer",
-      url: "/"
+      url: "/single-wmdb"
     },
     categoriesId: [3, 4],
     dataIcon: ROOMS,
@@ -477,7 +482,7 @@ const DummyOutingCards: IOutingCard[] = [
     ],
     button: {
       title: "Lees meer",
-      url: "/"
+      url: "/single-wmdb"
     },
     categoriesId: [4, 9, 23],
     dataIcon: ROOMS,
@@ -497,7 +502,7 @@ const DummyOutingCards: IOutingCard[] = [
     ],
     button: {
       title: "Lees meer",
-      url: "/"
+      url: "/single-wmdb"
     },
     categoriesId: [4, 9, 23],
     dataIcon: ROOMS,

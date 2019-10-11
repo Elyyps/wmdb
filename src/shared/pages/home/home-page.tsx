@@ -14,7 +14,7 @@ import { generateDummyHeroModule } from "@app/api/modules/hero/hero-module";
 import { CategoryOverviewComponent } from "@app/modules/category-overview";
 import { GenerateDummyCategoryOverviewData } from "@app/api/modules/category-overview/dummy-data";
 import { FAQOverviewComponent } from "@app/modules/faq-overview";
-import { generateDummyFaqOverviewData } from "@app/api/modules/faq-overview";
+import { generateDummyFaqOverviewData, generateDummyLocatieOverviewData } from "@app/api/modules/faq-overview";
 
 const HomePageComponent = () => (
   <React.Fragment>
@@ -24,6 +24,7 @@ const HomePageComponent = () => (
     <NewActivityComponent newActivityModule={generateNewActivityData()} />
     <FAQOverviewComponent faqOverviewModule={generateDummyFaqOverviewData()} />
     <CompanyOutingComponent companyOutingModule={generateCompanyOutingData()} />
+    <FAQOverviewComponent faqOverviewModule={generateDummyLocatieOverviewData()} />
     <OtherLocationsComponent otherLocationsModule={generateOtherLocationsData()} />
     <FooterComponent footerModule={generateFooterData()} />
   </React.Fragment>
