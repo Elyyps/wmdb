@@ -1,4 +1,6 @@
 .new-activity {
+  max-width: $container-max-width;
+  margin: auto;
   &__columns {
     display: flex;
     flex-direction: row;

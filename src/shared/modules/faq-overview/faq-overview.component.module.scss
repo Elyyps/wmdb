@@ -1,7 +1,8 @@
 .faq-overview {
   &__posts {
-    max-width: 900px;
+    max-width: $container-max-width;
     margin: auto;
+    margin-bottom: 5px;
     @media (min-width: $breakpoint-small) {
       margin-bottom: -24px;
     }

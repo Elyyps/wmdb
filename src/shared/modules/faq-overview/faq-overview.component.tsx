@@ -1,6 +1,6 @@
 import * as React from "react";
-import "./faq-overview.component.scss";
-import { SimpleCard, Section, SeeMoreCard, IconComponent } from "@app/prep/modules-prep/core";
+import styles from "./faq-overview.component.module.scss";
+import { Section } from "@app/prep/modules-prep/core";
 import { ArrowPanelListComponent } from "@app/core/arrow-panel-list";
 import { IFaqOverviewModule } from "@app/api/modules/faq-overview";
 
@@ -12,9 +12,9 @@ const FAQOverviewComponent = (props: IFAQOverviewComponentProps) => {
   const { title, items } = props.faqOverviewModule;
 
   return (
-    <div className="faq-overview">
+    <div className={styles["faq-overview"]}>
       <Section title={title} paddingBottom={"72px"} paddingTop="72px" backgroundColor={"#e8f2fc"}>
-        <div className="faq-overview__posts uk-grid uk-child-width-1-2@s">
+        <div className={`${styles["faq-overview__posts"]} uk-grid uk-child-width-1-2@s`}>
           {items.map((row, key) => (
             <ArrowPanelListComponent
               key={key}
