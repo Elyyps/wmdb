@@ -59,14 +59,14 @@ const OutingCardComponent = ({
             <h3>{button.href ? <LinkComponent to={button.href}>{title}</LinkComponent> : { title }}</h3>
           </div>
           <div className={styles["card-subtitle"]}>{subtitle}</div>
-          {date ? (
+          {date && (
             <div className={`${styles["card-label"]} ${"uk-hidden@m"}`}>
               <IconComponent icon={IconCalendar} size={"16px"} />
               <span>
                 {date.start} - {date.end}
               </span>
             </div>
-          ) : null}
+          )}
         </div>
         <div className={`${styles["card-content"]} ${"uk-visible@s"}`}>
           <p>{content}</p>
