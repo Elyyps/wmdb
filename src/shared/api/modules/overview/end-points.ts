@@ -1,6 +1,5 @@
-import { IOverviewFilterItem } from "./overview";
+import { IOverviewFilterItem, IOutingCard } from "./overview";
 import { getCardsAmount } from "./dummy-data";
-import { IOutingCard } from "@app/api/core/outing-card";
 /* tslint:disable */
 interface ICardsPaginatedReturn {
   cards: IOutingCard[];
@@ -54,7 +53,7 @@ export const getCardsPaginated = (skip: number, take: number, filter: IOverviewF
     image: ["https://picsum.photos/id/103/1200/800"],
     button: {
       title: "Lees meer",
-      url: "#"
+      href: "#"
     }
   };
   if (cards.length === 8) {

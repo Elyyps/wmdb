@@ -15,29 +15,30 @@ exports[`[NewActivity] should render component without crashing 1`] = `
       <OutingCardComponent
         button={
           Object {
+            "href": "#",
             "title": "Lees meer",
-            "url": "#",
           }
         }
-        content="Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
-        data={
-          Object {
-            "icon": "rooms.svg",
-            "label": "10 - 1000",
-            "unit": "personen",
-          }
-        }
-        image={
+        categoriesId={
           Array [
-            "img02.png",
-            "img-big.jpg",
-            "img02.png",
-            "img-big.jpg",
+            1,
           ]
         }
+        content="Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
+        dataIcon="rooms.svg"
+        image={
+          Array [
+            "img01.png",
+            "img02.png",
+            "img01.png",
+            "img02.png",
+          ]
+        }
+        maximumPersons={100}
+        minimumPersons={10}
         modify="small"
         subtitle="Citygames in Amsterdam"
-        title="Escape City - Het ontsnappingsspel van Mokum"
+        title="Escape City - Het ontsnappingsspel van Mokum #1"
       />
     </div>
     <div
@@ -46,29 +47,30 @@ exports[`[NewActivity] should render component without crashing 1`] = `
       <OutingCardComponent
         button={
           Object {
+            "href": "#",
             "title": "Lees meer",
-            "url": "#",
           }
         }
-        content="Amsterdamse Uitjes: Speel het bekende spel ‘Escape Room’ nu als uniek stadsspel: Escape City. De sport van het aangaan van uitdagingen en opdrachten, het oplossen van raadsels en het ontcijferen van codes…"
-        data={
-          Object {
-            "icon": "rooms.svg",
-            "label": "10 - 1000",
-            "unit": "personen",
-          }
-        }
-        image={
+        categoriesId={
           Array [
-            "img02.png",
-            "img-big.jpg",
-            "img02.png",
-            "img02.png",
+            2,
           ]
         }
+        content="TB Events: Met een flinke kater: verloren spullen, lippenstift op vreemde plaatsen, blauwe plekken... Net als de vier hoofdrol-spelers in de briljante speelfilm ‘The Hangover’. TB Events biedt je de mogelijkheid om The Hangover nu zelf real time...KEYWORD"
+        dataIcon="rooms.svg"
+        image={
+          Array [
+            "https://picsum.photos/id/115/300/200",
+            "https://picsum.photos/id/116/300/200",
+            "https://picsum.photos/id/117/300/200",
+            "https://picsum.photos/id/118/300/200",
+          ]
+        }
+        maximumPersons={100}
+        minimumPersons={20}
         modify="small"
         subtitle="Citygames in Amsterdam"
-        title="Escape City - Het ontsnappingsspel van Mokum"
+        title="The Hangover #2x"
       />
     </div>
   </div>

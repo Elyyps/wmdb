@@ -69,15 +69,16 @@ exports[`[Footer] should render component without crashing 1`] = `
             </LinkComponent>
           </li>
         </ul>
-        <LinkComponent
-          to="/"
+        <a
+          href="/"
+          role="button"
         >
           <IconComponent
             fillColor="#3b5998"
             icon="facebook.svg"
             size="24px"
           />
-        </LinkComponent>
+        </a>
       </div>
     </div>
   </div>
