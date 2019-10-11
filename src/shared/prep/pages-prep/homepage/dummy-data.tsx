@@ -104,8 +104,6 @@ const Cards = [
 
 const FAQOverviewData = {
   backgroundColor: "#e8f2fc",
-  paddingBottom: "72px",
-  paddingTop: "72px",
   title: "Veelgestelde vragen",
   items: [
     {
