@@ -1,5 +1,6 @@
 import { IButton } from "@app/api/core/button";
 import { ICheckboxUnique } from "@app/api/core/checkbox";
+import { ILink } from '@app/api/core/link';
 
 export interface IOverviewModule {
   filter: IOverviewFilterCategoryItem[];
@@ -18,7 +19,7 @@ export interface IOverviewFilterItem {
 }
 
 export interface IOutingCard {
-  button: IButton;
+  button: ILink;
   categoriesId?: number[];
   content: string;
   dataIcon?: string;

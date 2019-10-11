@@ -1,9 +1,10 @@
 import * as React from "react";
 import styles from "./expendable-component.module.scss";
+import { BodyTextComponent } from "../bodytext";
 
 export interface IExpendableItemComponentProps {
   callback?: (identifier?: number) => void;
-  content?: string;
+  content: string;
   identifier?: number;
   opened?: boolean;
   title?: string;
@@ -21,7 +22,9 @@ const ExpendableItemComponent = (props: IExpendableItemComponentProps) => {
       <button onClick={invokeCallback} className={styles["expendable__item-title"]}>
         {props.title}
       </button>
-      <div className={styles["expendable__item-body"]}>{props.content}</div>
+      <div className={styles["expendable__item-body"]}>
+        <BodyTextComponent html={props.content} />
+      </div>
     </div>
   );
 };

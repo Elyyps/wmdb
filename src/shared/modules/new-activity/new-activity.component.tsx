@@ -12,9 +12,7 @@ const NewActivityComponent = ({ newActivityModule }: INewActivityComponentProps)
   <ModuleSectionComponent title={newActivityModule.title} paddingTop={"40px"} paddingBottom={"40px"}>
     <div className={`${styles["new-activity__columns"]} uk-grid uk-child-width-1-2@m `}>
       {newActivityModule.cards.map((card, key) => (
-        <div key={key}>
-          <OutingCardComponent modify={"small"} {...card} />
-        </div>
+        <OutingCardComponent modify={"small"} {...card} key={key} />
       ))}
     </div>
   </ModuleSectionComponent>

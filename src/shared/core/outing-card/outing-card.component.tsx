@@ -7,10 +7,10 @@ import { Button } from "@app/prep/modules-prep/core";
 import IconCalendar from "@assets/icons/calendar.svg";
 import classNames from "classnames";
 import IconDown from "@assets/icons/chevron-down.svg";
-import { IButton } from "@app/api/core/button";
+import { ILink } from "@app/api/core/link";
 
 export interface IOutingCardComponentProps {
-  button: IButton;
+  button: ILink;
   categoriesId?: number[];
   content: string;
   dataIcon?: string;
@@ -45,7 +45,7 @@ const OutingCardComponent = ({
   };
 
   const styleOpen = isOpen ? "show" : "hide";
-  const modifyCard = modify ? `${styles["outing-card--"]}${modify}` : "";
+  const modifyCard = modify ? styles[`outing-card--${modify}`] : "";
 
   const classModify = classNames(styles["outing-card"], { "outing-card--event": date }, modifyCard, styleOpen);
 
@@ -54,22 +54,24 @@ const OutingCardComponent = ({
       {image && <OutingCardImage images={image} />}
 
       <div className={styles["card-body"]}>
-        <div className={styles["card-head"]}>
-          <div className={styles["card-title"]}>
-            <h3>{button.href ? <LinkComponent to={button.href}>{title}</LinkComponent> : { title }}</h3>
-          </div>
-          <div className={styles["card-subtitle"]}>{subtitle}</div>
-          {date ? (
-            <div className={`${styles["card-label"]} ${"uk-hidden@m"}`}>
-              <IconComponent icon={IconCalendar} size={"16px"} />
-              <span>
-                {date.start} - {date.end}
-              </span>
+        <div>
+          <div className={styles["card-head"]}>
+            <div className={styles["card-title"]}>
+              <h3>{button.url ? <LinkComponent to={button.url}>{title}</LinkComponent> : { title }}</h3>
             </div>
-          ) : null}
-        </div>
-        <div className={`${styles["card-content"]} ${"uk-visible@s"}`}>
-          <p>{content}</p>
+            <div className={styles["card-subtitle"]}>{subtitle}</div>
+            {date && (
+              <div className={`${styles["card-label"]} ${"uk-hidden@m"}`}>
+                <IconComponent icon={IconCalendar} size={"16px"} />
+                <span>
+                  {date.start} - {date.end}
+                </span>
+              </div>
+            )}
+          </div>
+          <div className={`${styles["card-content"]} ${"uk-visible@s"}`}>
+            <p>{content}</p>
+          </div>
         </div>
         <div className={` ${styles["card-bottom"]} ${"uk-visible@s"}`}>
           <div className={styles["card-labels"]}>
@@ -83,11 +85,13 @@ const OutingCardComponent = ({
             )}
             <div className={styles["card-label"]}>
               <IconComponent icon={dataIcon} size={"20px"} />
-              <span>{`${minimumPersons} - ${maximumPersons} personen`}</span>
+              <span>
+                {`${minimumPersons} - ${maximumPersons}`} <span className={styles["card-label-unit"]}>personen</span>
+              </span>
             </div>
           </div>
           <div className={styles["card-action"]}>
-            <Button title={button.title} href={button.href} />
+            <Button title={button.title} href={button.url} />
           </div>
         </div>
       </div>
