@@ -13,7 +13,7 @@ const FAQOverviewComponent = (props: IFAQOverviewComponentProps) => {
 
   return (
     <div className={styles["faq-overview"]}>
-      <Section title={title} paddingBottom={"72px"} paddingTop="72px" backgroundColor={"#e8f2fc"}>
+      <Section title={title} paddingBottom={"42px"} paddingTop="72px" backgroundColor={"#e8f2fc"}>
         <div className={`${styles["faq-overview__posts"]} uk-grid uk-child-width-1-2@s`}>
           {items.map((row, key) => (
             <ArrowPanelListComponent
