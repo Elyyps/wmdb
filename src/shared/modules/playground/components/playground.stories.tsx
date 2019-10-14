@@ -10,25 +10,6 @@ const notes = require("./playground.md");
 storiesOf("Playground", module)
   .addDecorator(withA11y)
   .addDecorator(withProvider)
-  .add(
-    "Basic implementation",
-    () => (
-      <PlaygroundComponent
-        testItems={[
-          {
-            amount: 22,
-            name: "Item 1"
-          },
-          {
-            amount: 33,
-            name: "Item 2"
-          }
-        ]}
-        // tslint:disable-next-line
-        getItems={() => {}}
-      />
-    ),
-    {
-      notes
-    }
-  );
+  .add("Basic implementation", () => <PlaygroundComponent />, {
+    notes
+  });

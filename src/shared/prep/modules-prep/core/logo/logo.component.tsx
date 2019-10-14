@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { ImageComponent } from "@app/prep/modules-prep/core";
+import { ImageComponent } from "@app/core/image";
 import "./logo.component.scss";
 import Logo from "@assets/WMDB.svg";
 

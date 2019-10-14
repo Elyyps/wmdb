@@ -7,6 +7,24 @@ exports[`[HeaderGallery] should render component without crashing 1`] = `
   <div
     className="uk-container"
   >
+    <Breadcrumb
+      breadcrumbs={
+        Array [
+          Object {
+            "title": "Home",
+            "url": "#",
+          },
+          Object {
+            "title": "Citygames in Amsterdam",
+            "url": "#",
+          },
+          Object {
+            "title": "Wie is de mol?",
+            "url": "",
+          },
+        ]
+      }
+    />
     <div
       className="header-gallery__container"
     >

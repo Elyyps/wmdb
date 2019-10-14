@@ -11,20 +11,21 @@
     text-decoration: none;
     display: flex;
     align-items: center;
-    .icon-svg{
+    svg{
       path{
-        stroke:$brand-primary
+        stroke:$brand-primary;
+        fill: transparent;
       }
     }
   }
   .prev{
-    .icon-svg{
+    svg{
       //tra
       margin-right: 8px;
     }
   }
   .next{
-    .icon-svg{
+    svg{
       margin-left: 8px;
     }
   }

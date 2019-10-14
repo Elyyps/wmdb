@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Button] should render without crashing 1`] = `
+<Fragment>
+  <ul
+    className="breadcrumb"
+  >
+    <li
+      key="0"
+    >
+      <Link
+        to="/"
+      >
+        <span>
+          Home
+        </span>
+        <IconComponent
+          icon="chevron-right.svg"
+          size="8px"
+        />
+      </Link>
+    </li>
+    <li
+      key="1"
+    >
+      <Link
+        to="/"
+      >
+        <span>
+          Another page
+        </span>
+        <IconComponent
+          icon="chevron-right.svg"
+          size="8px"
+        />
+      </Link>
+    </li>
+    <li
+      key="2"
+    >
+      <span>
+        Current page
+      </span>
+    </li>
+  </ul>
+</Fragment>
+`;
+
+exports[`[Button] should render without crashing 2`] = `
+<Fragment>
+  <ul
+    className="breadcrumb"
+  />
+</Fragment>
+`;
+
+exports[`[Button] should render without crashing 3`] = `
+<Fragment>
+  <ul
+    className="breadcrumb"
+  >
+    <li
+      key="0"
+    >
+      <Link
+        to="/"
+      >
+        <span>
+          Home
+        </span>
+        <IconComponent
+          icon="chevron-right.svg"
+          size="8px"
+        />
+      </Link>
+    </li>
+  </ul>
+</Fragment>
+`;

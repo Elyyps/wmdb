@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../single-wmdb-component.module.scss";
-import { IconComponent } from "@app/prep/modules-prep/core";
 import CLOSE from "@assets/icons/cross.svg";
+import { IconComponent } from "@app/prep/modules-prep/core";
 
 export interface ISingleWmdkModalComponentProps {
   children: any;

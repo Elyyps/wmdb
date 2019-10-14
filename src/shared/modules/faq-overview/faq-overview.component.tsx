@@ -1,8 +1,9 @@
 import * as React from "react";
 import styles from "./faq-overview.component.module.scss";
-import { Section } from "@app/prep/modules-prep/core";
+
 import { ArrowPanelListComponent } from "@app/core/arrow-panel-list";
 import { IFaqOverviewModule } from "@app/api/modules/faq-overview";
+import { ModuleSectionComponent } from "@app/core/module-section";
 
 export interface IFAQOverviewComponentProps {
   faqOverviewModule: IFaqOverviewModule;
@@ -13,7 +14,7 @@ const FAQOverviewComponent = (props: IFAQOverviewComponentProps) => {
 
   return (
     <div className={styles["faq-overview"]}>
-      <Section title={title} paddingBottom={"42px"} paddingTop="72px" backgroundColor={"#e8f2fc"}>
+      <ModuleSectionComponent title={title} paddingBottom={"42px"} paddingTop="72px" backgroundColor={"#e8f2fc"}>
         <div className={`${styles["faq-overview__posts"]} uk-grid uk-child-width-1-2@s`}>
           {items.map((row, key) => (
             <ArrowPanelListComponent
@@ -25,7 +26,7 @@ const FAQOverviewComponent = (props: IFAQOverviewComponentProps) => {
             />
           ))}
         </div>
-      </Section>
+      </ModuleSectionComponent>
     </div>
   );
 };

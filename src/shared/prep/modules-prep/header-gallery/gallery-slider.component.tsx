@@ -1,6 +1,6 @@
 import React from "react";
 import "./header-gallery-component.scss";
-import { ImageComponent } from "@app/prep/modules-prep/core";
+import { ImageComponent } from "@app/core/image";
 import Slider, { Settings } from "react-slick";
 import { BasicArrow } from "./basic-arrow.component";
 import { SliderImages } from "../../pages-prep/single-wmdb/dummy-data";

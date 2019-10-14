@@ -1,8 +1,8 @@
 import * as React from "react";
-import { IconComponent } from "@app/prep/modules-prep/core";
 import styles from "../single-wmdb-component.module.scss";
 import { Link } from "react-router-dom";
 import Phone from "@assets/icons/images.svg";
+import { IconComponent } from "@app/prep/modules-prep/core";
 
 export interface ISingleWmdbContactComponentProps {}
 

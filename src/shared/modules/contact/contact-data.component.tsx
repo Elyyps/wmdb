@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./contact-component.module.scss";
-import { Button } from "@app/prep/modules-prep/core";
+import { Button } from "@app/core/button";
 import LOCATION from "@assets/icons/location.svg";
 import { Link } from "react-router-dom";
 import { ILink } from "@app/api/core/link";

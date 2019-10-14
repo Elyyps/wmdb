@@ -2,7 +2,7 @@ import * as React from "react";
 import styles from "./contact-form-component.module.scss";
 import { Input } from "../input";
 import { Checkbox } from "../checkbox/checkbox.component";
-import { Button } from "@app/prep/modules-prep/core";
+import { Button } from "@app/core/button";
 import { TextAreaComponent } from "../text-area";
 import { RadioButtonComponent } from "../radio-button";
 import { withFormik, FormikProps, FormikErrors, Form } from "formik";
@@ -79,24 +79,36 @@ const InnerForm = (props: FormikProps<IContactFormValues>) => {
         label="Naam"
         name="name"
         errorMessage={touched.name ? errors.name : ""}
-        onChange={props.handleChange}
-        onBlur={props.handleBlur}
+        onChange={(e: any) => {
+          props.handleChange(e);
+        }}
+        onBlur={(e: any) => {
+          props.handleBlur(e);
+        }}
         value={props.values.name}
       />
       <Input
         label={"E-mailadres"}
         name={"emailAddress"}
         errorMessage={touched.emailAddress ? errors.emailAddress : ""}
-        onChange={props.handleChange}
-        onBlur={props.handleBlur}
+        onChange={(e: any) => {
+          props.handleChange(e);
+        }}
+        onBlur={(e: any) => {
+          props.handleBlur(e);
+        }}
         value={props.values.emailAddress}
       />
       <Input
         label={"Telefoonnummer"}
         name={"phone"}
         errorMessage={touched.phone ? errors.phone : ""}
-        onChange={props.handleChange}
-        onBlur={props.handleBlur}
+        onChange={(e: any) => {
+          props.handleChange(e);
+        }}
+        onBlur={(e: any) => {
+          props.handleBlur(e);
+        }}
         value={props.values.phone}
       />
       <Input
@@ -104,8 +116,12 @@ const InnerForm = (props: FormikProps<IContactFormValues>) => {
         name={"numberPerson"}
         type="number"
         errorMessage={touched.numberPerson ? errors.numberPerson : ""}
-        onChange={props.handleChange}
-        onBlur={props.handleBlur}
+        onChange={(e: any) => {
+          props.handleChange(e);
+        }}
+        onBlur={(e: any) => {
+          props.handleBlur(e);
+        }}
         value={props.values.numberPerson}
         min={0}
       />

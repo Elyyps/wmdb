@@ -62,7 +62,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
       setFilterText(currentFilter.filterText);
     }
   };
-  const handelClick = () => {
+  const handleClick = () => {
     setIsActive(!isActive);
     initializeFilter();
   };
@@ -115,7 +115,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
 
   return (
     <div className={styles["overview-filter-wrapper"]}>
-      <button className={`${styles["button-search"]} uk-hidden@m`} onClick={handelClick}>
+      <button className={`${styles["button-search"]} uk-hidden@m`} onClick={handleClick}>
         <IconComponent icon={Search} size={"15px"} />
         <span>{searchPlaceholder}</span>
       </button>
@@ -123,7 +123,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
       <div className={`${styles["overview-filter"]} ${isActive && styles["isActive"]}`}>
         {isActive ? (
           <div className={styles["overview-filter__title"]}>
-            <button role={"button"} onClick={handelClick} className="uk-hidden@m">
+            <button role={"button"} onClick={handleClick} className="uk-hidden@m">
               <IconComponent icon={CROSS} size={"15px"} />
             </button>
             <h2>Filters</h2>

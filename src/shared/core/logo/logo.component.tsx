@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { ImageComponent } from "@app/prep/modules-prep/core";
+import { ImageComponent } from "@app/core/image";
 import styles from "./logo-component.module.scss";
 
 export interface ILogoComponentProps {
@@ -10,7 +10,7 @@ export interface ILogoComponentProps {
 
 const LogoComponent = (props: ILogoComponentProps) => (
   <Link to={props.url ? props.url : ""} className={styles["logo"]}>
-    <ImageComponent src={props.logo} />
+    <ImageComponent style={{ maxWidth: 20 }} src={props.logo} />
   </Link>
 );
 

@@ -1,7 +1,7 @@
 import * as React from "react";
 import style from "./label-component.module.scss";
 import CLOSE from "@assets/icons/cross.svg";
-import { IconComponent } from "@app/prep/modules-prep/core";
+import { IconComponent } from '@app/core/icon';
 
 export interface ILabelComponentProps {
   label: string;

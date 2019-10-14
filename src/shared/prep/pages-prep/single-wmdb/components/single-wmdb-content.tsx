@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Button } from "@app/prep/modules-prep/core";
+import { Button } from "@app/core/button";
 
 export interface ISingleWmdkContentComponentProps {}
 

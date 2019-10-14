@@ -3,11 +3,11 @@ import styles from "./outing-card-component.module.scss";
 import { IconComponent } from "../icon";
 import { LinkComponent } from "../link";
 import { OutingCardImage } from "./outing-card-image.component";
-import { Button } from "@app/prep/modules-prep/core";
 import IconCalendar from "@assets/icons/calendar.svg";
 import classNames from "classnames";
 import IconDown from "@assets/icons/chevron-down.svg";
 import { ILink } from "@app/api/core/link";
+import { Button } from "../button";
 
 export interface IOutingCardComponentProps {
   button: ILink;
@@ -84,7 +84,9 @@ const OutingCardComponent = ({
               </div>
             )}
             <div className={styles["card-label"]}>
-              <IconComponent icon={dataIcon} size={"20px"} />
+              <div style={{ height: 20 }}>
+                <IconComponent icon={dataIcon} size={"20px"} />
+              </div>
               <span>
                 {`${minimumPersons} - ${maximumPersons}`}
                 <span className={styles[modify ? "card-label-unit" : ""]}> personen</span>

@@ -45,6 +45,12 @@
       margin: 8px 0 !important;
     }
   }
+  svg {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
   &__title {
     button {
       background-color: transparent;

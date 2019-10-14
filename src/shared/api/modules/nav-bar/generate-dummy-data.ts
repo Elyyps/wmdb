@@ -1,4 +1,5 @@
 import { INavBarModule } from "./nav-bar.module";
+import Logo from "@assets/WMDB.svg";
 
 export const generateDummyNavbarData = (): INavBarModule => ({
   closeText: "Sluiten",
@@ -7,7 +8,7 @@ export const generateDummyNavbarData = (): INavBarModule => ({
     { title: "Nieuwsbrief", url: "/" },
     { title: "Mijn uitjes", url: "/overzicht" }
   ],
-  logo: "",
+  logo: Logo,
   title: "Menu",
   menuItems: [
     { title: "Helpdesk", url: "/contact" },

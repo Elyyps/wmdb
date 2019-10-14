@@ -1,9 +1,10 @@
 import * as React from "react";
 import styles from "./other-activities-component.module.scss";
 import { EventCardComponent } from "@app/core/event-card";
-import { Button } from "@app/prep/modules-prep/core";
+
 import { IOtherActivities } from "@app/api/modules/other-activities/other-activities";
 import { IEventCard } from "@app/api/core/event-card";
+import { Button } from '@app/core/button';
 
 export interface IOtherActivitiesComponentProps {
   otherActivities: IOtherActivities;

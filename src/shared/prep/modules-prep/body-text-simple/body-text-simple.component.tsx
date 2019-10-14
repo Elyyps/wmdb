@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import styles from "./body-text-simple-component.module.scss";
-import { Button } from "@app/prep/modules-prep/core";
+import { Button } from "@app/core/button";
 
 export interface IBodyTextSimpleComponentProps {
   bgImage?: string;

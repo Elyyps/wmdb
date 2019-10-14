@@ -24,8 +24,12 @@ const InnerForm = (props: FormikProps<IFAQFormValues>) => {
           label={"Naam"}
           name={"name"}
           errorMessage={touched.name ? errors.name : ""}
-          onChange={props.handleChange}
-          onBlur={props.handleBlur}
+          onChange={(e: any) => {
+            props.handleChange(e);
+          }}
+          onBlur={(e: any) => {
+            props.handleBlur(e);
+          }}
           value={props.values.name}
         />
 
@@ -33,8 +37,12 @@ const InnerForm = (props: FormikProps<IFAQFormValues>) => {
           label={"E-mailadres"}
           name={"emailAddress"}
           errorMessage={touched.emailAddress ? errors.emailAddress : ""}
-          onChange={props.handleChange}
-          onBlur={props.handleBlur}
+          onChange={(e: any) => {
+            props.handleChange(e);
+          }}
+          onBlur={(e: any) => {
+            props.handleBlur(e);
+          }}
           value={props.values.emailAddress}
         />
         <TextAreaComponent label={"Vraag of opmerking (optioneel)"} name={"textarea"} />

@@ -2,10 +2,13 @@ import * as React from "react";
 import classNames from "classnames";
 import "./card-post.component.scss";
 import { Link } from "react-router-dom";
-import { Button, IButtonProps, IconComponent } from "@app/prep/modules-prep/core";
-import { CardPostImage } from "@app/prep/modules-prep/core/card-post/card-post-image";
+
 import IconCalendar from "@assets/icons/calendar.svg";
 import IconDown from "@assets/icons/chevron-down.svg";
+import { IButtonProps, Button } from "@app/core/button";
+import { IconComponent } from "@app/core/icon";
+import { CardPostImage } from "./card-post-image";
+
 
 interface ICardPostProps {
   button: IButtonProps;

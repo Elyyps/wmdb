@@ -1,10 +1,11 @@
 import * as React from "react";
 import "./pagination.component.scss";
-import { IconComponent } from "@app/prep/modules-prep/core";
+
 import { Link } from "react-router-dom";
 import ArrowRight from "@assets/icons/chevron-right.svg";
 import ArrowLeft from "@assets/icons/chevron-left.svg";
 import { calculatePages } from "@app/util/calculate-pages/calculate-pages";
+import { IconComponent } from '@app/core/icon';
 
 export interface IPaginationComponentProps {
   changePage: (page: number) => void;
@@ -39,7 +40,7 @@ const PaginationComponent = ({
     <div className="pagination">
       {totalPages > 1 && (
         <Link onClick={previousPage} to="#" className="prev">
-          <IconComponent icon={ArrowLeft} size={"13px"} stroke />
+          <IconComponent icon={ArrowLeft} size={"13px"}  />
           <span className={"uk-visible@s"}>Vorige</span>
         </Link>
       )}
@@ -86,7 +87,7 @@ const PaginationComponent = ({
       {totalPages > 1 && (
         <Link onClick={nextPage} to="#" className="next">
           <span className={"uk-visible@s"}>Volgende</span>
-          <IconComponent icon={ArrowRight} size={"13px"} stroke />
+          <IconComponent icon={ArrowRight} size={"13px"}  />
         </Link>
       )}
     </div>

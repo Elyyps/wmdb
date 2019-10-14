@@ -1,6 +1,6 @@
 import * as React from "react";
 import styles from "./nav-bar-component.module.scss";
-import { LogoComponent } from "@app/prep/modules-prep/core";
+import { LogoComponent } from "@app/core/logo/logo.component";
 import { LinkComponent } from "@app/core/link";
 import MENU_ICON from "@assets/icons/menu.svg";
 import { INavBarModule } from "@app/api/modules/nav-bar/nav-bar.module";
@@ -16,7 +16,7 @@ const NavBarComponent = ({ navbarModule }: INavBarComponentProps) => (
     <div className="uk-container">
       <div className={styles["nav-bar__holder"]}>
         <div>
-          <LogoComponent />
+          <LogoComponent logo={navbarModule.logo} />
         </div>
         <div>
           <ul className={`${styles["nav-bar__links"]} uk-visible@m`}>

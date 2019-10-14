@@ -1,9 +1,9 @@
 import * as React from "react";
 import styles from "./button-component.module.scss";
 import { Link } from "react-router-dom";
-import { IconComponent } from "@app/prep/modules-prep/core";
 import ArrowDown from "@assets/icons/chevron-down.svg";
 import classNames from "classnames";
+import { IconComponent } from '@app/core/icon';
 
 export interface IButtonProps {
   fullWidth?: boolean;
@@ -32,7 +32,7 @@ const Button = (props: IButtonProps) => {
       {href ? (
         <Link {...other} to={href} className={buttonClassName} target={target}>
           <span>{title}</span>
-          {icon && <IconComponent icon={icon} size="14px" stroke={iconStroke ? iconStroke : true} />}
+          {icon && <IconComponent icon={icon} size="14px" strokeColor="black" />}
         </Link>
       ) : (
         <button
@@ -43,10 +43,10 @@ const Button = (props: IButtonProps) => {
           className={buttonClassName}
         >
           <span>{title}</span>
-          {icon && <IconComponent icon={icon} size="14px" stroke={iconStroke ? iconStroke : true} />}
+          {icon && <IconComponent icon={icon} size="14px" strokeColor="black"/>}
           {variant === "dropdown" && (
             <div className={styles["button__arrow"]}>
-              <IconComponent icon={ArrowDown} size={"12px"} stroke={iconStroke ? iconStroke : true} />
+              <IconComponent icon={ArrowDown} size={"12px"} strokeColor="black"/>
             </div>
           )}
         </button>

@@ -10,7 +10,9 @@ import Rectangle from "@assets/rectangle.png";
 import Big from "@assets/img-big.jpg";
 import Grid from "@assets/img-grid.png";
 import { HeaderGalleryComponent } from "@app/modules/header-gallery";
+
 const imageList = [Rectangle, Oasis, Big, Image, Oasis, Grid];
+
 const ContactPageComponent = () => (
   <React.Fragment>
     <NavBarComponent navbarModule={generateNavbarData()} />

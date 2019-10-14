@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./advertise-component.module.scss";
 import RECTANGLE from "@assets/rectangle.png";
-import { Button } from "@app/prep/modules-prep/core";
+import { Button } from "@app/core/button";
 
 interface IadvertiseProps {}
 

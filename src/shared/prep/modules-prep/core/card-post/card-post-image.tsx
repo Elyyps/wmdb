@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./card-post.component.scss";
-import { ImageComponent } from "@app/prep/modules-prep/core";
+import { ImageComponent } from "@app/core/image";
 import Slider, { Settings } from "react-slick";
 
 interface ICardPostImageProps {

@@ -1,0 +1,60 @@
+.card {
+  &-advertise {
+    position: relative;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 100%;
+    border-radius: $global-border-radius;
+    overflow: hidden;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba($black, .5);
+      z-index: 0;
+    }
+    .card {
+      &-image {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &-body {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      &-title {
+        font-size: 32px;
+        padding: 0 10px;
+        text-align: center;
+        font-weight: 600;
+        @media(max-width: $breakpoint-xsmall-max) {
+          font-size: 22px;
+          font-weight: 500;
+        }
+        h1, h2, h3, h4, h5 {
+          font-size: inherit;
+          font-weight: inherit;
+          @media(max-width: $breakpoint-xsmall-max) {
+            margin-bottom: 16px;
+          }
+        }
+      }
+    }
+  }
+}

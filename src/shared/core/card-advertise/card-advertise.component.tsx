@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./card-advertise.component.scss";
 import ImageAdvertise from "@assets/advertise.png";
-import { IButtonProps, Button } from "@app/core/button";
+import { Button, IButtonProps } from "@app/core/button";
 
 interface ICardAdvertiseProps {
   button: IButtonProps;

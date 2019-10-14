@@ -5,7 +5,7 @@ import { PlaygroundComponent } from "@app/modules/playground";
 
 describe("[PlaygroundComponent]", () => {
   it("should render without crashing", () => {
-    const renderedComponent = shallow(<PlaygroundComponent testItems={[]} getItems={jest.fn()} />);
+    const renderedComponent = shallow(<PlaygroundComponent />);
 
     expect(renderedComponent).toMatchSnapshot();
   });

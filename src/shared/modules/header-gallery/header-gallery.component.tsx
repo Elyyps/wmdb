@@ -7,10 +7,27 @@ import IconPlay from "@assets/icons/play.svg";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { getArrow } from "@app/constants/icons";
+import { ILink } from "@app/api/core/link";
+import { Breadcrumb } from "@app/core/breadcrumb";
 
 export interface IHeaderGalleryComponentProps {
   images: string[];
 }
+
+const BreadcrumbsData: ILink[] = [
+  {
+    title: "Home",
+    url: "#"
+  },
+  {
+    title: "Citygames in Amsterdam",
+    url: "#"
+  },
+  {
+    title: "Wie is de mol?",
+    url: ""
+  }
+];
 
 const HeaderGalleryComponent = (props: IHeaderGalleryComponentProps) => {
   const [currentImage, setCurrentImage] = React.useState(0);
@@ -31,6 +48,7 @@ const HeaderGalleryComponent = (props: IHeaderGalleryComponentProps) => {
   return (
     <div className={styles["header-gallery"]}>
       <div className="uk-container">
+        <Breadcrumb breadcrumbs={BreadcrumbsData} />
         <div className={styles["header-gallery__container"]}>
           <div className={`${styles["header-gallery__col"]} ${styles["large"]}`}>
             <div className={styles["header-gallery__slider_images"]}>
