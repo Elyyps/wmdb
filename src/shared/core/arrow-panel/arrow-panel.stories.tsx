@@ -8,4 +8,4 @@ import { ArrowPanel } from "./arrow-panel.component";
 storiesOf("Arrow panel", module)
   .addDecorator(withA11y)
   .addDecorator(withProvider)
-  .add("Basic implementation", () => <ArrowPanel title="Title" link="./" />);
+  .add("Basic implementation", () => <ArrowPanel title="Title" url="/" />);

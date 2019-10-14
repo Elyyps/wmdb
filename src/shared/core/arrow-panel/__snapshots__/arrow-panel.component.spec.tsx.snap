@@ -3,7 +3,7 @@
 exports[`[ArrowPanel] should render component without crashing 1`] = `
 <Link
   className="arrow-panel"
-  to="./"
+  to="/"
 >
   <div
     className="arrow-panel__title"

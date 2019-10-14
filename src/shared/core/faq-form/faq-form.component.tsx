@@ -28,7 +28,7 @@ const InnerForm = (props: FormikProps<IFAQFormValues>) => {
           onBlur={props.handleBlur}
           value={props.values.name}
         />
-        <br />
+
         <Input
           label={"E-mailadres"}
           name={"emailAddress"}

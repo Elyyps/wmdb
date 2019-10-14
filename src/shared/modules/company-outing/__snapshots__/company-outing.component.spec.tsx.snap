@@ -2,7 +2,7 @@
 
 exports[`[CompanyOuting] should render component without crashing 1`] = `
 <ModuleSectionComponent
-  backgroundImage="img-big.jpg"
+  backgroundImage="img-top.jpg"
   paddingBottom="40px"
   paddingTop="40px"
   title="Alles over het kiezen van een bedrijfsuitje"

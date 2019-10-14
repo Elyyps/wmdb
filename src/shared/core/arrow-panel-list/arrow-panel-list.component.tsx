@@ -24,7 +24,7 @@ const ArrowPanelListComponent = (props: IArrowPanelListComponentProps) => {
             <IconComponent icon={icon} size="34px" />
           </div>
         )}
-        {title && <h3>{title}></h3>}
+        {title && <h3>{title}</h3>}
       </div>
       {items &&
         items.map((item, key: number) => (

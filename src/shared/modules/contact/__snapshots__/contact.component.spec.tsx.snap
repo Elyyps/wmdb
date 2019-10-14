@@ -217,6 +217,7 @@ deelnemers zijn op dit moment Mister X al tegen gekomen.
             className="contact-mobile-item"
           >
             <Button
+              fullWidth={true}
               onClick={[Function]}
               title="Aanvragen"
               variant="primary"

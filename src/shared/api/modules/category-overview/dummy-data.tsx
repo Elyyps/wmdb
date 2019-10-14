@@ -1,4 +1,3 @@
-import PlaceholderImage from "@assets/img02.png";
 import { ICategoryOverviewModule } from "./category-overview.model";
 import SPEL from "@assets/icons/spel.svg";
 

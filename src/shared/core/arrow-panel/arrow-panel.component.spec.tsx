@@ -4,7 +4,7 @@ import { ArrowPanel } from "./arrow-panel.component";
 
 describe("[ArrowPanel]", () => {
   it("should render component without crashing", () => {
-    const renderedComponent = shallow(<ArrowPanel link="./" title="Title" />);
+    const renderedComponent = shallow(<ArrowPanel url="/" title="Title" />);
     expect(renderedComponent).toMatchSnapshot();
   });
 });

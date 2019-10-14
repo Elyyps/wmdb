@@ -7,7 +7,6 @@ import { ContactPageComponent } from "./pages/contact/contact-page.component";
 import { FAQPageComponent } from "./pages/faq/faq-page";
 import { HomePageComponent } from "./pages/home/home-page";
 import { OverviewPageComponent } from "./pages/overview/overview.component";
-import { InfoPageComponent } from "./prep/pages-prep/info-page/info-page.component";
 
 const Routes: React.FunctionComponent = props => (
   <React.Fragment>
