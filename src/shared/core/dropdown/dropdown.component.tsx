@@ -13,10 +13,11 @@ interface IDropdownProps {
   onChange?: (value: any) => void;
   options?: IDropdownItem[];
   placeholder?: string;
+  style?: any;
 }
 
 const Dropdown = (props: IDropdownProps) => {
-  const { name, options, placeholder, classModify, label, isError, isSuccess } = props;
+  const { name, options, style, placeholder, classModify, label, isError, isSuccess } = props;
   const selectClassName = classNames(styles["dropdown"], {
     [styles[`dropdown--${classModify}`]]: classModify
   });
@@ -39,7 +40,7 @@ const Dropdown = (props: IDropdownProps) => {
 
   return (
     <React.Fragment>
-      <div className={`${styles["form__item"]} ${wrapperClassnames}`}>
+      <div style={style} className={`${styles["form__item"]} ${wrapperClassnames}`}>
         {label && (
           <label htmlFor="label" className={styles["form__item-label"]}>
             {label}

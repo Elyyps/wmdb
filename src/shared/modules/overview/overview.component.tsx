@@ -148,6 +148,7 @@ const OverviewComponent = ({ overviewModule }: IOverviewComponentProps) => {
                 {cards.length >= AD_POSITION && (
                   <>
                     <ListCheckComponent
+                      hideTopBorder
                       labels={["Kwalitatief aanbod van uitjes", "Direct contact", "Unieke content van uitjes"]}
                     />
                     <CardContainer Cards={cards.slice(AD_POSITION, cards.length)} />

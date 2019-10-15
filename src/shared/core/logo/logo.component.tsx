@@ -10,7 +10,7 @@ export interface ILogoComponentProps {
 
 const LogoComponent = (props: ILogoComponentProps) => (
   <Link to={props.url ? props.url : ""} className={styles["logo"]}>
-    <ImageComponent style={{ maxWidth: 20 }} src={props.logo} />
+    <ImageComponent src={props.logo} />
   </Link>
 );
 

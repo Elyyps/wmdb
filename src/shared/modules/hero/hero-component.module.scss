@@ -76,11 +76,17 @@
     width: 100%;
     padding-bottom: 16px;
     @media (min-width: $breakpoint-medium) {
-      width: 25%;
+      max-width: 25%;
       padding: 0 16px 0 0;
     }
     &--flex {
       flex: 1 1 auto;
+    }
+    &-dropdown {
+      @media (min-width: $breakpoint-medium) {
+        min-width: 260px;
+        padding: 0 16px 0 0;
+      }
     }
   }
 }

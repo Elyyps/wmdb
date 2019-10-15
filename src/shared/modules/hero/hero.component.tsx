@@ -28,40 +28,16 @@ const HeroComponent = (props: IHeroComponentProps) => {
   const [keywordText, setKeywordText] = React.useState("");
   const [numberPersonText, setNumberPersonText] = React.useState("");
 
-  const [companyError, setCompanyError] = React.useState(false);
-  const [provincieError, setProvincieError] = React.useState(false);
-  const [keywordError, setKeywordError] = React.useState(false);
-  const [numberPersonError, setNumberPersonError] = React.useState(false);
-
   const onSubmit = (e: any) => {
     e.preventDefault();
-    let isValid = true;
-    if (!companyText.trim()) {
-      setCompanyError(true);
-      isValid = false;
-    } else setCompanyError(false);
-    if (!provincieText.trim()) {
-      setProvincieError(true);
-      isValid = false;
-    } else setProvincieError(false);
-    if (!keywordText.trim()) {
-      setKeywordError(true);
-      isValid = false;
-    } else setKeywordError(false);
-    if (!numberPersonText.trim()) {
-      setNumberPersonError(true);
-      isValid = false;
-    } else setNumberPersonError(false);
 
-    if (isValid) {
-      if (props.onSubmit) {
-        props.onSubmit({
-          companyValue: companyText,
-          provincieText,
-          keywordText,
-          numberPersonText
-        });
-      }
+    if (props.onSubmit) {
+      props.onSubmit({
+        companyValue: companyText,
+        provincieText,
+        keywordText,
+        numberPersonText
+      });
     }
 
     return false;
@@ -82,40 +58,29 @@ const HeroComponent = (props: IHeroComponentProps) => {
       <div className={styles["hero__form-holder"]}>
         <div className={"uk-container"}>
           <form onSubmit={onSubmit} className={`${styles["hero__form"]} ${styles["form"]}`}>
-            <div className={styles["hero__form-area"]}>
+            <div className={`${styles["hero__form-area"]} ${styles["hero__form-area-dropdown"]}`}>
               <Dropdown
-                isError={companyError ? "This field is mandatory" : ""}
                 onChange={setCompanyText}
                 placeholder={dropdownCompanyPlaceholder}
                 options={dropdownCompanyItems}
               />
             </div>
             <div className={`${styles["hero__form-area"]} ${styles["hero__form-area--flex"]}`}>
-              <Input
-                isError={provincieError ? "This field is mandatory" : ""}
-                onChange={setProvincieText}
-                name={"text"}
-                placeholder={provincePlaceholder}
-              />
+              <Input onChange={setProvincieText} name={"text"} placeholder={provincePlaceholder} />
+            </div>
+            <div className={`${styles["hero__form-area"]} ${styles["hero__form-area--flex"]}`}>
+              <Input onChange={setKeywordText} name={"text"} placeholder={keywordPlaceholder} />
             </div>
             <div className={`${styles["hero__form-area"]} ${styles["hero__form-area--flex"]}`}>
               <Input
-                isError={keywordError ? "This field is mandatory" : ""}
-                onChange={setKeywordText}
-                name={"text"}
-                placeholder={keywordPlaceholder}
-              />
-            </div>
-            <div className={`${styles["hero__form-area"]} ${styles["hero__form-area--flex"]}`}>
-              <Input
-                isError={numberPersonError ? "This field is mandatory" : ""}
                 onChange={setNumberPersonText}
                 name={"text"}
+                min={0}
                 type={"number"}
                 placeholder={numberPersonsPlaceholder}
               />
             </div>
-            <Button type={"submit"} title={buttonTitle} variant={"primary"} />
+            <Button fullWidth type={"submit"} title={buttonTitle} variant={"primary"} />
           </form>
         </div>
       </div>

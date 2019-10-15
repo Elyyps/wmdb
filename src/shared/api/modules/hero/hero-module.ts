@@ -1,5 +1,6 @@
 import { IDropdownItem } from "@app/api/core/dropdown-item";
 import Placeholder from "@assets/img01.png";
+import { GenerateDummyFilterOverview } from "../overview/dummy-data";
 
 export interface IHeroModule {
   buttonTitle: string;
@@ -12,22 +13,14 @@ export interface IHeroModule {
   title: string;
 }
 
+const categoriesData = GenerateDummyFilterOverview().map((item, key) => ({
+  text: item.title,
+  value: key
+}));
+
 export const generateDummyHeroModule = (): IHeroModule => ({
   buttonTitle: "Toon 500 uijtes",
-  dropdownCompanyItems: [
-    {
-      value: 1,
-      text: "Item #1"
-    },
-    {
-      value: 2,
-      text: "Item #2"
-    },
-    {
-      value: 3,
-      text: "Item #3"
-    }
-  ],
+  dropdownCompanyItems: categoriesData,
   dropdownCompanyPlaceholder: "Kies een bedrijfsuitje categorie",
   image: Placeholder,
   keywordPlaceholder: "Zoekwoord",
