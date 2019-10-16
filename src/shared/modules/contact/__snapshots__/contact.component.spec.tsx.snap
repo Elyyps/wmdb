@@ -85,6 +85,7 @@ deelnemers zijn op dit moment Mister X al tegen gekomen.
         <Button
           fullWidth={true}
           large={true}
+          onClick={[Function]}
           title="Ontvang informatie / offerte"
           variant="primary"
         />
@@ -199,8 +200,7 @@ deelnemers zijn op dit moment Mister X al tegen gekomen.
                 to=""
               >
                 <IconComponent
-                  fillColor="#101010"
-                  icon="cross.svg"
+                  icon="mail.svg"
                   size="15px"
                 />
                 <span

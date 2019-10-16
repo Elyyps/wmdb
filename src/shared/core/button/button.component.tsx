@@ -23,16 +23,30 @@ const Button = (props: IButtonProps) => {
   const { onClick, href, variant, target, title, type, icon, position, large, fullWidth, iconStroke, ...other } = props;
   const classModify = variant || "default";
   const buttonClassName = classNames(styles["button"], {
-    [styles[`button--${classModify}`]]: classModify,
-    [styles[`button--icon-${position}`]]: position
+    [styles[`button--${classModify}`]]: classModify
   });
+  const renderIconMargin = (margin = "right") => {
+    let newMargin = "";
+    if (title) {
+      newMargin = margin;
+    }
+
+    return (
+      <span className={styles[`icon-${newMargin}`]}>
+        <IconComponent icon={icon} size="14px" strokeColor="black" fillColor="transparent" />
+      </span>
+    );
+  };
 
   return (
     <React.Fragment>
       {href ? (
         <Link {...other} to={href} className={buttonClassName} target={target}>
-          <span>{title}</span>
-          {icon && <IconComponent icon={icon} size="14px" strokeColor="black" />}
+          <span className={styles["icon-svg"]}>
+            {((icon && position === "right") || (icon && !position)) && title}
+            {icon ? renderIconMargin(position) : title}
+            {icon && position === "left" && title}
+          </span>
         </Link>
       ) : (
         <button
@@ -43,7 +57,7 @@ const Button = (props: IButtonProps) => {
           className={buttonClassName}
         >
           <span>{title}</span>
-          {icon && <IconComponent icon={icon} size="14px" strokeColor="black" />}
+
           {variant === "dropdown" && (
             <div className={styles["button__arrow"]}>
               <IconComponent icon={ArrowDown} size={"12px"} strokeColor="black" />
