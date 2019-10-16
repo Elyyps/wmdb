@@ -8,6 +8,9 @@ import { RadioButtonComponent } from "../radio-button";
 import { withFormik, FormikProps, FormikErrors, Form } from "formik";
 import { validateEmail } from "@app/util/validate-email";
 import { DatePickerComponent } from "../date-picker";
+import { LinkComponent } from "../link";
+import { IconComponent } from "../icon";
+import CROSS from "@assets/icons/cross.svg";
 
 interface IContactFormErrorMessages {
   comment: string;
@@ -141,7 +144,13 @@ const InnerForm = (props: FormikProps<IContactFormValues>) => {
           label={"Aanmelden voor de WMDK nieuwsbrief"}
           onChange={() => setIsChecked(!isChecked)}
         />
-        <Button title={"Verstuur aanvraag"} variant={"secondary full large"} />
+        <Button title={"Verstuur aanvraag"} variant={"secondary"} fullWidth large />
+        <div className={styles["contact-form-mail"]}>
+          <LinkComponent to="">
+            <IconComponent icon={CROSS} size="15px" fillColor="#101010" />
+            <span className={styles["contact-form-mail-span"]}>Deel via mail</span>
+          </LinkComponent>
+        </div>
       </div>
     </Form>
   );

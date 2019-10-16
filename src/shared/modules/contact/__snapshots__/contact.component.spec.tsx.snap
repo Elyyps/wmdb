@@ -157,14 +157,30 @@ deelnemers zijn op dit moment Mister X al tegen gekomen.
           >
             <Button
               fullWidth={true}
-              icon="location.svg"
               large={true}
               onClick={[Function]}
-              position="left"
               title="Ontvang informatie / offerte"
               type="button"
               variant="primary"
             />
+            <div
+              className="contact-actions-mail"
+            >
+              <LinkComponent
+                to=""
+              >
+                <IconComponent
+                  fillColor="#101010"
+                  icon="cross.svg"
+                  size="15px"
+                />
+                <span
+                  className="contact-actions-mail-span"
+                >
+                  Deel via mail
+                </span>
+              </LinkComponent>
+            </div>
           </div>
         </div>
         <div

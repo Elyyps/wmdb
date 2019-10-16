@@ -1,7 +1,7 @@
 .outing-card {
   display: flex;
   padding: 24px 0;
-  margin: 0 -12px;
+  // margin: 0 -12px;
   border-bottom: 1px solid $gray-light-secondary;
   font-size: 14px;
   text-decoration: none;
@@ -161,7 +161,7 @@
     }
     &-subtitle {
       color: $brand-secondary;
-       @media (max-width: $breakpoint-xsmall-max) {
+      @media (max-width: $breakpoint-xsmall-max) {
         margin-top: 5px;
       }
     }

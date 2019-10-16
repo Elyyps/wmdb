@@ -32,7 +32,6 @@ const InnerForm = (props: FormikProps<IFAQFormValues>) => {
           }}
           value={props.values.name}
         />
-
         <Input
           label={"E-mailadres"}
           name={"emailAddress"}

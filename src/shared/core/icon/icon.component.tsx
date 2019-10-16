@@ -22,22 +22,21 @@ const iconStyleClassName = (props: IconComponentProps) => {
   return classNames(styles[defaultStyle], fillClassName, outlineClassName, strokeWidthClassName);
 };
 
-const IconComponent: React.FunctionComponent<IconComponentProps> = props =>
-  (
-    <ReactSVG
-      src={props.icon}
-      fallback={() => <span>Error!</span>}
-      loading={() => <span />}
-      renumerateIRIElements={true}
-      wrapper="span"
-      style={{
-        fill: props.fillColor,
-        height: props.size,
-        stroke: props.strokeColor,
-        strokeWidth: props.strokeWidth,
-        width: props.size
-      }}
-      className={iconStyleClassName(props)}
-    />
-  );
+const IconComponent: React.FunctionComponent<IconComponentProps> = props => (
+  <ReactSVG
+    src={props.icon}
+    fallback={() => <span>Error!</span>}
+    loading={() => <span />}
+    renumerateIRIElements={true}
+    wrapper="span"
+    style={{
+      fill: props.fillColor,
+      height: props.size,
+      stroke: props.strokeColor,
+      strokeWidth: props.strokeWidth,
+      width: props.size
+    }}
+    className={iconStyleClassName(props)}
+  />
+);
 export { IconComponent };

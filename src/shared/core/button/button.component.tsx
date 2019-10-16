@@ -3,7 +3,7 @@ import styles from "./button-component.module.scss";
 import { Link } from "react-router-dom";
 import ArrowDown from "@assets/icons/chevron-down.svg";
 import classNames from "classnames";
-import { IconComponent } from '@app/core/icon';
+import { IconComponent } from "@app/core/icon";
 
 export interface IButtonProps {
   fullWidth?: boolean;
@@ -12,7 +12,7 @@ export interface IButtonProps {
   iconStroke?: boolean;
   large?: boolean;
   onClick?: () => void;
-  position?: string;
+  position?: "right" | "left";
   target?: string;
   title: string;
   type?: string;
@@ -43,10 +43,10 @@ const Button = (props: IButtonProps) => {
           className={buttonClassName}
         >
           <span>{title}</span>
-          {icon && <IconComponent icon={icon} size="14px" strokeColor="black"/>}
+          {icon && <IconComponent icon={icon} size="14px" strokeColor="black" />}
           {variant === "dropdown" && (
             <div className={styles["button__arrow"]}>
-              <IconComponent icon={ArrowDown} size={"12px"} strokeColor="black"/>
+              <IconComponent icon={ArrowDown} size={"12px"} strokeColor="black" />
             </div>
           )}
         </button>

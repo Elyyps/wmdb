@@ -3,7 +3,6 @@ import styles from "./contact-component.module.scss";
 import classNames from "classnames";
 import { IconComponent } from "@app/core/icon";
 import ROOMS from "@assets/icons/rooms.svg";
-import LOCATION from "@assets/icons/location.svg";
 import PATTERNT from "@assets/pattern/pattern-wmdb.png";
 import Arrow from "@assets/icons/chevron-right.svg";
 import { BodyTextComponent } from "@app/core/bodytext";
@@ -17,6 +16,8 @@ import RECTANGLE from "@assets/rectangle.png";
 import { AdBannerComponent } from "@app/core/ad-banner";
 import { generateContactData } from "@app/api/modules/contact/end-point";
 import { Button } from "@app/core/button";
+import { LinkComponent } from "@app/core/link";
+import CROSS from "@assets/icons/cross.svg";
 
 export interface IContactComponentProps {}
 
@@ -76,11 +77,15 @@ const ContactComponent = (props: IContactComponentProps) => {
                     variant={"primary"}
                     fullWidth
                     large
-                    icon={LOCATION}
-                    position={"left"}
                     onClick={toggleForm}
                     type={"button"}
                   />
+                  <div className={styles["contact-actions-mail"]}>
+                    <LinkComponent to="">
+                      <IconComponent icon={CROSS} size="15px" fillColor="#101010" />
+                      <span className={styles["contact-actions-mail-span"]}>Deel via mail</span>
+                    </LinkComponent>
+                  </div>
                 </div>
               )}
             </div>

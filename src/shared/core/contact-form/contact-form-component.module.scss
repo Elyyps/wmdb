@@ -1,4 +1,16 @@
 .contact-form {
+  &-mail {
+    margin: 12px 0 12px 0;
+    display: flex;
+    justify-content: center;
+    &-span {
+      margin-left: 7px;
+      color: gray;
+    }
+    a {
+      width: fit-content;
+    }
+  }
   &-label {
     background-color: #e8f2fc;
     padding: 16px;

@@ -101,6 +101,10 @@
     > * {
       margin: 8px 0;
     }
+    label,
+    li {
+      width: fit-content;
+    }
     padding: 6px 0;
     position: relative;
     h1,

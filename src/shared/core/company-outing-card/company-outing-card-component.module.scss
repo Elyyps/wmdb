@@ -33,13 +33,9 @@
     }
   }
   .button {
-    margin-top: 100px;
-    padding-left: 15px;
-    padding-right: 15px;
-    .icon-svg {
-      path {
-        fill: none;
-      }
+    margin: 100px;
+    svg {
+      width: 1px;
     }
   }
 }

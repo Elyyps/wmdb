@@ -1,4 +1,9 @@
 .expendable {
+  ul {
+    li:before {
+      display: none;
+    }
+  }
   &__item {
     margin-bottom: 24px;
     &.show {

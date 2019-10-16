@@ -226,6 +226,19 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 24px;
+    &-mail {
+      width: 100%;
+      margin: 12px 0 12px 0;
+      display: flex;
+      justify-content: center;
+      &-span {
+        margin-left: 7px;
+        color: gray;
+      }
+      a {
+        width: fit-content;
+      }
+    }
   }
   &-list {
     margin: 0;

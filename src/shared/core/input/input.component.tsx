@@ -39,7 +39,7 @@ const Input = (props: IInputProps) => {
   }, [value]);
   const handleChange = (event: any) => {
     if (props.onChange) {
-      props.onChange(event.target.value);
+      props.onChange(event);
     }
     if (typeof value !== undefined) {
       setValues(event.target.value);
@@ -47,7 +47,7 @@ const Input = (props: IInputProps) => {
   };
   const handleBlur = (event: any) => {
     if (props.onBlur) {
-      props.onBlur(event.target.value);
+      props.onBlur(event);
     }
     if (typeof value !== undefined) {
       setValues(event.target.value);
@@ -89,7 +89,7 @@ const Input = (props: IInputProps) => {
           )}
         </div>
 
-        {errorMessage && <div className={styles["error-message"]}>{errorMessage}</div>}
+        <div className={styles["error-message"]}>{errorMessage}</div>
       </div>
     </React.Fragment>
   );

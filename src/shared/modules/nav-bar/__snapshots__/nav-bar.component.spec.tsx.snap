@@ -23,7 +23,7 @@ exports[`[NavBar] should render component without crashing 1`] = `
             key="0"
           >
             <LinkComponent
-              to="/contact"
+              to="/info-page"
             >
               Helpdesk
             </LinkComponent>
@@ -32,7 +32,7 @@ exports[`[NavBar] should render component without crashing 1`] = `
             key="1"
           >
             <LinkComponent
-              to="/"
+              to="/single-wmdb"
             >
               Nieuwsbrief
             </LinkComponent>
@@ -58,11 +58,11 @@ exports[`[NavBar] should render component without crashing 1`] = `
               Array [
                 Object {
                   "title": "Helpdesk",
-                  "url": "/contact",
+                  "url": "/info-page",
                 },
                 Object {
                   "title": "Nieuwsbrief",
-                  "url": "/info-page",
+                  "url": "/single-wmdb",
                 },
                 Object {
                   "title": "Mijn uitjes",

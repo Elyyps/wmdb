@@ -11,7 +11,6 @@ import { OverviewPageComponent } from "./pages/overview/overview.component";
 const Routes: React.FunctionComponent = props => (
   <React.Fragment>
     <Route exact path="/" component={HomePageComponent} />
-    <Route exact path="/contact" component={FAQPageComponent} />
     <Route exact path="/overzicht" component={OverviewPageComponent} />
     <Route exact path="/single-wmdb" component={ContactPageComponent} />
     <Route exact path="/info-page" component={FAQPageComponent} />

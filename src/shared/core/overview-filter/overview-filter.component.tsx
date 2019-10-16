@@ -1,7 +1,5 @@
 import * as React from "react";
-import { CalendarComponent } from "@app/prep/modules-prep/core";
 import InputRange from "react-input-range";
-import { Link } from "react-router-dom";
 import { Checkbox } from "../checkbox/checkbox.component";
 import { ICheckboxUnique } from "@app/api/core/checkbox";
 import styles from "./overview-filter-component.module.scss";
@@ -12,6 +10,8 @@ import CROSS from "@assets/icons/cross.svg";
 import { IconComponent } from "@app/core/icon";
 import { IOverviewFilterCategoryItem, IOverviewFilterItem } from "@app/api/modules/overview";
 import { arrayRemoveElement } from "@app/util/array";
+import { LinkComponent } from "../link";
+import { CalendarComponent } from "../calendar";
 
 export interface IOverviewFilterComponentProps {
   checkboxCount?: number;
@@ -142,9 +142,9 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
             <h2>Filters</h2>
             <Input
               value={filterText}
-              onChange={value => {
-                setFilterText(value);
-                sendFilterOptions({ checkedItems, keyword: keywordText, filterText: value, range });
+              onChange={(e: any) => {
+                setFilterText(e.target.value);
+                sendFilterOptions({ checkedItems, keyword: keywordText, filterText: e.target.value, range });
               }}
               placeholder={searchPlaceholder}
               icon={Search}
@@ -154,9 +154,9 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
         )}
         {isActive && (
           <Input
-            onChange={value => {
-              setFilterText(value);
-              sendFilterOptions({ checkedItems, keyword: keywordText, filterText: value, range });
+            onChange={(e: any) => {
+              setFilterText(e.target.value);
+              sendFilterOptions({ checkedItems, keyword: keywordText, filterText: e.target.value, range });
             }}
             value={filterText}
             placeholder={searchPlaceholder}
@@ -189,9 +189,9 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
           <h5>Zoekwoord</h5>
           <Input
             value={keywordText}
-            onChange={value => {
-              setKeywordText(value);
-              sendFilterOptions({ checkedItems, keyword: value, filterText, range });
+            onChange={(e: any) => {
+              setKeywordText(e.target.value);
+              sendFilterOptions({ checkedItems, keyword: e.target.value, filterText, range });
             }}
             name="zoekwoord"
             placeholder="Zoekwoord"
@@ -236,7 +236,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
               {sidebarList.list &&
                 sidebarList.list.map((item: string, index: number) => (
                   <li key={index}>
-                    <Link to={item}>{item}</Link>
+                    <LinkComponent to={item}>{item}</LinkComponent>
                   </li>
                 ))}
             </ul>
