@@ -1,7 +1,6 @@
 .outing-card {
   display: flex;
   padding: 24px 0;
-  // margin: 0 -12px;
   border-bottom: 1px solid $gray-light-secondary;
   font-size: 14px;
   text-decoration: none;
@@ -56,7 +55,6 @@
           flex: 1 1 auto;
 
           padding: 0 0 4px;
-          cursor: pointer;
 
           div {
             padding: 0;
@@ -126,7 +124,6 @@
     height: 33.3%;
 
     box-sizing: border-box;
-    cursor: pointer;
     @media (max-width: $breakpoint-medium-max) {
       height: 56px;
       padding: 0 2px;

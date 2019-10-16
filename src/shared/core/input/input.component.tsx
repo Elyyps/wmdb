@@ -19,12 +19,13 @@ interface IInputProps {
   onChange?: (text: string) => void;
   onClick?: any;
   placeholder?: string;
+  style?: any;
   type?: string;
   value?: any;
 }
 
 const Input = (props: IInputProps) => {
-  const { name, type, placeholder, classModify, icon, label, errorMessage, isSuccess, value, min } = props;
+  const { name, type, style, placeholder, classModify, icon, label, errorMessage, isSuccess, value, min } = props;
   const inputClassName = classNames(styles["input"], {
     [styles[`input--${classModify}`]]: classModify
   });
@@ -73,7 +74,9 @@ const Input = (props: IInputProps) => {
             placeholder={placeholder}
             className={inputClassName}
             name={name}
+            step={1}
             value={values}
+            style={style}
             min={min}
           />
           {icon && <IconComponent icon={icon} size={"15px"} />}

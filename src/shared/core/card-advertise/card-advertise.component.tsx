@@ -1,5 +1,5 @@
 import * as React from "react";
-import "./card-advertise.component.scss";
+import styles from "./card-advertise-component.module.scss";
 import ImageAdvertise from "@assets/advertise.png";
 import { Button, IButtonProps } from "@app/core/button";
 
@@ -11,15 +11,15 @@ interface ICardAdvertiseProps {
 }
 
 const CardAdvertise = ({ title, image, button }: ICardAdvertiseProps) => (
-  <div className="card-advertise uk-invert">
-    <div className="card-image">
+  <div className={`${styles["card-advertise"]} ${styles["divider"]} uk-invert`}>
+    <div className={styles["card-image"]}>
       <img src={image.length > 0 ? image[0] : ImageAdvertise} alt="ImageAdvertise" />
     </div>
-    <div className="card-body">
-      <div className="card-title">
+    <div className={styles["card-body"]}>
+      <div className={styles["card-title"]}>
         <h2>{title}</h2>
       </div>
-      <div className="card-action">
+      <div className={styles["card-action"]}>
         <Button {...button} />
       </div>
     </div>
