@@ -85,6 +85,7 @@ deelnemers zijn op dit moment Mister X al tegen gekomen.
         <Button
           fullWidth={true}
           large={true}
+          onClick={[Function]}
           title="Ontvang informatie / offerte"
           variant="primary"
         />

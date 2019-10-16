@@ -54,7 +54,7 @@ const ContactComponent = (props: IContactComponentProps) => {
             <div className={styles["contact-content"]}>
               <BodyTextComponent html={generateContactData().content} />
             </div>
-            <Button title={"Ontvang informatie / offerte"} variant={"primary"} fullWidth large />
+            <Button title={"Ontvang informatie / offerte"} variant={"primary"} fullWidth large onClick={toggleForm} />
             <div className={styles["other-activities"]}>
               <OtherActivitiesComponent otherActivities={generateOtherActivitiesData()} />
             </div>

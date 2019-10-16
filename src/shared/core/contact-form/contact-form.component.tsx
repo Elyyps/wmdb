@@ -26,7 +26,7 @@ export interface IContactFormValues {
   emailAddress: string;
   gender: string;
   name: string;
-  numberPerson: number;
+  numberPerson: number | undefined;
   phone: string;
   subscribed: boolean;
 }
@@ -166,7 +166,7 @@ export const ContactFormComponent = withFormik<IFormProps, IContactFormValues>({
     emailAddress: "",
     gender: "",
     name: "",
-    numberPerson: 0,
+    numberPerson: undefined,
     phone: "",
     subscribed: false
   }),
@@ -188,7 +188,7 @@ export const ContactFormComponent = withFormik<IFormProps, IContactFormValues>({
     } else if (values.phone.length > phoneNumberLength) {
       errors.phone = "telefoonnummer mag niet langer zijn dan 13 tekens";
     }
-    if (values.numberPerson < 0) {
+    if (values.numberPerson !== undefined && values.numberPerson < 0) {
       errors.numberPerson = "aantal personen moet een positief getal zijn";
     }
 
