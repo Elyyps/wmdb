@@ -44,7 +44,6 @@
 
   svg {
     line-height: 0.5;
-    margin-left: 8px;
     path {
       fill: currentColor;
     }
@@ -69,10 +68,29 @@
       color: $global-inverse-color;
     }
   }
+  .icon-svg {
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .icon-left {
+    margin-right: 8px;
+    display: inherit;
+    svg {
+      path {
+        fill: transparent;
+      }
+    }
+  }
 
-  &--icon-left {
-    span {
-      order: 1;
+  .icon-right {
+    margin-left: 8px;
+    display: inherit;
+    svg {
+      path {
+        fill: transparent;
+      }
     }
   }
 }
