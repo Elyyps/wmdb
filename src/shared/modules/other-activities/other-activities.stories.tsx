@@ -9,4 +9,6 @@ import { generateOtherActivitiesData } from "@app/api/modules/other-activities/e
 storiesOf("OtherActivities", module)
   .addDecorator(withA11y)
   .addDecorator(withProvider)
-  .add("Basic implementation", () => <OtherActivitiesComponent otherActivities={generateOtherActivitiesData()} />);
+  .add("Basic implementation", () => (
+    <OtherActivitiesComponent otherActivitiesModule={generateOtherActivitiesData()} />
+  ));

@@ -92,12 +92,10 @@ deelnemers zijn op dit moment Mister X al tegen gekomen.
           className="other-activities"
         >
           <OtherActivitiesComponent
-            otherActivities={
+            otherActivitiesModule={
               Object {
-                "button": Object {
-                  "title": "Bekijk 6 meer activiteiten",
-                  "url": "/",
-                },
+                "buttonTitleClosed": "Bekijk 6 meer activiteiten",
+                "buttonTitleOpened": "Bekijk 6 minder activiteiten",
                 "cards": Array [
                   Object {
                     "buttonText": "",
@@ -119,7 +117,38 @@ deelnemers zijn op dit moment Mister X al tegen gekomen.
                     "image": "img-big.jpg",
                     "title": "Hou van Holland Stadsspel",
                   },
+                  Object {
+                    "buttonText": "",
+                    "image": "rectangle.png",
+                    "title": "Het Mislukte Feest",
+                  },
+                  Object {
+                    "buttonText": "",
+                    "image": "img-big.jpg",
+                    "title": "Hou van Holland Stadsspel",
+                  },
+                  Object {
+                    "buttonText": "",
+                    "image": "rectangle.png",
+                    "title": "Het Mislukte Feest",
+                  },
+                  Object {
+                    "buttonText": "",
+                    "image": "img-big.jpg",
+                    "title": "Hou van Holland Stadsspel",
+                  },
+                  Object {
+                    "buttonText": "",
+                    "image": "rectangle.png",
+                    "title": "Het Mislukte Feest",
+                  },
+                  Object {
+                    "buttonText": "",
+                    "image": "img-big.jpg",
+                    "title": "Hou van Holland Stadsspel",
+                  },
                 ],
+                "numberItemsShowing": 4,
                 "title": "Andere activiteiten van dit bedrijf",
               }
             }
