@@ -5,6 +5,7 @@ import Image from "@assets/img02.png";
 export const generateCompanyOutingDummyData = (): ICompanyOutingModule => ({
   title: "Alles over het kiezen van een bedrijfsuitje",
   button: { title: "Bekijk álle blogs", url: "#" },
+  backgroundImage: "https://happytovisit.com/glib/3/Visit-Blue-Cave-and-5-Islands-with-Luxury-Speedboat-from-Split-2-19559.png",
   cards: [
     {
       icon: ETEN,

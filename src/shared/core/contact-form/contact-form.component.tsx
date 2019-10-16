@@ -10,7 +10,7 @@ import { validateEmail } from "@app/util/validate-email";
 import { DatePickerComponent } from "../date-picker";
 import { LinkComponent } from "../link";
 import { IconComponent } from "../icon";
-import CROSS from "@assets/icons/cross.svg";
+import MAIL from "@assets/icons/mail.svg";
 
 interface IContactFormErrorMessages {
   comment: string;
@@ -26,7 +26,7 @@ export interface IContactFormValues {
   emailAddress: string;
   gender: string;
   name: string;
-  numberPerson: number;
+  numberPerson: number | undefined;
   phone: string;
   subscribed: boolean;
 }
@@ -147,7 +147,7 @@ const InnerForm = (props: FormikProps<IContactFormValues>) => {
         <Button title={"Verstuur aanvraag"} variant={"secondary"} fullWidth large />
         <div className={styles["contact-form-mail"]}>
           <LinkComponent to="">
-            <IconComponent icon={CROSS} size="15px" fillColor="#101010" />
+            <IconComponent icon={MAIL} size="15px" />
             <span className={styles["contact-form-mail-span"]}>Deel via mail</span>
           </LinkComponent>
         </div>
@@ -166,7 +166,7 @@ export const ContactFormComponent = withFormik<IFormProps, IContactFormValues>({
     emailAddress: "",
     gender: "",
     name: "",
-    numberPerson: 0,
+    numberPerson: undefined,
     phone: "",
     subscribed: false
   }),
@@ -188,7 +188,7 @@ export const ContactFormComponent = withFormik<IFormProps, IContactFormValues>({
     } else if (values.phone.length > phoneNumberLength) {
       errors.phone = "telefoonnummer mag niet langer zijn dan 13 tekens";
     }
-    if (values.numberPerson < 0) {
+    if (values.numberPerson !== undefined && values.numberPerson < 0) {
       errors.numberPerson = "aantal personen moet een positief getal zijn";
     }
 

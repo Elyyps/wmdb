@@ -2,7 +2,7 @@
 
 exports[`[CompanyOuting] should render component without crashing 1`] = `
 <ModuleSectionComponent
-  backgroundImage="img-top.jpg"
+  backgroundImage="https://happytovisit.com/glib/3/Visit-Blue-Cave-and-5-Islands-with-Luxury-Speedboat-from-Split-2-19559.png"
   paddingBottom="40px"
   paddingTop="40px"
   title="Alles over het kiezen van een bedrijfsuitje"

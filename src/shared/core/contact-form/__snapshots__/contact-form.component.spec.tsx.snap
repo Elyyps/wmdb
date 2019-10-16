@@ -11,7 +11,7 @@ exports[`[ContactForm] should render component without crashing 1`] = `
       "emailAddress": "",
       "gender": "",
       "name": "",
-      "numberPerson": 0,
+      "numberPerson": undefined,
       "phone": "",
       "subscribed": false,
     }

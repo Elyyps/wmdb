@@ -1,5 +1,6 @@
 .module-section {
   position: relative;
+
   &__background {
     z-index: 0;
     position: absolute;
@@ -20,6 +21,94 @@
   &__foreground {
     position: relative;
     z-index: 0;
+  }
+
+  &-padding {
+    &-top--120px {
+      padding-top: 120px;
+      &-mobile {
+        @media (max-width: $breakpoint-small-max) {
+          padding-top: 120px !important;
+        }
+      }
+    }
+    &-top--72px {
+      padding-top: 72px;
+      &-mobile {
+        @media (max-width: $breakpoint-small-max) {
+          padding-top: 72px !important;
+        }
+      }
+    }
+    &-top--40px {
+      padding-top: 40px;
+      &-mobile {
+        @media (max-width: $breakpoint-small-max) {
+          padding-top: 40px !important;
+        }
+      }
+    }
+    &-top--32px {
+      padding-top: 32px;
+      &-mobile {
+        @media (max-width: $breakpoint-small-max) {
+          padding-top: 32px !important;
+        }
+      }
+    }
+    &-top--0px {
+      padding-top: 0px;
+      &-mobile {
+
+        @media (max-width: $breakpoint-small-max) {
+          padding-top: 0px !important;
+        }
+      }
+    }
+    &-bottom--120px {
+      padding-bottom: 120px;
+      &-mobile {
+        @media (max-width: $breakpoint-small-max) {
+          padding-bottom: 120px !important;
+        }
+      }
+    }
+    &-bottom--72px {
+      padding-bottom: 72px;
+      &-mobile {
+        @media (max-width: $breakpoint-small-max) {
+          padding-bottom: 72px !important;
+        }
+      }
+    }
+    &-bottom--40px {
+      padding-bottom: 40px;
+      &-mobile {
+        @media (max-width: $breakpoint-small-max) {
+          padding-bottom: 40px !important;
+        }
+      }
+    }
+    &-bottom--32px {
+      padding-bottom: 32px;
+      &-mobile {
+        @media (max-width: $breakpoint-small-max) {
+          padding-bottom: 32px !important;
+        }
+      }
+    }
+    &-bottom--0px {
+      padding-bottom: 0px;
+      &-mobile {
+        @media (max-width: $breakpoint-small-max) {
+          padding-bottom: 0px !important;
+        }
+      }
+    }
+  }
+  @media (max-width: $breakpoint-small-max) {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   &__title {

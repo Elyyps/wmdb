@@ -4,8 +4,8 @@ import { IFaqOverviewModule } from "@app/api/modules/faq-overview";
 
 export const dummyFaqOverviewData: IFaqOverviewModule = {
   title: "Veelgestelde vragen",
-  paddingTop: "72px",
-  paddingBottom: "72px",
+  paddingBottomMobile: "0px",
+
   items: [
     {
       icon: ETEN,
@@ -198,8 +198,8 @@ export const dummyFaqOverviewData: IFaqOverviewModule = {
 
 export const dummyLocatieOverviewData: IFaqOverviewModule = {
   title: "Meest bekeken locaties",
-  paddingTop: "72px",
-  paddingBottom: "72px",
+  paddingTopMobile: "0px",
+  paddingBottomMobile: "0px",
   items: [
     {
       title: "",

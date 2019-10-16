@@ -13,10 +13,10 @@ const CompanyOutingComponent = ({ companyOutingModule }: ICompanyOutingComponent
   <ModuleSectionComponent
     title={companyOutingModule.title}
     titleColor={"white"}
-    backgroundImage={Big}
-    paddingTop={"40px"}
-    paddingBottom={"40px"}
-    visibility={"uk-visible@s"}
+    backgroundImage={companyOutingModule.backgroundImage}
+    paddingTop={"120px"}
+    paddingBottom={"120px"}
+    visibility={"uk-visible@m"}
   >
     <div className={` ${styles["company-outing"]} `}>
       <div className="uk-container">

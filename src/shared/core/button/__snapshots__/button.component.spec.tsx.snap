@@ -50,11 +50,6 @@ exports[`[Button] should render without crashing 3`] = `
     <span>
       Primary
     </span>
-    <IconComponent
-      icon="chevron-down.svg"
-      size="14px"
-      strokeColor="black"
-    />
   </button>
 </Fragment>
 `;
