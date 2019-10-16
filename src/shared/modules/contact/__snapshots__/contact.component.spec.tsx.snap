@@ -170,8 +170,7 @@ deelnemers zijn op dit moment Mister X al tegen gekomen.
                 to=""
               >
                 <IconComponent
-                  fillColor="#101010"
-                  icon="cross.svg"
+                  icon="mail.svg"
                   size="15px"
                 />
                 <span

@@ -17,7 +17,7 @@ import { AdBannerComponent } from "@app/core/ad-banner";
 import { generateContactData } from "@app/api/modules/contact/end-point";
 import { Button } from "@app/core/button";
 import { LinkComponent } from "@app/core/link";
-import CROSS from "@assets/icons/cross.svg";
+import MAIL from "@assets/icons/mail.svg";
 
 export interface IContactComponentProps {}
 
@@ -82,7 +82,7 @@ const ContactComponent = (props: IContactComponentProps) => {
                   />
                   <div className={styles["contact-actions-mail"]}>
                     <LinkComponent to="">
-                      <IconComponent icon={CROSS} size="15px" fillColor="#101010" />
+                      <IconComponent icon={MAIL} size="15px" />
                       <span className={styles["contact-actions-mail-span"]}>Deel via mail</span>
                     </LinkComponent>
                   </div>

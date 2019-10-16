@@ -10,7 +10,7 @@ import { validateEmail } from "@app/util/validate-email";
 import { DatePickerComponent } from "../date-picker";
 import { LinkComponent } from "../link";
 import { IconComponent } from "../icon";
-import CROSS from "@assets/icons/cross.svg";
+import MAIL from "@assets/icons/mail.svg";
 
 interface IContactFormErrorMessages {
   comment: string;
@@ -147,7 +147,7 @@ const InnerForm = (props: FormikProps<IContactFormValues>) => {
         <Button title={"Verstuur aanvraag"} variant={"secondary"} fullWidth large />
         <div className={styles["contact-form-mail"]}>
           <LinkComponent to="">
-            <IconComponent icon={CROSS} size="15px" fillColor="#101010" />
+            <IconComponent icon={MAIL} size="15px" />
             <span className={styles["contact-form-mail-span"]}>Deel via mail</span>
           </LinkComponent>
         </div>
