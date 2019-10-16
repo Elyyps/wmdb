@@ -41,12 +41,10 @@ const TextAreaComponent = (props: ITextAreaComponentProps) => {
     <div className={styles["text-area"]}>
       <React.Fragment>
         <div className={` ${styles["form__item"]} ${wrapperClassnames}`}>
-          {label ? (
+          {label && (
             <label htmlFor="label" className={styles["form__item-label"]}>
               {label}
             </label>
-          ) : (
-            ""
           )}
           <div className={styles["form__item-holder"]}>
             <textarea
@@ -56,23 +54,19 @@ const TextAreaComponent = (props: ITextAreaComponentProps) => {
               name={name}
               value={value}
             />
-            {value && !isSuccess ? (
+            {value && !isSuccess && (
               <div role={"button"} className={styles["form__item-icon"]} onClick={handelClear}>
                 <IconComponent icon={Cross} size={"10px"} />
               </div>
-            ) : (
-              ""
             )}
-            {isSuccess ? (
+            {isSuccess && (
               <div className={styles["form__item-icon"]}>
                 <IconComponent icon={Check} size={"10px"} />
               </div>
-            ) : (
-              ""
             )}
           </div>
 
-          {isError ? <div className={styles["error-message"]}>{isError ? isError : ""}</div> : " "}
+          {isError && <div className={styles["error-message"]}>{isError && isError}</div>}
         </div>
       </React.Fragment>
     </div>
