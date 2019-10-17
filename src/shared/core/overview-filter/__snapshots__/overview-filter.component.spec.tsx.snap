@@ -38,7 +38,7 @@ exports[`[OverviewFilter] should render component without crashing 1`] = `
       key="0"
     >
       <h5>
-        Spen & Ontspanning
+        Spel & Ontspanning
       </h5>
       <Checkbox
         id={0}
@@ -112,6 +112,14 @@ exports[`[OverviewFilter] should render component without crashing 1`] = `
         onChange={[Function]}
         value="Indoor Sport en Actie"
       />
+      <Checkbox
+        id={1}
+        key="4"
+        label="Outdoor Sport en Actie"
+        name={26}
+        onChange={[Function]}
+        value="Outdoor Sport en Actie"
+      />
     </div>
     <div
       className="overview-filter__item"
@@ -139,10 +147,10 @@ exports[`[OverviewFilter] should render component without crashing 1`] = `
       <Checkbox
         id={2}
         key="2"
-        label="Muziek en Daans"
+        label="Muziek en Dans"
         name={11}
         onChange={[Function]}
-        value="Muziek en Daans"
+        value="Muziek en Dans"
       />
     </div>
     <div

@@ -6,8 +6,6 @@ exports[`[ModuleSection] should render component without crashing 1`] = `
   style={
     Object {
       "backgroundColor": undefined,
-      "paddingBottom": undefined,
-      "paddingTop": undefined,
     }
   }
 >

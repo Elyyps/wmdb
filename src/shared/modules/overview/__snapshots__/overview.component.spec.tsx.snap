@@ -47,7 +47,7 @@ exports[`[Overview] should render component without crashing 1`] = `
                     "name": "Outdoor Spel en Ontspanning",
                   },
                 ],
-                "title": "Spen & Ontspanning",
+                "title": "Spel & Ontspanning",
               },
               Object {
                 "checkboxes": Array [
@@ -71,6 +71,11 @@ exports[`[Overview] should render component without crashing 1`] = `
                     "label": "Indoor Sport en Actie",
                     "name": "indorsportenactie",
                   },
+                  Object {
+                    "id": 26,
+                    "label": "Outdoor Sport en Actie",
+                    "name": "outdorsportenactie",
+                  },
                 ],
                 "title": "Sportief & Actie(f)",
               },
@@ -88,8 +93,8 @@ exports[`[Overview] should render component without crashing 1`] = `
                   },
                   Object {
                     "id": 11,
-                    "label": "Muziek en Daans",
-                    "name": "muziekendaans",
+                    "label": "Muziek en Dans",
+                    "name": "muziekenDans",
                   },
                 ],
                 "title": "Creatieve Uitjes",

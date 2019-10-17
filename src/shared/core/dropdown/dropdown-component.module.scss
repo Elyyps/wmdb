@@ -1,11 +1,5 @@
 .dropdown {
   width: 100%;
-  font-size: 16px;
-  font-family: $global-font-family;
-  height: 45px;
-  background: $global-background;
-  border: 1px solid $gray-lighter;
-  box-shadow: inset 0 1px 2px 0 rgba($black, 0.2);
 }
 
 .form {
@@ -33,7 +27,31 @@
     &:not(:first-child) {
       margin-top: 24px;
     }
+    height: 45px;
+    background: $global-background;
+    border: 1px solid $gray-lighter;
+    box-shadow: inset 0 1px 2px 0 rgba($black, 0.2);
 
+    padding-right: 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid $gray-lighter;
+    font-family: $global-font-family;
+    box-shadow: inset 0 1px 2px 0 rgba($black, 0.2);
+    &:focus {
+      outline: none;
+      border-color: $global-color;
+    }
+    select {
+      font-size: 16px;
+      font-family: $global-font-family;
+      margin-right: 40px !important;
+      height: 43px;
+      border: none;
+      &:focus{
+        outline: 0;
+      }
+    }
     &.isIcon {
       input {
         padding-left: 48px;
