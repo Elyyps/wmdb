@@ -1,6 +1,9 @@
 .hamburger-menu {
   height: 100%;
   overflow: auto;
+  &:hover {
+    color: $global-link-color;
+  }
   &__navigation {
     li {
       margin-bottom: 8px;
@@ -8,9 +11,6 @@
       a {
         text-decoration: none;
         color: $global-inverse-color;
-        &:hover {
-          color: $global-link-color;
-        }
       }
     }
   }

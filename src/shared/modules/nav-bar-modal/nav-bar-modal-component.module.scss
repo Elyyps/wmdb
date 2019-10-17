@@ -92,9 +92,21 @@
     align-items: center;
     justify-content: space-between;
     width: 75px;
+    user-select: none;
     svg {
       @media (min-width: $breakpoint-small) {
         margin-right: 12px;
+      }
+    }
+    &:focus {
+      outline: 0;
+    }
+    &:hover {
+      color: $global-link-color;
+      svg {
+        path {
+          fill: $global-link-color;
+        }
       }
     }
   }
