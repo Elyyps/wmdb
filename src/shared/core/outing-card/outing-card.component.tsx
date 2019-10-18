@@ -50,6 +50,10 @@ const OutingCardComponent = ({
     setWindowSize(window.innerWidth);
   };
   React.useEffect(() => {
+    handleResize();
+  }, [windowSize]);
+
+  React.useEffect(() => {
     window.addEventListener("resize", handleResize);
 
     return () => {
