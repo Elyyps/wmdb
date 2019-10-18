@@ -53,10 +53,10 @@ app.use(serverRenderer());
 app.use(errorHandler);
 
 // Let the world know we're up and running
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 3001, () => {
   console.log(
     `[${new Date().toISOString()}]`,
-    chalk.blue(`Application is running: http://localhost:${process.env.PORT || 3000}`)
+    chalk.blue(`Application is running: http://localhost:${process.env.PORT || 3001}`)
   );
 });
 
