@@ -12,10 +12,10 @@ export interface IOtherLocationsComponentProps {
 
 const OtherLocationsComponent = ({ otherLocationsModule }: IOtherLocationsComponentProps) => (
   <ModuleSectionComponent
-    title="Andere locaties"
+    title={otherLocationsModule.title}
     backgroundColor={"#e8f2fc"}
-    paddingTop={"0px"}
-    paddingTopMobile="0px"
+    paddingTop={"72px"}
+    paddingTopMobile="32px"
     paddingBottom={"72px"}
   >
     {otherLocationsModule.locations.map((locations: ILocation, key: number) => (

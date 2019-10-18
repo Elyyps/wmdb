@@ -1,6 +1,14 @@
 import { IContact } from "./contact";
+import ROOMS from "@assets/icons/rooms.svg";
 
 export const generateContactDummyData = (): IContact => ({
+  buttonText: "Ontvang informatie / offerte",
+  formTitle: "Vrijblijvende offerte / prijsindicatie",
+  formContent: "Vraag vrijblijvend een prijsindicatie aan en ontvang informatie op maat!",
+  personsNumber: "10 - 1000 personen",
+  personsNumberIcon: ROOMS,
+  category: "BE Eventgroup",
+  title: "Wie is de mol?",
   content: `  <p>
 Maak kennis met het spel Wie is de Mol? Leuk, leukst en nog veel leuker. Het spel boordevol met verrassingen, wie
 o wie bedriegt het gezelschap?

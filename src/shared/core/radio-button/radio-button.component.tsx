@@ -28,7 +28,7 @@ const RadioButtonComponent = (props: IRadioButtonComponentProps) => (
       <div className={styles["radio-button__check"]} />
       <div className={styles["radio-button__check-label"]}>
         <span>{props.label}</span>
-        {props.count ? <span className={styles["radio-button-count"]}>({props.count})</span> : ""}
+        {props.count && <span className={styles["radio-button-count"]}>({props.count})</span>}
       </div>
     </label>
   </div>

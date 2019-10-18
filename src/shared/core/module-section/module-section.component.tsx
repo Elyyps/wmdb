@@ -2,7 +2,7 @@ import * as React from "react";
 import styles from "./module-section-component.module.scss";
 import classNames from "classnames";
 import { ImageComponent } from "../image";
-import PATTERNT from "@assets/pattern/pattern-wmdb.png";
+import PATTERN from "@assets/pattern/pattern-wmdb.png";
 
 export interface IModuleSectionComponentProps {
   align?: string;
@@ -34,7 +34,7 @@ const ModuleSectionComponent = (props: IModuleSectionComponentProps) => {
     backgroundColor: props.backgroundColor,
     paddingBottom: props.paddingBottom,
     paddingTop: props.paddingTop,
-    backgroundImage: props.pattern ? `url(${PATTERNT})` : "",
+    backgroundImage: props.pattern ? `url(${PATTERN})` : "",
     backgroundSize: props.pattern ? "5%" : ""
   };
 

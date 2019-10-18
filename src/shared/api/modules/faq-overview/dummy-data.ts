@@ -205,6 +205,7 @@ export const dummyLocatieOverviewData: IFaqOverviewModule = {
   title: "Meest bekeken locaties",
   paddingTopMobile: "0px",
   paddingBottomMobile: "0px",
+  shouldMarginBottomBeZero: true,
   items: [
     {
       title: "",

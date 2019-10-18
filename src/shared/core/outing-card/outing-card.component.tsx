@@ -50,12 +50,13 @@ const OutingCardComponent = ({
     setWindowSize(window.innerWidth);
   };
   React.useEffect(() => {
-    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
-  React.useEffect(() => {
-    window.addEventListener("resize", handleResize);
-  }, [windowSize]);
   const mobileSize = 959;
   const contentLength = 100;
   const styleOpen = isOpen ? "show" : "hide";
@@ -123,6 +124,7 @@ const OutingCardComponent = ({
           position={"left"}
         />
       </div>
+      {windowSize}
     </div>
   );
 };

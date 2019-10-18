@@ -3,6 +3,7 @@
 exports[`[ArrowPanelList] should render component without crashing 1`] = `
 <div
   className="arrow-panel-list"
+  style={Object {}}
 >
   <div
     className="arrow-panel-list__head"
