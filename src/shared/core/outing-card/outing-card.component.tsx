@@ -124,7 +124,6 @@ const OutingCardComponent = ({
           position={"left"}
         />
       </div>
-      {windowSize}
     </div>
   );
 };
