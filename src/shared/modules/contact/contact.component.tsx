@@ -56,7 +56,7 @@ const ContactComponent = (props: IContactComponentProps) => {
             </div>
             <Button title={"Ontvang informatie / offerte"} variant={"primary"} fullWidth large onClick={toggleForm} />
             <div className={styles["other-activities"]}>
-              <OtherActivitiesComponent otherActivities={generateOtherActivitiesData()} />
+              <OtherActivitiesComponent otherActivitiesModule={generateOtherActivitiesData()} />
             </div>
             <div className={styles["contact-bottom"]}>
               <ContactTelephoneComponent

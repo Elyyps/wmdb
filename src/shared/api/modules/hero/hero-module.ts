@@ -19,7 +19,7 @@ const categoriesData = GenerateDummyFilterOverview().map((item, key) => ({
 }));
 
 export const generateDummyHeroModule = (): IHeroModule => ({
-  buttonTitle: "Toon 500 uijtes",
+  buttonTitle: "Toon 500 uitjes",
   dropdownCompanyItems: categoriesData,
   dropdownCompanyPlaceholder: "Kies een bedrijfsuitje categorie",
   image: Placeholder,

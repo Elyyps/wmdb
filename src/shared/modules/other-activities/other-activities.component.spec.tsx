@@ -5,7 +5,9 @@ import { generateOtherActivitiesData } from "@app/api/modules/other-activities/e
 
 describe("[OtherActivities]", () => {
   it("should render component without crashing", () => {
-    const renderedComponent = shallow(<OtherActivitiesComponent otherActivities={generateOtherActivitiesData()} />);
+    const renderedComponent = shallow(
+      <OtherActivitiesComponent otherActivitiesModule={generateOtherActivitiesData()} />
+    );
     expect(renderedComponent).toMatchSnapshot();
   });
 });

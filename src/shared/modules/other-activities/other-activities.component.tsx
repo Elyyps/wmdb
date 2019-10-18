@@ -2,31 +2,53 @@ import * as React from "react";
 import styles from "./other-activities-component.module.scss";
 import { EventCardComponent } from "@app/core/event-card";
 
-import { IOtherActivities } from "@app/api/modules/other-activities/other-activities";
+import { IOtherActivitiesModule } from "@app/api/modules/other-activities/other-activities";
 import { IEventCard } from "@app/api/core/event-card";
-import { Button } from '@app/core/button';
+import { Button } from "@app/core/button";
 
 export interface IOtherActivitiesComponentProps {
-  otherActivities: IOtherActivities;
+  otherActivitiesModule: IOtherActivitiesModule;
 }
 
-const OtherActivitiesComponent = ({ otherActivities }: IOtherActivitiesComponentProps) => (
-  <div className={styles["other-activities"]}>
-    <div className={styles["other-activities-head"]}>
-      <h2>{otherActivities.title}</h2>
-    </div>
-    <div className="uk-grid uk-child-width-1-2@s uk-grid-medium" data-uk-margin>
-      {otherActivities.cards &&
-        otherActivities.cards.map((item: IEventCard, key: number) => (
+const OtherActivitiesComponent = ({ otherActivitiesModule }: IOtherActivitiesComponentProps) => {
+  const [isOpened, setIsOpened] = React.useState(false);
+  const [internalArray, setInternalArray] = React.useState<IEventCard[]>([]);
+  const sliceCardsByState = (isComponentOpened: boolean) => {
+    if (isComponentOpened) {
+      setInternalArray(otherActivitiesModule.cards);
+    } else {
+      setInternalArray(otherActivitiesModule.cards.slice(0, otherActivitiesModule.numberItemsShowing));
+    }
+  };
+  const toggleOpened = () => {
+    sliceCardsByState(!isOpened);
+    setIsOpened(!isOpened);
+  };
+  React.useEffect(() => {
+    sliceCardsByState(isOpened);
+  }, [otherActivitiesModule]);
+
+  return (
+    <div className={styles["other-activities"]}>
+      <div className={styles["other-activities-head"]}>
+        <h2>{otherActivitiesModule.title}</h2>
+      </div>
+      <div className="uk-grid uk-child-width-1-2@s uk-grid-medium" data-uk-margin>
+        {internalArray.map((item: IEventCard, key: number) => (
           <div key={key}>
             <EventCardComponent image={item.image} link={item.buttonText} title={item.title} />
           </div>
         ))}
+      </div>
+      <div className={styles["other-activities-action"]}>
+        <Button
+          fullWidth
+          onClick={toggleOpened}
+          title={isOpened ? otherActivitiesModule.buttonTitleOpened : otherActivitiesModule.buttonTitleClosed}
+        />
+      </div>
     </div>
-    <div className={styles["other-activities-action"]}>
-      <Button title={otherActivities.button.title} href={otherActivities.button.url} />
-    </div>
-  </div>
-);
+  );
+};
 
 export { OtherActivitiesComponent };

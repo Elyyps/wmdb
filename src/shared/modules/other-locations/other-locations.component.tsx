@@ -14,8 +14,9 @@ const OtherLocationsComponent = ({ otherLocationsModule }: IOtherLocationsCompon
   <ModuleSectionComponent
     title="Andere locaties"
     backgroundColor={"#e8f2fc"}
-    paddingTop={"40px"}
-    paddingBottom={"40px"}
+    paddingTop={"0px"}
+    paddingTopMobile="0px"
+    paddingBottom={"72px"}
   >
     {otherLocationsModule.locations.map((locations: ILocation, key: number) => (
       <div className={styles["other-locations"]} key={key}>

@@ -1,9 +1,9 @@
-import { ILink } from '@app/api/core/link';
+import { ILink } from "@app/api/core/link";
 
 export interface IFaqOverviewModule {
   items: IFaqSection[];
-  paddingBottom: string;
-  paddingTop: string;
+  paddingBottomMobile?: "120px" | "72px" | "40px" | "32px" | "0px";
+  paddingTopMobile?: "120px" | "72px" | "40px" | "32px" | "0px";
   title: string;
 }
 

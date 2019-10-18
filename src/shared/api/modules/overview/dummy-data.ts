@@ -5,7 +5,7 @@ import { IOverviewFilterCategoryItem } from "@app/api/modules/overview";
 /* tslint:disable */
 export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => [
   {
-    title: "Spen & Ontspanning",
+    title: "Spel & Ontspanning",
     checkboxes: [
       {
         label: "Citygames",
@@ -60,6 +60,12 @@ export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => 
         id: 8,
         count: 30,
         name: "indorsportenactie"
+      },
+
+      {
+        label: "Outdoor Sport en Actie",
+        id: 26,
+        name: "outdorsportenactie"
       }
     ]
   },
@@ -80,10 +86,10 @@ export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => 
         name: "theater"
       },
       {
-        label: "Muziek en Daans",
+        label: "Muziek en Dans",
         id: 11,
         count: 30,
-        name: "muziekendaans"
+        name: "muziekenDans"
       }
     ]
   },

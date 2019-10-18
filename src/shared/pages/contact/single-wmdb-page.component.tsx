@@ -13,7 +13,7 @@ import { HeaderGalleryComponent } from "@app/modules/header-gallery";
 
 const imageList = [Rectangle, Oasis, Big, Image, Oasis, Grid];
 
-const ContactPageComponent = () => (
+const SingleWMDBPage = () => (
   <React.Fragment>
     <NavBarComponent navbarModule={generateNavbarData()} />
     <HeaderGalleryComponent images={imageList} />
@@ -21,4 +21,4 @@ const ContactPageComponent = () => (
     <FooterComponent footerModule={generateFooterData()} />
   </React.Fragment>
 );
-export { ContactPageComponent };
+export { SingleWMDBPage };

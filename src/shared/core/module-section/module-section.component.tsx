@@ -9,8 +9,10 @@ export interface IModuleSectionComponentProps {
   backgroundColor?: string;
   backgroundImage?: string;
   children?: any;
-  paddingBottom?: string;
-  paddingTop?: string;
+  paddingBottom?: "120px" | "72px" | "40px" | "32px" | "0px";
+  paddingBottomMobile?: "120px" | "72px" | "40px" | "32px" | "0px";
+  paddingTop?: "120px" | "72px" | "40px" | "32px" | "0px";
+  paddingTopMobile?: "120px" | "72px" | "40px" | "32px" | "0px";
   pattern?: boolean;
   size?: string;
   title?: string;
@@ -21,6 +23,10 @@ export interface IModuleSectionComponentProps {
 const ModuleSectionComponent = (props: IModuleSectionComponentProps) => {
   const sectionClassName = classNames(styles["module-section"], {
     [styles[`module-section--${props.align}`]]: props.align,
+    [styles[`module-section-padding-top--${props.paddingTop}`]]: props.paddingTop,
+    [styles[`module-section-padding-bottom--${props.paddingBottom}`]]: props.paddingBottom,
+    [styles[`module-section-padding-top--${props.paddingTopMobile}-mobile`]]: props.paddingTopMobile,
+    [styles[`module-section-padding-bottom--${props.paddingBottomMobile}-mobile`]]: props.paddingBottomMobile,
     [styles[`module-section--${props.size}`]]: props.size
   });
 

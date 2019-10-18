@@ -2,7 +2,6 @@ import * as React from "react";
 import styles from "./company-outing-component.module.scss";
 import { ModuleSectionComponent } from "@app/core/module-section";
 import { ICompanyOutingModule } from "@app/api/modules/company-outing/company-outing";
-import Big from "@assets/img-top.jpg";
 import { Button } from "@app/core/button";
 import { CompanyOutingCardComponent } from "@app/core/company-outing-card";
 export interface ICompanyOutingComponentProps {
@@ -13,10 +12,10 @@ const CompanyOutingComponent = ({ companyOutingModule }: ICompanyOutingComponent
   <ModuleSectionComponent
     title={companyOutingModule.title}
     titleColor={"white"}
-    backgroundImage={Big}
-    paddingTop={"40px"}
-    paddingBottom={"40px"}
-    visibility={"uk-visible@s"}
+    backgroundImage={companyOutingModule.backgroundImage}
+    paddingTop={"120px"}
+    paddingBottom={"120px"}
+    visibility={"uk-visible@m"}
   >
     <div className={` ${styles["company-outing"]} `}>
       <div className="uk-container">

@@ -3,8 +3,9 @@
 exports[`[OtherLocations] should render component without crashing 1`] = `
 <ModuleSectionComponent
   backgroundColor="#e8f2fc"
-  paddingBottom="40px"
-  paddingTop="40px"
+  paddingBottom="72px"
+  paddingTop="0px"
+  paddingTopMobile="0px"
   title="Andere locaties"
 >
   <div

@@ -14,7 +14,14 @@ const FAQOverviewComponent = (props: IFAQOverviewComponentProps) => {
 
   return (
     <div className={styles["faq-overview"]}>
-      <ModuleSectionComponent title={title} paddingBottom={"42px"} paddingTop="72px" backgroundColor={"#e8f2fc"}>
+      <ModuleSectionComponent
+        title={title}
+        paddingTopMobile={props.faqOverviewModule.paddingTopMobile}
+        paddingBottomMobile={props.faqOverviewModule.paddingBottomMobile}
+        paddingBottom={"32px"}
+        paddingTop="72px"
+        backgroundColor={"#e8f2fc"}
+      >
         <div className={`${styles["faq-overview__posts"]} uk-grid uk-child-width-1-2@s`}>
           {items.map((row, key) => (
             <ArrowPanelListComponent
