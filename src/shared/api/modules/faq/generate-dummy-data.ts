@@ -4,7 +4,7 @@ export const generateFAQDummyData = (): IFAQModule => ({
   items: [
     {
       title: "Wat is de prijs van het uitje?",
-      content: `<span>Dit hangt af van uw wensen.. Zoveel mensen, zoveel wensen!</span>
+      content: `<p>Dit hangt af van uw wensen.. Zoveel mensen, zoveel wensen!</p>
       <ul>
         <li>  Wilt u bijvoorbeeld een een bbq of een lunch bij de activiteit?</li>
         <li>  Met of zonder drank?</li>

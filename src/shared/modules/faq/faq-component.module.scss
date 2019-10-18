@@ -5,16 +5,19 @@
         margin-bottom: 16px;
       }
     }
+    p {
+      color: #101010;
+    }
     &__content {
       width: 350px;
+      color: #101010;
     }
     ul {
+      color: #101010;
+
       margin-top: 10px;
       margin-left: 25px;
 
-      // li {
-      //   list-style-type: none;
-      // }
       li {
         list-style-type: disc;
       }

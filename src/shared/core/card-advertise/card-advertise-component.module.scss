@@ -2,13 +2,15 @@
   &-advertise {
     position: relative;
     height: 200px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1 1 100%;
     border-radius: $global-border-radius;
     overflow: hidden;
-    margin: 12px;
+    margin: 24.5px 0;
+
     &:after {
       content: "";
       position: absolute;

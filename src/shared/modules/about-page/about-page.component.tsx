@@ -10,7 +10,13 @@ export interface IAboutPageComponentProps {
 }
 
 const AboutPageComponent = ({ aboutPageModule }: IAboutPageComponentProps) => (
-  <ModuleSectionComponent title={aboutPageModule.title} paddingBottom={"40px"} paddingTop={"40px"} align="center">
+  <ModuleSectionComponent
+    title={aboutPageModule.title}
+    paddingBottom={"40px"}
+    paddingTop={"40px"}
+    align="center"
+    pattern
+  >
     <div className={styles["about-page"]}>
       <BodyTextComponent html={aboutPageModule.content} />
       <div className={styles["about-page-button"]}>

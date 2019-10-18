@@ -2,6 +2,7 @@ import * as React from "react";
 import styles from "./module-section-component.module.scss";
 import classNames from "classnames";
 import { ImageComponent } from "../image";
+import PATTERNT from "@assets/pattern/pattern-wmdb.png";
 
 export interface IModuleSectionComponentProps {
   align?: string;
@@ -19,7 +20,6 @@ export interface IModuleSectionComponentProps {
 
 const ModuleSectionComponent = (props: IModuleSectionComponentProps) => {
   const sectionClassName = classNames(styles["module-section"], {
-    [styles[`module-section--pattern`]]: props.pattern,
     [styles[`module-section--${props.align}`]]: props.align,
     [styles[`module-section--${props.size}`]]: props.size
   });
@@ -27,13 +27,16 @@ const ModuleSectionComponent = (props: IModuleSectionComponentProps) => {
   const style = {
     backgroundColor: props.backgroundColor,
     paddingBottom: props.paddingBottom,
-    paddingTop: props.paddingTop
+    paddingTop: props.paddingTop,
+    backgroundImage: props.pattern ? `url(${PATTERNT})` : "",
+    backgroundSize: props.pattern ? "5%" : ""
   };
 
   return (
     <div className={` ${sectionClassName} ${props.visibility ? props.visibility : ""}`} style={style}>
+      {props.pattern && <div className={styles[props.pattern ? "module-section__pattern" : ""]} />}
       {props.backgroundImage && (
-        <div className={styles["module-section__background"]}>
+        <div className={styles[props.backgroundImage ? "module-section__background" : ""]}>
           <ImageComponent src={props.backgroundImage} />
         </div>
       )}

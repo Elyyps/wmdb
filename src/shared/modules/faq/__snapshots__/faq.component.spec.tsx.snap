@@ -4,6 +4,7 @@ exports[`[FAQ] should render component without crashing 1`] = `
 <ModuleSectionComponent
   paddingBottom="72px"
   paddingTop="72px"
+  pattern={true}
 >
   <div
     className=" faq__columns uk-grid uk-child-width-1-2@s uk-grid-xlarge "
@@ -16,7 +17,7 @@ exports[`[FAQ] should render component without crashing 1`] = `
         items={
           Array [
             Object {
-              "content": "<span>Dit hangt af van uw wensen.. Zoveel mensen, zoveel wensen!</span>
+              "content": "<p>Dit hangt af van uw wensen.. Zoveel mensen, zoveel wensen!</p>
       <ul>
         <li>  Wilt u bijvoorbeeld een een bbq of een lunch bij de activiteit?</li>
         <li>  Met of zonder drank?</li>

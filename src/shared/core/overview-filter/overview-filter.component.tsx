@@ -39,7 +39,6 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
   const {
     onFilterChange,
     searchPlaceholder,
-    checkboxCount,
     rangeMax,
     filterItems,
     dateOnchange,
@@ -176,7 +175,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
                   label={item.label}
                   name={item.id}
                   value={item.label}
-                  count={checkboxCount}
+                  count={item.count}
                   onChange={() => {
                     handleCheckboxChange(item);
                   }}
@@ -236,7 +235,9 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
               {sidebarList.list &&
                 sidebarList.list.map((item: string, index: number) => (
                   <li key={index}>
-                    <LinkComponent to={item}>{item}</LinkComponent>
+                    <LinkComponent variant="secondary" to={item}>
+                      {item}
+                    </LinkComponent>
                   </li>
                 ))}
             </ul>

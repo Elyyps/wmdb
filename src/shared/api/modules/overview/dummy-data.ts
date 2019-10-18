@@ -10,21 +10,25 @@ export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => 
       {
         label: "Citygames",
         id: 1,
+        count: 30,
         name: "citygames"
       },
       {
         label: "Beachgames",
         id: 2,
+        count: 30,
         name: "Beachgames"
       },
       {
         label: "Indoor Spel en Ontspanning",
         id: 3,
+        count: 30,
         name: "IndoorSpelenOntspanning"
       },
       {
         label: "Outdoor Spel en Ontspanning",
         id: 4,
+        count: 30,
         name: "Outdoor Spel en Ontspanning"
       }
     ]
@@ -36,21 +40,25 @@ export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => 
       {
         label: "Fun op Wielen",
         id: 5,
+        count: 30,
         name: "Funopwielen"
       },
       {
         label: "Outdoor Lucht",
         id: 6,
+        count: 30,
         name: "Outdoor Lucht"
       },
       {
         label: "Outdoor Water",
         id: 7,
+        count: 30,
         name: "outdoorwater"
       },
       {
         label: "Indoor Sport en Actie",
         id: 8,
+        count: 30,
         name: "indorsportenactie"
       }
     ]
@@ -62,16 +70,19 @@ export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => 
       {
         label: "Creatief",
         id: 9,
+        count: 30,
         name: "creatief"
       },
       {
         label: "Theater",
         id: 10,
+        count: 30,
         name: "theater"
       },
       {
         label: "Muziek en Daans",
         id: 11,
+        count: 30,
         name: "muziekendaans"
       }
     ]
@@ -82,16 +93,19 @@ export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => 
       {
         label: "Kookworkshops",
         id: 12,
+        count: 30,
         name: "kookworkshops"
       },
       {
         label: "Kunst en Cultuur",
         id: 13,
+        count: 30,
         name: "kunstencultuur"
       },
       {
         label: "Body en Spirit",
         id: 14,
+        count: 30,
         name: "bodyenspirit"
       }
     ]
@@ -102,21 +116,25 @@ export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => 
       {
         label: "Eten en drinken",
         id: 15,
+        count: 30,
         name: "etenendrinken"
       },
       {
         label: "Themafeesten",
         id: 16,
+        count: 30,
         name: "Themafeesten"
       },
       {
         label: "Totaalprogramma",
         id: 17,
+        count: 30,
         name: "totaalprogramma"
       },
       {
         label: "Attracties en Entertainment",
         id: 18,
+        count: 30,
         name: "Attractiesenentertainment"
       }
     ]
@@ -127,16 +145,19 @@ export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => 
       {
         label: "Teamtraining",
         id: 19,
+        count: 30,
         name: "Teamtraining"
       },
       {
         label: "Teambuilding",
         id: 20,
+        count: 30,
         name: "Teambuilding"
       },
       {
         label: "Uit Vergaderen",
         id: 21,
+        count: 30,
         name: "Uit Vergaderen"
       }
     ]
@@ -147,21 +168,25 @@ export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => 
       {
         label: "Wintersport",
         id: 22,
+        count: 30,
         name: "wintersport"
       },
       {
         label: "Stedentrips",
         id: 23,
+        count: 30,
         name: "stedentrips"
       },
       {
         label: "Adventure & Outdoor",
         id: 24,
+        count: 30,
         name: "adventureeoutdoor"
       },
       {
         label: "Reizen Buitenland",
         id: 25,
+        count: 30,
         name: "reizenbuitenland"
       }
     ]
@@ -207,7 +232,7 @@ const DummyOutingCards: IOutingCard[] = [
     minimumPersons: 20,
     maximumPersons: 100,
     content:
-      "TB Events: Met een flinke kater: verloren spullen, lippenstift op vreemde plaatsen, blauwe plekken... Net als de vier hoofdrol-spelers in de briljante speelfilm ‘The Hangover’. TB Events biedt je de mogelijkheid om The Hangover nu zelf real time..."
+      "TB Events: Met een flinke kater: verloren spullen, lippenstift op vreemde plaatsen, blauwe plekken... Net als  zelf real time..."
   },
   {
     title: "Escape City - Het ontsnappingsspel van Mokum",
