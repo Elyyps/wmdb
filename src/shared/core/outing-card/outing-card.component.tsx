@@ -8,6 +8,7 @@ import classNames from "classnames";
 import IconDown from "@assets/icons/chevron-down.svg";
 import { ILink } from "@app/api/core/link";
 import { Button } from "../button";
+import { trimText } from "@app/util/trim-text";
 
 export interface IOutingCardComponentProps {
   button: ILink;
@@ -40,17 +41,35 @@ const OutingCardComponent = ({
   modify
 }: IOutingCardComponentProps) => {
   const [isOpen, setIsOpened] = React.useState(false);
+  const [windowSize, setWindowSize] = React.useState(0);
+
   const toggleOpened = () => {
     setIsOpened(!isOpen);
   };
+  const handleResize = () => {
+    setWindowSize(window.innerWidth);
+  };
+  React.useEffect(() => {
+    handleResize();
+  }, [windowSize]);
 
+  React.useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const mobileSize = 959;
+  const contentLength = 100;
   const styleOpen = isOpen ? "show" : "hide";
-  const modifyCard = modify ? styles[`outing-card--${modify}`] : "";
+  const modifyCard = modify && windowSize >= mobileSize ? styles[`outing-card--${modify}`] : "";
 
   const classModify = classNames(styles["outing-card"], { "outing-card--event": date }, modifyCard, styleOpen);
 
   return (
-    <div className={classModify}>
+    <div className={classModify} style={{ height: modify && windowSize <= mobileSize ? "260px" : "" }}>
       {image && <OutingCardImage images={image} />}
 
       <div className={styles["card-body"]}>
@@ -70,7 +89,7 @@ const OutingCardComponent = ({
             )}
           </div>
           <div className={`${styles["card-content"]} ${"uk-visible@s"}`}>
-            <p>{content}</p>
+            <p>{windowSize >= mobileSize && modify ? trimText(content, contentLength, "...", true) : content}</p>
           </div>
         </div>
         <div className={` ${styles["card-bottom"]} ${"uk-visible@s"}`}>

@@ -1,6 +1,10 @@
 import { ICategoryOverviewModule } from "./category-overview.model";
 import SPEL from "@assets/icons/spel.svg";
-
+import ETEN from "@assets/icons/eten.svg";
+import SPORT from "@assets/icons/sportief.svg";
+import CREATIVE from "@assets/icons/creatief.svg";
+import INCENTIVE from "@assets/icons/incentive.svg";
+import TEAM from "@assets/icons/teambuilding.svg";
 const GenerateDummyCategoryOverviewData = (): ICategoryOverviewModule => ({
   backgroundColor: "#e8f2fc",
   paddingBottom: "72px",
@@ -11,21 +15,21 @@ const GenerateDummyCategoryOverviewData = (): ICategoryOverviewModule => ({
       title: "Eten, Drinken & Feesten",
       count: 500,
       image: "https://picsum.photos/id/1/600/400",
-      icon: SPEL,
+      icon: ETEN,
       link: "/single-wmdb"
     },
     {
       title: "Teambuilden",
       count: 430,
       image: "https://picsum.photos/id/20/600/400",
-      icon: SPEL,
+      icon: TEAM,
       link: "/single-wmdb"
     },
     {
       title: "Incentives",
       count: 430,
       image: "https://picsum.photos/id/30/600/400",
-      icon: SPEL,
+      icon: INCENTIVE,
       link: "/single-wmdb"
     },
     {
@@ -39,14 +43,14 @@ const GenerateDummyCategoryOverviewData = (): ICategoryOverviewModule => ({
       title: "Sportief & Actie(f)",
       count: 430,
       image: "https://picsum.photos/id/50/600/400",
-      icon: SPEL,
+      icon: SPORT,
       link: "/single-wmdb"
     },
     {
       title: "Creative Uitjes",
       count: 20,
       image: "https://picsum.photos/id/60/600/400",
-      icon: SPEL,
+      icon: CREATIVE,
       link: "/single-wmdb"
     },
     {

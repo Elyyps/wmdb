@@ -2,8 +2,7 @@ import * as React from "react";
 import styles from "./contact-component.module.scss";
 import classNames from "classnames";
 import { IconComponent } from "@app/core/icon";
-import ROOMS from "@assets/icons/rooms.svg";
-import PATTERNT from "@assets/pattern/pattern-wmdb.png";
+import PATTERN from "@assets/pattern/pattern-wmdb.png";
 import Arrow from "@assets/icons/chevron-right.svg";
 import { BodyTextComponent } from "@app/core/bodytext";
 import { ContactFormComponent } from "@app/core/contact-form";
@@ -14,14 +13,16 @@ import { ContactTelephoneComponent } from "./contact-telephone.component";
 import { ContactDataComponent } from "./contact-data.component";
 import RECTANGLE from "@assets/rectangle.png";
 import { AdBannerComponent } from "@app/core/ad-banner";
-import { generateContactData } from "@app/api/modules/contact/end-point";
 import { Button } from "@app/core/button";
 import { LinkComponent } from "@app/core/link";
 import MAIL from "@assets/icons/mail.svg";
+import { IContact } from "@app/api/modules/contact/contact";
 
-export interface IContactComponentProps {}
+export interface IContactComponentProps {
+  contactModule: IContact;
+}
 
-const ContactComponent = (props: IContactComponentProps) => {
+const ContactComponent = ({ contactModule }: IContactComponentProps) => {
   const [isActive, setIsActive] = React.useState(false);
   const [isData, setIsData] = React.useState(false);
   const [fullHeight, setFullHeight] = React.useState(false);
@@ -37,24 +38,24 @@ const ContactComponent = (props: IContactComponentProps) => {
   };
 
   return (
-    <div className={styles["contact-body"]} style={{ backgroundImage: `url(${PATTERNT})` }}>
+    <div className={styles["contact-body"]} style={{ backgroundImage: `url(${PATTERN})` }}>
       <div className="uk-container">
         <div className={styles["contact-grid"]}>
           <div className={classNames(styles["contact-main"], { [styles["fullheight"]]: fullHeight })}>
             <div className={styles["contact-title"]}>
-              <h2>Wie is de mol?</h2>
+              <h2>{contactModule.title}</h2>
             </div>
             <ul className={styles["contact-list"]}>
-              <li>BE Eventgroup</li>
+              <li>{contactModule.category}</li>
               <li>
-                <IconComponent icon={ROOMS} size={"14px"} />
-                10 - 1000 personen
+                <IconComponent icon={contactModule.personsNumberIcon} size={"14px"} />
+                {contactModule.personsNumber}
               </li>
             </ul>
             <div className={styles["contact-content"]}>
-              <BodyTextComponent html={generateContactData().content} />
+              <BodyTextComponent html={contactModule.content} />
             </div>
-            <Button title={"Ontvang informatie / offerte"} variant={"primary"} fullWidth large onClick={toggleForm} />
+            <Button title={contactModule.buttonText} variant={"primary"} fullWidth large onClick={toggleForm} />
             <div className={styles["other-activities"]}>
               <OtherActivitiesComponent otherActivitiesModule={generateOtherActivitiesData()} />
             </div>
@@ -68,12 +69,12 @@ const ContactComponent = (props: IContactComponentProps) => {
           </div>
           <div className={styles["contact-aside"]}>
             <div className="uk-visible@m">
-              <h2>Vrijblijvende offerte / prijsindicatie</h2>
-              <p>Vraag vrijblijvend een prijsindicatie aan en ontvang informatie op maat!</p>
+              <h2>{contactModule.formTitle}</h2>
+              <p>{contactModule.formContent}</p>
               {!isActive && (
                 <div className={styles["contact-actions"]}>
                   <Button
-                    title={"Ontvang informatie / offerte"}
+                    title={contactModule.buttonText}
                     variant={"primary"}
                     fullWidth
                     large

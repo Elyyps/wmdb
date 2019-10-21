@@ -50,7 +50,7 @@ exports[`[NavBar] should render component without crashing 1`] = `
         <NavBarModalComponent
           close="Sluiten"
           icon="menu.svg"
-          iconSize="20px"
+          iconSize="22px"
           title="Menu"
         >
           <HamburgerMenuComponent

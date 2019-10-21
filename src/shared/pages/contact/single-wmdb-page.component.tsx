@@ -10,6 +10,7 @@ import Rectangle from "@assets/rectangle.png";
 import Big from "@assets/img-big.jpg";
 import Grid from "@assets/img-grid.png";
 import { HeaderGalleryComponent } from "@app/modules/header-gallery";
+import { generateContactData } from "@app/api/modules/contact/end-point";
 
 const imageList = [Rectangle, Oasis, Big, Image, Oasis, Grid];
 
@@ -17,7 +18,7 @@ const SingleWMDBPage = () => (
   <React.Fragment>
     <NavBarComponent navbarModule={generateNavbarData()} />
     <HeaderGalleryComponent images={imageList} />
-    <ContactComponent />
+    <ContactComponent contactModule={generateContactData()} />
     <FooterComponent footerModule={generateFooterData()} />
   </React.Fragment>
 );

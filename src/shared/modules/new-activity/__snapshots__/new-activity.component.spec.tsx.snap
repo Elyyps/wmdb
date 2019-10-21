@@ -4,6 +4,7 @@ exports[`[NewActivity] should render component without crashing 1`] = `
 <ModuleSectionComponent
   paddingBottom="72px"
   paddingTop="40px"
+  pattern={true}
   title="Nieuwe activiteiten"
 >
   <div
@@ -50,7 +51,7 @@ exports[`[NewActivity] should render component without crashing 1`] = `
           2,
         ]
       }
-      content="TB Events: Met een flinke kater: verloren spullen, lippenstift op vreemde plaatsen, blauwe plekken... Net als de vier hoofdrol-spelers in de briljante speelfilm ‘The Hangover’. TB Events biedt je de mogelijkheid om The Hangover nu zelf real time...KEYWORD"
+      content="TB Events: Met een flinke kater: verloren spullen, lippenstift op vreemde plaatsen, blauwe plekken... Net als  zelf real time...KEYWORD"
       dataIcon="rooms.svg"
       image={
         Array [

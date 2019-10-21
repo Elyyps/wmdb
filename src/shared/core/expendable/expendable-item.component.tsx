@@ -22,7 +22,7 @@ const ExpendableItemComponent = (props: IExpendableItemComponentProps) => {
       <button onClick={invokeCallback} className={styles["expendable__item-title"]}>
         {props.title}
       </button>
-      <div className={styles["expendable__item-body"]}>
+      <div className={styles["expendable__item-body"]} style={{ color: "#101010" }}>
         <BodyTextComponent html={props.content} />
       </div>
     </div>

@@ -1,6 +1,7 @@
 import { IOtherLocationsModule } from "./other-locations";
 
 export const generateOtherLocationsDummyData = (): IOtherLocationsModule => ({
+  title: "Andere locaties",
   locations: [
     {
       title: "Locaties per plaats",

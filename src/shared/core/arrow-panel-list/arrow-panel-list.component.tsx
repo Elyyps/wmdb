@@ -10,15 +10,17 @@ export interface IArrowPanelListComponentProps {
   icon?: string;
   items: ILink[];
   linkMore?: IArrowPanelProps;
+
+  shouldMarginBottomBeZero?: boolean;
   title: string;
 }
 
 const ArrowPanelListComponent = (props: IArrowPanelListComponentProps) => {
-  const { items, title, icon, linkMore } = props;
+  const { items, title, icon, linkMore, shouldMarginBottomBeZero } = props;
 
   return (
-    <div className={styles["arrow-panel-list"]}>
-      <div style={!title ? { marginTop: -24 }: {}} className={styles["arrow-panel-list__head"]}>
+    <div style={shouldMarginBottomBeZero ? { marginBottom: 0 } : {}} className={styles["arrow-panel-list"]}>
+      <div style={!title ? { marginTop: -24 } : {}} className={styles["arrow-panel-list__head"]}>
         {icon && (
           <div className={styles["arrow-panel-list__head__icon"]}>
             <IconComponent icon={icon} size="34px" />

@@ -339,6 +339,7 @@ exports[`[OverviewFilter] should render component without crashing 1`] = `
           maxValue={100}
           minValue={0}
           onChange={[Function]}
+          onChangeComplete={[Function]}
           step={1}
           value={0}
         />

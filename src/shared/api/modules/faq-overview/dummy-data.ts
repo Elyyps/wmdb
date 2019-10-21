@@ -1,5 +1,10 @@
 import SPEL from "@assets/icons/spel.svg";
 import ETEN from "@assets/icons/eten.svg";
+import SPORT from "@assets/icons/sportief.svg";
+import CREATIVE from "@assets/icons/creatief.svg";
+import INCENTIVE from "@assets/icons/incentive.svg";
+import TEAM from "@assets/icons/teambuilding.svg";
+
 import { IFaqOverviewModule } from "@app/api/modules/faq-overview";
 
 export const dummyFaqOverviewData: IFaqOverviewModule = {
@@ -8,7 +13,7 @@ export const dummyFaqOverviewData: IFaqOverviewModule = {
 
   items: [
     {
-      icon: ETEN,
+      icon: SPEL,
       title: "Spel & Ontspanning",
       items: [
         {
@@ -39,7 +44,7 @@ export const dummyFaqOverviewData: IFaqOverviewModule = {
       }
     },
     {
-      icon: SPEL,
+      icon: SPORT,
       title: "Sportief & actie(f)",
       items: [
         {
@@ -70,7 +75,7 @@ export const dummyFaqOverviewData: IFaqOverviewModule = {
       }
     },
     {
-      icon: SPEL,
+      icon: CREATIVE,
       title: "Creatieve uitjes",
       items: [
         {
@@ -132,7 +137,7 @@ export const dummyFaqOverviewData: IFaqOverviewModule = {
       }
     },
     {
-      icon: SPEL,
+      icon: TEAM,
       title: "Teambuilden",
       items: [
         {
@@ -163,7 +168,7 @@ export const dummyFaqOverviewData: IFaqOverviewModule = {
       }
     },
     {
-      icon: SPEL,
+      icon: INCENTIVE,
       title: "Incentives",
       items: [
         {
@@ -200,6 +205,7 @@ export const dummyLocatieOverviewData: IFaqOverviewModule = {
   title: "Meest bekeken locaties",
   paddingTopMobile: "0px",
   paddingBottomMobile: "0px",
+  shouldMarginBottomBeZero: true,
   items: [
     {
       title: "",

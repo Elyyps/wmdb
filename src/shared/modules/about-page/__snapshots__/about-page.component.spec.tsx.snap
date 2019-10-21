@@ -5,6 +5,7 @@ exports[`[AboutPage] should render component without crashing 1`] = `
   align="center"
   paddingBottom="40px"
   paddingTop="40px"
+  pattern={true}
   title="Over deze pagina"
 >
   <div

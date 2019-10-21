@@ -25,7 +25,7 @@ exports[`[CategoryOverview] should render component without crashing 1`] = `
         >
           <CategoryCard
             count={500}
-            icon="spel.svg"
+            icon="eten.svg"
             image="https://picsum.photos/id/1/600/400"
             link="/single-wmdb"
             title="Eten, Drinken & Feesten"
@@ -36,7 +36,7 @@ exports[`[CategoryOverview] should render component without crashing 1`] = `
         >
           <CategoryCard
             count={430}
-            icon="spel.svg"
+            icon="teambuilding.svg"
             image="https://picsum.photos/id/20/600/400"
             link="/single-wmdb"
             title="Teambuilden"
@@ -47,7 +47,7 @@ exports[`[CategoryOverview] should render component without crashing 1`] = `
         >
           <CategoryCard
             count={430}
-            icon="spel.svg"
+            icon="incentive.svg"
             image="https://picsum.photos/id/30/600/400"
             link="/single-wmdb"
             title="Incentives"
@@ -69,7 +69,7 @@ exports[`[CategoryOverview] should render component without crashing 1`] = `
         >
           <CategoryCard
             count={430}
-            icon="spel.svg"
+            icon="sportief.svg"
             image="https://picsum.photos/id/50/600/400"
             link="/single-wmdb"
             title="Sportief & Actie(f)"
@@ -80,7 +80,7 @@ exports[`[CategoryOverview] should render component without crashing 1`] = `
         >
           <CategoryCard
             count={20}
-            icon="spel.svg"
+            icon="creatief.svg"
             image="https://picsum.photos/id/60/600/400"
             link="/single-wmdb"
             title="Creative Uitjes"

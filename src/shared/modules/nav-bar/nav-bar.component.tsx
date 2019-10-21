@@ -30,7 +30,7 @@ const NavBarComponent = ({ navbarModule }: INavBarComponentProps) => (
             title={navbarModule.title}
             close={navbarModule.closeText}
             icon={MENU_ICON}
-            iconSize="20px"
+            iconSize="22px"
           >
             <HamburgerMenuComponent menuItems={navbarModule.menuItems} />
           </NavBarModalComponent>

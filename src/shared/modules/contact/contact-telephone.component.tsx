@@ -1,7 +1,7 @@
 import * as React from "react";
 import styles from "./contact-component.module.scss";
 import { Link } from "react-router-dom";
-import Phone from "@assets/icons/images.svg";
+import Phone from "@assets/icons/phone.svg";
 import { ILink } from "@app/api/core/link";
 import { IconComponent } from "@app/core/icon";
 

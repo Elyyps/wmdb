@@ -4,6 +4,7 @@ export interface IFaqOverviewModule {
   items: IFaqSection[];
   paddingBottomMobile?: "120px" | "72px" | "40px" | "32px" | "0px";
   paddingTopMobile?: "120px" | "72px" | "40px" | "32px" | "0px";
+  shouldMarginBottomBeZero?: boolean;
   title: string;
 }
 

@@ -18,11 +18,10 @@ const FAQOverviewComponent = (props: IFAQOverviewComponentProps) => {
         title={title}
         paddingTopMobile={props.faqOverviewModule.paddingTopMobile}
         paddingBottomMobile={props.faqOverviewModule.paddingBottomMobile}
-        paddingBottom={"32px"}
+        paddingBottom={props.faqOverviewModule.shouldMarginBottomBeZero ? "0px" : "32px"}
         paddingTop="72px"
         backgroundColor={"#e8f2fc"}
       >
-       
         <div className={`${styles["faq-overview__posts"]} uk-grid uk-child-width-1-2@s`}>
           {items.map((row, key) => (
             <ArrowPanelListComponent
@@ -31,6 +30,7 @@ const FAQOverviewComponent = (props: IFAQOverviewComponentProps) => {
               items={row.items}
               linkMore={row.linkMore}
               icon={row.icon}
+              shouldMarginBottomBeZero={props.faqOverviewModule.shouldMarginBottomBeZero}
             />
           ))}
         </div>
