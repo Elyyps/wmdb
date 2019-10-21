@@ -10,7 +10,6 @@ export const getCardsPaginated = (skip: number, take: number, filter: IOverviewF
   const CARDS_AMOUNT = 200;
   let cards = getCardsAmount(CARDS_AMOUNT);
   if (filter.filterText) {
-    console.log(filter.filterText)
     const filterTextCapitalized = filter.filterText.toUpperCase();
     cards = cards.filter(
       item =>
@@ -53,7 +52,7 @@ export const getCardsPaginated = (skip: number, take: number, filter: IOverviewF
     subtitle: "Citygames in Amsterdam",
     image: ["https://picsum.photos/id/103/1200/800"],
     button: {
-      title: "Lees meer",
+      title: "Bekijk de nieuwsbrief",
       url: "/single-wmdb"
     }
   };

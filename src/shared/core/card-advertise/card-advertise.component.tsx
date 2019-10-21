@@ -21,7 +21,7 @@ const CardAdvertise = ({ title, image, button }: ICardAdvertiseProps) => (
           <h2>{title}</h2>
         </div>
         <div className={styles["card-action"]}>
-          <Button {...button} />
+          <Button {...button} variant="primary" />
         </div>
       </div>
     </div>
