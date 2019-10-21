@@ -80,7 +80,14 @@ const HeroComponent = (props: IHeroComponentProps) => {
                 placeholder={numberPersonsPlaceholder}
               />
             </div>
-            <Button fullWidth type={"submit"} title={buttonTitle} href="/overzicht" variant={"primary"} />
+            <Button
+              stateLink={{ test: "lol" }}
+              fullWidth
+              type={"submit"}
+              title={buttonTitle}
+              href="/overzicht"
+              variant={"primary"}
+            />
           </form>
         </div>
       </div>

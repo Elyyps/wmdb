@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import ArrowDown from "@assets/icons/chevron-down.svg";
 import classNames from "classnames";
 import { IconComponent } from "@app/core/icon";
+import path from "path";
 
 export interface IButtonProps {
   fullWidth?: boolean;
@@ -13,6 +14,7 @@ export interface IButtonProps {
   large?: boolean;
   onClick?: () => void;
   position?: "right" | "left";
+  stateLink?: any;
   target?: string;
   title: string;
   type?: string;
@@ -41,7 +43,7 @@ const Button = (props: IButtonProps) => {
   return (
     <React.Fragment>
       {href ? (
-        <Link {...other} to={href} className={buttonClassName} target={target}>
+        <Link {...other} to={{ pathname: href, state: props.stateLink }} className={buttonClassName} target={target}>
           <span className={styles["icon-svg"]}>
             {((icon && position === "right") || (icon && !position)) && title}
             {icon ? renderIconMargin(position) : title}

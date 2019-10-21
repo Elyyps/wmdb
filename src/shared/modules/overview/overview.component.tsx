@@ -64,6 +64,8 @@ const OverviewComponent = ({ overviewModule }: IOverviewComponentProps) => {
     setTotalCards(cardsFiltered.total);
     setTotalPages(totalPagesCalculated);
     setCards(cardsFiltered.cards);
+
+
   }, []);
   React.useEffect(() => {
     const skip = (currentPage - 1) * TAKE;
