@@ -52,7 +52,7 @@ export const getCardsPaginated = (skip: number, take: number, filter: IOverviewF
     subtitle: "Citygames in Amsterdam",
     image: ["https://picsum.photos/id/103/1200/800"],
     button: {
-      title: "Lees meer",
+      title: "Bekijk de nieuwsbrief",
       url: "/single-wmdb"
     }
   };

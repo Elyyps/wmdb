@@ -11,6 +11,22 @@ export interface IFAQOverviewComponentProps {
 
 const FAQOverviewComponent = (props: IFAQOverviewComponentProps) => {
   const { title, items } = props.faqOverviewModule;
+  const [windowSize, setWindowSize] = React.useState(0);
+  const mobileSize = 640;
+  const handleResize = () => {
+    setWindowSize(window.innerWidth);
+  };
+  React.useEffect(() => {
+    handleResize();
+  }, [windowSize]);
+
+  React.useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className={styles["faq-overview"]}>
@@ -23,7 +39,7 @@ const FAQOverviewComponent = (props: IFAQOverviewComponentProps) => {
         backgroundColor={"#e8f2fc"}
       >
         <div className={`${styles["faq-overview__posts"]} uk-grid uk-child-width-1-2@s`}>
-          {items.map((row, key) => (
+          {items.slice(0, windowSize < mobileSize ? 1 : items.length).map((row, key) => (
             <ArrowPanelListComponent
               key={key}
               title={row.title}

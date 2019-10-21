@@ -19,6 +19,7 @@ const OutingCardImage = ({ images }: IOutingCardImageProps) => {
       {
         breakpoint: 639,
         settings: {
+          dots: true,
           slidesToScroll: 1,
           slidesToShow: 1
         }
