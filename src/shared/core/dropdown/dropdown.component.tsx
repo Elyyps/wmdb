@@ -10,14 +10,16 @@ interface IDropdownProps {
   isSuccess?: boolean;
   label?: string;
   name?: string;
-  onChange?: (value: any) => void;
+  onChange?: (value: number) => void;
   options?: IDropdownItem[];
   placeholder?: string;
   style?: any;
+  value?: any;
 }
 
 const Dropdown = (props: IDropdownProps) => {
-  const { name, options, style, placeholder, classModify, label, isError, isSuccess } = props;
+  const { name, options, style, placeholder, classModify, label, isError, value, isSuccess } = props;
+  const [internalValue, setValue] = useState<number>(-1);
   const selectClassName = classNames(styles["dropdown"], {
     [styles[`dropdown--${classModify}`]]: classModify
   });
@@ -27,14 +29,16 @@ const Dropdown = (props: IDropdownProps) => {
     ["success"]: isSuccess
   });
 
-  const [value, setValue] = useState("");
+  React.useEffect(() => {
+    setValue(value);
+  }, [value]);
 
   const handleChange = (event: any) => {
     {
-      setValue(event.target.value);
       if (props.onChange) {
         props.onChange(event.target.value);
       }
+      setValue(event.target.value);
     }
   };
 
@@ -47,9 +51,14 @@ const Dropdown = (props: IDropdownProps) => {
           </label>
         )}
         <div className={styles["form__item-holder"]}>
-          <select className={selectClassName} name={name} onChange={handleChange} value={value ? value : "all"}>
+          <select
+            className={selectClassName}
+            name={name}
+            onChange={handleChange}
+            value={internalValue ? internalValue : -1}
+          >
             {placeholder && (
-              <option value="all" disabled aria-selected>
+              <option value={-1} disabled aria-selected>
                 {placeholder}
               </option>
             )}

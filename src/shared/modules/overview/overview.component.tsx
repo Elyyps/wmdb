@@ -7,6 +7,8 @@ import { ListCheckComponent } from "@app/core/list-check";
 import { IOverviewFilterItem, IOutingCard, getCardsPaginated } from "@app/api/modules/overview";
 import { IOverviewModule } from "../../api/modules/overview/overview";
 import styles from "./overview-component.module.scss";
+import { ICheckboxUnique } from "@app/api/core/checkbox";
+const queryString = require("query-string");
 
 export interface IOverviewComponentProps {
   overviewModule: IOverviewModule;
@@ -15,7 +17,8 @@ export interface IOverviewComponentProps {
 const TAKE = 8;
 const AD_POSITION = 6;
 
-const OverviewComponent = ({ overviewModule }: IOverviewComponentProps) => {
+const OverviewComponent = (props: IOverviewComponentProps) => {
+  const { overviewModule } = props;
   const rangeMax = 200;
   const [currentPage, setCurrentPage] = React.useState(1);
   const [totalPages, setTotalPages] = React.useState(0);
@@ -53,19 +56,72 @@ const OverviewComponent = ({ overviewModule }: IOverviewComponentProps) => {
     setCurrentFilter({ ...newCheckedItems, range: 0 });
   };
 
+  const insertUrlParam = (key: string, value: string) => {
+    if (history.pushState) {
+      const searchParams = new URLSearchParams(window.location.search);
+
+      searchParams.set(key, value);
+      const newurl = `?${searchParams.toString()}`;
+      window.history.pushState({ path: newurl }, "", newurl);
+    }
+  };
+  const deleteUrlParam = (key: string) => {
+    if (history.pushState) {
+      const searchParams = new URLSearchParams(window.location.search);
+      searchParams.delete(key);
+      const newurl = `?${searchParams.toString()}`;
+      window.history.pushState({ path: newurl }, "", newurl);
+    }
+  };
   React.useEffect(() => {
-    const cardsFiltered = getCardsPaginated(0, TAKE, {
-      keyword: "",
-      filterText: "",
-      checkedItems: [],
-      range: rangeMax
-    });
+    /* tslint:disable:no-empty */
+    try {
+      const parsed: {
+        categories?: string;
+        keyword?: string;
+        range?: number;
+        region?: string;
+      } = queryString.parse(location.search);
+      const categoriesId: ICheckboxUnique[] = [];
+      let keyword = "";
+      let region = "";
+      let range = 0;
+
+      if (parsed.categories) {
+        const categoriesIdJson: string[] = JSON.parse(`[${parsed.categories}]`);
+        categoriesIdJson.forEach(item => {
+          const foundSection = overviewModule.filter.find((filterSection: any) => {
+            if (filterSection.checkboxes.find((filterItem: any) => filterItem.id === parseInt(item, 0))) {
+              return filterSection;
+            }
+          });
+          if (foundSection) {
+            const foundItem = foundSection.checkboxes.find((filterItem: any) => filterItem.id === parseInt(item, 0));
+            if (foundItem) categoriesId.push({ ...foundItem, isChecked: true });
+          }
+        });
+      }
+
+      if (parsed.keyword) keyword = parsed.keyword;
+      if (parsed.region) region = parsed.region;
+      if (parsed.region) region = parsed.region;
+      if (parsed.range) range = parsed.range;
+
+      setCurrentFilter({
+        filterText: region,
+        range,
+        keyword,
+        checkedItems: categoriesId
+      });
+    } catch (e) {}
+
+    /* tslint:enable:no-empty */
+
+    const cardsFiltered = getCardsPaginated(0, TAKE, currentFilter);
     const totalPagesCalculated = cardsFiltered.total / TAKE;
     setTotalCards(cardsFiltered.total);
     setTotalPages(totalPagesCalculated);
     setCards(cardsFiltered.cards);
-
-
   }, []);
   React.useEffect(() => {
     const skip = (currentPage - 1) * TAKE;
@@ -83,6 +139,22 @@ const OverviewComponent = ({ overviewModule }: IOverviewComponentProps) => {
     setTotalCards(cardsFiltered.total);
     setTotalPages(totalPagesCalculated);
     setCards(cardsFiltered.cards);
+
+    if (currentFilter.keyword) insertUrlParam("keyword", currentFilter.keyword);
+    else deleteUrlParam("keyword");
+
+    if (currentFilter.filterText) insertUrlParam("region", currentFilter.filterText);
+    else deleteUrlParam("region");
+    if (currentFilter.range) {
+      insertUrlParam("range", currentFilter.range.toString());
+    } else deleteUrlParam("range");
+
+    if (currentFilter.checkedItems.length > 0) {
+      const checkedItemsMapped = currentFilter.checkedItems.map(item => item.id);
+      insertUrlParam("categories", checkedItemsMapped.join(","));
+    } else {
+      deleteUrlParam("categories");
+    }
   }, [currentFilter]);
 
   return (
@@ -167,7 +239,10 @@ const OverviewComponent = ({ overviewModule }: IOverviewComponentProps) => {
                 )}
               </div>
             ) : (
-              "Nothing to show"
+              <span>
+                Weg met de Baas heeft geen uitjes gevonden met de huidige gekozen zoekopties. Verander 1 of meer zoek
+                opties om uw zoekopdracht te vergroten.
+              </span>
             )}
           </div>
         </div>

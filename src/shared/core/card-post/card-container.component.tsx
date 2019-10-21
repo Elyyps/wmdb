@@ -1,5 +1,4 @@
 import * as React from "react";
-import "./card-post.component.scss";
 import { OutingCardComponent } from "@app/core/outing-card";
 import { CardAdvertise } from "../card-advertise";
 

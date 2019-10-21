@@ -16,7 +16,8 @@ interface IInputProps {
   min?: number;
   name: string;
   onBlur?: (text: string) => void;
-  onChange?: (text: string) => void;
+  onChange?: (event: any) => void;
+  onChangeText?: (text: string) => void;
   onClick?: any;
   placeholder?: string;
   style?: any;
@@ -39,6 +40,9 @@ const Input = (props: IInputProps) => {
     setValues(value);
   }, [value]);
   const handleChange = (event: any) => {
+    if (props.onChangeText) {
+      props.onChangeText(event.target.value);
+    }
     if (props.onChange) {
       props.onChange(event);
     }
