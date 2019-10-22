@@ -27,25 +27,25 @@ exports[`[Overview] should render component without crashing 1`] = `
               Object {
                 "checkboxes": Array [
                   Object {
-                    "count": 30,
+                    "count": 60,
                     "id": 1,
                     "label": "Citygames",
                     "name": "citygames",
                   },
                   Object {
-                    "count": 30,
+                    "count": 36,
                     "id": 2,
                     "label": "Beachgames",
                     "name": "Beachgames",
                   },
                   Object {
-                    "count": 30,
+                    "count": 23,
                     "id": 3,
                     "label": "Indoor Spel en Ontspanning",
                     "name": "IndoorSpelenOntspanning",
                   },
                   Object {
-                    "count": 30,
+                    "count": 45,
                     "id": 4,
                     "label": "Outdoor Spel en Ontspanning",
                     "name": "Outdoor Spel en Ontspanning",
@@ -57,25 +57,25 @@ exports[`[Overview] should render component without crashing 1`] = `
               Object {
                 "checkboxes": Array [
                   Object {
-                    "count": 30,
+                    "count": 24,
                     "id": 5,
                     "label": "Fun op Wielen",
                     "name": "Funopwielen",
                   },
                   Object {
-                    "count": 30,
+                    "count": 11,
                     "id": 6,
                     "label": "Outdoor Lucht",
                     "name": "Outdoor Lucht",
                   },
                   Object {
-                    "count": 30,
+                    "count": 35,
                     "id": 7,
                     "label": "Outdoor Water",
                     "name": "outdoorwater",
                   },
                   Object {
-                    "count": 30,
+                    "count": 12,
                     "id": 8,
                     "label": "Indoor Sport en Actie",
                     "name": "indorsportenactie",
@@ -92,19 +92,19 @@ exports[`[Overview] should render component without crashing 1`] = `
               Object {
                 "checkboxes": Array [
                   Object {
-                    "count": 30,
+                    "count": 22,
                     "id": 9,
                     "label": "Creatief",
                     "name": "creatief",
                   },
                   Object {
-                    "count": 30,
+                    "count": 24,
                     "id": 10,
                     "label": "Theater",
                     "name": "theater",
                   },
                   Object {
-                    "count": 30,
+                    "count": 24,
                     "id": 11,
                     "label": "Muziek en Dans",
                     "name": "muziekenDans",
@@ -116,19 +116,19 @@ exports[`[Overview] should render component without crashing 1`] = `
               Object {
                 "checkboxes": Array [
                   Object {
-                    "count": 30,
+                    "count": 0,
                     "id": 12,
                     "label": "Kookworkshops",
                     "name": "kookworkshops",
                   },
                   Object {
-                    "count": 30,
+                    "count": 24,
                     "id": 13,
                     "label": "Kunst en Cultuur",
                     "name": "kunstencultuur",
                   },
                   Object {
-                    "count": 30,
+                    "count": 24,
                     "id": 14,
                     "label": "Body en Spirit",
                     "name": "bodyenspirit",
@@ -140,25 +140,25 @@ exports[`[Overview] should render component without crashing 1`] = `
               Object {
                 "checkboxes": Array [
                   Object {
-                    "count": 30,
+                    "count": 0,
                     "id": 15,
                     "label": "Eten en drinken",
                     "name": "etenendrinken",
                   },
                   Object {
-                    "count": 30,
+                    "count": 0,
                     "id": 16,
                     "label": "Themafeesten",
                     "name": "Themafeesten",
                   },
                   Object {
-                    "count": 30,
+                    "count": 12,
                     "id": 17,
                     "label": "Totaalprogramma",
                     "name": "totaalprogramma",
                   },
                   Object {
-                    "count": 30,
+                    "count": 12,
                     "id": 18,
                     "label": "Attracties en Entertainment",
                     "name": "Attractiesenentertainment",
@@ -170,19 +170,19 @@ exports[`[Overview] should render component without crashing 1`] = `
               Object {
                 "checkboxes": Array [
                   Object {
-                    "count": 30,
+                    "count": 12,
                     "id": 19,
                     "label": "Teamtraining",
                     "name": "Teamtraining",
                   },
                   Object {
-                    "count": 30,
+                    "count": 12,
                     "id": 20,
                     "label": "Teambuilding",
                     "name": "Teambuilding",
                   },
                   Object {
-                    "count": 30,
+                    "count": 0,
                     "id": 21,
                     "label": "Uit Vergaderen",
                     "name": "Uit Vergaderen",
@@ -194,31 +194,31 @@ exports[`[Overview] should render component without crashing 1`] = `
               Object {
                 "checkboxes": Array [
                   Object {
-                    "count": 30,
+                    "count": 12,
                     "id": 22,
                     "label": "Wintersport",
                     "name": "wintersport",
                   },
                   Object {
-                    "count": 30,
+                    "count": 22,
                     "id": 23,
                     "label": "Stedentrips",
                     "name": "stedentrips",
                   },
                   Object {
-                    "count": 30,
+                    "count": 12,
                     "id": 24,
                     "label": "Adventure & Outdoor",
                     "name": "adventureeoutdoor",
                   },
                   Object {
-                    "count": 30,
+                    "count": 12,
                     "id": 25,
                     "label": "Reizen Buitenland",
                     "name": "reizenbuitenland",
                   },
                 ],
-                "id": 6,
+                "id": 7,
                 "title": "Incentives",
               },
             ]

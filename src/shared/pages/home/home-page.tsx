@@ -11,11 +11,11 @@ import { OtherLocationsComponent } from "@app/modules/other-locations";
 import { generateOtherLocationsData } from "@app/api/modules/other-locations/end-point";
 
 import { generateDummyHeroModule } from "@app/api/modules/hero/hero-module";
-import { CategoryOverviewComponent } from "@app/modules/category-overview";
 import { GenerateDummyCategoryOverviewData } from "@app/api/modules/category-overview/dummy-data";
 import { FAQOverviewComponent } from "@app/modules/faq-overview";
 import { generateDummyFaqOverviewData, generateDummyLocatieOverviewData } from "@app/api/modules/faq-overview";
 import { HeroComponent } from "@app/modules/hero";
+import { CategoryOverviewComponent } from "@app/modules/category-overview";
 
 const HomePageComponent = () => (
   <React.Fragment>
