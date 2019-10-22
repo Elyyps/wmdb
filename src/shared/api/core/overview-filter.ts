@@ -102,7 +102,7 @@ export const dummyOverviewFilterData = {
       ]
     },
     {
-      id: 4,
+      id: 5,
       title: "Eten, Drinken & Feesten",
       checkboxes: [
         {
@@ -128,7 +128,7 @@ export const dummyOverviewFilterData = {
       ]
     },
     {
-      id: 5,
+      id: 6,
       title: "Teambuilden",
       checkboxes: [
         {
@@ -149,7 +149,7 @@ export const dummyOverviewFilterData = {
       ]
     },
     {
-      id: 6,
+      id: 7,
       title: "Incentives",
       checkboxes: [
         {

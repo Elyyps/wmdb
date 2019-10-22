@@ -1,15 +1,41 @@
 import * as React from "react";
 import styles from "./category-overview-component.module.scss";
 import { CategoryCard } from "@app/core/category-card";
-import { ICategoryOverviewModule } from "@app/api/modules/category-overview/category-overview.model";
+import {
+  ICategoryOverviewModule,
+  ICategoryCardModel
+} from "@app/api/modules/category-overview/category-overview.model";
 import { ModuleSectionComponent } from "@app/core/module-section";
+import { withRouter, RouteComponentProps } from "react-router";
 
 export interface ICategoryOverviewComponentProps {
   categoryOverviewModule: ICategoryOverviewModule;
 }
 
-const CategoryOverviewComponent = (props: ICategoryOverviewComponentProps) => {
+const Component = (props: ICategoryOverviewComponentProps & RouteComponentProps) => {
   const { title, items, backgroundColor } = props.categoryOverviewModule;
+
+  const openOverviewPage = (categoryCard: ICategoryCardModel) => {
+    if (categoryCard.filterSectionId !== undefined) {
+      let finalUrl = "/overzicht";
+
+      // tslint:disable
+      const foundSection = props.categoryOverviewModule.filterSections.find(
+        section => section.id == categoryCard.filterSectionId
+      );
+      // tslint:enable
+      if (foundSection) {
+        const selectedItemsArrayString = foundSection.checkboxes.map(checkbox => checkbox.id).join("%2C");
+        finalUrl = finalUrl.concat(`?categories=${selectedItemsArrayString}`);
+      }
+
+      props.history.push(finalUrl);
+    } else {
+      if (categoryCard.link) {
+        props.history.push(categoryCard.link);
+      }
+    }
+  };
 
   return (
     <ModuleSectionComponent backgroundColor={backgroundColor} paddingBottom="72px" paddingTop="72px">
@@ -21,6 +47,9 @@ const CategoryOverviewComponent = (props: ICategoryOverviewComponentProps) => {
               {items.map((item, key) => (
                 <div key={key}>
                   <CategoryCard
+                    onClick={() => {
+                      openOverviewPage(item);
+                    }}
                     count={item.count}
                     icon={item.icon}
                     image={item.image}
@@ -36,5 +65,7 @@ const CategoryOverviewComponent = (props: ICategoryOverviewComponentProps) => {
     </ModuleSectionComponent>
   );
 };
+
+const CategoryOverviewComponent = withRouter(Component);
 
 export { CategoryOverviewComponent };

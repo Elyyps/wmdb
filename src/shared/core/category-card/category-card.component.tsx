@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
 import styles from "./category-card-component.module.scss";
 import Arrow from "@assets/icons/chevron-down.svg";
 import { IconComponent } from "../icon";
@@ -9,12 +8,13 @@ interface ICategoryCardProps {
   count?: number;
   icon?: string;
   image?: string;
-  link: string;
+  link?: string;
+  onClick: () => void;
   title?: string;
 }
 
-const CategoryCard = ({ link, title, count, image, icon }: ICategoryCardProps) => (
-  <Link to={link} className={styles["category-card"]}>
+const CategoryCard = ({ onClick, title, count, image, icon }: ICategoryCardProps) => (
+  <div role="button" onClick={onClick} className={styles["category-card"]}>
     <div className={styles["category-card__head"]}>
       <h3 className={styles["category-card__title"]}>
         <div>
@@ -37,7 +37,7 @@ const CategoryCard = ({ link, title, count, image, icon }: ICategoryCardProps) =
         <ImageComponent src={image} />
       </div>
     )}
-  </Link>
+  </div>
 );
 
 export { CategoryCard };

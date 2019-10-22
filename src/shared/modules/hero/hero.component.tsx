@@ -48,7 +48,7 @@ const Component = (props: IHeroComponentProps & RouteComponentProps) => {
       // tslint:disable-next-line
       const foundSection = filterSections.find(section => section.id == companyValue);
       if (foundSection) {
-        const selectedItemsArrayString = foundSection.checkboxes.map(checkbox => checkbox.id).join(",");
+        const selectedItemsArrayString = foundSection.checkboxes.map(checkbox => checkbox.id).join("%2C");
         finalUrl = finalUrl.concat(`&categories=${selectedItemsArrayString}`);
       }
     }

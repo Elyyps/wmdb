@@ -5,58 +5,60 @@ import SPORT from "@assets/icons/sportief.svg";
 import CREATIVE from "@assets/icons/creatief.svg";
 import INCENTIVE from "@assets/icons/incentive.svg";
 import TEAM from "@assets/icons/teambuilding.svg";
+import { GenerateDummyFilterOverview } from "../overview";
 const GenerateDummyCategoryOverviewData = (): ICategoryOverviewModule => ({
   backgroundColor: "#e8f2fc",
   paddingBottom: "72px",
   paddingTop: "72px",
+  filterSections: GenerateDummyFilterOverview(),
   title: "Kies direct een categorie om het aanbod te bekijken!",
   items: [
     {
       title: "Eten, Drinken & Feesten",
-      count: 500,
+      count: 24,
+      filterSectionId: 5,
       image: "https://picsum.photos/id/1/600/400",
-      icon: ETEN,
-      link: "/single-wmdb"
+      icon: ETEN
     },
     {
       title: "Teambuilden",
-      count: 430,
+      count: 24,
+      filterSectionId: 6,
       image: "https://picsum.photos/id/20/600/400",
-      icon: TEAM,
-      link: "/single-wmdb"
+      icon: TEAM
     },
     {
       title: "Incentives",
-      count: 430,
+      count: 58,
+      filterSectionId: 7,
       image: "https://picsum.photos/id/30/600/400",
-      icon: INCENTIVE,
-      link: "/single-wmdb"
+      icon: INCENTIVE
     },
     {
       title: "Spel & Ontspanning",
-      count: 430,
+      filterSectionId: 1,
+      count: 129,
       image: "https://picsum.photos/id/40/600/400",
-      icon: SPEL,
-      link: "/single-wmdb"
+      icon: SPEL
     },
     {
       title: "Sportief & Actie(f)",
-      count: 430,
+      filterSectionId: 2,
+      count: 59,
       image: "https://picsum.photos/id/50/600/400",
-      icon: SPORT,
-      link: "/single-wmdb"
+      icon: SPORT
     },
     {
       title: "Creative Uitjes",
-      count: 20,
+      count: 70,
+      filterSectionId: 3,
       image: "https://picsum.photos/id/60/600/400",
-      icon: CREATIVE,
-      link: "/single-wmdb"
+      icon: CREATIVE
     },
     {
       title: "Workshops",
-      image: "https://picsum.photos/id/70/600/400",
-      link: "/single-wmdb"
+      filterSectionId: 4,
+      image: "https://picsum.photos/id/70/600/400"
     },
     {
       title: "Helpdesk",

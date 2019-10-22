@@ -11,25 +11,25 @@ export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => 
       {
         label: "Citygames",
         id: 1,
-        count: 30,
+        count: 60,
         name: "citygames"
       },
       {
         label: "Beachgames",
         id: 2,
-        count: 30,
+        count: 36,
         name: "Beachgames"
       },
       {
         label: "Indoor Spel en Ontspanning",
         id: 3,
-        count: 30,
+        count: 23,
         name: "IndoorSpelenOntspanning"
       },
       {
         label: "Outdoor Spel en Ontspanning",
         id: 4,
-        count: 30,
+        count: 45,
         name: "Outdoor Spel en Ontspanning"
       }
     ]
@@ -42,25 +42,25 @@ export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => 
       {
         label: "Fun op Wielen",
         id: 5,
-        count: 30,
+        count: 24,
         name: "Funopwielen"
       },
       {
         label: "Outdoor Lucht",
         id: 6,
-        count: 30,
+        count: 11,
         name: "Outdoor Lucht"
       },
       {
         label: "Outdoor Water",
         id: 7,
-        count: 30,
+        count: 35,
         name: "outdoorwater"
       },
       {
         label: "Indoor Sport en Actie",
         id: 8,
-        count: 30,
+        count: 12,
         name: "indorsportenactie"
       },
 
@@ -79,19 +79,19 @@ export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => 
       {
         label: "Creatief",
         id: 9,
-        count: 30,
+        count: 22,
         name: "creatief"
       },
       {
         label: "Theater",
         id: 10,
-        count: 30,
+        count: 24,
         name: "theater"
       },
       {
         label: "Muziek en Dans",
         id: 11,
-        count: 30,
+        count: 24,
         name: "muziekenDans"
       }
     ]
@@ -103,19 +103,19 @@ export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => 
       {
         label: "Kookworkshops",
         id: 12,
-        count: 30,
+        count: 0.0,
         name: "kookworkshops"
       },
       {
         label: "Kunst en Cultuur",
         id: 13,
-        count: 30,
+        count: 24,
         name: "kunstencultuur"
       },
       {
         label: "Body en Spirit",
         id: 14,
-        count: 30,
+        count: 24,
         name: "bodyenspirit"
       }
     ]
@@ -127,25 +127,25 @@ export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => 
       {
         label: "Eten en drinken",
         id: 15,
-        count: 30,
+        count: 0,
         name: "etenendrinken"
       },
       {
         label: "Themafeesten",
         id: 16,
-        count: 30,
+        count: 0,
         name: "Themafeesten"
       },
       {
         label: "Totaalprogramma",
         id: 17,
-        count: 30,
+        count: 12,
         name: "totaalprogramma"
       },
       {
         label: "Attracties en Entertainment",
         id: 18,
-        count: 30,
+        count: 12,
         name: "Attractiesenentertainment"
       }
     ]
@@ -157,49 +157,49 @@ export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => 
       {
         label: "Teamtraining",
         id: 19,
-        count: 30,
+        count: 12,
         name: "Teamtraining"
       },
       {
         label: "Teambuilding",
         id: 20,
-        count: 30,
+        count: 12,
         name: "Teambuilding"
       },
       {
         label: "Uit Vergaderen",
         id: 21,
-        count: 30,
+        count: 0,
         name: "Uit Vergaderen"
       }
     ]
   },
   {
-    id: 6,
+    id: 7,
     title: "Incentives",
     checkboxes: [
       {
         label: "Wintersport",
         id: 22,
-        count: 30,
+        count: 12,
         name: "wintersport"
       },
       {
         label: "Stedentrips",
         id: 23,
-        count: 30,
+        count: 22,
         name: "stedentrips"
       },
       {
         label: "Adventure & Outdoor",
         id: 24,
-        count: 30,
+        count: 12,
         name: "adventureeoutdoor"
       },
       {
         label: "Reizen Buitenland",
         id: 25,
-        count: 30,
+        count: 12,
         name: "reizenbuitenland"
       }
     ]
