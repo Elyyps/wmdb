@@ -2,7 +2,7 @@ import * as React from "react";
 import styles from "./nav-bar-component.module.scss";
 import { LogoComponent } from "@app/core/logo/logo.component";
 import { LinkComponent } from "@app/core/link";
-import MENU_ICON from "@assets/icons/menu.svg";
+import MENU_ICON from "@assets/icons/icons-menu.svg";
 import { INavBarModule } from "@app/api/modules/nav-bar/nav-bar.module";
 import { NavBarModalComponent } from "../nav-bar-modal";
 import { HamburgerMenuComponent } from "@app/core/hamburger-menu";
