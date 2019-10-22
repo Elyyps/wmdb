@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[NotFound] should render component without crashing 1`] = `
+<div
+  className="not-found"
+>
+  <div
+    className="not-found__table-cell"
+  >
+    <div
+      className="not-found__container"
+    >
+      <IconComponent
+        fillColor="white"
+        height="220px"
+        icon="WMDB2.svg"
+        width="160px"
+      />
+      <div
+        className="not-found__content"
+      >
+        <div
+          className="not-found__content-title"
+        >
+          <h2>
+            Oeps!
+          </h2>
+        </div>
+        <span>
+          Pagina niet gevonden. We helpen je graag de weg weer terug te vinden.
+        </span>
+        <Button
+          title="WMDB homepage"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

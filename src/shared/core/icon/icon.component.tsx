@@ -5,10 +5,12 @@ import ReactSVG from "react-svg";
 
 export interface IconComponentProps {
   fillColor?: string;
+  height?: string;
   icon: any;
-  size: string;
+  size?: string;
   strokeColor?: string;
   strokeWidth?: string;
+  width?: string;
 }
 
 const iconStyleClassName = (props: IconComponentProps) => {
@@ -29,13 +31,22 @@ const IconComponent: React.FunctionComponent<IconComponentProps> = props => (
     loading={() => <span />}
     renumerateIRIElements={true}
     wrapper="span"
-    style={{
-      fill: props.fillColor,
-      height: props.size,
-      stroke: props.strokeColor,
-      strokeWidth: props.strokeWidth,
-      width: props.size
-    }}
+    style={
+      props.size || props.width || props.height
+        ? {
+            fill: props.fillColor,
+            width: props.size ? props.size : props.width,
+            height: props.size ? props.size : props.height,
+            stroke: props.strokeColor,
+            strokeWidth: props.strokeWidth
+          }
+        : {
+            fill: props.fillColor,
+
+            stroke: props.strokeColor,
+            strokeWidth: props.strokeWidth
+          }
+    }
     className={iconStyleClassName(props)}
   />
 );

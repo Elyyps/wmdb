@@ -8,6 +8,7 @@ import { FAQPageComponent } from "./pages/faq/faq-page";
 import { HomePageComponent } from "./pages/home/home-page";
 import { OverviewPageComponent } from "./pages/overview/overview.component";
 import { HomepageComponent } from "./prep/pages-prep/homepage/homepage.component";
+import { NotFoundPageComponent } from "./pages/not-found/not-found-page";
 
 const Routes: React.FunctionComponent = props => (
   <React.Fragment>
@@ -20,6 +21,8 @@ const Routes: React.FunctionComponent = props => (
     <Route exact path="/playground" component={PlaygroundComponent} />
     <Route exact path="/playground-ahmed" component={PlaygroundAhmedComponent} />
     <Route exact path="/playground-pedro" component={PlaygroundPedroComponent} />
+    <Route exact path="/not-found" component={NotFoundPageComponent} />
+    <Route path="*" component={NotFoundPageComponent} />
   </React.Fragment>
 );
 
