@@ -154,9 +154,9 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
         )}
         {isActive && (
           <Input
-            onChange={(e: any) => {
-              setFilterText(e.target.value);
-              sendFilterOptions({ checkedItems, keyword: keywordText, filterText: e.target.value, range });
+            onChange={(value: string) => {
+              setFilterText(value);
+              sendFilterOptions({ checkedItems, keyword: keywordText, filterText: value, range });
             }}
             value={filterText}
             placeholder={searchPlaceholder}
@@ -189,9 +189,9 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
           <h5>Zoekwoord</h5>
           <Input
             value={keywordText}
-            onChange={(e: any) => {
-              setKeywordText(e.target.value);
-              sendFilterOptions({ checkedItems, keyword: e.target.value, filterText, range });
+            onChangeText={(value: string) => {
+              setKeywordText(value);
+              sendFilterOptions({ checkedItems, keyword: value, filterText, range });
             }}
             name="zoekwoord"
             placeholder="Zoekwoord"

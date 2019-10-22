@@ -14,7 +14,7 @@ const Routes: React.FunctionComponent = props => (
     <Route exact path="/" component={HomePageComponent} />
     <Route exact path="/overzicht2" component={HomepageComponent} />
 
-    <Route exact path="/overzicht" component={OverviewPageComponent} />
+    <Route exact path="/overzicht/" component={OverviewPageComponent} />
     <Route exact path="/single-wmdb" component={SingleWMDBPage} />
     <Route exact path="/info-page" component={FAQPageComponent} />
     <Route exact path="/playground" component={PlaygroundComponent} />

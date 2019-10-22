@@ -1,7 +1,7 @@
 /* tslint:disable */
 import React from "react";
 import style from "./playground-pedro-component.module.scss";
-import { HeroComponent } from "@app/modules/hero";
+
 import { generateDummyHeroModule } from "@app/api/modules/hero/hero-module";
 import { CategoryOverviewComponent } from "@app/modules/category-overview";
 import { ArrowPanelListComponent } from "@app/core/arrow-panel-list";

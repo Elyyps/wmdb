@@ -1,10 +1,10 @@
 export interface ICheckbox {
   count?: number;
   isChecked?: boolean;
-  label: string;
+  label?: string;
   name?: string;
 }
 
-export interface ICheckboxUnique extends ICheckbox{
+export interface ICheckboxUnique extends ICheckbox {
   id: number;
 }

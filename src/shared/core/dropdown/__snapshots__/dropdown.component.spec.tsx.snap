@@ -11,7 +11,7 @@ exports[`[Dropdown] should render component without crashing 1`] = `
       <select
         className="dropdown"
         onChange={[Function]}
-        value="all"
+        value={-1}
       />
     </div>
   </div>

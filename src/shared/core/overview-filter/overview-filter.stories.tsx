@@ -13,7 +13,7 @@ storiesOf("OverviewFilter", module)
     <OverviewFilterComponent
       searchPlaceholder="Plaats, regio of provincie"
       range={0}
-      onFilterChange={jest.fn()}
+      onFilterChange={jest.fn}
       {...dummyOverviewFilterData}
     />
   ));

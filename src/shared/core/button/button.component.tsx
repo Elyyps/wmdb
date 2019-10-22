@@ -41,7 +41,13 @@ const Button = (props: IButtonProps) => {
   return (
     <React.Fragment>
       {href ? (
-        <Link {...other} to={href} className={buttonClassName} target={target}>
+        <Link
+          style={{ width: fullWidth ? "100%" : "auto", padding: large ? "14px 26px" : "" }}
+          {...other}
+          to={href}
+          className={buttonClassName}
+          target={target}
+        >
           <span className={styles["icon-svg"]}>
             {((icon && position === "right") || (icon && !position)) && title}
             {icon ? renderIconMargin(position) : title}

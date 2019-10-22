@@ -5,6 +5,7 @@ import { IOverviewFilterCategoryItem } from "@app/api/modules/overview";
 /* tslint:disable */
 export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => [
   {
+    id: 1,
     title: "Spel & Ontspanning",
     checkboxes: [
       {
@@ -35,6 +36,7 @@ export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => 
   },
 
   {
+    id: 2,
     title: "Sportief & Actie(f)",
     checkboxes: [
       {
@@ -71,6 +73,7 @@ export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => 
   },
 
   {
+    id: 3,
     title: "Creatieve Uitjes",
     checkboxes: [
       {
@@ -94,6 +97,7 @@ export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => 
     ]
   },
   {
+    id: 4,
     title: "Workshops",
     checkboxes: [
       {
@@ -117,6 +121,7 @@ export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => 
     ]
   },
   {
+    id: 5,
     title: "Eten, Drinken & Feesten",
     checkboxes: [
       {
@@ -146,6 +151,7 @@ export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => 
     ]
   },
   {
+    id: 6,
     title: "Teambuilden",
     checkboxes: [
       {
@@ -169,6 +175,7 @@ export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => 
     ]
   },
   {
+    id: 6,
     title: "Incentives",
     checkboxes: [
       {

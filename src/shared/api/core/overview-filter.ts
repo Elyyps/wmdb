@@ -1,6 +1,7 @@
 export const dummyOverviewFilterData = {
   filterItems: [
     {
+      id: 1,
       title: "Spel & Ontspanning",
       checkboxes: [
         {
@@ -27,6 +28,7 @@ export const dummyOverviewFilterData = {
     },
 
     {
+      id: 2,
       title: "Sportief & Actie(f)",
       checkboxes: [
         {
@@ -58,6 +60,7 @@ export const dummyOverviewFilterData = {
     },
 
     {
+      id: 3,
       title: "Creatieve Uitjes",
       checkboxes: [
         {
@@ -78,6 +81,7 @@ export const dummyOverviewFilterData = {
       ]
     },
     {
+      id: 4,
       title: "Workshops",
       checkboxes: [
         {
@@ -98,6 +102,7 @@ export const dummyOverviewFilterData = {
       ]
     },
     {
+      id: 4,
       title: "Eten, Drinken & Feesten",
       checkboxes: [
         {
@@ -123,6 +128,7 @@ export const dummyOverviewFilterData = {
       ]
     },
     {
+      id: 5,
       title: "Teambuilden",
       checkboxes: [
         {
@@ -143,6 +149,7 @@ export const dummyOverviewFilterData = {
       ]
     },
     {
+      id: 6,
       title: "Incentives",
       checkboxes: [
         {

@@ -305,7 +305,7 @@ exports[`[OverviewFilter] should render component without crashing 1`] = `
       </h5>
       <Input
         name="zoekwoord"
-        onChange={[Function]}
+        onChangeText={[Function]}
         placeholder="Zoekwoord"
         value=""
       />

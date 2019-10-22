@@ -7,6 +7,7 @@ export interface IOverviewModule {
 
 export interface IOverviewFilterCategoryItem {
   checkboxes: ICheckboxUnique[];
+  id: number;
   title: string;
 }
 
