@@ -28,7 +28,7 @@ const Checkbox = ({ name, label, id, onChange, isChecked, count, value }: ICheck
       {count === 0 ? (
         <span className={styles["checkbox-count"]}>(0)</span>
       ) : (
-        <span className={styles["checkbox-count"]}>({count})</span>
+        count && <span className={styles["checkbox-count"]}>({count})</span>
       )}
     </label>
   </React.Fragment>

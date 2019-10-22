@@ -11,12 +11,6 @@ exports[`[Label] should render component without crashing 1`] = `
       type="checkbox"
     />
     Label
-    <span
-      className="checkbox-count"
-    >
-      (
-      )
-    </span>
   </label>
 </Fragment>
 `;
