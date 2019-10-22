@@ -4,20 +4,14 @@ import { generateNavbarData } from "@app/api/modules/nav-bar/end-point";
 import { ContactComponent } from "@app/modules/contact";
 import { FooterComponent } from "@app/modules/footer";
 import { generateFooterData } from "@app/api/modules/footer/end-point";
-import Oasis from "@assets/oasis.jpg";
-import Image from "@assets/img02.png";
-import Rectangle from "@assets/rectangle.png";
-import Big from "@assets/img-big.jpg";
-import Grid from "@assets/img-grid.png";
 import { HeaderGalleryComponent } from "@app/modules/header-gallery";
 import { generateContactData } from "@app/api/modules/contact/end-point";
-
-const imageList = [Rectangle, Oasis, Big, Image, Oasis, Grid];
+import { generateHeaderGalleryData } from "@app/api/modules/header-gallery/end-point";
 
 const SingleWMDBPage = () => (
   <React.Fragment>
     <NavBarComponent navbarModule={generateNavbarData()} />
-    <HeaderGalleryComponent images={imageList} />
+    <HeaderGalleryComponent images={generateHeaderGalleryData()} />
     <ContactComponent contactModule={generateContactData()} />
     <FooterComponent footerModule={generateFooterData()} />
   </React.Fragment>
