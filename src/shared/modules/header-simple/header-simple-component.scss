@@ -2,9 +2,9 @@
   position: relative;
   min-height: 252px;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display:flex;
+  align-items: center;
+
   @media(max-width: $breakpoint-xsmall-max) {
     min-height: 106px;
   }
@@ -14,6 +14,7 @@
     top: 0;
     bottom: 0;
     right: 0;
+
     &:after {
       content: '';
       position: absolute;
@@ -30,11 +31,15 @@
     }
   }
   &__title {
-    position: relative;
-    z-index: 1;
+width: 100%;
+display:flex;
+    justify-content: center;
+   position: absolute;
+   top: 40%;
+   z-index: 1;
     color: $global-inverse-color;
-    padding: 20px 0;
-    text-align: center;
+
+ text-align: center;
     h1 {
       color: inherit;
       margin: 0;

@@ -11,7 +11,15 @@
         padding: 0 12px 0 0;
       }
       &--large {
+ 
         padding: 0 24px 0 0;
+      }
+    }
+    @media (min-width: $breakpoint-medium-max){
+      &--large {
+      .card-images__grid{
+        width: 24%;
+       }
       }
     }
   }
@@ -55,6 +63,13 @@
       &--large {
         @media (min-width: $breakpoint-small) {
           width: 38%;
+        
+        }
+        @media (min-width: $breakpoint-xsmall-max){
+          .card-images{
+            padding: 0 0 4px;
+
+      }
         }
         @media (min-width: $breakpoint-large) {
           width: 393px;
@@ -62,8 +77,9 @@
         .card-images {
           flex: 1 1 auto;
 
-          padding: 0 0 4px;
-
+@media (max-width:$breakpoint-xsmall-max){
+  max-height: 170px;
+}
           div {
             padding: 0;
           }
@@ -158,6 +174,8 @@
         @media (min-width: $breakpoint-small) {
           max-height: 50px;
         }
+        @media (max-width: $breakpoint-small) {
+margin-top: 8px;        }
       }
       a {
         color: $global-color;

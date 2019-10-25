@@ -9,7 +9,10 @@
     flex: 1 1 100%;
     border-radius: $global-border-radius;
     overflow: hidden;
-    margin-top: 24px;
+    @media (min-width: $breakpoint-xsmall-max){
+
+      margin-top: 24px;
+    }
 
     &:after {
       content: "";

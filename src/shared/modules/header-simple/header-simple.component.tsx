@@ -15,11 +15,9 @@ const HeaderSimpleComponent = (props: IHeaderSimpleComponentProps) => {
       <div className="header-simple__image">
         <img src={picture} alt="oasis image" />
       </div>
-      <div className="uk-container">
         <div className="header-simple__title">
           <h1>{title}</h1>
         </div>
-      </div>
     </div>
   );
 };

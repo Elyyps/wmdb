@@ -7,7 +7,7 @@
   &__navigation {
     li {
       margin-bottom: 20px;
-      width: fit-content;
+      display: table;
       a {
         text-decoration: none;
         color: $global-inverse-color;

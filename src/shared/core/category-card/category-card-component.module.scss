@@ -34,7 +34,7 @@
       display: flex;
       align-items: center;
     }
-    &__icon {
+    &__icon {  
       margin-right: 24px;
       @media (max-width: $breakpoint-xsmall-max) {
         margin-right: 8px;

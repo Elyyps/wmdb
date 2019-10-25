@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
-    <defs>
-        <path id="a-phone" d="M30.224 4H1.778C.795 4 0 4.795 0 5.778v21.334c0 .982.795 1.778 1.778 1.778h28.446c.983 0 1.777-.796 1.777-1.778V5.778c0-.982-.794-1.778-1.777-1.778zm-8.445 6.222a2.223 2.223 0 1 1-.002 4.447 2.223 2.223 0 0 1 .002-4.447zM5.334 23.556l5.891-13.545 6.701 10.848 5.744-2.853 2.998 5.55H5.334z"/>
-    </defs>
-    <g fill="none" fill-rule="evenodd">
-        <mask id="b-phone" fill="#fff">
-            <use xlink:href="#a-phone"/>
-        </mask>
-        <use fill="#000" fill-rule="nonzero" xlink:href="#a-phone"/>
-        <g fill="#101010" mask="url(#b-phone)">
-            <path d="M0 0h32v32H0z"/>
-        </g>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32"><defs><mask id="a" x="0" y="0" width="32" height="32" maskUnits="userSpaceOnUse"><path d="M30.22,3.93H1.78A1.78,1.78,0,0,0,0,5.71V27a1.78,1.78,0,0,0,1.78,1.78H30.22A1.78,1.78,0,0,0,32,27V5.71A1.77,1.77,0,0,0,30.22,3.93Zm-8.44,6.22a2.23,2.23,0,1,1-2.23,2.22A2.22,2.22,0,0,1,21.78,10.15ZM5.33,23.48l5.9-13.54,6.7,10.85,5.74-2.86,3,5.55Z" fill="#fff" fill-rule="evenodd"/></mask></defs><title>Asset 73</title><g mask="url(#a)"><path d="M0,0H32V32H0Z" fill="#101010" fill-rule="evenodd"/></g></svg>
