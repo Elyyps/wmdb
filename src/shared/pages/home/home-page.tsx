@@ -17,17 +17,23 @@ import { generateDummyFaqOverviewData, generateDummyLocatieOverviewData } from "
 import { HeroComponent } from "@app/modules/hero";
 import { CategoryOverviewComponent } from "@app/modules/category-overview";
 
-const HomePageComponent = () => (
-  <React.Fragment>
-    <NavBarComponent navbarModule={generateNavbarData()} />
-    <HeroComponent heroModule={generateDummyHeroModule()} />
-    <CategoryOverviewComponent categoryOverviewModule={GenerateDummyCategoryOverviewData()} />
-    <NewActivityComponent newActivityModule={generateNewActivityData()} />
-    <FAQOverviewComponent faqOverviewModule={generateDummyFaqOverviewData()} />
-    <CompanyOutingComponent companyOutingModule={generateCompanyOutingData()} />
-    <FAQOverviewComponent faqOverviewModule={generateDummyLocatieOverviewData()} />
-    <OtherLocationsComponent otherLocationsModule={generateOtherLocationsData()} />
-    <FooterComponent footerModule={generateFooterData()} />
-  </React.Fragment>
-);
+const HomePageComponent = () => {
+  React.useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
+  return (
+    <React.Fragment>
+      <NavBarComponent navbarModule={generateNavbarData()} />
+      <HeroComponent heroModule={generateDummyHeroModule()} />
+      <CategoryOverviewComponent categoryOverviewModule={GenerateDummyCategoryOverviewData()} />
+      <NewActivityComponent newActivityModule={generateNewActivityData()} />
+      <FAQOverviewComponent faqOverviewModule={generateDummyFaqOverviewData()} />
+      <CompanyOutingComponent companyOutingModule={generateCompanyOutingData()} />
+      <FAQOverviewComponent faqOverviewModule={generateDummyLocatieOverviewData()} />
+      <OtherLocationsComponent otherLocationsModule={generateOtherLocationsData()} />
+      <FooterComponent footerModule={generateFooterData()} />
+    </React.Fragment>
+  );
+};
 export { HomePageComponent };

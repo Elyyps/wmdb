@@ -5,9 +5,10 @@ import { ImageComponent } from "../image";
 
 interface IOutingCardImageProps {
   images: string[];
+  modify?: string;
 }
 
-const OutingCardImage = ({ images }: IOutingCardImageProps) => {
+const OutingCardImage = ({ images, modify }: IOutingCardImageProps) => {
   const ref: any = React.createRef();
   ref.current = "slick";
 
@@ -37,7 +38,7 @@ const OutingCardImage = ({ images }: IOutingCardImageProps) => {
     <div
       className={`${styles["card-images__wrapper"]} ${
         images.length >= numberSlide ? styles["card-images__wrapper--large"] : ""
-      }`}
+      } ${styles[modify ? `card-image-slider--${modify}` : "card-image-slider--large"]} `}
     >
       <div className={styles["card-images"]}>
         <Slider ref={ref} {...settings}>

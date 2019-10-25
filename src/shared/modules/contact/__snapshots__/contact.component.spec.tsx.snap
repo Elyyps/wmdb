@@ -80,6 +80,11 @@ deelnemers zijn op dit moment Mister X al tegen gekomen.
 </p>
 
 "
+            style={
+              Object {
+                "color": "black",
+              }
+            }
           />
         </div>
         <Button

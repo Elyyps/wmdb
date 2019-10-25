@@ -20,17 +20,17 @@
     }
   }
   &__image {
+    display: flex;
+
+    justify-content: center;
     @media (min-width: $breakpoint-medium) {
       width: 30%;
       flex: 0 0 33%;
       height: 252px;
-      display: flex;
       align-items: flex-end;
-      justify-content: center;
       order: -1;
     }
     @media (max-width: $breakpoint-small-max) {
-      max-width: 200px;
       height: 100px;
       margin-top: 20px;
       img {

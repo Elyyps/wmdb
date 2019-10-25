@@ -1,13 +1,21 @@
 .overview {
   padding: 40px 0 72px 0;
-  @media(max-width: $breakpoint-xsmall-max) {
+  @media (max-width: $breakpoint-xsmall-max) {
     padding: 16px 0;
   }
   &-head {
     &__subtitle {
-      font-size: 14px;
-      line-height: 1.41;
-      color: #6a6a6a;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      a {
+        text-decoration: none;
+      }
+      span {
+        font-size: 14px;
+        line-height: 1.41;
+        color: #6a6a6a;
+      }
     }
     &__list {
       display: flex;
@@ -21,7 +29,7 @@
   }
   &-head {
     margin-bottom: 24px;
-    @media(max-width: $breakpoint-xsmall-max) {
+    @media (max-width: $breakpoint-xsmall-max) {
       margin-bottom: 16px;
     }
   }
@@ -34,7 +42,7 @@
       justify-content: center;
       border-top: 1px solid $gray-light-secondary;
       border-bottom: 1px solid $gray-light-secondary;
-      @media(max-width: $breakpoint-xsmall-max) {
+      @media (max-width: $breakpoint-xsmall-max) {
         background-color: #fff8ed;
         margin: 0 -16px;
         padding: 16px;
@@ -42,10 +50,10 @@
       }
       > li {
         margin: 0 20px;
-        @media(max-width: $breakpoint-medium-max) {
+        @media (max-width: $breakpoint-medium-max) {
           margin: 0 5px;
         }
-        @media(max-width: $breakpoint-xsmall-max) {
+        @media (max-width: $breakpoint-xsmall-max) {
           margin: 0;
           text-align: center;
           justify-content: center;
@@ -60,12 +68,12 @@
     }
     .card {
       &-post {
-        @media(max-width: $breakpoint-xsmall-max) {
+        @media (max-width: $breakpoint-xsmall-max) {
           padding: 0 0 24px 0;
         }
       }
       &-advertise {
-        @media(max-width: $breakpoint-xsmall-max) {
+        @media (max-width: $breakpoint-xsmall-max) {
           margin: 0 0 24px 0;
         }
       }

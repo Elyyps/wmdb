@@ -4,7 +4,17 @@
   border-bottom: 1px solid $gray-light-secondary;
   font-size: 14px;
   text-decoration: none;
-
+  .card-image-slider {
+    box-sizing: border-box;
+    @media (min-width: $breakpoint-xsmall-max) {
+      &--small {
+        padding: 0 12px 0 0;
+      }
+      &--large {
+        padding: 0 24px 0 0;
+      }
+    }
+  }
   @media (max-width: $breakpoint-xsmall-max) {
     flex-direction: column;
     padding: 12px 0;
@@ -13,10 +23,6 @@
 
   &:hover {
     text-decoration: none;
-  }
-  > * {
-    padding: 0 12px 0 0;
-    box-sizing: border-box;
   }
 
   .card-images {
@@ -33,6 +39,7 @@
       overflow: hidden;
       position: relative;
       display: flex;
+
       @media (max-width: $breakpoint-medium-max) {
         flex-direction: column;
       }

@@ -8,6 +8,8 @@ import { IOverviewFilterItem, IOutingCard, getCardsPaginated } from "@app/api/mo
 import { IOverviewModule } from "../../api/modules/overview/overview";
 import styles from "./overview-component.module.scss";
 import { ICheckboxUnique } from "@app/api/core/checkbox";
+
+import { Link } from "react-router-dom";
 const queryString = require("query-string");
 
 export interface IOverviewComponentProps {
@@ -178,7 +180,10 @@ const OverviewComponent = (props: IOverviewComponentProps) => {
             <div className={`${styles["overview-head"]} uk-visible@m`}>
               {currentFilter.checkedItems.length > 0 && (
                 <div className={styles["overview-head__subtitle"]}>
-                  {`${totalCards}  uitjes gevonden gebaseerd op de volgende filters:`}
+                  <span> {`${totalCards}  uitjes gevonden gebaseerd op de volgende filters:`}</span>
+                  <Link to="#" onClick={() => setCurrentFilter({ ...currentFilter, checkedItems: [] })}>
+                    Alle filters wissen
+                  </Link>
                 </div>
               )}
 

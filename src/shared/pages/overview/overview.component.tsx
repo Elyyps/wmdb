@@ -15,15 +15,21 @@ import { OverviewComponent } from "@app/modules/overview";
 
 export interface IOverzichtComponentProps {}
 
-const OverviewPageComponent = (props: IOverzichtComponentProps) => (
-  <div>
-    <NavBarComponent navbarModule={generateDummyNavbarData()} />
-    <HeaderSimpleComponent headerSimpleModule={generateDummyHeaderSimpleModule()} />
-    <OverviewComponent overviewModule={generateDummyOverviewModule()} />
-    <OtherLocationsComponent otherLocationsModule={generateOtherLocationsData()} />
-    <AboutPageComponent aboutPageModule={generateAboutPageData()} />
-    <FooterComponent footerModule={generateDummyFooterData()} />
-  </div>
-);
+const OverviewPageComponent = (props: IOverzichtComponentProps) => {
+  React.useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
+
+  return (
+    <div>
+      <NavBarComponent navbarModule={generateDummyNavbarData()} />
+      <HeaderSimpleComponent headerSimpleModule={generateDummyHeaderSimpleModule()} />
+      <OverviewComponent overviewModule={generateDummyOverviewModule()} />
+      <OtherLocationsComponent otherLocationsModule={generateOtherLocationsData()} />
+      <AboutPageComponent aboutPageModule={generateAboutPageData()} />
+      <FooterComponent footerModule={generateDummyFooterData()} />
+    </div>
+  );
+};
 
 export { OverviewPageComponent };

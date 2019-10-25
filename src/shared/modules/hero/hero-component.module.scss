@@ -75,6 +75,14 @@
   &__form-area {
     width: 100%;
     padding-bottom: 16px;
+    select {
+      color: #101010;
+
+      font-size: 16px;
+      padding: 10px 16px 10px 16px;
+      background-color: transparent;
+    }
+
     @media (min-width: $breakpoint-medium) {
       max-width: 25%;
       padding: 0 16px 0 0;
@@ -84,7 +92,8 @@
     }
     &-dropdown {
       @media (min-width: $breakpoint-medium) {
-        min-width: 260px;
+        min-width: 290px;
+
         padding: 0 16px 0 0;
       }
     }

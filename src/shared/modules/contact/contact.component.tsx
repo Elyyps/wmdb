@@ -53,7 +53,7 @@ const ContactComponent = ({ contactModule }: IContactComponentProps) => {
               </li>
             </ul>
             <div className={styles["contact-content"]}>
-              <BodyTextComponent html={contactModule.content} />
+              <BodyTextComponent html={contactModule.content} style={{ color: "black" }} />
             </div>
             <Button title={contactModule.buttonText} variant={"primary"} fullWidth large onClick={toggleForm} />
             <div className={styles["other-activities"]}>

@@ -81,6 +81,7 @@ exports[`[Overview] should render component without crashing 1`] = `
                     "name": "indorsportenactie",
                   },
                   Object {
+                    "count": 0,
                     "id": 26,
                     "label": "Outdoor Sport en Actie",
                     "name": "outdorsportenactie",

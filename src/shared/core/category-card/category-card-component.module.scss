@@ -5,8 +5,10 @@
   position: relative;
   cursor: pointer;
   &__head {
+    height: 83px !important;
     background: $global-background;
-    padding: 24px 37px 24px 16px;
+    padding-left: 16px;
+    display: flex;
     border-bottom: 2px solid $brand-primary;
     position: relative;
     @media (max-width: $breakpoint-xsmall-max) {
@@ -34,7 +36,6 @@
     }
     &__icon {
       margin-right: 24px;
-
       @media (max-width: $breakpoint-xsmall-max) {
         margin-right: 8px;
       }

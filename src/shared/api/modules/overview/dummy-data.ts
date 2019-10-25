@@ -67,6 +67,7 @@ export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => 
       {
         label: "Outdoor Sport en Actie",
         id: 26,
+        count: 0,
         name: "outdorsportenactie"
       }
     ]

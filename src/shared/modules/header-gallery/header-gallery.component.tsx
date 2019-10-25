@@ -32,7 +32,9 @@ const BreadcrumbsData: ILink[] = [
 const HeaderGalleryComponent = (props: IHeaderGalleryComponentProps) => {
   const [currentImage, setCurrentImage] = React.useState(0);
   const smallImagesStart = 2;
-
+  // React.useEffect(() => {
+  //   window.scroll(0, 0);
+  // }, []);
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
