@@ -70,7 +70,7 @@ exports[`[Footer] should render component without crashing 1`] = `
           </li>
         </ul>
         <a
-          href="/"
+          href="https://www.webbio.nl"
           role="button"
         >
           <IconComponent

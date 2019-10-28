@@ -24,5 +24,6 @@ export const generateDummyFooterData = (): IFooterModule => ({
       url: "/"
     }
   ],
-  logo: Logo
+  logo: Logo,
+  facebookURL: "https://www.webbio.nl"
 });
