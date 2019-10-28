@@ -33,7 +33,7 @@ const Button = (props: IButtonProps) => {
 
     return (
       <span className={styles[`icon-${newMargin}`]}>
-        <IconComponent icon={icon} size="14px" strokeColor="black" fillColor="transparent" />
+        <IconComponent icon={icon} size="14px" fillColor="black" />
       </span>
     );
   };

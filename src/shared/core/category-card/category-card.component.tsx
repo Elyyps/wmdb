@@ -28,7 +28,7 @@ const CategoryCard = ({ onClick, title, count, image, icon }: ICategoryCardProps
         {count && <span>({count})</span>}
       </h3>
       <div className={styles["category-card__arrow"]}>
-        <IconComponent icon={Arrow} size={"12px"} strokeColor="#b7b7b7" />
+        <IconComponent icon={Arrow} size={"12px"} fillColor="#34aadf" />
       </div>
     </div>
 

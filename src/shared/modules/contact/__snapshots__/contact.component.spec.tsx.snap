@@ -170,7 +170,9 @@ deelnemers zijn op dit moment Mister X al tegen gekomen.
                 "url": "",
               }
             }
+            contactName="Roel van den Berg"
             content="Ook al zijn wij vaak op pad met een groep, wij doen altijd ons best u te woord te staan."
+            phone="+31 020 6154 183"
             title="Telefonisch contact"
           />
         </div>
@@ -205,6 +207,7 @@ deelnemers zijn op dit moment Mister X al tegen gekomen.
                 to=""
               >
                 <IconComponent
+                  fillColor="black"
                   icon="mail.svg"
                   size="15px"
                 />
@@ -253,10 +256,12 @@ deelnemers zijn op dit moment Mister X al tegen gekomen.
             button={
               Object {
                 "title": "Toon telefoonnummer",
-                "url": "",
+                "url": "#",
               }
             }
+            contactName="Roel van den Berg"
             content="Ook al zijn wij vaak op pad met een groep, wij doen altijd ons best u te woord te staan."
+            phone="+31 020 6154 183"
             title="Telefonisch contact"
           />
         </div>

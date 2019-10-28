@@ -32,9 +32,7 @@ const BreadcrumbsData: ILink[] = [
 const HeaderGalleryComponent = (props: IHeaderGalleryComponentProps) => {
   const [currentImage, setCurrentImage] = React.useState(0);
   const smallImagesStart = 2;
-  // React.useEffect(() => {
-  //   window.scroll(0, 0);
-  // }, []);
+
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -71,14 +69,14 @@ const HeaderGalleryComponent = (props: IHeaderGalleryComponentProps) => {
                   onClick={() => setCurrentImage(currentImage - 1)}
                   role="button"
                 >
-                  <IconComponent icon={getArrow(true)} size={"8px"} strokeColor={"white"} fillColor={"none"} />
+                  <IconComponent icon={getArrow(true)} size={"8px"} fillColor={"white"} />
                 </div>
                 <div
                   className={styles["header-gallery__slider_arrows_next"]}
                   onClick={() => setCurrentImage(currentImage + 1)}
                   role="button"
                 >
-                  <IconComponent icon={getArrow(false)} size={"8px"} strokeColor={"white"} fillColor={"none"} />
+                  <IconComponent icon={getArrow(false)} size={"8px"} fillColor={"white"} />
                 </div>
               </div>
             </div>

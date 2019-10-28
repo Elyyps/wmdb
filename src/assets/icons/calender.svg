@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="29" height="32" viewBox="0 0 29 32"><title>Asset 82</title><path d="M25,29V11H3V29ZM21,0h3V3h1.75A3.14,3.14,0,0,1,28,4a3.14,3.14,0,0,1,1,2.27v22.5A3.35,3.35,0,0,1,25.75,32H3.25A3.1,3.1,0,0,1,.94,31,3.18,3.18,0,0,1,0,28.75V6.25A3.18,3.18,0,0,1,.94,4,3.1,3.1,0,0,1,3.25,3H5V0H8V3H21Zm1,17v8H14V17Z"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="29px" height="32px" viewBox="0 0 29 32" enable-background="new 0 0 29 32" xml:space="preserve">
+<path d="M25,29V11H3v18L25,29L25,29z M21,0h3v3h1.75c0.86,0,1.61,0.33,2.27,0.98C28.67,4.64,29,5.39,29,6.25v22.51
+	c0,0.86-0.33,1.61-0.98,2.27S26.61,32,25.75,32H3.25c-0.87,0.01-1.71-0.34-2.3-0.98C0.31,30.36,0,29.61,0,28.75V6.25
+	c0-0.86,0.31-1.61,0.94-2.27c0.59-0.64,1.43-1,2.3-0.98H5V0h3v3h13C21,3,21,0,21,0z M22,17v8h-8v-8H22L22,17z"/>
+</svg>

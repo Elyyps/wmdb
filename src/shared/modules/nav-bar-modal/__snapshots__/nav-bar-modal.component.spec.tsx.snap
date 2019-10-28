@@ -32,6 +32,7 @@ exports[`[NavBarModal] should render component without crashing 1`] = `
             role="button"
           >
             <IconComponent
+              fillColor="white"
               icon={
                 Object {
                   "ReactComponent": [Function],
@@ -40,6 +41,7 @@ exports[`[NavBarModal] should render component without crashing 1`] = `
                 }
               }
               size="12px"
+              strokeColor="white"
             />
             <span
               className="uk-visible@m"

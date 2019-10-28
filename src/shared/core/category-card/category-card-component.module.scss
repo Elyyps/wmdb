@@ -29,23 +29,29 @@
     position: relative;
     display: flex;
     align-items: center;
-    flex: 1 1 auto;
     > div {
       display: flex;
       align-items: center;
     }
-    &__icon {  
+    &__icon {
       margin-right: 24px;
+      font-size: 16px;
+
+      @media (min-width: $breakpoint-medium) {
+        margin-right: 16px;
+      }
       @media (max-width: $breakpoint-xsmall-max) {
         margin-right: 8px;
       }
     }
     @media (max-width: $breakpoint-xsmall-max) {
+      width: 94%;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
-    @media (min-width: $breakpoint-medium) {
+    @media (min-width: $breakpoint-medium-max) {
       font-size: 18px;
     }
     > span {
@@ -62,10 +68,6 @@
     color: $brand-primary;
     @media (max-width: $breakpoint-xsmall-max) {
       right: 16px;
-    }
-    path {
-      stroke: currentColor;
-      fill: none !important;
     }
   }
 

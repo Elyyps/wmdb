@@ -74,8 +74,10 @@ exports[`[Footer] should render component without crashing 1`] = `
           role="button"
         >
           <IconComponent
+            fillColor="#3b5998"
             icon="facebook.svg"
             size="24px"
+            strokeColor="white"
           />
         </a>
       </div>

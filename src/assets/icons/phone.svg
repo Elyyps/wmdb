@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.13" height="33" viewBox="0 0 32.13 33"><defs><mask id="a" x="0" y="0" width="32.13" height="33.04" maskUnits="userSpaceOnUse"><path d="M22.56,25.75V5.4H9.49V25.75ZM16,31.54a2.06,2.06,0,0,0,1.53-.65,2.16,2.16,0,1,0-3.06-3.06,2.13,2.13,0,0,0,0,3.06A2.06,2.06,0,0,0,16,31.54ZM21.88,1a3.43,3.43,0,0,1,2.56,1.09,3.59,3.59,0,0,1,1,2.59V29.36a3.61,3.61,0,0,1-1,2.59A3.43,3.43,0,0,1,21.88,33H10.24A3.4,3.4,0,0,1,7.69,32a3.58,3.58,0,0,1-1.06-2.59V4.72A3.56,3.56,0,0,1,7.69,2.13,3.4,3.4,0,0,1,10.24,1Z" fill="#fff" fill-rule="evenodd"/></mask></defs><title>Asset 65</title><g mask="url(#a)"><path d="M0,1,32.13,0V32L0,33Z" fill="#101010" fill-rule="evenodd"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+<path id="a_2_" fill-rule="evenodd" clip-rule="evenodd" d="M22.5,24.72V4.36H9.43v20.36H22.5z M15.96,30.5
+	c0.59,0,1.1-0.22,1.53-0.65c0.43-0.43,0.65-0.94,0.65-1.53s-0.22-1.1-0.65-1.53c-0.43-0.43-0.94-0.65-1.53-0.65
+	c-0.59,0-1.1,0.22-1.53,0.65c-0.43,0.43-0.65,0.94-0.65,1.53s0.22,1.1,0.65,1.53C14.86,30.29,15.37,30.5,15.96,30.5z M21.82,0
+	c1,0,1.85,0.36,2.55,1.09c0.7,0.73,1.06,1.59,1.06,2.59v24.65c0,1-0.35,1.86-1.06,2.59c-0.7,0.73-1.55,1.09-2.55,1.09H10.18
+	c-1,0-1.85-0.36-2.55-1.09c-0.7-0.73-1.06-1.59-1.06-2.59V3.68c0-1,0.35-1.86,1.06-2.59C8.33,0.36,9.18,0,10.18,0H21.82z"/>
+</svg>

@@ -26,7 +26,7 @@ const CompanyOutingCardComponent = ({
   <div className={styles["company-outing-card"]}>
     <div className={styles["company-outing-card__head"]}>
       <div className={styles["company-outing-card__date"]}>{data}</div>
-      {icon && <IconComponent icon={icon} size="24px" fillColor={"#969696"} />}
+      {icon && <IconComponent icon={icon} size="24px" fillColor={"#969696"} strokeColor="black" />}
     </div>
     <div className={styles["company-outing-card__image"]}>
       <ImageComponent src={image} />

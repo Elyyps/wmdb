@@ -34,10 +34,10 @@ const IconComponent: React.FunctionComponent<IconComponentProps> = props => (
     style={
       props.size || props.width || props.height
         ? {
-            fill: props.fillColor ? props.fillColor : "transparent",
+            fill: props.fillColor ? props.fillColor : "black",
             width: props.size ? props.size : props.width,
             height: props.size ? props.size : props.height,
-            stroke: props.strokeColor ? props.strokeColor : "black",
+            stroke: props.strokeColor ? props.strokeColor : "none",
             strokeWidth: props.strokeWidth
           }
         : {

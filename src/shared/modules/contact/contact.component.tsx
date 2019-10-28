@@ -64,6 +64,8 @@ const ContactComponent = ({ contactModule }: IContactComponentProps) => {
                 title={"Telefonisch contact"}
                 content={"Ook al zijn wij vaak op pad met een groep, wij doen altijd ons best u te woord te staan."}
                 button={{ title: "Toon telefoonnummer", url: "" }}
+                phone={"+31 020 6154 183"}
+                contactName="Roel van den Berg"
               />
             </div>
           </div>
@@ -83,7 +85,7 @@ const ContactComponent = ({ contactModule }: IContactComponentProps) => {
                   />
                   <div className={styles["contact-actions-mail"]}>
                     <LinkComponent to="">
-                      <IconComponent icon={MAIL} size="15px" />
+                      <IconComponent icon={MAIL} size="15px" fillColor="black" />
                       <span className={styles["contact-actions-mail-span"]}>Deel via mail</span>
                     </LinkComponent>
                   </div>
@@ -118,7 +120,9 @@ const ContactComponent = ({ contactModule }: IContactComponentProps) => {
                 <ContactTelephoneComponent
                   title={"Telefonisch contact"}
                   content={"Ook al zijn wij vaak op pad met een groep, wij doen altijd ons best u te woord te staan."}
-                  button={{ title: "Toon telefoonnummer", url: "" }}
+                  button={{ title: "Toon telefoonnummer", url: "#" }}
+                  phone={"+31 020 6154 183"}
+                  contactName="Roel van den Berg"
                 />
               </div>
             )}
