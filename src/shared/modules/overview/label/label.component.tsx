@@ -12,7 +12,7 @@ const LabelComponent = ({ label, onClick }: ILabelComponentProps) => (
   <div className={style["label"]}>
     <span>{label}</span>
     <button className={style["label-close"]} onClick={onClick}>
-      <IconComponent icon={CLOSE} size={"8px"} />
+      <IconComponent icon={CLOSE} size={"8px"} fillColor="black" />
     </button>
   </div>
 );

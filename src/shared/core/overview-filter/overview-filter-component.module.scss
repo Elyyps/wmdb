@@ -101,10 +101,11 @@
   &__item {
     > * {
       margin: 8px 0;
+      display: block;
     }
     label,
     li {
-      width: fit-content;
+      display: table;
     }
 
     padding: 6px 0;

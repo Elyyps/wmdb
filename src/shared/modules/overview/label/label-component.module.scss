@@ -1,4 +1,9 @@
 .label {
+  >*{
+
+    max-height:30px ;
+  }
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -8,9 +13,13 @@
   font-size: 14px;
   border-radius: 2px;
   &-close {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 6px 6px 6px 8px;
     border: none;
     background-color: transparent;
+ 
     cursor: pointer;
     &:focus {
       outline: none;

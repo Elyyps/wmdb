@@ -28,7 +28,7 @@ const FooterComponent = (props: IFooterComponentProps) => (
           </ul>
 
           <a role="button" href={"/"}>
-            <IconComponent icon={Facebook} size="24px" fillColor="#3b5998" strokeColor="white" />
+            <IconComponent icon={Facebook} size="24px" fillColor="#3b5998" strokeColor="none" />
           </a>
         </div>
       </div>

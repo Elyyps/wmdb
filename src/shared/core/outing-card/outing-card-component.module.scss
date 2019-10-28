@@ -169,15 +169,20 @@
       h3,
       h4,
       h5 {
-        width: fit-content;
+        display: table;
         margin: 0;
         @media (min-width: $breakpoint-small) {
           max-height: 50px;
         }
+      
         @media (max-width: $breakpoint-small) {
-margin-top: 8px;        }
+        margin-top: 8px; 
+       }
       }
       a {
+        @media (max-width: $breakpoint-large) {
+          font-size: 17px;
+        }
         color: $global-color;
         text-decoration: none;
       }

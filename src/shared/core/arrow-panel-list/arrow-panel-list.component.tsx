@@ -23,7 +23,7 @@ const ArrowPanelListComponent = (props: IArrowPanelListComponentProps) => {
       <div style={!title ? { marginTop: -24 } : {}} className={styles["arrow-panel-list__head"]}>
         {icon && (
           <div className={styles["arrow-panel-list__head__icon"]}>
-            <IconComponent icon={icon} size="34px" />
+            <IconComponent icon={icon} size="32px" />
           </div>
         )}
         {title && <h3>{title}</h3>}
