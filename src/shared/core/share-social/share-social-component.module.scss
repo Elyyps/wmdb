@@ -1,0 +1,37 @@
+.share {
+  > div:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  &__social-link {
+    display: inline-flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    &:hover {
+      .share__social-title {
+        color: #34aadf;
+      }
+      .share__social-icon {
+        svg {
+          fill: #34aadf;
+        }
+      }
+    }
+    width: 100%;
+  }
+
+  &__social-icon {
+    width: 25px;
+    height: 25px;
+    border-radius: $global-border-radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__social-title {
+    font-size: 15px;
+    color: #101010;
+  }
+}

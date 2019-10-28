@@ -203,20 +203,16 @@ deelnemers zijn op dit moment Mister X al tegen gekomen.
             <div
               className="contact-actions-mail"
             >
-              <LinkComponent
-                to=""
-              >
-                <IconComponent
-                  fillColor="black"
-                  icon="mail.svg"
-                  size="15px"
-                />
-                <span
-                  className="contact-actions-mail-span"
-                >
-                  Deel via mail
-                </span>
-              </LinkComponent>
+              <ShareSocialComponent
+                email={
+                  Object {
+                    "nameSocialShare": "Deel via mail",
+                    "subject": "Webbio email test for WMDB",
+                    "title": "Hi , I'm sending this email to inform you that ....",
+                    "url": "https://www.webbio.nl",
+                  }
+                }
+              />
             </div>
           </div>
         </div>

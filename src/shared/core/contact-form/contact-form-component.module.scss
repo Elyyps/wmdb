@@ -49,6 +49,9 @@
     font-weight: 600;
   }
   &-bottom {
+    label {
+      display: table;
+    }
     margin-top: 16px;
     button {
       margin-top: 24px;

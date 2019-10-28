@@ -14,9 +14,8 @@ import { ContactDataComponent } from "./contact-data.component";
 import RECTANGLE from "@assets/rectangle.png";
 import { AdBannerComponent } from "@app/core/ad-banner";
 import { Button } from "@app/core/button";
-import { LinkComponent } from "@app/core/link";
-import MAIL from "@assets/icons/mail.svg";
 import { IContact } from "@app/api/modules/contact/contact";
+import { ShareSocialComponent } from "@app/core/share-social";
 
 export interface IContactComponentProps {
   contactModule: IContact;
@@ -84,10 +83,14 @@ const ContactComponent = ({ contactModule }: IContactComponentProps) => {
                     type={"button"}
                   />
                   <div className={styles["contact-actions-mail"]}>
-                    <LinkComponent to="">
-                      <IconComponent icon={MAIL} size="15px" fillColor="black" />
-                      <span className={styles["contact-actions-mail-span"]}>Deel via mail</span>
-                    </LinkComponent>
+                    <ShareSocialComponent
+                      email={{
+                        title: "Hi , I'm sending this email to inform you that ....",
+                        subject: "Webbio email test for WMDB",
+                        url: "https://www.webbio.nl",
+                        nameSocialShare: "Deel via mail"
+                      }}
+                    />
                   </div>
                 </div>
               )}
