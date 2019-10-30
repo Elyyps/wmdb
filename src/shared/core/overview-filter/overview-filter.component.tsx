@@ -36,6 +36,8 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
   const [filterText, setFilterText] = React.useState("");
   const [keywordText, setKeywordText] = React.useState("");
   const MEDIUM_BREAKPOINT = 960;
+  const radix = 10;
+
   const {
     onFilterChange,
     searchPlaceholder,
@@ -211,7 +213,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
               <InputRange
                 maxValue={rangeMax}
                 minValue={0}
-                value={range}
+                value={range ? parseInt(range, radix) : 0}
                 onChangeComplete={event => {
                   const numberRange = parseInt(event.toString(), 0);
                   setRange(numberRange);
