@@ -28,6 +28,8 @@ const Component = (props: IHeroComponentProps & RouteComponentProps) => {
   const [provincieText, setProvincieText] = React.useState("");
   const [keywordText, setKeywordText] = React.useState("");
   const [numberPersonText, setNumberPersonText] = React.useState("");
+  const maxPerson = 200;
+  const radix = 10;
   const dropdownCompanyItems = filterSections.map(item => ({ value: item.id, text: item.title }));
   const onSubmit = () => {
     let finalUrl = "/overzicht";
@@ -55,6 +57,12 @@ const Component = (props: IHeroComponentProps & RouteComponentProps) => {
 
     props.history.push(finalUrl);
   };
+
+  React.useEffect(() => {
+    parseInt(numberPersonText, radix) > maxPerson &&
+      setNumberPersonText(numberPersonText.substring(0, numberPersonText.length - 1));
+    parseInt(numberPersonText, radix) <= 0 && setNumberPersonText("0");
+  }, [numberPersonText]);
 
   return (
     <div className={styles["hero"]}>
@@ -90,7 +98,9 @@ const Component = (props: IHeroComponentProps & RouteComponentProps) => {
                 onChangeText={setNumberPersonText}
                 name={"text"}
                 min={0}
+                max={maxPerson}
                 type={"number"}
+                value={numberPersonText}
                 placeholder={numberPersonsPlaceholder}
               />
             </div>

@@ -12,11 +12,11 @@ exports[`[HeaderGallery] should render component without crashing 1`] = `
         Array [
           Object {
             "title": "Home",
-            "url": "#",
+            "url": "/",
           },
           Object {
             "title": "Citygames in Amsterdam",
-            "url": "#",
+            "url": "/overzicht",
           },
           Object {
             "title": "Wie is de mol?",

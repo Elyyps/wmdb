@@ -10,5 +10,5 @@ Wallen, of gaat u liever Zuid.
 </p>
 
 <p>Nog niet alles duidelijk? Stel je vraag!</p>`,
-  button: { title: "Stel je vraag", url: "/" }
+  button: { title: "Stel je vraag", url: "/info-page" }
 });

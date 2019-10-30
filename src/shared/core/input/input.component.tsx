@@ -9,10 +9,13 @@ import { IconComponent } from "@app/core/icon";
 interface IInputProps {
   classModify?: string;
   errorMessage?: string;
+  hasCross?: boolean;
   icon?: string;
   isError?: string;
   isSuccess?: boolean;
   label?: string;
+  max?: number;
+  maxLength?: number;
   min?: number;
   name: string;
   onBlur?: (text: string) => void;
@@ -26,7 +29,22 @@ interface IInputProps {
 }
 
 const Input = (props: IInputProps) => {
-  const { name, type, style, placeholder, classModify, icon, label, errorMessage, isSuccess, value, min } = props;
+  const {
+    name,
+    hasCross,
+    type,
+    style,
+    placeholder,
+    classModify,
+    maxLength,
+    icon,
+    label,
+    errorMessage,
+    isSuccess,
+    value,
+    min,
+    max
+  } = props;
   const inputClassName = classNames(styles["input"], {
     [styles[`input--${classModify}`]]: classModify
   });
@@ -78,13 +96,16 @@ const Input = (props: IInputProps) => {
             placeholder={placeholder}
             className={inputClassName}
             name={name}
+            maxLength={maxLength}
             step={1}
             value={values}
             style={style}
             min={min}
+            max={max}
           />
+
           {icon && <IconComponent icon={icon} size={"15px"} />}
-          {values && !isSuccess && (
+          {values && !isSuccess && hasCross && (
             <div role={"button"} className={styles["form__item-icon"]} onClick={handelClear}>
               <IconComponent icon={Cross} size={"10px"} />
             </div>

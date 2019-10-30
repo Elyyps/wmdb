@@ -8,13 +8,22 @@ exports[`[OverviewFilter] should render component without crashing 1`] = `
     className="button-search uk-hidden@m"
     onClick={[Function]}
   >
-    <IconComponent
-      icon="search.svg"
-      size="15px"
-    />
-    <span>
-      Plaats, regio of provincie
-    </span>
+    <div>
+      <IconComponent
+        icon="search.svg"
+        size="15px"
+      />
+      <span>
+        Plaats, regio of provincie
+      </span>
+    </div>
+    <div
+      className="button-search-count"
+    >
+      <span>
+        0
+      </span>
+    </div>
   </button>
   <div
     className="overview-filter false"
@@ -33,6 +42,7 @@ exports[`[OverviewFilter] should render component without crashing 1`] = `
         value=""
       />
     </div>
+    <br />
     <div
       className="overview-filter__item"
       key="0"
@@ -298,7 +308,7 @@ exports[`[OverviewFilter] should render component without crashing 1`] = `
       />
     </div>
     <div
-      className="overview-filter__item"
+      className="overview-filter__item uk-visible@m"
     >
       <h5>
         Zoekwoord
@@ -314,7 +324,7 @@ exports[`[OverviewFilter] should render component without crashing 1`] = `
       className="overview-filter__item"
     >
       <h5>
-        Personen
+        Personen 
       </h5>
       <div
         className="input-range__wrapper"
@@ -341,7 +351,7 @@ exports[`[OverviewFilter] should render component without crashing 1`] = `
           onChange={[Function]}
           onChangeComplete={[Function]}
           step={1}
-          value={0}
+          value={null}
         />
         <div
           className="input-range__items"

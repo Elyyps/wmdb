@@ -5,31 +5,32 @@ exports[`[NotFound] should render component without crashing 1`] = `
   className="not-found"
 >
   <div
-    className="not-found__table-cell"
+    className=" not-found__container uk-container"
   >
     <div
-      className="not-found__container"
+      className="not-found__icon"
     >
       <IconComponent
         fillColor="white"
-        height="220px"
+        height="376px"
         icon="WMDB2.svg"
-        width="160px"
+        width="182px"
       />
+    </div>
+    <div
+      className="not-found__content"
+    >
+      <h2>
+        Oeps!
+      </h2>
+      <span>
+        Pagina niet gevonden. We helpen je graag de weg weer terug te vinden.
+      </span>
       <div
-        className="not-found__content"
+        className="not-found__content__button"
       >
-        <div
-          className="not-found__content-title"
-        >
-          <h2>
-            Oeps!
-          </h2>
-        </div>
-        <span>
-          Pagina niet gevonden. We helpen je graag de weg weer terug te vinden.
-        </span>
         <Button
+          href="/"
           title="WMDB homepage"
         />
       </div>

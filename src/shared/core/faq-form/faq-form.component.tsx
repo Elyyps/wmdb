@@ -24,7 +24,7 @@ const InnerForm = (props: FormikProps<IFAQFormValues>) => {
           label={"Naam"}
           name={"name"}
           errorMessage={touched.name ? errors.name : ""}
-          onChangeText={(e: any) => {
+          onChange={(e: any) => {
             props.handleChange(e);
           }}
           onBlur={(e: any) => {
@@ -36,7 +36,7 @@ const InnerForm = (props: FormikProps<IFAQFormValues>) => {
           label={"E-mailadres"}
           name={"emailAddress"}
           errorMessage={touched.emailAddress ? errors.emailAddress : ""}
-          onChangeText={(e: any) => {
+          onChange={(e: any) => {
             props.handleChange(e);
           }}
           onBlur={(e: any) => {

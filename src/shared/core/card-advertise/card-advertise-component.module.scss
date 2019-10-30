@@ -9,8 +9,7 @@
     flex: 1 1 100%;
     border-radius: $global-border-radius;
     overflow: hidden;
-    @media (min-width: $breakpoint-xsmall-max){
-
+    @media (min-width: $breakpoint-xsmall-max) {
       margin-top: 24px;
     }
 
@@ -77,6 +76,8 @@
     height: 1px;
 
     padding-top: 24px;
-    border-bottom: 1px solid $gray-light-secondary;
+    @media (min-width: $breakpoint-small) {
+      border-bottom: 1px solid $gray-light-secondary;
+    }
   }
 }

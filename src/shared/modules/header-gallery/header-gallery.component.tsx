@@ -17,11 +17,11 @@ export interface IHeaderGalleryComponentProps {
 const BreadcrumbsData: ILink[] = [
   {
     title: "Home",
-    url: "#"
+    url: "/"
   },
   {
     title: "Citygames in Amsterdam",
-    url: "#"
+    url: "/overzicht"
   },
   {
     title: "Wie is de mol?",

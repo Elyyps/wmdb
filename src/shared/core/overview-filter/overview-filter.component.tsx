@@ -107,6 +107,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
 
   React.useEffect(() => {
     initializeFilter();
+    setTempRange(range);
   }, []);
 
   React.useEffect(() => {
@@ -116,8 +117,13 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
   return (
     <div className={styles["overview-filter-wrapper"]}>
       <button className={`${styles["button-search"]} uk-hidden@m`} onClick={handleClick}>
-        <IconComponent icon={Search} size={"15px"} />
-        <span>{searchPlaceholder}</span>
+        <div>
+          <IconComponent icon={Search} size={"15px"} />
+          <span>{searchPlaceholder}</span>
+        </div>
+        <div className={styles["button-search-count"]}>
+          <span>{checkedItems.length}</span>
+        </div>
       </button>
 
       <div className={`${styles["overview-filter"]} ${isActive && styles["isActive"]}`}>
@@ -133,6 +139,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
               }}
               role="button"
               className={"uk-hidden@m"}
+              style={{ cursor: "pointer" }}
             >
               Wissen
             </span>
@@ -152,6 +159,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
             />
           </div>
         )}
+
         {isActive && (
           <Input
             onChange={(value: string) => {
@@ -164,6 +172,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
             name={"search"}
           />
         )}
+        <br />
         {filterItems &&
           filterItems.map((filterItem, key) => (
             <div key={key} className={styles["overview-filter__item"]}>
@@ -185,7 +194,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
             </div>
           ))}
 
-        <div className={styles["overview-filter__item"]}>
+        <div className={`${styles["overview-filter__item"]} uk-visible@m`}>
           <h5>Zoekwoord</h5>
           <Input
             value={keywordText}
@@ -199,12 +208,12 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
         </div>
         {rangeMax && (
           <div className={styles["overview-filter__item"]}>
-            <h5>Personen</h5>
+            <h5>Personen {tempRange}</h5>
             <div className="input-range__wrapper">
               <InputRange
                 maxValue={rangeMax}
                 minValue={0}
-                value={tempRange ? tempRange : 0}
+                value={range}
                 onChangeComplete={event => {
                   const numberRange = parseInt(event.toString(), 0);
                   setRange(numberRange);
@@ -233,7 +242,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
         )}
 
         {sidebarList && (
-          <div className={`${styles["overview-filter__item"]} ${styles["divider"]}`}>
+          <div className={`${styles["overview-filter__item"]} ${styles["divider"]} uk-hidden@s `}>
             <h5>{sidebarList.title}</h5>
             <ul className={"sidebar-list"}>
               {sidebarList.list &&

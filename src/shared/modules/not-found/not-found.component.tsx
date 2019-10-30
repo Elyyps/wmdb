@@ -8,15 +8,15 @@ export interface INotFoundComponentProps {}
 
 const NotFoundComponent = (props: INotFoundComponentProps) => (
   <div className={styles["not-found"]}>
-    <div className={styles["not-found__table-cell"]}>
-      <div className={styles["not-found__container"]}>
-        <IconComponent height={"220px"} width="160px" fillColor="white" icon={PlaceholderImage} />
-        <div className={styles["not-found__content"]}>
-          <div className={styles["not-found__content-title"]}>
-            <h2>Oeps!</h2>
-          </div>
-          <span>Pagina niet gevonden. We helpen je graag de weg weer terug te vinden.</span>
-          <Button title="WMDB homepage" />
+    <div className={` ${styles["not-found__container"]} uk-container`}>
+      <div className={styles["not-found__icon"]}>
+        <IconComponent height={"376px"} width="182px" fillColor="white" icon={PlaceholderImage} />
+      </div>
+      <div className={styles["not-found__content"]}>
+        <h2>Oeps!</h2>
+        <span>Pagina niet gevonden. We helpen je graag de weg weer terug te vinden.</span>
+        <div className={styles["not-found__content__button"]}>
+          <Button title="WMDB homepage" href="/" />
         </div>
       </div>
     </div>

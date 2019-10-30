@@ -103,7 +103,6 @@ const OverviewComponent = (props: IOverviewComponentProps) => {
           }
         });
       }
-
       if (parsed.keyword) keyword = parsed.keyword;
       if (parsed.region) region = parsed.region;
       if (parsed.region) region = parsed.region;
@@ -166,7 +165,7 @@ const OverviewComponent = (props: IOverviewComponentProps) => {
           <div className="uk-width-1-4@m">
             <OverviewFilterComponent
               searchPlaceholder="Plaats, regio of provincie"
-              range={0}
+              range={currentFilter.range}
               sidebarList={{ title: "Handige links", list: ["Link 1", "Link 2"] }}
               currentFilter={currentFilter}
               onFilterChange={changed => {

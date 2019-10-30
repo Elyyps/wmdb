@@ -25,7 +25,7 @@ Wallen, of gaat u liever Zuid.
       className="about-page-button"
     >
       <Button
-        href="/"
+        href="/info-page"
         title="Stel je vraag"
         variant="primary"
       />

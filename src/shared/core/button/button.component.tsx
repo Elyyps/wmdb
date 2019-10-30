@@ -6,6 +6,7 @@ import classNames from "classnames";
 import { IconComponent } from "@app/core/icon";
 
 export interface IButtonProps {
+  disabled?: boolean;
   fullWidth?: boolean;
   href?: string;
   icon?: string;
@@ -20,7 +21,21 @@ export interface IButtonProps {
 }
 
 const Button = (props: IButtonProps) => {
-  const { onClick, href, variant, target, title, type, icon, position, large, fullWidth, iconStroke, ...other } = props;
+  const {
+    onClick,
+    disabled,
+    href,
+    variant,
+    target,
+    title,
+    type,
+    icon,
+    position,
+    large,
+    fullWidth,
+    iconStroke,
+    ...other
+  } = props;
   const classModify = variant || "default";
   const buttonClassName = classNames(styles["button"], {
     [styles[`button--${classModify}`]]: classModify
@@ -61,6 +76,7 @@ const Button = (props: IButtonProps) => {
           {...other}
           type={type}
           className={buttonClassName}
+          disabled={disabled}
         >
           <span>{title}</span>
 

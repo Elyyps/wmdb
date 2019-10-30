@@ -46,7 +46,7 @@ const InnerForm = (props: FormikProps<IContactFormValues>) => {
     props.handleChange(newValue);
     props.setFieldValue(id, newValue);
   };
-  const handleChange = (event: EventListener, isWoman: boolean) => {
+  const handleChange = (event: any, isWoman: boolean) => {
     if (isWoman) {
       setIsMan(false);
     } else {
@@ -80,7 +80,7 @@ const InnerForm = (props: FormikProps<IContactFormValues>) => {
         label="Naam"
         name="name"
         errorMessage={touched.name ? errors.name : ""}
-        onChangeText={(e: any) => {
+        onChange={(e: any) => {
           props.handleChange(e);
         }}
         onBlur={(e: any) => {
@@ -92,7 +92,7 @@ const InnerForm = (props: FormikProps<IContactFormValues>) => {
         label={"E-mailadres"}
         name={"emailAddress"}
         errorMessage={touched.emailAddress ? errors.emailAddress : ""}
-        onChangeText={(e: any) => {
+        onChange={(e: any) => {
           props.handleChange(e);
         }}
         onBlur={(e: any) => {
@@ -104,7 +104,7 @@ const InnerForm = (props: FormikProps<IContactFormValues>) => {
         label={"Telefoonnummer"}
         name={"phone"}
         errorMessage={touched.phone ? errors.phone : ""}
-        onChangeText={(e: any) => {
+        onChange={(e: any) => {
           props.handleChange(e);
         }}
         onBlur={(e: any) => {
@@ -117,7 +117,7 @@ const InnerForm = (props: FormikProps<IContactFormValues>) => {
         name={"numberPerson"}
         type="number"
         errorMessage={touched.numberPerson ? errors.numberPerson : ""}
-        onChangeText={(e: any) => {
+        onChange={(e: any) => {
           props.handleChange(e);
         }}
         onBlur={(e: any) => {
