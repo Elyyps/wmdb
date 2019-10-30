@@ -33,7 +33,6 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
   const [isActive, setIsActive] = React.useState(false);
   const [checkedItems, setCheckedItems] = React.useState<ICheckboxUnique[]>([]);
   const [range, setRange] = React.useState<any>(null);
-  const [tempRange, setTempRange] = React.useState<any>(null);
   const [filterText, setFilterText] = React.useState("");
   const [keywordText, setKeywordText] = React.useState("");
   const MEDIUM_BREAKPOINT = 960;
@@ -107,7 +106,6 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
 
   React.useEffect(() => {
     initializeFilter();
-    setTempRange(range);
   }, []);
 
   React.useEffect(() => {
@@ -208,7 +206,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
         </div>
         {rangeMax && (
           <div className={styles["overview-filter__item"]}>
-            <h5>Personen {tempRange}</h5>
+            <h5>Personen </h5>
             <div className="input-range__wrapper">
               <InputRange
                 maxValue={rangeMax}
@@ -225,11 +223,11 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
                   });
                 }}
                 onChange={event => {
-                  setTempRange(event);
+                  setRange(event);
                 }}
               />
               <div className="input-range__items">
-                <span>{tempRange ? tempRange : 0}+</span>
+                <span>{0}</span>
                 <span>{rangeMax}+</span>
               </div>
             </div>

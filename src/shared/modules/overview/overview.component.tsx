@@ -177,10 +177,10 @@ const OverviewComponent = (props: IOverviewComponentProps) => {
           </div>
           <div className="uk-width-3-4@m">
             <div className={`${styles["overview-head"]} uk-visible@m`}>
-              {currentFilter.checkedItems.length > 0 && (
+              {(currentFilter.checkedItems.length > 0 || currentFilter.range !== 0) && (
                 <div className={styles["overview-head__subtitle"]}>
                   <span> {`${totalCards}  uitjes gevonden gebaseerd op de volgende filters:`}</span>
-                  <Link to="#" onClick={() => setCurrentFilter({ ...currentFilter, checkedItems: [] })}>
+                  <Link to="#" onClick={() => setCurrentFilter({ ...currentFilter, checkedItems: [], range: 0 })}>
                     Alle filters wissen
                   </Link>
                 </div>

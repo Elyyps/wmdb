@@ -358,7 +358,6 @@ exports[`[OverviewFilter] should render component without crashing 1`] = `
         >
           <span>
             0
-            +
           </span>
           <span>
             100
