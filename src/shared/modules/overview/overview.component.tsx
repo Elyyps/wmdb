@@ -166,7 +166,7 @@ const OverviewComponent = (props: IOverviewComponentProps) => {
             <OverviewFilterComponent
               searchPlaceholder="Plaats, regio of provincie"
               range={currentFilter.range}
-              sidebarList={{ title: "Handige links", list: ["Link 1", "Link 2"] }}
+              sidebarList={{ title: "Handige links", list: ["www.link1.nl", "www.link2.nl"] }}
               currentFilter={currentFilter}
               onFilterChange={changed => {
                 setCurrentFilter(changed);

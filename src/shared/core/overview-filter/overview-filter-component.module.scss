@@ -131,6 +131,11 @@
     h4,
     h5,
     h6 {
+      display: flex;
+      justify-content: space-between;
+      span {
+        font-size: 14px;
+      }
       margin-top: 0px;
       margin-bottom: 4px;
     }

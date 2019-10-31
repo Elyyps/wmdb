@@ -17,13 +17,6 @@ exports[`[OverviewFilter] should render component without crashing 1`] = `
         Plaats, regio of provincie
       </span>
     </div>
-    <div
-      className="button-search-count"
-    >
-      <span>
-        0
-      </span>
-    </div>
   </button>
   <div
     className="overview-filter false"
@@ -325,6 +318,7 @@ exports[`[OverviewFilter] should render component without crashing 1`] = `
     >
       <h5>
         Personen 
+        <span />
       </h5>
       <div
         className="input-range__wrapper"

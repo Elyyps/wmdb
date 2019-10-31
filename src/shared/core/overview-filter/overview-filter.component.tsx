@@ -121,9 +121,11 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
           <IconComponent icon={Search} size={"15px"} />
           <span>{searchPlaceholder}</span>
         </div>
-        <div className={styles["button-search-count"]}>
-          <span>{checkedItems.length}</span>
-        </div>
+        {checkedItems.length > 0 && (
+          <div className={styles["button-search-count"]}>
+            <span>{checkedItems.length}</span>
+          </div>
+        )}
       </button>
 
       <div className={`${styles["overview-filter"]} ${isActive && styles["isActive"]}`}>
@@ -208,7 +210,9 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
         </div>
         {rangeMax && (
           <div className={styles["overview-filter__item"]}>
-            <h5>Personen </h5>
+            <h5>
+              Personen <span>{range}</span>
+            </h5>
             <div className="input-range__wrapper">
               <InputRange
                 maxValue={rangeMax}
@@ -229,7 +233,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
                 }}
               />
               <div className="input-range__items">
-                <span>{0}</span>
+                <span>0</span>
                 <span>{rangeMax}+</span>
               </div>
             </div>
@@ -242,7 +246,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
         )}
 
         {sidebarList && (
-          <div className={`${styles["overview-filter__item"]} ${styles["divider"]} uk-hidden@s `}>
+          <div className={`${styles["overview-filter__item"]} ${styles["divider"]} uk-visible@m `}>
             <h5>{sidebarList.title}</h5>
             <ul className={"sidebar-list"}>
               {sidebarList.list &&
