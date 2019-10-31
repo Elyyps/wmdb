@@ -31,7 +31,7 @@ exports[`[CompanyOuting] should render component without crashing 1`] = `
             content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc…"
             data="18 sep. 2017"
             icon="eten.svg"
-            image="img02.png"
+            image="https://picsum.photos/id/116/300/200"
             title="Blog titel"
           />
         </div>
@@ -48,7 +48,7 @@ exports[`[CompanyOuting] should render component without crashing 1`] = `
             content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc…"
             data="18 sep. 2017"
             icon="eten.svg"
-            image="img02.png"
+            image="https://picsum.photos/id/118/300/200"
             title="Blog titel"
           />
         </div>
@@ -65,7 +65,7 @@ exports[`[CompanyOuting] should render component without crashing 1`] = `
             content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc…"
             data="18 sep. 2017"
             icon="eten.svg"
-            image="img02.png"
+            image="https://picsum.photos/id/115/300/200"
             title="Blog titel"
           />
         </div>

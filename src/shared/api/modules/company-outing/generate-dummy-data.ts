@@ -1,6 +1,5 @@
 import { ICompanyOutingModule } from "./company-outing";
 import ETEN from "@assets/icons/eten.svg";
-import Image from "@assets/img02.png";
 
 export const generateCompanyOutingDummyData = (): ICompanyOutingModule => ({
   title: "Alles over het kiezen van een bedrijfsuitje",
@@ -13,7 +12,7 @@ export const generateCompanyOutingDummyData = (): ICompanyOutingModule => ({
       title: "Blog titel",
       content:
         "Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc…",
-      image: Image,
+      image: "https://picsum.photos/id/116/300/200",
       data: "18 sep. 2017",
       button: {
         title: "Lees meer",
@@ -25,7 +24,7 @@ export const generateCompanyOutingDummyData = (): ICompanyOutingModule => ({
       title: "Blog titel",
       content:
         "Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc…",
-      image: Image,
+      image: "https://picsum.photos/id/118/300/200",
       data: "18 sep. 2017",
       button: {
         title: "Lees meer",
@@ -37,7 +36,7 @@ export const generateCompanyOutingDummyData = (): ICompanyOutingModule => ({
       title: "Blog titel",
       content:
         "Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc…",
-      image: Image,
+      image: "https://picsum.photos/id/115/300/200",
       data: "18 sep. 2017",
       button: {
         title: "Lees meer",
