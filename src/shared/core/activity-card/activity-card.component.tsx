@@ -3,10 +3,10 @@ import styles from "./activity-card-component.module.scss";
 import { IconComponent } from "../icon";
 import Arrow from "@assets/icons/chevron-right.svg";
 export interface IActivityCardComponentProps {
-  title: string;
-  icon?: string;
-  total?: number | undefined;
   color?: string;
+  icon?: string;
+  title: string;
+  total?: number | undefined;
 }
 
 const ActivityCardComponent = ({ icon, title, total, color }: IActivityCardComponentProps) => (

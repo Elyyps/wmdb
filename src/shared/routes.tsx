@@ -7,7 +7,6 @@ import { OverviewPageComponent } from "./pages/overview/overview.component";
 import { NotFoundPageComponent } from "./pages/not-found/not-found-page";
 import { AdvertiserWMDBPageComponent } from "./pages/advertiser-wmdb/advertiser-wmdb-page";
 import { OrganizationsPageComponent } from "./pages/organizations/organizations-page";
-import { PlaygroundPage } from "./pages/playground/playground";
 
 const Routes: React.FunctionComponent = props => (
   <Switch>
@@ -18,7 +17,6 @@ const Routes: React.FunctionComponent = props => (
     <Route exact path="/adverteren" component={AdvertiserWMDBPageComponent} />
     <Route exact path="/organisaties" component={OrganizationsPageComponent} />
     <Route exact path="/not-found" component={NotFoundPageComponent} />
-    <Route exact path="/playground" component={PlaygroundPage} />
 
     <Route path="*" render={() => <Redirect to="/not-found" />} />
   </Switch>

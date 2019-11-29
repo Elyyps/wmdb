@@ -97,6 +97,7 @@ exports[`[Gallery] should render component without crashing 1`] = `
           className="gallery-images-item"
           key="0"
           onClick={[Function]}
+          role="button"
         >
           <ImageComponent
             src="img-1.jpg"
@@ -106,6 +107,7 @@ exports[`[Gallery] should render component without crashing 1`] = `
           className="gallery-images-item"
           key="1"
           onClick={[Function]}
+          role="button"
         >
           <ImageComponent
             src="img-2.png"
@@ -115,6 +117,7 @@ exports[`[Gallery] should render component without crashing 1`] = `
           className="gallery-images-item"
           key="2"
           onClick={[Function]}
+          role="button"
         >
           <ImageComponent
             src="img-3.png"
@@ -124,6 +127,7 @@ exports[`[Gallery] should render component without crashing 1`] = `
           className="gallery-images-item"
           key="3"
           onClick={[Function]}
+          role="button"
         >
           <ImageComponent
             src="img-4.png"
@@ -133,6 +137,7 @@ exports[`[Gallery] should render component without crashing 1`] = `
           className="gallery-images-item"
           key="4"
           onClick={[Function]}
+          role="button"
         >
           <ImageComponent
             src="img-5.png"
@@ -142,6 +147,7 @@ exports[`[Gallery] should render component without crashing 1`] = `
           className="gallery-images-item"
           key="5"
           onClick={[Function]}
+          role="button"
         >
           <ImageComponent
             src="img-6.png"
@@ -151,6 +157,7 @@ exports[`[Gallery] should render component without crashing 1`] = `
           className="gallery-images-item"
           key="6"
           onClick={[Function]}
+          role="button"
         >
           <ReactPlayer
             config={
@@ -259,6 +266,7 @@ exports[`[Gallery] should render component without crashing 1`] = `
           className="gallery-images-item"
           key="7"
           onClick={[Function]}
+          role="button"
         >
           <ReactPlayer
             config={
@@ -385,6 +393,7 @@ exports[`[Gallery] should render component without crashing 1`] = `
         <div
           className="video"
           onClick={[Function]}
+          role="button"
         >
           <IconComponent
             icon="play.svg"
