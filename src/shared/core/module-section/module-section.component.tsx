@@ -47,7 +47,7 @@ const ModuleSectionComponent = (props: IModuleSectionComponentProps) => {
         </div>
       )}
       <div className={styles["module-section__foreground"]}>
-        <div className="uk-container">
+        <div className={props.size ? "" : "uk-container"}>
           {props.title && (
             <h2 className={styles["module-section__title"]} style={{ color: props.titleColor }}>
               {props.title}

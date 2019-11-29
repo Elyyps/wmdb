@@ -7,12 +7,16 @@ exports[`[ContactForm] should render component without crashing 1`] = `
   initialValues={
     Object {
       "comment": "",
+      "companyName": "",
       "date": "",
       "emailAddress": "",
       "gender": "",
       "name": "",
       "numberPerson": undefined,
       "phone": "",
+      "place": "",
+      "postCode": "",
+      "streetNumber": undefined,
       "subscribed": false,
     }
   }

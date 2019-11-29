@@ -23,9 +23,9 @@ exports[`[NavBar] should render component without crashing 1`] = `
             key="0"
           >
             <LinkComponent
-              to="/info-page"
+              to="/organisaties"
             >
-              Helpdesk
+              Alle bedrijfsuitjes
             </LinkComponent>
           </li>
           <li
@@ -34,16 +34,34 @@ exports[`[NavBar] should render component without crashing 1`] = `
             <LinkComponent
               to="/info-page"
             >
-              Nieuwsbrief
+              Helpdesk
             </LinkComponent>
           </li>
           <li
             key="2"
           >
             <LinkComponent
+              to="/info-page"
+            >
+              Nieuwsbrief
+            </LinkComponent>
+          </li>
+          <li
+            key="3"
+          >
+            <LinkComponent
               to="/overzicht"
             >
-              Mijn uitjes
+              Bekeken uitjes
+            </LinkComponent>
+          </li>
+          <li
+            key="4"
+          >
+            <LinkComponent
+              to="/overzicht"
+            >
+              Adverteren?
             </LinkComponent>
           </li>
         </ul>

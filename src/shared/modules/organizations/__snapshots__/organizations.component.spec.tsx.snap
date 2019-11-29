@@ -1,0 +1,343 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Organizations] should render component without crashing 1`] = `
+<ModuleSectionComponent
+  paddingBottom="40px"
+  paddingTop="40px"
+  paddingTopMobile="32px"
+>
+  <div
+    className="organizations"
+    key="0"
+  >
+    <h5>
+      Art of Events Productions
+    </h5>
+    <ul
+      className="organizations__list"
+    >
+      <li
+        key="0"
+      >
+        <LinkComponent
+          to=""
+        >
+          U Deugt Wij Deugen
+        </LinkComponent>
+      </li>
+      <li
+        key="1"
+      >
+        <LinkComponent
+          to=""
+        >
+          The Ultimate Expedition
+        </LinkComponent>
+      </li>
+      <li
+        key="2"
+      >
+        <LinkComponent
+          to=""
+        >
+          Het Mislukte Feest
+        </LinkComponent>
+      </li>
+      <li
+        key="3"
+      >
+        <LinkComponent
+          to=""
+        >
+          Wie zijn de Mollen?
+        </LinkComponent>
+      </li>
+      <li
+        key="4"
+      >
+        <LinkComponent
+          to=""
+        >
+          Bosgolf
+        </LinkComponent>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="organizations"
+    key="1"
+  >
+    <h5>
+      Astron37
+    </h5>
+    <ul
+      className="organizations__list"
+    >
+      <li
+        key="0"
+      >
+        <LinkComponent
+          to=""
+        >
+          Urban Walkabout; ... haal jij de 5?
+        </LinkComponent>
+      </li>
+      <li
+        key="1"
+      >
+        <LinkComponent
+          to=""
+        >
+          Een tactisch teamspel met een hoge fun-factor
+        </LinkComponent>
+      </li>
+      <li
+        key="2"
+      >
+        <LinkComponent
+          to=""
+        >
+          Toss & Throw (in- & outdoor)
+        </LinkComponent>
+      </li>
+      <li
+        key="3"
+      >
+        <LinkComponent
+          to=""
+        >
+          Survive the Never Never (in- & outdoor)
+        </LinkComponent>
+      </li>
+      <li
+        key="4"
+      >
+        <LinkComponent
+          to=""
+        >
+          Uitdagende game met een hoge fun-factor
+        </LinkComponent>
+      </li>
+      <li
+        key="5"
+      >
+        <LinkComponent
+          to=""
+        >
+          Spannende games voor iedereen (in- & outdoor)
+        </LinkComponent>
+      </li>
+      <li
+        key="6"
+      >
+        <LinkComponent
+          to=""
+        >
+          Pioneers Quest (in- & outdoor)
+        </LinkComponent>
+      </li>
+      <li
+        key="7"
+      >
+        <LinkComponent
+          to=""
+        >
+          Down Under Culture (in- & outdoor)
+        </LinkComponent>
+      </li>
+      <li
+        key="8"
+      >
+        <LinkComponent
+          to=""
+        >
+          Down Under Winter Games
+        </LinkComponent>
+      </li>
+    </ul>
+  </div>
+  <div
+    className="organizations"
+    key="2"
+  >
+    <h5>
+      Toon vertier
+    </h5>
+    <ul
+      className="organizations__list"
+    >
+      <li
+        key="0"
+      >
+        <LinkComponent
+          to=""
+        >
+          Dagje Terug in de Tijd
+        </LinkComponent>
+      </li>
+      <li
+        key="1"
+      >
+        <LinkComponent
+          to=""
+        >
+          Dagje uit- Verassingsdag
+        </LinkComponent>
+      </li>
+      <li
+        key="2"
+      >
+        <LinkComponent
+          to=""
+        >
+          Dagje Tukkend Touren
+        </LinkComponent>
+      </li>
+      <li
+        key="3"
+      >
+        <LinkComponent
+          to=""
+        >
+          Casino Speelavond All-in
+        </LinkComponent>
+      </li>
+      <li
+        key="4"
+      >
+        <LinkComponent
+          to=""
+        >
+          Sensationele fotopuzzeltocht
+        </LinkComponent>
+      </li>
+      <li
+        key="5"
+      >
+        <LinkComponent
+          to=""
+        >
+          Dagje Brabant
+        </LinkComponent>
+      </li>
+      <li
+        key="6"
+      >
+        <LinkComponent
+          to=""
+        >
+          Wie is de Mol?
+        </LinkComponent>
+      </li>
+      <li
+        key="7"
+      >
+        <LinkComponent
+          to=""
+        >
+          Cold Case
+        </LinkComponent>
+      </li>
+      <li
+        key="8"
+      >
+        <LinkComponent
+          to=""
+        >
+          Tuk Tuk & Meermansfiets Special
+        </LinkComponent>
+      </li>
+      <li
+        key="9"
+      >
+        <LinkComponent
+          to=""
+        >
+          Nostalgische Solexdag
+        </LinkComponent>
+      </li>
+      <li
+        key="10"
+      >
+        <LinkComponent
+          to=""
+        >
+          Tuk escape
+        </LinkComponent>
+      </li>
+      <li
+        key="11"
+      >
+        <LinkComponent
+          to=""
+        >
+          Bosescape
+        </LinkComponent>
+      </li>
+      <li
+        key="12"
+      >
+        <LinkComponent
+          to=""
+        >
+          Diner game
+        </LinkComponent>
+      </li>
+      <li
+        key="13"
+      >
+        <LinkComponent
+          to=""
+        >
+          Bos escape plus
+        </LinkComponent>
+      </li>
+      <li
+        key="14"
+      >
+        <LinkComponent
+          to=""
+        >
+          Op de vlucht
+        </LinkComponent>
+      </li>
+      <li
+        key="15"
+      >
+        <LinkComponent
+          to=""
+        >
+          Crazy 44
+        </LinkComponent>
+      </li>
+      <li
+        key="16"
+      >
+        <LinkComponent
+          to=""
+        >
+          Hunted
+        </LinkComponent>
+      </li>
+      <li
+        key="17"
+      >
+        <LinkComponent
+          to=""
+        >
+          Hilarische diner game
+        </LinkComponent>
+      </li>
+      <li
+        key="18"
+      >
+        <LinkComponent
+          to=""
+        >
+          Spetterende spellentocht
+        </LinkComponent>
+      </li>
+    </ul>
+  </div>
+</ModuleSectionComponent>
+`;

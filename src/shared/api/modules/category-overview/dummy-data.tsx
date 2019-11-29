@@ -18,47 +18,56 @@ const GenerateDummyCategoryOverviewData = (): ICategoryOverviewModule => ({
       count: 24,
       filterSectionId: 5,
       image: "https://picsum.photos/id/1/600/400",
-      icon: ETEN
+      icon: ETEN,
+      color: "#b0cf6d"
     },
     {
       title: "Teambuilden",
       count: 24,
       filterSectionId: 6,
       image: "https://picsum.photos/id/20/600/400",
-      icon: TEAM
+      icon: TEAM,
+      color: "#71abde"
     },
     {
       title: "Incentives",
       count: 58,
       filterSectionId: 7,
       image: "https://picsum.photos/id/30/600/400",
-      icon: INCENTIVE
+      icon: INCENTIVE,
+      color: "#f8b272"
     },
     {
       title: "Spel & Ontspanning",
       filterSectionId: 1,
       count: 129,
       image: "https://picsum.photos/id/40/600/400",
-      icon: SPEL
+      icon: SPEL,
+      color: "#ef7478"
     },
     {
       title: "Sportief & Actie(f)",
       filterSectionId: 2,
       count: 59,
       image: "https://picsum.photos/id/50/600/400",
-      icon: SPORT
+      icon: SPORT,
+      color: "#d6b6d8"
     },
     {
       title: "Creative Uitjes",
       count: 70,
       filterSectionId: 3,
       image: "https://picsum.photos/id/60/600/400",
-      icon: CREATIVE
+      icon: CREATIVE,
+      color: "#75c5c3"
     },
     {
       title: "Workshops",
       filterSectionId: 4,
-      image: "https://picsum.photos/id/70/600/400"
+      image: "https://picsum.photos/id/70/600/400",
+      icon: CREATIVE,
+      color: "#ffdf7a",
+      count: 70
     },
     {
       title: "Helpdesk",

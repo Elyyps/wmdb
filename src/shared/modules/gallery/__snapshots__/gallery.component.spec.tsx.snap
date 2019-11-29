@@ -1,0 +1,399 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Gallery] should render component without crashing 1`] = `
+<div
+  className="gallery"
+>
+  <div
+    className="uk-container"
+  >
+    <Breadcrumb
+      breadcrumbs={
+        Array [
+          Object {
+            "title": "Home",
+            "url": "/",
+          },
+          Object {
+            "title": "Citygames in Amsterdam",
+            "url": "/overzicht",
+          },
+          Object {
+            "title": "Wie is de mol?",
+            "url": "",
+          },
+        ]
+      }
+    />
+    <div
+      className="gallery-images"
+    >
+      <Slider
+        arrows={true}
+        dots={false}
+        infinite={false}
+        nextArrow={
+          <button
+            className="gallery__slick-right-arrow"
+            style={
+              Object {
+                "backgroundColor": "red",
+              }
+            }
+          >
+            <IconComponent
+              fillColor="white"
+              icon={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "chevron-right.svg",
+                }
+              }
+              size="8px"
+            />
+          </button>
+        }
+        prevArrow={
+          <button
+            className="gallery__slick-left-arrow"
+          >
+            <IconComponent
+              fillColor="white"
+              icon={
+                Object {
+                  "ReactComponent": [Function],
+                  "__esModule": true,
+                  "default": "chevron-left.svg",
+                }
+              }
+              size="8px"
+            />
+          </button>
+        }
+        responsive={
+          Array [
+            Object {
+              "breakpoint": 639,
+              "settings": Object {
+                "arrows": false,
+                "dots": true,
+                "slidesToShow": 1,
+              },
+            },
+            Object {
+              "breakpoint": 1000,
+              "settings": Object {
+                "slidesToShow": 3,
+              },
+            },
+          ]
+        }
+        slidesToScroll={1}
+        slidesToShow={5}
+        speed={500}
+      >
+        <div
+          className="gallery-images-item"
+          key="0"
+          onClick={[Function]}
+        >
+          <ImageComponent
+            src="img-1.jpg"
+          />
+        </div>
+        <div
+          className="gallery-images-item"
+          key="1"
+          onClick={[Function]}
+        >
+          <ImageComponent
+            src="img-2.png"
+          />
+        </div>
+        <div
+          className="gallery-images-item"
+          key="2"
+          onClick={[Function]}
+        >
+          <ImageComponent
+            src="img-3.png"
+          />
+        </div>
+        <div
+          className="gallery-images-item"
+          key="3"
+          onClick={[Function]}
+        >
+          <ImageComponent
+            src="img-4.png"
+          />
+        </div>
+        <div
+          className="gallery-images-item"
+          key="4"
+          onClick={[Function]}
+        >
+          <ImageComponent
+            src="img-5.png"
+          />
+        </div>
+        <div
+          className="gallery-images-item"
+          key="5"
+          onClick={[Function]}
+        >
+          <ImageComponent
+            src="img-6.png"
+          />
+        </div>
+        <div
+          className="gallery-images-item"
+          key="6"
+          onClick={[Function]}
+        >
+          <ReactPlayer
+            config={
+              Object {
+                "dailymotion": Object {
+                  "params": Object {
+                    "api": 1,
+                    "endscreen-enable": false,
+                  },
+                  "preload": false,
+                },
+                "facebook": Object {
+                  "appId": "1309697205772819",
+                  "version": "v3.3",
+                },
+                "file": Object {
+                  "attributes": Object {},
+                  "dashVersion": "2.9.2",
+                  "forceAudio": false,
+                  "forceDASH": false,
+                  "forceHLS": false,
+                  "forceVideo": false,
+                  "hlsOptions": Object {},
+                  "hlsVersion": "0.10.1",
+                  "tracks": Array [],
+                },
+                "mixcloud": Object {
+                  "options": Object {
+                    "hide_cover": 1,
+                  },
+                },
+                "soundcloud": Object {
+                  "options": Object {
+                    "buying": false,
+                    "download": false,
+                    "liking": false,
+                    "sharing": false,
+                    "show_comments": false,
+                    "show_playcount": false,
+                    "visual": true,
+                  },
+                },
+                "twitch": Object {
+                  "options": Object {},
+                },
+                "vimeo": Object {
+                  "playerOptions": Object {
+                    "autopause": false,
+                    "byline": false,
+                    "portrait": false,
+                    "title": false,
+                  },
+                  "preload": false,
+                },
+                "wistia": Object {
+                  "options": Object {},
+                },
+                "youtube": Object {
+                  "embedOptions": Object {},
+                  "playerVars": Object {
+                    "iv_load_policy": 3,
+                    "modestbranding": 1,
+                    "playsinline": 1,
+                    "rel": 0,
+                    "showinfo": 0,
+                  },
+                  "preload": false,
+                },
+              }
+            }
+            controls={false}
+            height="100%"
+            light={false}
+            loop={false}
+            muted={false}
+            onBuffer={[Function]}
+            onBufferEnd={[Function]}
+            onDisablePIP={[Function]}
+            onDuration={[Function]}
+            onEnablePIP={[Function]}
+            onEnded={[Function]}
+            onError={[Function]}
+            onPause={[Function]}
+            onPlay={[Function]}
+            onProgress={[Function]}
+            onReady={[Function]}
+            onSeek={[Function]}
+            onStart={[Function]}
+            pip={false}
+            playbackRate={1}
+            playing={false}
+            playsinline={false}
+            progressInterval={1000}
+            style={
+              Object {
+                "pointerEvents": "none",
+              }
+            }
+            url="https://www.youtube.com/watch?v=2oyhlad64-s"
+            volume={null}
+            width="100%"
+            wrapper="div"
+          />
+        </div>
+        <div
+          className="gallery-images-item"
+          key="7"
+          onClick={[Function]}
+        >
+          <ReactPlayer
+            config={
+              Object {
+                "dailymotion": Object {
+                  "params": Object {
+                    "api": 1,
+                    "endscreen-enable": false,
+                  },
+                  "preload": false,
+                },
+                "facebook": Object {
+                  "appId": "1309697205772819",
+                  "version": "v3.3",
+                },
+                "file": Object {
+                  "attributes": Object {},
+                  "dashVersion": "2.9.2",
+                  "forceAudio": false,
+                  "forceDASH": false,
+                  "forceHLS": false,
+                  "forceVideo": false,
+                  "hlsOptions": Object {},
+                  "hlsVersion": "0.10.1",
+                  "tracks": Array [],
+                },
+                "mixcloud": Object {
+                  "options": Object {
+                    "hide_cover": 1,
+                  },
+                },
+                "soundcloud": Object {
+                  "options": Object {
+                    "buying": false,
+                    "download": false,
+                    "liking": false,
+                    "sharing": false,
+                    "show_comments": false,
+                    "show_playcount": false,
+                    "visual": true,
+                  },
+                },
+                "twitch": Object {
+                  "options": Object {},
+                },
+                "vimeo": Object {
+                  "playerOptions": Object {
+                    "autopause": false,
+                    "byline": false,
+                    "portrait": false,
+                    "title": false,
+                  },
+                  "preload": false,
+                },
+                "wistia": Object {
+                  "options": Object {},
+                },
+                "youtube": Object {
+                  "embedOptions": Object {},
+                  "playerVars": Object {
+                    "iv_load_policy": 3,
+                    "modestbranding": 1,
+                    "playsinline": 1,
+                    "rel": 0,
+                    "showinfo": 0,
+                  },
+                  "preload": false,
+                },
+              }
+            }
+            controls={false}
+            height="100%"
+            light={false}
+            loop={false}
+            muted={false}
+            onBuffer={[Function]}
+            onBufferEnd={[Function]}
+            onDisablePIP={[Function]}
+            onDuration={[Function]}
+            onEnablePIP={[Function]}
+            onEnded={[Function]}
+            onError={[Function]}
+            onPause={[Function]}
+            onPlay={[Function]}
+            onProgress={[Function]}
+            onReady={[Function]}
+            onSeek={[Function]}
+            onStart={[Function]}
+            pip={false}
+            playbackRate={1}
+            playing={false}
+            playsinline={false}
+            progressInterval={1000}
+            style={
+              Object {
+                "pointerEvents": "none",
+              }
+            }
+            url="https://www.youtube.com/watch?v=7gphiFVVtUI"
+            volume={null}
+            width="100%"
+            wrapper="div"
+          />
+        </div>
+      </Slider>
+    </div>
+    <div
+      className="gallery__info uk-visible@s"
+    >
+      <div
+        className="slider-info"
+      >
+        <div
+          className="photo"
+        >
+          <IconComponent
+            icon="images.svg"
+            size="15px"
+          />
+          Foto’s (
+          8
+          )
+        </div>
+        <div
+          className="video"
+          onClick={[Function]}
+        >
+          <IconComponent
+            icon="play.svg"
+            size="12px"
+          />
+          Video
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

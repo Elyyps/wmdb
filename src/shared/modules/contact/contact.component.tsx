@@ -11,11 +11,10 @@ import { generateOtherActivitiesData } from "@app/api/modules/other-activities/e
 import { ContactModalComponent } from "./contact-modal.component";
 import { ContactTelephoneComponent } from "./contact-telephone.component";
 import { ContactDataComponent } from "./contact-data.component";
-import RECTANGLE from "@assets/rectangle.png";
-import { AdBannerComponent } from "@app/core/ad-banner";
 import { Button } from "@app/core/button";
 import { IContact } from "@app/api/modules/contact/contact";
-import { ShareSocialComponent } from "@app/core/share-social";
+import { ActivitiesComponent } from "../activities";
+import { generateActivitiesData } from "@app/api/modules/activities/end-point";
 
 export interface IContactComponentProps {
   contactModule: IContact;
@@ -71,42 +70,18 @@ const ContactComponent = ({ contactModule }: IContactComponentProps) => {
           <div className={styles["contact-aside"]}>
             <div className="uk-visible@m">
               <h2>{contactModule.formTitle}</h2>
-              <p>{contactModule.formContent}</p>
-              {!isActive && (
-                <div className={styles["contact-actions"]}>
-                  <Button
-                    title={contactModule.buttonText}
-                    variant={"primary"}
-                    fullWidth
-                    large
-                    onClick={toggleForm}
-                    type={"button"}
-                  />
-                  <div className={styles["contact-actions-mail"]}>
-                    <ShareSocialComponent
-                      email={{
-                        title: "Hi , I'm sending this email to inform you that ....",
-                        subject: "Webbio email test for WMDB",
-                        url: "https://www.webbio.nl",
-                        nameSocialShare: "Deel via mail"
-                      }}
-                    />
-                  </div>
-                </div>
-              )}
             </div>
+            <div className="uk-visible@m">
+              <ContactFormComponent onSubmit={() => alert("submitted")} />
+            </div>
+
             {isActive && (
               <ContactModalComponent title={"Informatie aanvraag"} onClick={toggleForm}>
                 <ContactFormComponent onSubmit={() => alert("submitted")} />
               </ContactModalComponent>
             )}
             <div className="uk-visible@m">
-              <AdBannerComponent
-                content={"Surfen? Dat doe je in Zeeland."}
-                backgroundImage={RECTANGLE}
-                button={{ title: "Meer info", url: "/" }}
-                advertisement={"Advertentie"}
-              />
+              <ActivitiesComponent activitiesModule={generateActivitiesData()} />
             </div>
           </div>
           <div className={styles["contact-mobile-actions"]}>

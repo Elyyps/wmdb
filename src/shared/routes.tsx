@@ -5,6 +5,9 @@ import { FAQPageComponent } from "./pages/faq/faq-page";
 import { HomePageComponent } from "./pages/home/home-page";
 import { OverviewPageComponent } from "./pages/overview/overview.component";
 import { NotFoundPageComponent } from "./pages/not-found/not-found-page";
+import { AdvertiserWMDBPageComponent } from "./pages/advertiser-wmdb/advertiser-wmdb-page";
+import { OrganizationsPageComponent } from "./pages/organizations/organizations-page";
+import { PlaygroundPage } from "./pages/playground/playground";
 
 const Routes: React.FunctionComponent = props => (
   <Switch>
@@ -12,7 +15,11 @@ const Routes: React.FunctionComponent = props => (
     <Route exact path="/overzicht" component={OverviewPageComponent} />
     <Route exact path="/single-wmdb" component={SingleWMDBPage} />
     <Route exact path="/info-page" component={FAQPageComponent} />
+    <Route exact path="/adverteren" component={AdvertiserWMDBPageComponent} />
+    <Route exact path="/organisaties" component={OrganizationsPageComponent} />
     <Route exact path="/not-found" component={NotFoundPageComponent} />
+    <Route exact path="/playground" component={PlaygroundPage} />
+
     <Route path="*" render={() => <Redirect to="/not-found" />} />
   </Switch>
 );

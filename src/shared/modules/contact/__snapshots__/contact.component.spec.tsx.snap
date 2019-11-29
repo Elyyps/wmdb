@@ -184,51 +184,69 @@ deelnemers zijn op dit moment Mister X al tegen gekomen.
           className="uk-visible@m"
         >
           <h2>
-            Vrijblijvende offerte / prijsindicatie
+            Ontvang informatie / Offerte
           </h2>
-          <p>
-            Vraag vrijblijvend een prijsindicatie aan en ontvang informatie op maat!
-          </p>
-          <div
-            className="contact-actions"
-          >
-            <Button
-              fullWidth={true}
-              large={true}
-              onClick={[Function]}
-              title="Ontvang informatie / offerte"
-              type="button"
-              variant="primary"
-            />
-            <div
-              className="contact-actions-mail"
-            >
-              <ShareSocialComponent
-                email={
-                  Object {
-                    "nameSocialShare": "Deel via mail",
-                    "subject": "Webbio email test for WMDB",
-                    "title": "Hi , I'm sending this email to inform you that ....",
-                    "url": "https://www.webbio.nl",
-                  }
-                }
-              />
-            </div>
-          </div>
         </div>
         <div
           className="uk-visible@m"
         >
-          <AdBannerComponent
-            advertisement="Advertentie"
-            backgroundImage="rectangle.png"
-            button={
+          <WithFormik(InnerForm)
+            onSubmit={[Function]}
+          />
+        </div>
+        <div
+          className="uk-visible@m"
+        >
+          <ActivitiesComponent
+            activitiesModule={
               Object {
-                "title": "Meer info",
-                "url": "/",
+                "items": Array [
+                  Object {
+                    "color": "#b0cf6d",
+                    "icon": "eten.svg",
+                    "title": "Eten, Drinken & Feesten",
+                    "total": 500,
+                  },
+                  Object {
+                    "color": "#71abde",
+                    "icon": "teambuilding.svg",
+                    "title": "Teambuilden",
+                    "total": 500,
+                  },
+                  Object {
+                    "color": "#f8b272",
+                    "icon": "incentive.svg",
+                    "title": "Incentives",
+                    "total": 500,
+                  },
+                  Object {
+                    "color": "#ef7478",
+                    "icon": "spel.svg",
+                    "title": "Spel & Ontspanning",
+                    "total": 500,
+                  },
+                  Object {
+                    "color": "#d6b6d8",
+                    "icon": "sportief.svg",
+                    "title": "Sportief & Actie(f)",
+                    "total": 500,
+                  },
+                  Object {
+                    "color": "#75c5c3",
+                    "icon": "creatief.svg",
+                    "title": "Creatieve Uitjes",
+                    "total": 500,
+                  },
+                  Object {
+                    "color": "#ffdf7a",
+                    "icon": "incentive.svg",
+                    "title": "Workshops",
+                    "total": 500,
+                  },
+                ],
+                "title": "Bekijk ook andere activiteiten!",
               }
             }
-            content="Surfen? Dat doe je in Zeeland."
           />
         </div>
       </div>

@@ -1,0 +1,31 @@
+.organizations {
+  &:not(:first-child) {
+    margin-top: 16px;
+  }
+
+  &__list {
+    font-size: 12px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+
+    @media (max-width: $breakpoint-medium) {
+      grid-template-columns: repeat(2, 50%);
+    }
+    @media (max-width: $breakpoint-small) {
+      grid-template-columns: repeat(1, 100%);
+    }
+  }
+  li,
+  h5 {
+    width: fit-content;
+    margin-bottom: 12px;
+    text-decoration: underline;
+    @media (min-width: $breakpoint-small) {
+      margin-bottom: 9px;
+    }
+  }
+  a {
+    color: $gray;
+  }
+}

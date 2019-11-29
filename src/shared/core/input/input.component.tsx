@@ -12,6 +12,7 @@ interface IInputProps {
   hasCross?: boolean;
   icon?: string;
   isError?: string;
+  isRequired?: boolean;
   isSuccess?: boolean;
   label?: string;
   max?: number;
@@ -43,7 +44,8 @@ const Input = (props: IInputProps) => {
     isSuccess,
     value,
     min,
-    max
+    max,
+    isRequired
   } = props;
   const inputClassName = classNames(styles["input"], {
     [styles[`input--${classModify}`]]: classModify
@@ -89,11 +91,15 @@ const Input = (props: IInputProps) => {
           </label>
         )}
         <div className={styles["form__item-holder"]}>
+          {icon && (
+            <div className={styles["form-icon"]}>
+              <IconComponent icon={icon} size={"15px"} />
+            </div>
+          )}
           <input
             onChange={handleChange}
             onBlur={handleBlur}
             type={type ? type : "text"}
-            placeholder={placeholder}
             className={inputClassName}
             name={name}
             maxLength={maxLength}
@@ -103,8 +109,11 @@ const Input = (props: IInputProps) => {
             min={min}
             max={max}
           />
+          <span className={styles["form__item-placeholder"]} style={{ left: icon ? "15%" : "15px" }}>
+            {placeholder}
+            {isRequired && <span style={{ color: "red" }}>*</span>}
+          </span>
 
-          {icon && <IconComponent icon={icon} size={"15px"} />}
           {values && !isSuccess && hasCross && (
             <div role={"button"} className={styles["form__item-icon"]} onClick={handelClear}>
               <IconComponent icon={Cross} size={"10px"} />

@@ -1,6 +1,6 @@
 import * as React from "react";
 import styles from "./category-overview-component.module.scss";
-import { CategoryCard } from "@app/core/category-card";
+import { CategoryCardComponent } from "@app/core/category-card";
 import {
   ICategoryOverviewModule,
   ICategoryCardModel
@@ -19,11 +19,9 @@ const Component = (props: ICategoryOverviewComponentProps & RouteComponentProps)
     if (categoryCard.filterSectionId !== undefined) {
       let finalUrl = "/overzicht";
 
-      // tslint:disable
       const foundSection = props.categoryOverviewModule.filterSections.find(
-        section => section.id == categoryCard.filterSectionId
+        section => section.id === categoryCard.filterSectionId
       );
-      // tslint:enable
       if (foundSection) {
         const selectedItemsArrayString = foundSection.checkboxes.map(checkbox => checkbox.id).join("%2C");
         finalUrl = finalUrl.concat(`?categories=${selectedItemsArrayString}`);
@@ -46,7 +44,7 @@ const Component = (props: ICategoryOverviewComponentProps & RouteComponentProps)
             <div className={`${styles["category-overview__posts"]} uk-grid uk-child-width-1-2@s uk-child-width-1-3@m`}>
               {items.map((item, key) => (
                 <div key={key}>
-                  <CategoryCard
+                  <CategoryCardComponent
                     onClick={() => {
                       openOverviewPage(item);
                     }}
@@ -55,6 +53,7 @@ const Component = (props: ICategoryOverviewComponentProps & RouteComponentProps)
                     image={item.image}
                     link={item.link}
                     title={item.title}
+                    color={item.color}
                   />
                 </div>
               ))}

@@ -11,7 +11,7 @@ html {
   }
 }
 
-#app{
+#app {
   overflow: hidden;
 }
 a:not([class]) {
@@ -23,7 +23,6 @@ a:not([class]) {
 
 ul {
   padding: 0;
-  margin: 0 0 24px;
   list-style: none;
   &:not([class]) {
     > li {
@@ -47,7 +46,7 @@ ul {
       padding-left: 26px;
       position: relative;
       line-height: 1.29;
-      
+
       &::before,
       &::after {
         content: "";
@@ -141,7 +140,7 @@ blockquote {
 }
 
 .icon-svg {
-  line-height: .5;
+  line-height: 0.5;
   display: flex;
   align-items: center;
   &.icon-svg-stroke {
@@ -159,13 +158,17 @@ blockquote {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-top: 0;
   font-weight: 600;
 }
 
 h1 {
-
   @media (max-width: $breakpoint-small-max) {
     font-size: 22px;
     font-weight: 500;
@@ -200,8 +203,13 @@ h5 {
 h6 {
   text-transform: uppercase;
 }
-.uk-invert{
-  h1,h2,h3,h4,h5,h6{
+.uk-invert {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: $global-inverse-color;
   }
 }

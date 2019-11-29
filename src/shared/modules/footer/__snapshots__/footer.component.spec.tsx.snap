@@ -29,7 +29,7 @@ exports[`[Footer] should render component without crashing 1`] = `
             <LinkComponent
               to="/"
             >
-              info@wmdb.nl
+              info@wegmetdebaas.nl
             </LinkComponent>
           </li>
           <li
@@ -47,7 +47,7 @@ exports[`[Footer] should render component without crashing 1`] = `
             <LinkComponent
               to="/"
             >
-              Algemene voorwaarden
+              Linkpartners
             </LinkComponent>
           </li>
           <li
@@ -61,6 +61,33 @@ exports[`[Footer] should render component without crashing 1`] = `
           </li>
           <li
             key="4"
+          >
+            <LinkComponent
+              to="/"
+            >
+              Alle bedrijfsuitjes
+            </LinkComponent>
+          </li>
+          <li
+            key="5"
+          >
+            <LinkComponent
+              to="/"
+            >
+              Sitemap
+            </LinkComponent>
+          </li>
+          <li
+            key="6"
+          >
+            <LinkComponent
+              to="/"
+            >
+              Algemene voorwaarden
+            </LinkComponent>
+          </li>
+          <li
+            key="7"
           >
             <LinkComponent
               to="/"

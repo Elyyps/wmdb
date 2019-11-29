@@ -1,6 +1,7 @@
 @import "~uikit/src/scss/mixins.scss";
 
-
+@import "~uikit/src/scss/variables-theme.scss";
+@import "~uikit/src/scss/mixins-theme.scss";
 @import "~uikit/src/scss/variables.scss";
 @import "~uikit/src/scss/components/base.scss";
 
@@ -11,7 +12,7 @@
 
 @import "./src/shared/styles/fonts.scss";
 @import "./src/shared/styles/base.scss";
-
+@import "~uikit/src/scss/uikit-theme.scss";
 @import "./src/shared/styles/slick.scss";
 
 body {

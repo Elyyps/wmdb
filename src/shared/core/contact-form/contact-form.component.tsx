@@ -11,21 +11,21 @@ import { DatePickerComponent } from "../date-picker";
 import { ShareSocialComponent } from "../share-social";
 
 interface IContactFormErrorMessages {
-  comment: string;
-  date: string;
   emailAddress: string;
   name: string;
-  numberPerson: string;
-  phone: string;
 }
 export interface IContactFormValues {
   comment: string;
+  companyName: string;
   date: string;
   emailAddress: string;
   gender: string;
   name: string;
   numberPerson: number | undefined;
   phone: string;
+  place: string;
+  postCode: string;
+  streetNumber: number | undefined;
   subscribed: boolean;
 }
 const formOnChange = () => {
@@ -77,7 +77,7 @@ const InnerForm = (props: FormikProps<IContactFormValues>) => {
         />
       </div>
       <Input
-        label="Naam"
+        placeholder="Naam"
         name="name"
         errorMessage={touched.name ? errors.name : ""}
         onChange={(e: any) => {
@@ -87,9 +87,21 @@ const InnerForm = (props: FormikProps<IContactFormValues>) => {
           props.handleBlur(e);
         }}
         value={props.values.name}
+        isRequired
       />
       <Input
-        label={"E-mailadres"}
+        placeholder="Bedrijfsnaam"
+        name="companyName"
+        onChange={(e: any) => {
+          props.handleChange(e);
+        }}
+        onBlur={(e: any) => {
+          props.handleBlur(e);
+        }}
+        value={props.values.companyName}
+      />
+      <Input
+        placeholder={"E-mailadres"}
         name={"emailAddress"}
         errorMessage={touched.emailAddress ? errors.emailAddress : ""}
         onChange={(e: any) => {
@@ -99,11 +111,11 @@ const InnerForm = (props: FormikProps<IContactFormValues>) => {
           props.handleBlur(e);
         }}
         value={props.values.emailAddress}
+        isRequired
       />
       <Input
-        label={"Telefoonnummer"}
+        placeholder={"Telefoonnummer"}
         name={"phone"}
-        errorMessage={touched.phone ? errors.phone : ""}
         onChange={(e: any) => {
           props.handleChange(e);
         }}
@@ -113,7 +125,7 @@ const InnerForm = (props: FormikProps<IContactFormValues>) => {
         value={props.values.phone}
       />
       <Input
-        label={"Aantal personen"}
+        placeholder={"Aantal personen"}
         name={"numberPerson"}
         type="number"
         errorMessage={touched.numberPerson ? errors.numberPerson : ""}
@@ -124,17 +136,56 @@ const InnerForm = (props: FormikProps<IContactFormValues>) => {
           props.handleBlur(e);
         }}
         value={props.values.numberPerson}
-        min={0}
+        min={1}
       />
       <DatePickerComponent
-        label="Geplande datum"
+        placeholder="Geplande datum"
         value={props.values.date}
         onChange={onDatePickerChange}
         onBlur={onDatePickerChange}
         includeTime
         id="date"
       />
-      <TextAreaComponent label={"Vraag of opmerking (optioneel)"} name={"textarea"} />
+      <Input
+        placeholder={"Straat en huisnummer"}
+        name={"streetNumber"}
+        type="number"
+        errorMessage={touched.streetNumber ? errors.streetNumber : ""}
+        onChange={(e: any) => {
+          props.handleChange(e);
+        }}
+        onBlur={(e: any) => {
+          props.handleBlur(e);
+        }}
+        value={props.values.streetNumber}
+        min={0}
+      />
+      <div className={styles["contact-form-align"]}>
+        <Input
+          placeholder={"Postcode"}
+          name={"postCode"}
+          onChange={(e: any) => {
+            props.handleChange(e);
+          }}
+          onBlur={(e: any) => {
+            props.handleBlur(e);
+          }}
+          value={props.values.postCode}
+        />
+        <Input
+          placeholder={"Plaats"}
+          name={"place"}
+          onChange={(e: any) => {
+            props.handleChange(e);
+          }}
+          onBlur={(e: any) => {
+            props.handleBlur(e);
+          }}
+          value={props.values.place}
+        />
+      </div>
+
+      <TextAreaComponent placeholder={"Vraag of opmerking (optioneel)"} name={"textarea"} />
       <div className={styles["contact-form-bottom"]}>
         <Checkbox
           isChecked={isChecked}
@@ -164,18 +215,21 @@ interface IFormProps {
 export const ContactFormComponent = withFormik<IFormProps, IContactFormValues>({
   mapPropsToValues: () => ({
     comment: "",
+    place: "",
+    postCode: "",
+    streetNumber: undefined,
     date: "",
     emailAddress: "",
     gender: "",
     name: "",
     numberPerson: undefined,
     phone: "",
+    companyName: "",
     subscribed: false
   }),
 
   validate: (values: IContactFormValues) => {
     const errors: FormikErrors<IContactFormErrorMessages> = {};
-    const phoneNumberLength = 13;
 
     if (!values.name) {
       errors.name = "Vul uw naam in";
@@ -184,14 +238,6 @@ export const ContactFormComponent = withFormik<IFormProps, IContactFormValues>({
       errors.emailAddress = "Vul uw e-mail adres in";
     } else if (!validateEmail(values.emailAddress)) {
       errors.emailAddress = "Geen valide e-mail adres";
-    }
-    if (!values.phone) {
-      errors.phone = "Vul uw telefoonnummer in";
-    } else if (values.phone.length > phoneNumberLength) {
-      errors.phone = "telefoonnummer mag niet langer zijn dan 13 tekens";
-    }
-    if (values.numberPerson !== undefined && values.numberPerson < 0) {
-      errors.numberPerson = "aantal personen moet een positief getal zijn";
     }
 
     return errors;

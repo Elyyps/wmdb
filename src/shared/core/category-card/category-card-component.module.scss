@@ -4,83 +4,9 @@
   overflow: hidden;
   position: relative;
   cursor: pointer;
-  &__head {
-    height: 83px !important;
-    background: $global-background;
-    padding-left: 16px;
-    display: flex;
-    border-bottom: 2px solid $brand-primary;
-    position: relative;
-    @media (max-width: $breakpoint-xsmall-max) {
-      min-height: 56px;
-      display: flex;
-      align-items: center;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-  }
-
-  &__title {
-    font-size: 16px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    margin: 0;
-    position: relative;
-    display: flex;
-    align-items: center;
-    > div {
-      display: flex;
-      align-items: center;
-    }
-
-    &__count {
-      @media (max-width: $breakpoint-medium-max) {
-        display: none;
-      }
-
-      @media (max-width: $breakpoint-small) {
-        display: flex;
-      }
-    }
-    &__icon {
-      margin-right: 24px;
-      font-size: 16px;
-
-      @media (max-width: $breakpoint-medium-max +15px) {
-        margin-right: 16px;
-      }
-      @media (max-width: $breakpoint-xsmall-max) {
-        margin-right: 8px;
-      }
-    }
-    @media (max-width: $breakpoint-xsmall-max) {
-      width: 90%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    @media (min-width: $breakpoint-medium-max) {
-      font-size: 18px;
-    }
-    > span {
-      color: $brand-primary;
-      padding-left: 4px;
-    }
-  }
-
-  &__arrow {
-    position: absolute;
-    top: 50%;
-    right: 24px;
-    transform: translateY(-50%) rotate(-90deg);
-    color: $brand-primary;
-    @media (max-width: $breakpoint-medium) {
-      right: 16px;
-    }
-  }
 
   &__image {
+    margin-top: 2px;
     overflow: hidden;
     position: relative;
     height: 165px;

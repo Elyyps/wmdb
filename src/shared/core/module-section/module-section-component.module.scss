@@ -162,8 +162,7 @@
   }
 
   &--small {
-    .uk-container {
-      max-width: $breakpoint-small-medium;
-    }
+    margin: 0 auto;
+    max-width: $breakpoint-small-medium;
   }
 }

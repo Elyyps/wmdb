@@ -3,8 +3,7 @@ import ROOMS from "@assets/icons/rooms.svg";
 
 export const generateContactDummyData = (): IContact => ({
   buttonText: "Ontvang informatie / offerte",
-  formTitle: "Vrijblijvende offerte / prijsindicatie",
-  formContent: "Vraag vrijblijvend een prijsindicatie aan en ontvang informatie op maat!",
+  formTitle: "Ontvang informatie / Offerte",
   personsNumber: "10 - 1000 personen",
   personsNumberIcon: ROOMS,
   category: "BE Eventgroup",

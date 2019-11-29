@@ -4,7 +4,7 @@ import Logo from "@assets/WMDB.svg";
 export const generateDummyFooterData = (): IFooterModule => ({
   links: [
     {
-      title: "info@wmdb.nl",
+      title: "info@wegmetdebaas.nl",
       url: "/"
     },
     {
@@ -12,11 +12,20 @@ export const generateDummyFooterData = (): IFooterModule => ({
       url: "/"
     },
     {
-      title: "Algemene voorwaarden",
+      title: "Linkpartners",
       url: "/"
     },
     {
       title: "Privacystatement",
+      url: "/"
+    },
+    {
+      title: "Alle bedrijfsuitjes",
+      url: "/"
+    },
+    { title: "Sitemap", url: "/" },
+    {
+      title: "Algemene voorwaarden",
       url: "/"
     },
     {

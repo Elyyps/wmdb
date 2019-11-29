@@ -1,35 +1,22 @@
 import * as React from "react";
 import styles from "./category-card-component.module.scss";
-import Arrow from "@assets/icons/chevron-down.svg";
-import { IconComponent } from "../icon";
 import { ImageComponent } from "../image";
+import { ActivityCardComponent } from "../activity-card";
 
 interface ICategoryCardProps {
+  color?: string;
   count?: number;
   icon?: string;
-  image?: string;
+  image: string;
   link?: string;
   onClick: () => void;
-  title?: string;
+  title: string;
 }
 
-const CategoryCard = ({ onClick, title, count, image, icon }: ICategoryCardProps) => (
+const CategoryCardComponent = ({ onClick, title, count, image, icon, color }: ICategoryCardProps) => (
   <div role="button" onClick={onClick} className={styles["category-card"]}>
-    <div className={styles["category-card__head"]}>
-      <h3 className={styles["category-card__title"]}>
-        <div>
-          {icon && (
-            <div className={styles["category-card__title__icon"]}>
-              <IconComponent icon={icon} size={"34px"} />
-            </div>
-          )}
-          {title}
-        </div>
-        {count && <span className={styles["category-card__title__count"]}>({count})</span>}
-      </h3>
-      <div className={styles["category-card__arrow"]}>
-        <IconComponent icon={Arrow} size={"12px"} fillColor="#34aadf" />
-      </div>
+    <div style={{ height: "83px" }}>
+      <ActivityCardComponent title={title} total={count ? count : 0} color={color} icon={icon} />
     </div>
 
     {image && (
@@ -40,4 +27,4 @@ const CategoryCard = ({ onClick, title, count, image, icon }: ICategoryCardProps
   </div>
 );
 
-export { CategoryCard };
+export { CategoryCardComponent };

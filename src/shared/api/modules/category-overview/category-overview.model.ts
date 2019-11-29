@@ -9,10 +9,11 @@ export interface ICategoryOverviewModule {
 }
 
 export interface ICategoryCardModel {
+  color?: string;
   count?: number;
   filterSectionId?: number;
   icon?: string;
-  image?: string;
+  image: string;
   link?: string;
-  title?: string;
+  title: string;
 }
