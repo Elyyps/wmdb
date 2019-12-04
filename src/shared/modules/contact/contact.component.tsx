@@ -80,6 +80,7 @@ const ContactComponent = ({ contactModule }: IContactComponentProps) => {
                 <ContactFormComponent onSubmit={() => alert("submitted")} />
               </ContactModalComponent>
             )}
+            <br />
             <div className="uk-visible@m">
               <ActivitiesComponent activitiesModule={generateActivitiesData()} />
             </div>

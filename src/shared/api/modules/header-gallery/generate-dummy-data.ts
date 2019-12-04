@@ -25,6 +25,6 @@ export const generateGalleryDummyData = (): IHeaderGallery[] => [
   { type: "image", url: Image4, id: 3 },
   { type: "image", url: Image5, id: 4 },
   { type: "image", url: Image6, id: 5 },
-  { type: "video", url: "https://www.youtube.com/watch?v=2oyhlad64-s", id: 6 },
-  { type: "video", url: "https://www.youtube.com/watch?v=7gphiFVVtUI", id: 7 }
+  { type: "video", url: "https://www.youtube.com/watch?v=7gphiFVVtUI", id: 6 },
+  { type: "video", url: "https://www.youtube.com/watch?v=2oyhlad64-s", id: 7 }
 ];

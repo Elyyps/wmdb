@@ -5,7 +5,7 @@ import { generateOrganizationsData } from "@app/api/modules/organizations/end-po
 
 describe("[Organizations]", () => {
   it("should render component without crashing", () => {
-    const renderedComponent = shallow(<OrganizationsComponent locations={generateOrganizationsData()} />);
+    const renderedComponent = shallow(<OrganizationsComponent organisations={generateOrganizationsData()} />);
     expect(renderedComponent).toMatchSnapshot();
   });
 });

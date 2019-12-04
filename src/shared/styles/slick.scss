@@ -148,7 +148,10 @@
 .slick-arrow {
   position: absolute;
   right: 70px;
-  bottom: -70px;
+  @media (max-width: $breakpoint-medium) {
+    bottom: -70px;
+  }
+  bottom: -85px;
   z-index: 1;
   transform: translateY(-50%);
   color: #fff;

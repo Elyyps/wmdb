@@ -194,6 +194,7 @@ deelnemers zijn op dit moment Mister X al tegen gekomen.
             onSubmit={[Function]}
           />
         </div>
+        <br />
         <div
           className="uk-visible@m"
         >

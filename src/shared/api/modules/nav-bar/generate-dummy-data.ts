@@ -8,7 +8,7 @@ export const generateDummyNavbarData = (): INavBarModule => ({
     { title: "Helpdesk", url: "/info-page" },
     { title: "Nieuwsbrief", url: "/info-page" },
     { title: "Bekeken uitjes", url: "/overzicht" },
-    { title: "Adverteren?", url: "/overzicht" }
+    { title: "Adverteren?", url: "/adverteren" }
   ],
   logo: Logo,
   title: "Menu",

@@ -1,6 +1,5 @@
 import * as React from "react";
 import styles from "./gallery-component.module.scss";
-import Slider, { Settings } from "react-slick";
 import { ImageComponent } from "@app/core/image";
 import { ILink } from "@app/api/core/link";
 import { Breadcrumb } from "@app/core/breadcrumb";
@@ -11,9 +10,11 @@ import { getArrow } from "@app/constants/icons";
 import ReactPlayer from "react-player";
 import { IHeaderGallery } from "@app/api/modules/header-gallery/header-gallery";
 import { LightBoxComponent } from "@app/core/lightbox";
+import ReactAliceCarousel from "react-alice-carousel";
+import "react-alice-carousel/lib/alice-carousel.css";
 
 export interface IGalleryComponentProps {
-  galleryModule: IHeaderGallery[];
+  headerGallery: IHeaderGallery[];
 }
 const BreadcrumbsData: ILink[] = [
   {
@@ -29,86 +30,110 @@ const BreadcrumbsData: ILink[] = [
     url: ""
   }
 ];
-const GalleryComponent = ({ galleryModule }: IGalleryComponentProps) => {
+const GalleryComponent = ({ headerGallery }: IGalleryComponentProps) => {
   const [lightBoxOpen, setLightBoxOpen] = React.useState(false);
-  const [currentSlide, setCurrentSlide] = React.useState<IHeaderGallery | undefined>(undefined);
-  const ref: any = React.createRef();
+  const [currentSlide, setCurrentSlide] = React.useState<number>(0);
   const contentHeight = 50;
-  ref.current = "slick";
 
-  const settings: Settings = {
-    nextArrow: (
-      <button className={styles["gallery__slick-right-arrow"]} style={{ backgroundColor: "red" }}>
-        <IconComponent icon={getArrow(false)} size={"8px"} fillColor={"white"} />
-      </button>
-    ),
-    prevArrow: (
-      <button className={styles["gallery__slick-left-arrow"]}>
-        <IconComponent icon={getArrow(true)} size={"8px"} fillColor={"white"} />
-      </button>
-    ),
-    dots: false,
-    arrows: true,
-    infinite: false,
-    responsive: [
-      {
-        breakpoint: 639,
-        settings: {
-          arrows: false,
-          dots: true,
-
-          slidesToShow: 1
-        }
-      },
-      {
-        breakpoint: 1000,
-        settings: {
-          slidesToShow: 3
-        }
-      }
-    ],
-    slidesToScroll: 1,
-    slidesToShow: 5,
-    speed: 500
-  };
-  const handleClick = (slide: IHeaderGallery) => {
-    setCurrentSlide(slide);
+  const handleClick = (newSlide: number) => {
+    setCurrentSlide(newSlide);
     setLightBoxOpen(!lightBoxOpen);
   };
+  const findFirstElement = (type?: "video" | "image") => {
+    const firstElement = headerGallery.find(item => item.type === type);
+    firstElement && setCurrentSlide(firstElement.id);
+  };
+  const findSlide = (id: number) => {
+    const slide = headerGallery.find(item => item.id === id);
+
+    return slide ? slide : headerGallery[0];
+  };
+
+  const onButtonClick = (newImage: number) => {
+    setCurrentSlide(newImage);
+  };
+  const responsive = {
+    1200: {
+      items: 5
+    },
+    639: {
+      items: 3
+    },
+    0: {
+      items: 1
+    }
+  };
+  React.useEffect(() => {
+    currentSlide >= headerGallery.length && setCurrentSlide(0);
+    currentSlide < 0 && setCurrentSlide(headerGallery.length - 1);
+  }, [currentSlide]);
 
   return (
     <div className={styles["gallery"]}>
       <div className="uk-container">
         <Breadcrumb breadcrumbs={BreadcrumbsData} />
         <div className={styles["gallery-images"]}>
-          <Slider ref={ref} {...settings}>
-            {galleryModule.map((slide, key) => (
+          <ReactAliceCarousel
+            onSlideChanged={e => currentSlide && onButtonClick(e.slide)}
+            dotsDisabled
+            buttonsDisabled
+            responsive={responsive}
+            startIndex={currentSlide}
+            items={headerGallery.map((slide, key) => (
               <div
                 role="button"
                 key={key}
                 className={styles["gallery-images-item"]}
                 onClick={() => {
-                  handleClick(slide);
+                  handleClick(slide.id);
                 }}
               >
                 {slide.type === "image" ? (
                   <ImageComponent src={slide.url} />
                 ) : (
                   slide.type === "video" && (
-                    <ReactPlayer style={{ pointerEvents: "none" }} url={slide.url} height={"100%"} width={"100%"} />
+                    <ReactPlayer
+                      style={{ pointerEvents: "none" }}
+                      url={slide.url}
+                      height={"100%"}
+                      width={"100%"}
+                      controls
+                      light
+                    />
                   )
                 )}
               </div>
             ))}
-          </Slider>
+          />
+          <div className={` ${styles["gallery__slider_arrows"]} uk-visible@s`}>
+            <div
+              className={styles["gallery__slider_arrows_prev"]}
+              onClick={() => setCurrentSlide(currentSlide - 1)}
+              role="button"
+            >
+              <IconComponent icon={getArrow(true)} size={"8px"} fillColor={"white"} />
+            </div>
+            <div
+              className={styles["gallery__slider_arrows_next"]}
+              onClick={() => setCurrentSlide(currentSlide + 1)}
+              role="button"
+            >
+              <IconComponent icon={getArrow(false)} size={"8px"} fillColor={"white"} />
+            </div>
+          </div>
         </div>
         <div className={`${styles["gallery__info"]} uk-visible@s`}>
           <div className={styles["slider-info"]}>
-            <div className={styles["photo"]}>
+            <div
+              role="button"
+              className={styles["photo"]}
+              style={{ cursor: "pointer" }}
+              onClick={() => findFirstElement("image")}
+            >
               <IconComponent icon={IconImage} size={"15px"} />
-              Foto’s ({galleryModule.length})
+              Foto’s ({headerGallery.length})
             </div>
-            <div role="button" className={styles["video"]} onClick={() => handleClick(galleryModule[6])}>
+            <div role="button" style={{ cursor: "pointer" }} onClick={() => findFirstElement("video")}>
               <IconComponent icon={IconPlay} size={"12px"} />
               Video
             </div>
@@ -124,36 +149,33 @@ const GalleryComponent = ({ galleryModule }: IGalleryComponentProps) => {
         >
           <div className={styles["gallery__lightbox"]}>
             <div className={styles["gallery__lightbox-item"]}>
-              {currentSlide.type === "image" ? (
-                <ImageComponent src={currentSlide.url} />
+              {findSlide(currentSlide).type === "image" ? (
+                <ImageComponent src={findSlide(currentSlide).url} />
               ) : (
-                currentSlide.type === "video" && (
+                findSlide(currentSlide).type === "video" && (
                   <div className={styles["gallery__lightbox-item-video"]}>
-                    <ReactPlayer url={currentSlide.url} width={"100%"} height={"100%"} />
+                    <ReactPlayer url={findSlide(currentSlide).url} width={"100%"} height={"100%"} />
                   </div>
                 )
               )}
             </div>
 
             <div className={styles["gallery__lightbox-arrows"]}>
-              {currentSlide.id !== 0 && (
-                <div
-                  className={styles["gallery__lightbox-arrows-prev"]}
-                  onClick={() => setCurrentSlide(galleryModule[currentSlide.id - 1])}
-                  role="button"
-                >
-                  <IconComponent icon={getArrow(true)} size={"8px"} fillColor={"white"} />
-                </div>
-              )}
-              {currentSlide.id + 1 < galleryModule.length && (
-                <div
-                  className={styles["gallery__lightbox-arrows-next"]}
-                  onClick={() => setCurrentSlide(galleryModule[currentSlide.id + 1])}
-                  role="button"
-                >
-                  <IconComponent icon={getArrow(false)} size={"8px"} fillColor={"white"} />
-                </div>
-              )}
+              <div
+                className={styles["gallery__lightbox-arrows-prev"]}
+                onClick={() => setCurrentSlide(currentSlide - 1)}
+                role="button"
+              >
+                <IconComponent icon={getArrow(true)} size={"8px"} fillColor={"white"} />
+              </div>
+
+              <div
+                className={styles["gallery__lightbox-arrows-next"]}
+                onClick={() => setCurrentSlide(currentSlide + 1)}
+                role="button"
+              >
+                <IconComponent icon={getArrow(false)} size={"8px"} fillColor={"white"} />
+              </div>
             </div>
           </div>
         </LightBoxComponent>

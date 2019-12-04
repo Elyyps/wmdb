@@ -59,7 +59,7 @@ exports[`[NavBar] should render component without crashing 1`] = `
             key="4"
           >
             <LinkComponent
-              to="/overzicht"
+              to="/adverteren"
             >
               Adverteren?
             </LinkComponent>

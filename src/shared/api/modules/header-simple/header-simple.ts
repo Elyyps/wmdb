@@ -1,4 +1,4 @@
-import IMG from "@assets/adheader.jpg";
+import PIC from "@assets/header-1.png";
 import IMG2 from "@assets/boat.jpg";
 export interface IHeaderSimpleModule {
   picture: string;
@@ -11,7 +11,7 @@ export const generateDummyHeaderSimpleModule = (): IHeaderSimpleModule => ({
 });
 export const generateAdvertiserWMDBHeaderDummyData = (): IHeaderSimpleModule => ({
   title: "Adverteer op Wegmetdebaas!",
-  picture: IMG
+  picture: PIC
 });
 export const generateOrganizationsHeaderDummyData = (): IHeaderSimpleModule => ({
   title: "Overzicht van Uitjes op WegmetdeBaas.nl",

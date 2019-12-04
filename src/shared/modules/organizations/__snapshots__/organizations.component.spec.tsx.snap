@@ -11,7 +11,12 @@ exports[`[Organizations] should render component without crashing 1`] = `
     key="0"
   >
     <h5>
-      Art of Events Productions
+      <LinkComponent
+        to="/adverteren"
+      >
+        Art of Events Productions
+         
+      </LinkComponent>
     </h5>
     <ul
       className="organizations__list"
@@ -20,7 +25,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="0"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           U Deugt Wij Deugen
         </LinkComponent>
@@ -29,7 +34,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="1"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           The Ultimate Expedition
         </LinkComponent>
@@ -38,7 +43,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="2"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Het Mislukte Feest
         </LinkComponent>
@@ -47,7 +52,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="3"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Wie zijn de Mollen?
         </LinkComponent>
@@ -56,7 +61,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="4"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Bosgolf
         </LinkComponent>
@@ -68,7 +73,12 @@ exports[`[Organizations] should render component without crashing 1`] = `
     key="1"
   >
     <h5>
-      Astron37
+      <LinkComponent
+        to="/"
+      >
+        Astron37
+         
+      </LinkComponent>
     </h5>
     <ul
       className="organizations__list"
@@ -77,7 +87,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="0"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Urban Walkabout; ... haal jij de 5?
         </LinkComponent>
@@ -86,7 +96,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="1"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Een tactisch teamspel met een hoge fun-factor
         </LinkComponent>
@@ -95,7 +105,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="2"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Toss & Throw (in- & outdoor)
         </LinkComponent>
@@ -104,7 +114,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="3"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Survive the Never Never (in- & outdoor)
         </LinkComponent>
@@ -113,7 +123,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="4"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Uitdagende game met een hoge fun-factor
         </LinkComponent>
@@ -122,7 +132,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="5"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Spannende games voor iedereen (in- & outdoor)
         </LinkComponent>
@@ -131,7 +141,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="6"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Pioneers Quest (in- & outdoor)
         </LinkComponent>
@@ -140,7 +150,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="7"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Down Under Culture (in- & outdoor)
         </LinkComponent>
@@ -149,7 +159,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="8"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Down Under Winter Games
         </LinkComponent>
@@ -161,7 +171,12 @@ exports[`[Organizations] should render component without crashing 1`] = `
     key="2"
   >
     <h5>
-      Toon vertier
+      <LinkComponent
+        to="/"
+      >
+        Toon vertier
+         
+      </LinkComponent>
     </h5>
     <ul
       className="organizations__list"
@@ -170,7 +185,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="0"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Dagje Terug in de Tijd
         </LinkComponent>
@@ -179,7 +194,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="1"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Dagje uit- Verassingsdag
         </LinkComponent>
@@ -188,7 +203,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="2"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Dagje Tukkend Touren
         </LinkComponent>
@@ -197,7 +212,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="3"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Casino Speelavond All-in
         </LinkComponent>
@@ -206,7 +221,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="4"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Sensationele fotopuzzeltocht
         </LinkComponent>
@@ -215,7 +230,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="5"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Dagje Brabant
         </LinkComponent>
@@ -224,7 +239,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="6"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Wie is de Mol?
         </LinkComponent>
@@ -233,7 +248,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="7"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Cold Case
         </LinkComponent>
@@ -242,7 +257,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="8"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Tuk Tuk & Meermansfiets Special
         </LinkComponent>
@@ -251,7 +266,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="9"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Nostalgische Solexdag
         </LinkComponent>
@@ -260,7 +275,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="10"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Tuk escape
         </LinkComponent>
@@ -269,7 +284,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="11"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Bosescape
         </LinkComponent>
@@ -278,7 +293,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="12"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Diner game
         </LinkComponent>
@@ -287,7 +302,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="13"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Bos escape plus
         </LinkComponent>
@@ -296,7 +311,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="14"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Op de vlucht
         </LinkComponent>
@@ -305,7 +320,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="15"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Crazy 44
         </LinkComponent>
@@ -314,7 +329,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="16"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Hunted
         </LinkComponent>
@@ -323,7 +338,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="17"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Hilarische diner game
         </LinkComponent>
@@ -332,7 +347,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
         key="18"
       >
         <LinkComponent
-          to=""
+          to="/adverteren"
         >
           Spetterende spellentocht
         </LinkComponent>

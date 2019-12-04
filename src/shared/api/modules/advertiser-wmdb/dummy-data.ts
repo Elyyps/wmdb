@@ -3,7 +3,6 @@ import { IAdvertiserWMDB } from "./advertiser-wmdb";
 export const generateAdvertiserDummyData = (): IAdvertiserWMDB => ({
   title: "Waarom bij ons adverteren",
   content: `<span>Door Wegmetdebaas.nl als marketingkanaal aan te spreken vergroot u de regio waarin uw klanten zich bevinden. </span>
-  <br/>  <br/> 
   <ul className="uk-list-check">
 <li>Groot bereik onder vele bedrijven</li>
 <p>Via onze hoge posities bij Google en groot bereik via onze nieuwsbrief Gooves en via Facebook</p>

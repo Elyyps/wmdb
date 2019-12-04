@@ -63,7 +63,7 @@ exports[`[Footer] should render component without crashing 1`] = `
             key="4"
           >
             <LinkComponent
-              to="/"
+              to="/organisaties"
             >
               Alle bedrijfsuitjes
             </LinkComponent>

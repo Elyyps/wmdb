@@ -5,7 +5,7 @@ import { generateGalleryData } from "@app/api/modules/header-gallery/end-point";
 
 describe("[Gallery]", () => {
   it("should render component without crashing", () => {
-    const renderedComponent = shallow(<GalleryComponent galleryModule={generateGalleryData()} />);
+    const renderedComponent = shallow(<GalleryComponent headerGallery={generateGalleryData()} />);
     expect(renderedComponent).toMatchSnapshot();
   });
 });

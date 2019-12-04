@@ -9,4 +9,4 @@ import { generateOrganizationsData } from "@app/api/modules/organizations/end-po
 storiesOf("Organizations", module)
   .addDecorator(withA11y)
   .addDecorator(withProvider)
-  .add("Basic implementation", () => <OrganizationsComponent locations={generateOrganizationsData()} />);
+  .add("Basic implementation", () => <OrganizationsComponent organisations={generateOrganizationsData()} />);

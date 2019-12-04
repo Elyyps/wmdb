@@ -9,9 +9,11 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import { getArrow } from "@app/constants/icons";
 import { ILink } from "@app/api/core/link";
 import { Breadcrumb } from "@app/core/breadcrumb";
+import { IHeaderGallery } from "@app/api/modules/header-gallery/header-gallery";
+import ReactPlayer from "react-player";
 
 export interface IHeaderGalleryComponentProps {
-  images: string[];
+  headerGallery: IHeaderGallery[];
 }
 
 const BreadcrumbsData: ILink[] = [
@@ -29,8 +31,10 @@ const BreadcrumbsData: ILink[] = [
   }
 ];
 
-const HeaderGalleryComponent = (props: IHeaderGalleryComponentProps) => {
+const HeaderGalleryComponent = ({ headerGallery }: IHeaderGalleryComponentProps) => {
   const [currentImage, setCurrentImage] = React.useState(0);
+  const [videoIsPlaying, setVideoIsPlaying] = React.useState(false);
+
   const smallImagesStart = 2;
 
   const responsive = {
@@ -40,9 +44,22 @@ const HeaderGalleryComponent = (props: IHeaderGalleryComponentProps) => {
     }
   };
 
+  const onVideoClick = () => {
+    setVideoIsPlaying(true);
+  };
+  const onButtonClick = (newImage: number) => {
+    setCurrentImage(newImage);
+    setVideoIsPlaying(false);
+  };
+
+  const findFirstElement = (type: "video" | "image") => {
+    const firstElement = headerGallery.find(item => item.type === type);
+    firstElement && setCurrentImage(firstElement.id);
+  };
+
   React.useEffect(() => {
-    currentImage >= props.images.length && setCurrentImage(0);
-    currentImage < 0 && setCurrentImage(props.images.length - 1);
+    currentImage >= headerGallery.length && onButtonClick(0);
+    currentImage < 0 && onButtonClick(headerGallery.length - 1);
   }, [currentImage]);
 
   return (
@@ -53,62 +70,113 @@ const HeaderGalleryComponent = (props: IHeaderGalleryComponentProps) => {
           <div className={`${styles["header-gallery__col"]} ${styles["large"]}`}>
             <div className={styles["header-gallery__slider_images"]}>
               <AliceCarousel
-                onSlideChanged={e => setCurrentImage(e.slide)}
+                onSlideChanged={e => onButtonClick(e.slide)}
                 dotsDisabled
                 startIndex={currentImage}
                 responsive={responsive}
                 infinite={true}
                 buttonsDisabled
-                items={props.images.map((item: string, key: number) => (
-                  <ImageComponent src={item} key={key} />
-                ))}
+                items={headerGallery.map((item: IHeaderGallery, key: number) =>
+                  item.type === "image" ? (
+                    <ImageComponent src={item.url} key={key} />
+                  ) : (
+                    <ReactPlayer
+                      url={item.url}
+                      width={"100%"}
+                      height={"496px"}
+                      controls
+                      onPlay={onVideoClick}
+                      playing={currentImage === item.id && videoIsPlaying && true}
+                    />
+                  )
+                )}
               />
               <div className={styles["header-gallery__slider_arrows"]}>
                 <div
                   className={styles["header-gallery__slider_arrows_prev"]}
-                  onClick={() => setCurrentImage(currentImage - 1)}
+                  onClick={() => onButtonClick(currentImage - 1)}
                   role="button"
                 >
                   <IconComponent icon={getArrow(true)} size={"8px"} fillColor={"white"} />
                 </div>
                 <div
                   className={styles["header-gallery__slider_arrows_next"]}
-                  onClick={() => setCurrentImage(currentImage + 1)}
+                  onClick={() => onButtonClick(currentImage + 1)}
                   role="button"
                 >
                   <IconComponent icon={getArrow(false)} size={"8px"} fillColor={"white"} />
                 </div>
               </div>
             </div>
-            <div className={`${styles["header-gallery__info"]} ${"uk-visible@l"}`}>
-              <div className={styles["slider-info"]}>
-                <div className={styles["photo"]}>
-                  <IconComponent icon={IconImage} size={"15px"} />
-                  Foto’s ({currentImage + 1}/{props.images.length})
-                </div>
-                <div className={styles["video"]}>
-                  <IconComponent icon={IconPlay} size={"12px"} />
-                  Video
+            {!videoIsPlaying && (
+              <div className={`${styles["header-gallery__info"]} ${"uk-visible@l"}`}>
+                <div className={styles["slider-info"]}>
+                  <div
+                    role="button"
+                    className={styles["photo"]}
+                    style={{ cursor: "pointer" }}
+                    onClick={() => findFirstElement("image")}
+                  >
+                    <IconComponent icon={IconImage} size={"15px"} />
+                    Foto’s ({currentImage + 1}/{headerGallery.length})
+                  </div>
+                  <div role="button" style={{ cursor: "pointer" }} onClick={() => findFirstElement("video")}>
+                    <IconComponent icon={IconPlay} size={"12px"} />
+                    Video
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
           <div className={` ${styles["header-gallery__col"]} ${styles["small"]} ${"uk-visible@l"} `}>
             <div className={` uk-grid ${styles["uk-grid-small"]} data-uk-margin `}>
               {
                 <>
-                  <div className={` ${styles["header-gallery__col-card"]} uk-width-1-1`} style={{ cursor: "pointer" }}>
-                    <ImageComponent src={props.images[1]} onClick={() => setCurrentImage(1)} />
+                  <div
+                    role="button"
+                    className={` ${styles["header-gallery__col-card"]} uk-width-1-1`}
+                    style={{ cursor: "pointer" }}
+                    onClick={() => onButtonClick(1)}
+                  >
+                    {headerGallery[1].type === "image" ? (
+                      <ImageComponent src={headerGallery[1].url} />
+                    ) : (
+                      <ReactPlayer
+                        url={headerGallery[1].url}
+                        width={"100%"}
+                        height={"248px"}
+                        controls
+                        light
+                        style={{ pointerEvents: "none" }}
+                      />
+                    )}
                   </div>
-                  {props.images.slice(smallImagesStart, props.images.length).map((value: string, key: number) => (
-                    <div
-                      className={` ${styles["header-gallery__col-cards"]} uk-width-1-2@s`}
-                      key={key}
-                      style={{ cursor: "pointer" }}
-                    >
-                      <ImageComponent src={value} onClick={() => setCurrentImage(key + smallImagesStart)} />
-                    </div>
-                  ))}
+                  {headerGallery
+                    .slice(smallImagesStart, headerGallery.length)
+                    .map((value: IHeaderGallery, key: number) => (
+                      <div
+                        className={` ${styles["header-gallery__col-cards"]} uk-width-1-2@s`}
+                        key={key}
+                        style={{ cursor: "pointer" }}
+                        onClick={() => onButtonClick(key + smallImagesStart)}
+                        role="button"
+                      >
+                        {value.type === "image" ? (
+                          <ImageComponent src={value.url} />
+                        ) : (
+                          value.type === "video" && (
+                            <ReactPlayer
+                              url={value.url}
+                              width={"100%"}
+                              height={"116px"}
+                              controls
+                              light
+                              style={{ pointerEvents: "none" }}
+                            />
+                          )
+                        )}
+                      </div>
+                    ))}
                 </>
               }
             </div>

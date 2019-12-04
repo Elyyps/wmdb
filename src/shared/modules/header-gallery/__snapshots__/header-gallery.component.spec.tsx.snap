@@ -48,22 +48,218 @@ exports[`[HeaderGallery] should render component without crashing 1`] = `
             items={
               Array [
                 <ImageComponent
-                  src="oasis.jpg"
+                  src="img-1.jpg"
                 />,
                 <ImageComponent
-                  src="img02.png"
+                  src="img-2.png"
                 />,
                 <ImageComponent
-                  src="oasis.jpg"
+                  src="img-3.png"
                 />,
                 <ImageComponent
-                  src="img-big.jpg"
+                  src="img-4.png"
                 />,
                 <ImageComponent
-                  src="img-grid.png"
+                  src="img-5.png"
                 />,
                 <ImageComponent
-                  src="rectangle.png"
+                  src="img-6.png"
+                />,
+                <ReactPlayer
+                  config={
+                    Object {
+                      "dailymotion": Object {
+                        "params": Object {
+                          "api": 1,
+                          "endscreen-enable": false,
+                        },
+                        "preload": false,
+                      },
+                      "facebook": Object {
+                        "appId": "1309697205772819",
+                        "version": "v3.3",
+                      },
+                      "file": Object {
+                        "attributes": Object {},
+                        "dashVersion": "2.9.2",
+                        "forceAudio": false,
+                        "forceDASH": false,
+                        "forceHLS": false,
+                        "forceVideo": false,
+                        "hlsOptions": Object {},
+                        "hlsVersion": "0.10.1",
+                        "tracks": Array [],
+                      },
+                      "mixcloud": Object {
+                        "options": Object {
+                          "hide_cover": 1,
+                        },
+                      },
+                      "soundcloud": Object {
+                        "options": Object {
+                          "buying": false,
+                          "download": false,
+                          "liking": false,
+                          "sharing": false,
+                          "show_comments": false,
+                          "show_playcount": false,
+                          "visual": true,
+                        },
+                      },
+                      "twitch": Object {
+                        "options": Object {},
+                      },
+                      "vimeo": Object {
+                        "playerOptions": Object {
+                          "autopause": false,
+                          "byline": false,
+                          "portrait": false,
+                          "title": false,
+                        },
+                        "preload": false,
+                      },
+                      "wistia": Object {
+                        "options": Object {},
+                      },
+                      "youtube": Object {
+                        "embedOptions": Object {},
+                        "playerVars": Object {
+                          "iv_load_policy": 3,
+                          "modestbranding": 1,
+                          "playsinline": 1,
+                          "rel": 0,
+                          "showinfo": 0,
+                        },
+                        "preload": false,
+                      },
+                    }
+                  }
+                  controls={true}
+                  height="496px"
+                  light={false}
+                  loop={false}
+                  muted={false}
+                  onBuffer={[Function]}
+                  onBufferEnd={[Function]}
+                  onDisablePIP={[Function]}
+                  onDuration={[Function]}
+                  onEnablePIP={[Function]}
+                  onEnded={[Function]}
+                  onError={[Function]}
+                  onPause={[Function]}
+                  onPlay={[Function]}
+                  onProgress={[Function]}
+                  onReady={[Function]}
+                  onSeek={[Function]}
+                  onStart={[Function]}
+                  pip={false}
+                  playbackRate={1}
+                  playing={false}
+                  playsinline={false}
+                  progressInterval={1000}
+                  style={Object {}}
+                  url="https://www.youtube.com/watch?v=7gphiFVVtUI"
+                  volume={null}
+                  width="100%"
+                  wrapper="div"
+                />,
+                <ReactPlayer
+                  config={
+                    Object {
+                      "dailymotion": Object {
+                        "params": Object {
+                          "api": 1,
+                          "endscreen-enable": false,
+                        },
+                        "preload": false,
+                      },
+                      "facebook": Object {
+                        "appId": "1309697205772819",
+                        "version": "v3.3",
+                      },
+                      "file": Object {
+                        "attributes": Object {},
+                        "dashVersion": "2.9.2",
+                        "forceAudio": false,
+                        "forceDASH": false,
+                        "forceHLS": false,
+                        "forceVideo": false,
+                        "hlsOptions": Object {},
+                        "hlsVersion": "0.10.1",
+                        "tracks": Array [],
+                      },
+                      "mixcloud": Object {
+                        "options": Object {
+                          "hide_cover": 1,
+                        },
+                      },
+                      "soundcloud": Object {
+                        "options": Object {
+                          "buying": false,
+                          "download": false,
+                          "liking": false,
+                          "sharing": false,
+                          "show_comments": false,
+                          "show_playcount": false,
+                          "visual": true,
+                        },
+                      },
+                      "twitch": Object {
+                        "options": Object {},
+                      },
+                      "vimeo": Object {
+                        "playerOptions": Object {
+                          "autopause": false,
+                          "byline": false,
+                          "portrait": false,
+                          "title": false,
+                        },
+                        "preload": false,
+                      },
+                      "wistia": Object {
+                        "options": Object {},
+                      },
+                      "youtube": Object {
+                        "embedOptions": Object {},
+                        "playerVars": Object {
+                          "iv_load_policy": 3,
+                          "modestbranding": 1,
+                          "playsinline": 1,
+                          "rel": 0,
+                          "showinfo": 0,
+                        },
+                        "preload": false,
+                      },
+                    }
+                  }
+                  controls={true}
+                  height="496px"
+                  light={false}
+                  loop={false}
+                  muted={false}
+                  onBuffer={[Function]}
+                  onBufferEnd={[Function]}
+                  onDisablePIP={[Function]}
+                  onDuration={[Function]}
+                  onEnablePIP={[Function]}
+                  onEnded={[Function]}
+                  onError={[Function]}
+                  onPause={[Function]}
+                  onPlay={[Function]}
+                  onProgress={[Function]}
+                  onReady={[Function]}
+                  onSeek={[Function]}
+                  onStart={[Function]}
+                  pip={false}
+                  playbackRate={1}
+                  playing={false}
+                  playsinline={false}
+                  progressInterval={1000}
+                  style={Object {}}
+                  url="https://www.youtube.com/watch?v=2oyhlad64-s"
+                  volume={null}
+                  width="100%"
+                  wrapper="div"
                 />,
               ]
             }
@@ -137,6 +333,13 @@ exports[`[HeaderGallery] should render component without crashing 1`] = `
           >
             <div
               className="photo"
+              onClick={[Function]}
+              role="button"
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
             >
               <IconComponent
                 icon="images.svg"
@@ -145,11 +348,17 @@ exports[`[HeaderGallery] should render component without crashing 1`] = `
               Foto’s (
               1
               /
-              6
+              8
               )
             </div>
             <div
-              className="video"
+              onClick={[Function]}
+              role="button"
+              style={
+                Object {
+                  "cursor": "pointer",
+                }
+              }
             >
               <IconComponent
                 icon="play.svg"
@@ -168,6 +377,8 @@ exports[`[HeaderGallery] should render component without crashing 1`] = `
         >
           <div
             className=" header-gallery__col-card uk-width-1-1"
+            onClick={[Function]}
+            role="button"
             style={
               Object {
                 "cursor": "pointer",
@@ -175,13 +386,14 @@ exports[`[HeaderGallery] should render component without crashing 1`] = `
             }
           >
             <ImageComponent
-              onClick={[Function]}
-              src="img02.png"
+              src="img-2.png"
             />
           </div>
           <div
             className=" header-gallery__col-cards uk-width-1-2@s"
             key="0"
+            onClick={[Function]}
+            role="button"
             style={
               Object {
                 "cursor": "pointer",
@@ -189,13 +401,14 @@ exports[`[HeaderGallery] should render component without crashing 1`] = `
             }
           >
             <ImageComponent
-              onClick={[Function]}
-              src="oasis.jpg"
+              src="img-3.png"
             />
           </div>
           <div
             className=" header-gallery__col-cards uk-width-1-2@s"
             key="1"
+            onClick={[Function]}
+            role="button"
             style={
               Object {
                 "cursor": "pointer",
@@ -203,13 +416,14 @@ exports[`[HeaderGallery] should render component without crashing 1`] = `
             }
           >
             <ImageComponent
-              onClick={[Function]}
-              src="img-big.jpg"
+              src="img-4.png"
             />
           </div>
           <div
             className=" header-gallery__col-cards uk-width-1-2@s"
             key="2"
+            onClick={[Function]}
+            role="button"
             style={
               Object {
                 "cursor": "pointer",
@@ -217,13 +431,14 @@ exports[`[HeaderGallery] should render component without crashing 1`] = `
             }
           >
             <ImageComponent
-              onClick={[Function]}
-              src="img-grid.png"
+              src="img-5.png"
             />
           </div>
           <div
             className=" header-gallery__col-cards uk-width-1-2@s"
             key="3"
+            onClick={[Function]}
+            role="button"
             style={
               Object {
                 "cursor": "pointer",
@@ -231,8 +446,235 @@ exports[`[HeaderGallery] should render component without crashing 1`] = `
             }
           >
             <ImageComponent
-              onClick={[Function]}
-              src="rectangle.png"
+              src="img-6.png"
+            />
+          </div>
+          <div
+            className=" header-gallery__col-cards uk-width-1-2@s"
+            key="4"
+            onClick={[Function]}
+            role="button"
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+          >
+            <ReactPlayer
+              config={
+                Object {
+                  "dailymotion": Object {
+                    "params": Object {
+                      "api": 1,
+                      "endscreen-enable": false,
+                    },
+                    "preload": false,
+                  },
+                  "facebook": Object {
+                    "appId": "1309697205772819",
+                    "version": "v3.3",
+                  },
+                  "file": Object {
+                    "attributes": Object {},
+                    "dashVersion": "2.9.2",
+                    "forceAudio": false,
+                    "forceDASH": false,
+                    "forceHLS": false,
+                    "forceVideo": false,
+                    "hlsOptions": Object {},
+                    "hlsVersion": "0.10.1",
+                    "tracks": Array [],
+                  },
+                  "mixcloud": Object {
+                    "options": Object {
+                      "hide_cover": 1,
+                    },
+                  },
+                  "soundcloud": Object {
+                    "options": Object {
+                      "buying": false,
+                      "download": false,
+                      "liking": false,
+                      "sharing": false,
+                      "show_comments": false,
+                      "show_playcount": false,
+                      "visual": true,
+                    },
+                  },
+                  "twitch": Object {
+                    "options": Object {},
+                  },
+                  "vimeo": Object {
+                    "playerOptions": Object {
+                      "autopause": false,
+                      "byline": false,
+                      "portrait": false,
+                      "title": false,
+                    },
+                    "preload": false,
+                  },
+                  "wistia": Object {
+                    "options": Object {},
+                  },
+                  "youtube": Object {
+                    "embedOptions": Object {},
+                    "playerVars": Object {
+                      "iv_load_policy": 3,
+                      "modestbranding": 1,
+                      "playsinline": 1,
+                      "rel": 0,
+                      "showinfo": 0,
+                    },
+                    "preload": false,
+                  },
+                }
+              }
+              controls={true}
+              height="116px"
+              light={true}
+              loop={false}
+              muted={false}
+              onBuffer={[Function]}
+              onBufferEnd={[Function]}
+              onDisablePIP={[Function]}
+              onDuration={[Function]}
+              onEnablePIP={[Function]}
+              onEnded={[Function]}
+              onError={[Function]}
+              onPause={[Function]}
+              onPlay={[Function]}
+              onProgress={[Function]}
+              onReady={[Function]}
+              onSeek={[Function]}
+              onStart={[Function]}
+              pip={false}
+              playbackRate={1}
+              playing={false}
+              playsinline={false}
+              progressInterval={1000}
+              style={
+                Object {
+                  "pointerEvents": "none",
+                }
+              }
+              url="https://www.youtube.com/watch?v=7gphiFVVtUI"
+              volume={null}
+              width="100%"
+              wrapper="div"
+            />
+          </div>
+          <div
+            className=" header-gallery__col-cards uk-width-1-2@s"
+            key="5"
+            onClick={[Function]}
+            role="button"
+            style={
+              Object {
+                "cursor": "pointer",
+              }
+            }
+          >
+            <ReactPlayer
+              config={
+                Object {
+                  "dailymotion": Object {
+                    "params": Object {
+                      "api": 1,
+                      "endscreen-enable": false,
+                    },
+                    "preload": false,
+                  },
+                  "facebook": Object {
+                    "appId": "1309697205772819",
+                    "version": "v3.3",
+                  },
+                  "file": Object {
+                    "attributes": Object {},
+                    "dashVersion": "2.9.2",
+                    "forceAudio": false,
+                    "forceDASH": false,
+                    "forceHLS": false,
+                    "forceVideo": false,
+                    "hlsOptions": Object {},
+                    "hlsVersion": "0.10.1",
+                    "tracks": Array [],
+                  },
+                  "mixcloud": Object {
+                    "options": Object {
+                      "hide_cover": 1,
+                    },
+                  },
+                  "soundcloud": Object {
+                    "options": Object {
+                      "buying": false,
+                      "download": false,
+                      "liking": false,
+                      "sharing": false,
+                      "show_comments": false,
+                      "show_playcount": false,
+                      "visual": true,
+                    },
+                  },
+                  "twitch": Object {
+                    "options": Object {},
+                  },
+                  "vimeo": Object {
+                    "playerOptions": Object {
+                      "autopause": false,
+                      "byline": false,
+                      "portrait": false,
+                      "title": false,
+                    },
+                    "preload": false,
+                  },
+                  "wistia": Object {
+                    "options": Object {},
+                  },
+                  "youtube": Object {
+                    "embedOptions": Object {},
+                    "playerVars": Object {
+                      "iv_load_policy": 3,
+                      "modestbranding": 1,
+                      "playsinline": 1,
+                      "rel": 0,
+                      "showinfo": 0,
+                    },
+                    "preload": false,
+                  },
+                }
+              }
+              controls={true}
+              height="116px"
+              light={true}
+              loop={false}
+              muted={false}
+              onBuffer={[Function]}
+              onBufferEnd={[Function]}
+              onDisablePIP={[Function]}
+              onDuration={[Function]}
+              onEnablePIP={[Function]}
+              onEnded={[Function]}
+              onError={[Function]}
+              onPause={[Function]}
+              onPlay={[Function]}
+              onProgress={[Function]}
+              onReady={[Function]}
+              onSeek={[Function]}
+              onStart={[Function]}
+              pip={false}
+              playbackRate={1}
+              playing={false}
+              playsinline={false}
+              progressInterval={1000}
+              style={
+                Object {
+                  "pointerEvents": "none",
+                }
+              }
+              url="https://www.youtube.com/watch?v=2oyhlad64-s"
+              volume={null}
+              width="100%"
+              wrapper="div"
             />
           </div>
         </div>

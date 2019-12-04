@@ -1,52 +1,52 @@
-import { ILocation } from "@app/api/core/location";
+import { IOrganisation } from "@app/api/core/organisation";
 
-export const generateOrganizationsDummyData = (): ILocation[] => [
+export const generateOrganizationsDummyData = (): IOrganisation[] => [
   {
-    title: "Art of Events Productions",
+    title: { title: "Art of Events Productions", url: "/adverteren" },
     links: [
-      { title: "U Deugt Wij Deugen", url: "" },
-      { title: "The Ultimate Expedition", url: "" },
-      { title: "Het Mislukte Feest", url: "" },
-      { title: "Wie zijn de Mollen?", url: "" },
-      { title: "Bosgolf", url: "" }
+      { title: "U Deugt Wij Deugen", url: "/adverteren" },
+      { title: "The Ultimate Expedition", url: "/adverteren" },
+      { title: "Het Mislukte Feest", url: "/adverteren" },
+      { title: "Wie zijn de Mollen?", url: "/adverteren" },
+      { title: "Bosgolf", url: "/adverteren" }
     ]
   },
   {
-    title: "Astron37",
+    title: { title: "Astron37", url: "/" },
     links: [
-      { title: "Urban Walkabout; ... haal jij de 5?", url: "" },
-      { title: "Een tactisch teamspel met een hoge fun-factor", url: "" },
-      { title: "Toss & Throw (in- & outdoor)", url: "" },
-      { title: "Survive the Never Never (in- & outdoor)", url: "" },
-      { title: "Uitdagende game met een hoge fun-factor", url: "" },
-      { title: "Spannende games voor iedereen (in- & outdoor)", url: "" },
-      { title: "Pioneers Quest (in- & outdoor)", url: "" },
-      { title: "Down Under Culture (in- & outdoor)", url: "" },
-      { title: "Down Under Winter Games", url: "" }
+      { title: "Urban Walkabout; ... haal jij de 5?", url: "/adverteren" },
+      { title: "Een tactisch teamspel met een hoge fun-factor", url: "/adverteren" },
+      { title: "Toss & Throw (in- & outdoor)", url: "/adverteren" },
+      { title: "Survive the Never Never (in- & outdoor)", url: "/adverteren" },
+      { title: "Uitdagende game met een hoge fun-factor", url: "/adverteren" },
+      { title: "Spannende games voor iedereen (in- & outdoor)", url: "/adverteren" },
+      { title: "Pioneers Quest (in- & outdoor)", url: "/adverteren" },
+      { title: "Down Under Culture (in- & outdoor)", url: "/adverteren" },
+      { title: "Down Under Winter Games", url: "/adverteren" }
     ]
   },
   {
-    title: "Toon vertier",
+    title: { title: "Toon vertier", url: "/" },
     links: [
-      { title: "Dagje Terug in de Tijd", url: "" },
-      { title: "Dagje uit- Verassingsdag", url: "" },
-      { title: "Dagje Tukkend Touren", url: "" },
-      { title: "Casino Speelavond All-in", url: "" },
-      { title: "Sensationele fotopuzzeltocht", url: "" },
-      { title: "Dagje Brabant", url: "" },
-      { title: "Wie is de Mol?", url: "" },
-      { title: "Cold Case", url: "" },
-      { title: "Tuk Tuk & Meermansfiets Special", url: "" },
-      { title: "Nostalgische Solexdag", url: "" },
-      { title: "Tuk escape", url: "" },
-      { title: "Bosescape", url: "" },
-      { title: "Diner game", url: "" },
-      { title: "Bos escape plus", url: "" },
-      { title: "Op de vlucht", url: "" },
-      { title: "Crazy 44", url: "" },
-      { title: "Hunted", url: "" },
-      { title: "Hilarische diner game", url: "" },
-      { title: "Spetterende spellentocht", url: "" }
+      { title: "Dagje Terug in de Tijd", url: "/adverteren" },
+      { title: "Dagje uit- Verassingsdag", url: "/adverteren" },
+      { title: "Dagje Tukkend Touren", url: "/adverteren" },
+      { title: "Casino Speelavond All-in", url: "/adverteren" },
+      { title: "Sensationele fotopuzzeltocht", url: "/adverteren" },
+      { title: "Dagje Brabant", url: "/adverteren" },
+      { title: "Wie is de Mol?", url: "/adverteren" },
+      { title: "Cold Case", url: "/adverteren" },
+      { title: "Tuk Tuk & Meermansfiets Special", url: "/adverteren" },
+      { title: "Nostalgische Solexdag", url: "/adverteren" },
+      { title: "Tuk escape", url: "/adverteren" },
+      { title: "Bosescape", url: "/adverteren" },
+      { title: "Diner game", url: "/adverteren" },
+      { title: "Bos escape plus", url: "/adverteren" },
+      { title: "Op de vlucht", url: "/adverteren" },
+      { title: "Crazy 44", url: "/adverteren" },
+      { title: "Hunted", url: "/adverteren" },
+      { title: "Hilarische diner game", url: "/adverteren" },
+      { title: "Spetterende spellentocht", url: "/adverteren" }
     ]
   }
 ];

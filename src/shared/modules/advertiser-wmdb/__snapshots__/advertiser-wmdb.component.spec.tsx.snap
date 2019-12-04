@@ -14,12 +14,11 @@ exports[`[AdvertiserWMDB] should render component without crashing 1`] = `
     <div
       className="advertiser-wmdb"
     >
-      <h1>
+      <h2>
         Waarom bij ons adverteren
-      </h1>
+      </h2>
       <BodyTextComponent
         html="<span>Door Wegmetdebaas.nl als marketingkanaal aan te spreken vergroot u de regio waarin uw klanten zich bevinden. </span>
-  <br/>  <br/> 
   <ul className=\\"uk-list-check\\">
 <li>Groot bereik onder vele bedrijven</li>
 <p>Via onze hoge posities bij Google en groot bereik via onze nieuwsbrief Gooves en via Facebook</p>
@@ -30,15 +29,20 @@ exports[`[AdvertiserWMDB] should render component without crashing 1`] = `
 <li>3 Maandelijkse rapportage</li>
 <p>Uitgebreide rapportage van uw marketingactie(s)</p>
 </ul> "
+        style={
+          Object {
+            "color": "#101010",
+          }
+        }
       />
       <br />
     </div>
     <div
       className="advertiser-wmdb-form"
     >
-      <h1>
+      <h2>
         Graag ontvang ik meer informatie over adverteren op WegmetdeBaas.nl
-      </h1>
+      </h2>
       <WithFormik(InnerForm)
         onSubmit={[Function]}
       />

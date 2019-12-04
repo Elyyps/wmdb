@@ -19,13 +19,13 @@ const AdvertiserWMDBComponent = ({ advertiserModule }: IAdvertiserWMDBComponentP
   >
     <div className={"uk-grid uk-child-width-1-2@s uk-grid-xlarge"}>
       <div className={styles["advertiser-wmdb"]}>
-        <h1>{advertiserModule.title}</h1>
-        <BodyTextComponent html={advertiserModule.content} />
+        <h2>{advertiserModule.title}</h2>
+        <BodyTextComponent html={advertiserModule.content} style={{ color: "#101010" }} />
         <br />
       </div>
 
       <div className={styles["advertiser-wmdb-form"]}>
-        <h1>{advertiserModule.formTitle}</h1>
+        <h2>{advertiserModule.formTitle}</h2>
         <FAQFormComponent onSubmit={() => alert("submitted ")} />
       </div>
     </div>

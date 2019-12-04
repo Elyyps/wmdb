@@ -9,4 +9,4 @@ import { generateGalleryData } from "@app/api/modules/header-gallery/end-point";
 storiesOf("Gallery", module)
   .addDecorator(withA11y)
   .addDecorator(withProvider)
-  .add("Basic implementation", () => <GalleryComponent galleryModule={generateGalleryData()} />);
+  .add("Basic implementation", () => <GalleryComponent headerGallery={generateGalleryData()} />);

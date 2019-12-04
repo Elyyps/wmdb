@@ -21,7 +21,7 @@ export const generateDummyFooterData = (): IFooterModule => ({
     },
     {
       title: "Alle bedrijfsuitjes",
-      url: "/"
+      url: "/organisaties"
     },
     { title: "Sitemap", url: "/" },
     {

@@ -1,9 +1,14 @@
 .organizations {
+  height: calc(100vh - 534px);
+  @media (max-width: $breakpoint-small) {
+    min-height: calc(100vh - 702px);
+  }
   &:not(:first-child) {
     margin-top: 16px;
   }
 
   &__list {
+    margin-top: 6px;
     font-size: 12px;
     padding: 0;
     display: grid;
