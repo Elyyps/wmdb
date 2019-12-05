@@ -1,4 +1,8 @@
 import React from "react";
+//import  "@babel/polyfill";
+require("@babel/polyfill");
+
+
 import { hydrate, render } from "react-dom";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router, Route } from "react-router-dom";
@@ -8,7 +12,6 @@ import createHistory from "../shared/stores/history";
 import "./index.scss";
 import { IntlProviderContainer } from "@app/translations/intl-provider.container";
 import { Routes } from "@app/routes";
-
 const history = createHistory();
 
 // Create/use the store

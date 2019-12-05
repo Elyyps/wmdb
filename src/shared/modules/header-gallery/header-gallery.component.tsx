@@ -88,6 +88,7 @@ const HeaderGalleryComponent = ({ headerGallery }: IHeaderGalleryComponentProps)
                       onPlay={onVideoClick}
                       playing={currentImage === item.id && videoIsPlaying && true}
                     />
+                    
                   )
                 )}
               />
@@ -149,6 +150,7 @@ const HeaderGalleryComponent = ({ headerGallery }: IHeaderGalleryComponentProps)
                         light
                         style={{ pointerEvents: "none" }}
                       />
+                      
                     )}
                   </div>
                   {headerGallery
@@ -165,14 +167,15 @@ const HeaderGalleryComponent = ({ headerGallery }: IHeaderGalleryComponentProps)
                           <ImageComponent src={value.url} />
                         ) : (
                           value.type === "video" && (
-                            <ReactPlayer
-                              url={value.url}
-                              width={"100%"}
-                              height={"116px"}
-                              controls
-                              light
-                              style={{ pointerEvents: "none" }}
-                            />
+                            // <ReactPlayer
+                            //   url={value.url}
+                            //   width={"100%"}
+                            //   height={"116px"}
+                            //   controls
+                            //   light
+                            //   style={{ pointerEvents: "none" }}
+                            // />
+                           '' 
                           )
                         )}
                       </div>

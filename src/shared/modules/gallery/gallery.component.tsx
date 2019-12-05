@@ -12,6 +12,11 @@ import { IHeaderGallery } from "@app/api/modules/header-gallery/header-gallery";
 import { LightBoxComponent } from "@app/core/lightbox";
 import ReactAliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
+import "core-js/stable";
+import "regenerator-runtime/runtime";
+
+
+
 
 export interface IGalleryComponentProps {
   headerGallery: IHeaderGallery[];
@@ -91,7 +96,7 @@ const GalleryComponent = ({ headerGallery }: IGalleryComponentProps) => {
                 {slide.type === "image" ? (
                   <ImageComponent src={slide.url} />
                 ) : (
-                  slide.type === "video" && (
+                  slide.type === "video" ? (
                     <ReactPlayer
                       style={{ pointerEvents: "none" }}
                       url={slide.url}
@@ -100,7 +105,9 @@ const GalleryComponent = ({ headerGallery }: IGalleryComponentProps) => {
                       controls
                       light
                     />
+                    
                   )
+                  :""
                 )}
               </div>
             ))}

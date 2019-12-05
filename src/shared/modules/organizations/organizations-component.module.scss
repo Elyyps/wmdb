@@ -1,7 +1,7 @@
 .organizations {
-  height: calc(100vh - 534px);
+  max-height: calc(100% - 534px);
   @media (max-width: $breakpoint-small) {
-    min-height: calc(100vh - 702px);
+    max-height: calc(100% - 702px);
   }
   &:not(:first-child) {
     margin-top: 16px;
@@ -10,27 +10,26 @@
   &__list {
     margin-top: 6px;
     font-size: 12px;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 33%);
+    display: flex;
+    flex-wrap: wrap;
 
-    @media (max-width: $breakpoint-medium) {
-      grid-template-columns: repeat(2, 50%);
-    }
-    @media (max-width: $breakpoint-small) {
-      grid-template-columns: repeat(1, 100%);
-    }
+ 
   }
   li,
   h5 {
-    width: fit-content;
+    width: 33%;
     margin-bottom: 12px;
     text-decoration: underline;
+    @media (max-width: $breakpoint-medium) {
+    }
+    @media (max-width: $breakpoint-small) {
+    }
     @media (min-width: $breakpoint-small) {
       margin-bottom: 9px;
     }
   }
   a {
+    width: auto;
     color: $gray;
   }
 }
