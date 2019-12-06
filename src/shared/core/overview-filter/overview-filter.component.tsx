@@ -119,7 +119,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
       <button className={`${styles["button-search"]} uk-hidden@m`} onClick={handleClick}>
         <div>
           <IconComponent icon={Search} size={"15px"} />
-          <span>{searchPlaceholder}</span>
+          <span className={styles["button-search-placeholder"]}>{searchPlaceholder}</span>
         </div>
         {checkedItems.length > 0 && (
           <div className={styles["button-search-count"]}>

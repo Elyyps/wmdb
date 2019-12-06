@@ -18,15 +18,18 @@
   li,
   h5 {
     width: 33%;
-    margin-bottom: 12px;
+
+    margin-bottom: 12px; 
     text-decoration: underline;
     @media (max-width: $breakpoint-medium) {
-    }
-    @media (max-width: $breakpoint-small) {
-    }
-    @media (min-width: $breakpoint-small) {
+      width: 50%;
       margin-bottom: 9px;
     }
+    @media (max-width: $breakpoint-small) {
+      width: 100%;
+
+    }
+  
   }
   a {
     width: auto;

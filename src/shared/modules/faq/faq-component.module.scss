@@ -1,5 +1,6 @@
 .faq {
   &__columns {
+
     @media (max-width: $breakpoint-xsmall-max) {
       > div {
         margin-bottom: 16px;
@@ -15,7 +16,7 @@
     ul {
       color: #101010;
       margin-top: 10px;
-
+margin-left: 24px;
       li {
         list-style-type: disc;
       }

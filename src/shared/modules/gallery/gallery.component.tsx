@@ -12,8 +12,7 @@ import { IHeaderGallery } from "@app/api/modules/header-gallery/header-gallery";
 import { LightBoxComponent } from "@app/core/lightbox";
 import ReactAliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import "core-js/stable";
-import "regenerator-runtime/runtime";
+
 
 
 

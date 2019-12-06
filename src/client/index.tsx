@@ -1,6 +1,4 @@
 import React from "react";
-//import  "@babel/polyfill";
-require("@babel/polyfill");
 
 
 import { hydrate, render } from "react-dom";

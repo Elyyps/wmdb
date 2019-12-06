@@ -13,7 +13,9 @@ exports[`[OverviewFilter] should render component without crashing 1`] = `
         icon="search.svg"
         size="15px"
       />
-      <span>
+      <span
+        className="button-search-placeholder"
+      >
         Plaats, regio of provincie
       </span>
     </div>

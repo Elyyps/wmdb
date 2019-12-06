@@ -19,6 +19,11 @@
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
+  } 
+  &-placeholder {
+    position: absolute;
+    left: 40px;
+    top: 25%;
   }
   &-count {
     display: flex;
