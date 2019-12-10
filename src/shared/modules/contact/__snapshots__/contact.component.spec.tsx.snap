@@ -198,48 +198,255 @@ deelnemers zijn op dit moment Mister X al tegen gekomen.
         <div
           className="uk-visible@m"
         >
-          <ActivitiesComponent
+          <withRouter(Component)
             activitiesModule={
               Object {
+                "filterSections": Array [
+                  Object {
+                    "checkboxes": Array [
+                      Object {
+                        "count": 60,
+                        "id": 1,
+                        "label": "Citygames",
+                        "name": "citygames",
+                      },
+                      Object {
+                        "count": 36,
+                        "id": 2,
+                        "label": "Beachgames",
+                        "name": "Beachgames",
+                      },
+                      Object {
+                        "count": 23,
+                        "id": 3,
+                        "label": "Indoor Spel en Ontspanning",
+                        "name": "IndoorSpelenOntspanning",
+                      },
+                      Object {
+                        "count": 45,
+                        "id": 4,
+                        "label": "Outdoor Spel en Ontspanning",
+                        "name": "Outdoor Spel en Ontspanning",
+                      },
+                    ],
+                    "id": 1,
+                    "title": "Spel & Ontspanning",
+                  },
+                  Object {
+                    "checkboxes": Array [
+                      Object {
+                        "count": 24,
+                        "id": 5,
+                        "label": "Fun op Wielen",
+                        "name": "Funopwielen",
+                      },
+                      Object {
+                        "count": 11,
+                        "id": 6,
+                        "label": "Outdoor Lucht",
+                        "name": "Outdoor Lucht",
+                      },
+                      Object {
+                        "count": 35,
+                        "id": 7,
+                        "label": "Outdoor Water",
+                        "name": "outdoorwater",
+                      },
+                      Object {
+                        "count": 12,
+                        "id": 8,
+                        "label": "Indoor Sport en Actie",
+                        "name": "indorsportenactie",
+                      },
+                      Object {
+                        "count": 0,
+                        "id": 26,
+                        "label": "Outdoor Sport en Actie",
+                        "name": "outdorsportenactie",
+                      },
+                    ],
+                    "id": 2,
+                    "title": "Sportief & Actie(f)",
+                  },
+                  Object {
+                    "checkboxes": Array [
+                      Object {
+                        "count": 22,
+                        "id": 9,
+                        "label": "Creatief",
+                        "name": "creatief",
+                      },
+                      Object {
+                        "count": 24,
+                        "id": 10,
+                        "label": "Theater",
+                        "name": "theater",
+                      },
+                      Object {
+                        "count": 24,
+                        "id": 11,
+                        "label": "Muziek en Dans",
+                        "name": "muziekenDans",
+                      },
+                    ],
+                    "id": 3,
+                    "title": "Creatieve Uitjes",
+                  },
+                  Object {
+                    "checkboxes": Array [
+                      Object {
+                        "count": 0,
+                        "id": 12,
+                        "label": "Kookworkshops",
+                        "name": "kookworkshops",
+                      },
+                      Object {
+                        "count": 24,
+                        "id": 13,
+                        "label": "Kunst en Cultuur",
+                        "name": "kunstencultuur",
+                      },
+                      Object {
+                        "count": 24,
+                        "id": 14,
+                        "label": "Body en Spirit",
+                        "name": "bodyenspirit",
+                      },
+                    ],
+                    "id": 4,
+                    "title": "Workshops",
+                  },
+                  Object {
+                    "checkboxes": Array [
+                      Object {
+                        "count": 0,
+                        "id": 15,
+                        "label": "Eten en drinken",
+                        "name": "etenendrinken",
+                      },
+                      Object {
+                        "count": 0,
+                        "id": 16,
+                        "label": "Themafeesten",
+                        "name": "Themafeesten",
+                      },
+                      Object {
+                        "count": 12,
+                        "id": 17,
+                        "label": "Totaalprogramma",
+                        "name": "totaalprogramma",
+                      },
+                      Object {
+                        "count": 12,
+                        "id": 18,
+                        "label": "Attracties en Entertainment",
+                        "name": "Attractiesenentertainment",
+                      },
+                    ],
+                    "id": 5,
+                    "title": "Eten, Drinken & Feesten",
+                  },
+                  Object {
+                    "checkboxes": Array [
+                      Object {
+                        "count": 12,
+                        "id": 19,
+                        "label": "Teamtraining",
+                        "name": "Teamtraining",
+                      },
+                      Object {
+                        "count": 12,
+                        "id": 20,
+                        "label": "Teambuilding",
+                        "name": "Teambuilding",
+                      },
+                      Object {
+                        "count": 0,
+                        "id": 21,
+                        "label": "Uit Vergaderen",
+                        "name": "Uit Vergaderen",
+                      },
+                    ],
+                    "id": 6,
+                    "title": "Teambuilden",
+                  },
+                  Object {
+                    "checkboxes": Array [
+                      Object {
+                        "count": 12,
+                        "id": 22,
+                        "label": "Wintersport",
+                        "name": "wintersport",
+                      },
+                      Object {
+                        "count": 22,
+                        "id": 23,
+                        "label": "Stedentrips",
+                        "name": "stedentrips",
+                      },
+                      Object {
+                        "count": 12,
+                        "id": 24,
+                        "label": "Adventure & Outdoor",
+                        "name": "adventureeoutdoor",
+                      },
+                      Object {
+                        "count": 12,
+                        "id": 25,
+                        "label": "Reizen Buitenland",
+                        "name": "reizenbuitenland",
+                      },
+                    ],
+                    "id": 7,
+                    "title": "Incentives",
+                  },
+                ],
                 "items": Array [
                   Object {
                     "color": "#b0cf6d",
+                    "filterSectionId": 5,
                     "icon": "eten.svg",
                     "title": "Eten, Drinken & Feesten",
                     "total": 500,
                   },
                   Object {
                     "color": "#71abde",
+                    "filterSectionId": 6,
                     "icon": "teambuilding.svg",
                     "title": "Teambuilden",
                     "total": 500,
                   },
                   Object {
                     "color": "#f8b272",
+                    "filterSectionId": 7,
                     "icon": "incentive.svg",
                     "title": "Incentives",
                     "total": 500,
                   },
                   Object {
                     "color": "#ef7478",
+                    "filterSectionId": 1,
                     "icon": "spel.svg",
                     "title": "Spel & Ontspanning",
                     "total": 500,
                   },
                   Object {
                     "color": "#d6b6d8",
+                    "filterSectionId": 2,
                     "icon": "sportief.svg",
                     "title": "Sportief & Actie(f)",
                     "total": 500,
                   },
                   Object {
                     "color": "#75c5c3",
+                    "filterSectionId": 3,
                     "icon": "creatief.svg",
                     "title": "Creatieve Uitjes",
                     "total": 500,
                   },
                   Object {
                     "color": "#ffdf7a",
+                    "filterSectionId": 4,
                     "icon": "incentive.svg",
                     "title": "Workshops",
                     "total": 500,

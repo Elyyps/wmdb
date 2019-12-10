@@ -389,11 +389,13 @@ exports[`[Gallery] should render component without crashing 1`] = `
           role="button"
           style={
             Object {
+              "color": "black",
               "cursor": "pointer",
             }
           }
         >
           <IconComponent
+            fillColor="black"
             icon="images.svg"
             size="15px"
           />
@@ -406,11 +408,13 @@ exports[`[Gallery] should render component without crashing 1`] = `
           role="button"
           style={
             Object {
+              "color": "black",
               "cursor": "pointer",
             }
           }
         >
           <IconComponent
+            fillColor="black"
             icon="play.svg"
             size="12px"
           />
