@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[QuestionsOverview] should render component without crashing 1`] = `
+<div
+  className="questions-overview"
+>
+  <div
+    className="uk-container"
+  >
+    <Breadcrumb
+      breadcrumbs={
+        Array [
+          Object {
+            "title": "Home",
+            "url": "/",
+          },
+          Object {
+            "title": "FAQ",
+            "url": "/",
+          },
+          Object {
+            "title": "Feest",
+            "url": "/",
+          },
+        ]
+      }
+    />
+    <div
+      className="questions-overview-header"
+    >
+      <h1>
+        Alle veelgestelde vragen over feest
+      </h1>
+      <p>
+        In onze FAQ belichten we alle facetten bij het organiseren van je evenement. Antwoorden op vragen en veel handige toepasbare tips.
+      </p>
+    </div>
+  </div>
+  <div
+    className="questions-overview-body"
+  >
+    <ModuleSectionComponent
+      paddingTop="40px"
+    >
+      <ArrowPanelListComponent
+        items={
+          Array [
+            Object {
+              "title": "Is er een checklist voor het plannen van een evenement?",
+              "url": "",
+            },
+            Object {
+              "title": "Wanneer moet u een evenementenverzekering afsluiten?",
+              "url": "",
+            },
+            Object {
+              "title": "Is een bedrijfsuitje anders dan een teamuitje?",
+              "url": "",
+            },
+            Object {
+              "title": "Wat zijn de belangrijkste tips bij het organiseren van een event?",
+              "url": "",
+            },
+            Object {
+              "title": "Hoe organiseert u een goed zakelijk jubileum?",
+              "url": "",
+            },
+          ]
+        }
+      />
+    </ModuleSectionComponent>
+  </div>
+</div>
+`;

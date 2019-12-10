@@ -69,7 +69,7 @@ const OutingCardComponent = ({
   const classModify = classNames(styles["outing-card"], { "outing-card--event": date }, modifyCard, styleOpen);
 
   return (
-    <div className={classModify} style={{ height: modify && windowSize <= mobileSize ? "260px" : "225px"}}>
+    <div className={classModify} style={{ height: modify && windowSize <= mobileSize ? "260px" : "225px" }}>
       {image && <OutingCardImage images={image} modify={modify} />}
 
       <div className={styles["card-body"]}>

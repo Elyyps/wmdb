@@ -36,7 +36,7 @@ exports[`[NewActivity] should render component without crashing 1`] = `
       maximumPersons={100}
       minimumPersons={10}
       modify="small"
-      subtitle="Citygames in Amsterdam"
+      subtitle="Citygames in Egmond aan Zee"
       title="Escape City - Het ontsnappingsspel van Mokum #1"
     />
     <OutingCardComponent
@@ -65,7 +65,7 @@ exports[`[NewActivity] should render component without crashing 1`] = `
       maximumPersons={100}
       minimumPersons={20}
       modify="small"
-      subtitle="Citygames in Amsterdam"
+      subtitle="Citygames in Vijfhuizen"
       title="The Hangover #2x"
     />
   </div>

@@ -210,7 +210,7 @@ export const GenerateDummyFilterOverview = (): IOverviewFilterCategoryItem[] => 
 const DummyOutingCards: IOutingCard[] = [
   {
     title: "Escape City - Het ontsnappingsspel van Mokum",
-    subtitle: "Citygames in Amsterdam",
+    subtitle: "Citygames in Egmond aan Zee",
     image: [
       "https://picsum.photos/id/420/600/400",
       "https://picsum.photos/id/421/600/400",
@@ -230,7 +230,7 @@ const DummyOutingCards: IOutingCard[] = [
   },
   {
     title: "The Hangover",
-    subtitle: "Citygames in Amsterdam",
+    subtitle: "Citygames in Vijfhuizen",
     image: [
       "https://picsum.photos/id/115/300/200",
       "https://picsum.photos/id/116/300/200",
@@ -250,7 +250,7 @@ const DummyOutingCards: IOutingCard[] = [
   },
   {
     title: "Escape City - Het ontsnappingsspel van Mokum",
-    subtitle: "Citygames in Amsterdam",
+    subtitle: "Citygames in Den Dolder",
     image: [
       "https://picsum.photos/id/1/300/200",
       "https://picsum.photos/id/2/300/200",
@@ -270,7 +270,7 @@ const DummyOutingCards: IOutingCard[] = [
   },
   {
     title: "Escape City - Het ontsnappingsspel van Mokum",
-    subtitle: "Citygames in Amsterdam",
+    subtitle: "Citygames in Kollumerpomp",
     image: [
       "https://picsum.photos/id/220/300/200",
       "https://picsum.photos/id/229/300/200",
@@ -290,7 +290,7 @@ const DummyOutingCards: IOutingCard[] = [
   },
   {
     title: "Escape City - Het ontsnappingsspel van Mokum",
-    subtitle: "Citygames in Amsterdam",
+    subtitle: "Citygames in Egmond aan Zee",
     image: [
       "https://picsum.photos/id/320/300/200",
       "https://picsum.photos/id/310/300/200",
@@ -310,7 +310,7 @@ const DummyOutingCards: IOutingCard[] = [
   },
   {
     title: "Escape City - Het ontsnappingsspel van Mokum",
-    subtitle: "Citygames in Amsterdam",
+    subtitle: "Citygames in Vijfhuizen",
     image: [
       "https://picsum.photos/id/13/300/200",
       "https://picsum.photos/id/14/300/200",
@@ -330,7 +330,7 @@ const DummyOutingCards: IOutingCard[] = [
   },
   {
     title: "Escape City - Het ontsnappingsspel van Mokum",
-    subtitle: "Citygames in Amsterdam",
+    subtitle: "Citygames in Vijfhuizen",
     image: [
       "https://picsum.photos/id/17/300/200",
       "https://picsum.photos/id/18/300/200",
@@ -350,7 +350,7 @@ const DummyOutingCards: IOutingCard[] = [
   },
   {
     title: "Escape City - Het ontsnappingsspel van Mokum",
-    subtitle: "Citygames in Amsterdam",
+    subtitle: "Citygames in Egmond aan Zee",
     image: [
       "https://picsum.photos/id/21/300/200",
       "https://picsum.photos/id/22/300/200",
@@ -370,7 +370,7 @@ const DummyOutingCards: IOutingCard[] = [
   },
   {
     title: "Escape City - Het ontsnappingsspel van Mokum",
-    subtitle: "Citygames in Amsterdam",
+    subtitle: "Citygames in Kollumerpomp",
     image: [
       "https://picsum.photos/id/25/300/200",
       "https://picsum.photos/id/26/300/200",
@@ -390,7 +390,7 @@ const DummyOutingCards: IOutingCard[] = [
   },
   {
     title: "Escape City - Het ontsnappingsspel van Mokum",
-    subtitle: "Citygames in Amsterdam",
+    subtitle: "Citygames in Egmond aan Zee",
     image: [
       "https://picsum.photos/id/30/300/200",
       "https://picsum.photos/id/31/300/200",
@@ -410,7 +410,7 @@ const DummyOutingCards: IOutingCard[] = [
   },
   {
     title: "Escape City - Het ontsnappingsspel van Mokum",
-    subtitle: "Citygames in Amsterdam",
+    subtitle: "Citygames in Den Dolder",
     image: [
       "https://picsum.photos/id/34/300/200",
       "https://picsum.photos/id/35/300/200",
@@ -430,7 +430,7 @@ const DummyOutingCards: IOutingCard[] = [
   },
   {
     title: "Escape City - Het ontsnappingsspel van Mokum",
-    subtitle: "Citygames in Amsterdam",
+    subtitle: "Citygames in Den Dolder",
     image: [
       "https://picsum.photos/id/38/300/200",
       "https://picsum.photos/id/39/300/200",
@@ -450,7 +450,7 @@ const DummyOutingCards: IOutingCard[] = [
   },
   {
     title: "Escape City - Het ontsnappingsspel van Mokum",
-    subtitle: "Citygames in Amsterdam",
+    subtitle: "Citygames in Kollumerpomp",
     image: [
       "https://picsum.photos/id/42/300/200",
       "https://picsum.photos/id/43/300/200",
@@ -470,7 +470,7 @@ const DummyOutingCards: IOutingCard[] = [
   },
   {
     title: "Escape City - Het ontsnappingsspel van Mokum",
-    subtitle: "Citygames in Amsterdam",
+    subtitle: "Citygames in Egmond aan Zee",
     image: [
       "https://picsum.photos/id/46/300/200",
       "https://picsum.photos/id/47/300/200",
@@ -490,7 +490,7 @@ const DummyOutingCards: IOutingCard[] = [
   },
   {
     title: "Escape City - Het ontsnappingsspel van Mokum",
-    subtitle: "Citygames in Amsterdam",
+    subtitle: "Citygames in Egmond aan Zee",
     image: [
       "https://picsum.photos/id/50/300/200",
       "https://picsum.photos/id/51/300/200",
@@ -510,7 +510,7 @@ const DummyOutingCards: IOutingCard[] = [
   },
   {
     title: "Escape City - Het ontsnappingsspel van Mokum",
-    subtitle: "Citygames in Amsterdam",
+    subtitle: "Citygames in Den Dolder",
     image: [
       "https://picsum.photos/id/54/300/200",
       "https://picsum.photos/id/55/300/200",
@@ -530,7 +530,7 @@ const DummyOutingCards: IOutingCard[] = [
   },
   {
     title: "Escape City - Het ontsnappingsspel van Mokum",
-    subtitle: "Citygames in Amsterdam",
+    subtitle: "Citygames in Vijfhuizen",
     image: [
       "https://picsum.photos/id/74/300/200",
       "https://picsum.photos/id/75/300/200",

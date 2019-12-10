@@ -1,5 +1,8 @@
-import { ILink } from "./link";
 export interface ILocation {
-  links: ILink[];
+  locations: ILocationInfo[];
   title: string;
+}
+export interface ILocationInfo {
+  title: string;
+  value: string;
 }

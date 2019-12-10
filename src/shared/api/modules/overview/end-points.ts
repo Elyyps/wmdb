@@ -13,8 +13,8 @@ export const getCardsPaginated = (skip: number, take: number, filter: IOverviewF
     const filterTextCapitalized = filter.filterText.toUpperCase();
     cards = cards.filter(
       item =>
-        item.title &&
-        item.title
+        item.subtitle &&
+        item.subtitle
           .toUpperCase()
           .trim()
           .includes(filterTextCapitalized)

@@ -26,10 +26,9 @@
     right: 16px;
     transform: translateY(-50%) rotate(-90deg);
     color: $brand-primary;
-
-    path {
-      stroke: currentColor;
-      fill: none !important;
+    svg {
+      fill: $brand-primary;
+      stroke: none;
     }
   }
 
@@ -39,8 +38,9 @@
     background-color: $brand-primary;
     .arrow-panel__arrow {
       color: $global-inverse-color;
-      path {
-        fill: none;
+      svg {
+        fill: white;
+        stroke: none;
       }
     }
   }

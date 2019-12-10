@@ -18,8 +18,8 @@ const SingleWMDBPage = () => {
   return (
     <React.Fragment>
       <NavBarComponent navbarModule={generateNavbarData()} />
-      <HeaderGalleryComponent headerGallery={generateGalleryData()} />
-      {/* <GalleryComponent headerGallery={generateGalleryData()} /> */}
+      {/* <HeaderGalleryComponent headerGallery={generateGalleryData()} /> */}
+      <GalleryComponent headerGallery={generateGalleryData()} />
       <ContactComponent contactModule={generateContactData()} />
       <FooterComponent footerModule={generateFooterData()} />
     </React.Fragment>

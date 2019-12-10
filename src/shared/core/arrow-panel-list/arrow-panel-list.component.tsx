@@ -12,7 +12,7 @@ export interface IArrowPanelListComponentProps {
   linkMore?: IArrowPanelProps;
 
   shouldMarginBottomBeZero?: boolean;
-  title: string;
+  title?: string;
 }
 
 const ArrowPanelListComponent = (props: IArrowPanelListComponentProps) => {

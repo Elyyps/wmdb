@@ -56,13 +56,7 @@ const ContactComponent = ({ contactModule }: IContactComponentProps) => {
             <div className={styles["contact-content"]}>
               <BodyTextComponent html={contactModule.content} style={{ color: "black" }} />
             </div>
-            <Button
-              title={contactModule.buttonText}
-              variant={"primary"}
-              fullWidth
-              large
-              onClick={() => executeScroll()}
-            />
+            <Button title={contactModule.buttonText} variant={"primary"} fullWidth large onClick={executeScroll} />
             <div className={styles["other-activities"]}>
               <OtherActivitiesComponent otherActivitiesModule={generateOtherActivitiesData()} />
             </div>

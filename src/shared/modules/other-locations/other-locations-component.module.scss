@@ -19,6 +19,7 @@
       display: table;
       margin-bottom: 12px;
       text-decoration: underline;
+      cursor: pointer;
       @media (min-width: $breakpoint-small) {
         margin-bottom: 9px;
       }

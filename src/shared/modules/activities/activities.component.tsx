@@ -16,7 +16,6 @@ const Component = (props: IActivitiesComponentProps & RouteComponentProps) => {
     const foundSection = props.activitiesModule.filterSections.find(
       section => section.id === activitiesModule.filterSectionId
     );
-    alert(foundSection);
 
     if (foundSection) {
       const selectedItemsArrayString = foundSection.checkboxes.map(checkbox => checkbox.id).join("%2C");
@@ -25,11 +24,12 @@ const Component = (props: IActivitiesComponentProps & RouteComponentProps) => {
 
     props.history.push(finalUrl);
   };
+
   return (
     <div className={styles["activities"]}>
       <h1>{props.activitiesModule.title}</h1>
       {props.activitiesModule.items.map((item: IActivityCard, key) => (
-        <div key={key} style={{ height: "58px" }} onClick={() => openOverviewPage(item)}>
+        <div key={key} style={{ height: "58px" }} role="button" onClick={() => openOverviewPage(item)}>
           <ActivityCardComponent {...item} key={key} />
         </div>
       ))}

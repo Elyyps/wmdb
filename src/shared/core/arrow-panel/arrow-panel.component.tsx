@@ -13,7 +13,7 @@ const ArrowPanel = ({ url, title }: IArrowPanelProps) => (
   <Link to={url} className={styles["arrow-panel"]}>
     <div className={styles["arrow-panel__title"]}>{title}</div>
     <div className={styles["arrow-panel__arrow"]}>
-      <IconComponent fillColor="white" icon={Arrow} size={"14px"} />
+      <IconComponent icon={Arrow} size={"14px"} />
     </div>
   </Link>
 );

@@ -10,8 +10,11 @@ export interface IActivityCardComponentProps {
   total?: number | undefined;
 }
 
-const ActivityCardComponent = ({ icon, title, total, color }: IActivityCardComponentProps) =>{
+const ActivityCardComponent = ({ icon, title, total, color }: IActivityCardComponentProps) => {
   const [windowSize, setWindowSize] = React.useState(0);
+  const mobileWidth = 640;
+  const tabletWidth = 760;
+  const titleLength = 18;
 
   const handleResize = () => {
     setWindowSize(window.innerWidth);
@@ -28,28 +31,29 @@ const ActivityCardComponent = ({ icon, title, total, color }: IActivityCardCompo
     };
   }, []);
 
-return (
-  <div className={styles["activity-card"]} style={{ borderBottomColor: color ? color : "white" }}>
-    <div className={styles["activity-card__head"]}>
-      <div className={styles["activity-card__title"]}>
-        {icon && (
-          <div className={styles["activity-card__title__icon"]} style={{ backgroundColor: color ? color : "white" }}>
-            <span>
-              <IconComponent icon={icon} size={"34px"} />
-            </span>
-          </div>
-        )}
-        <span className={styles["activity-card__text"]}>{(windowSize < 760 && windowSize>640) ? trimText(title,18,"...",false) : title}</span>
-      </div>
+  return (
+    <div className={styles["activity-card"]} style={{ borderBottomColor: color ? color : "white" }}>
+      <div className={styles["activity-card__head"]}>
+        <div className={styles["activity-card__title"]}>
+          {icon && (
+            <div className={styles["activity-card__title__icon"]} style={{ backgroundColor: color ? color : "white" }}>
+              <span>
+                <IconComponent icon={icon} size={"34px"} />
+              </span>
+            </div>
+          )}
+          <span className={styles["activity-card__text"]}>
+            {windowSize < tabletWidth && windowSize > mobileWidth ? trimText(title, titleLength, "...", false) : title}
+          </span>
+        </div>
 
-      <div className={styles["activity-card__count"]}>
-        {total ? <h6>({total})</h6> : ""}
-        <IconComponent icon={Arrow} size={"12px"} fillColor="#34aadf" />
+        <div className={styles["activity-card__count"]}>
+          {total ? <h6>({total})</h6> : ""}
+          <IconComponent icon={Arrow} size={"12px"} fillColor="#34aadf" />
+        </div>
       </div>
     </div>
-  </div>
-);
-
-} 
+  );
+};
 
 export { ActivityCardComponent };
