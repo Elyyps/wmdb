@@ -3,4 +3,6 @@ export interface IActivityCard {
   icon: string;
   title: string;
   total?: number;
+  filterSectionId?: number;
+
 }

@@ -38,6 +38,7 @@ const GalleryComponent = ({ headerGallery }: IGalleryComponentProps) => {
   const [lightBoxOpen, setLightBoxOpen] = React.useState(false);
   const [currentSlide, setCurrentSlide] = React.useState<number>(0);
   const contentHeight = 50;
+  const [buttonActive, setbuttonActive] = React.useState<undefined|"image"|"video">(undefined);
 
   const handleClick = (newSlide: number) => {
     setCurrentSlide(newSlide);
@@ -46,6 +47,8 @@ const GalleryComponent = ({ headerGallery }: IGalleryComponentProps) => {
   const findFirstElement = (type?: "video" | "image") => {
     const firstElement = headerGallery.find(item => item.type === type);
     firstElement && setCurrentSlide(firstElement.id);
+    
+    setbuttonActive(type);
   };
   const findSlide = (id: number) => {
     const slide = headerGallery.find(item => item.id === id);
@@ -133,14 +136,14 @@ const GalleryComponent = ({ headerGallery }: IGalleryComponentProps) => {
             <div
               role="button"
               className={styles["photo"]}
-              style={{ cursor: "pointer" }}
+              style={{ cursor: "pointer",color:buttonActive==="image" ? "#34aadf" :"black" }}
               onClick={() => findFirstElement("image")}
             >
-              <IconComponent icon={IconImage} size={"15px"} />
+              <IconComponent icon={IconImage} size={"15px"} fillColor={buttonActive==="image" ? "#34aadf" :"black"}/>
               Foto’s ({headerGallery.length})
             </div>
-            <div role="button" style={{ cursor: "pointer" }} onClick={() => findFirstElement("video")}>
-              <IconComponent icon={IconPlay} size={"12px"} />
+            <div role="button" style={{ cursor: "pointer",color:buttonActive==="video" ? "#34aadf" :"black" }} onClick={() => findFirstElement("video")}>
+              <IconComponent icon={IconPlay} size={"12px"}  fillColor={buttonActive==="video" ? "#34aadf" :"black"}/>
               Video
             </div>
           </div>
@@ -160,7 +163,7 @@ const GalleryComponent = ({ headerGallery }: IGalleryComponentProps) => {
               ) : (
                 findSlide(currentSlide).type === "video" && (
                   <div className={styles["gallery__lightbox-item-video"]}>
-                    <ReactPlayer url={findSlide(currentSlide).url} width={"100%"} height={"100%"} />
+                    <ReactPlayer url={findSlide(currentSlide).url} width={"100%"} height={"100%"} controls/>
                   </div>
                 )
               )}

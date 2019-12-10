@@ -212,23 +212,23 @@ export const dummyLocatieOverviewData: IFaqOverviewModule = {
       items: [
         {
           title: "Team vs Time - Citygames",
-          url: "/"
+          url: "/single-wmdb"
         },
         {
           title: "Wie is de Mol - Citygames",
-          url: "/"
+          url: "/single-wmdb"
         },
         {
           title: "Vliegeren - Beachgames",
-          url: "/"
+          url: "/single-wmdb"
         },
         {
           title: "Powerkkiten - Beachgames",
-          url: "/"
+          url: "/single-wmdb"
         },
         {
           title: "Bedrijfsuitje Harderwijk op het water - Outdoor Water",
-          url: "/"
+          url: "/single-wmdb"
         }
       ]
     },
@@ -237,23 +237,23 @@ export const dummyLocatieOverviewData: IFaqOverviewModule = {
       items: [
         {
           title: "Team vs Time - Citygames",
-          url: "/"
+          url: "/single-wmdb"
         },
         {
           title: "Wie is de Mol - Citygames",
-          url: "/"
+          url: "/single-wmdb"
         },
         {
           title: "Vliegeren - Beachgames",
-          url: "/"
+          url: "/single-wmdb"
         },
         {
           title: "Powerkkiten - Beachgames",
-          url: "/"
+          url: "/single-wmdb"
         },
         {
           title: "Bedrijfsuitje Harderwijk op het water - Outdoor Water",
-          url: "/"
+          url: "/single-wmdb"
         }
       ]
     }

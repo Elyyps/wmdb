@@ -34,7 +34,7 @@ const BreadcrumbsData: ILink[] = [
 const HeaderGalleryComponent = ({ headerGallery }: IHeaderGalleryComponentProps) => {
   const [currentImage, setCurrentImage] = React.useState(0);
   const [videoIsPlaying, setVideoIsPlaying] = React.useState(false);
-
+  const [buttonActive, setbuttonActive] = React.useState<undefined|"image"|"video">(undefined);
   const smallImagesStart = 2;
 
   const responsive = {
@@ -55,6 +55,7 @@ const HeaderGalleryComponent = ({ headerGallery }: IHeaderGalleryComponentProps)
   const findFirstElement = (type: "video" | "image") => {
     const firstElement = headerGallery.find(item => item.type === type);
     firstElement && setCurrentImage(firstElement.id);
+    setbuttonActive(type);
   };
 
   React.useEffect(() => {
@@ -115,14 +116,14 @@ const HeaderGalleryComponent = ({ headerGallery }: IHeaderGalleryComponentProps)
                   <div
                     role="button"
                     className={styles["photo"]}
-                    style={{ cursor: "pointer" }}
+                    style={{ cursor: "pointer",color:buttonActive==="image" ? "#34aadf" :"black"  }}
                     onClick={() => findFirstElement("image")}
                   >
-                    <IconComponent icon={IconImage} size={"15px"} />
+                    <IconComponent icon={IconImage} size={"15px"} fillColor={buttonActive==="image" ? "#34aadf" :"black" }/>
                     Foto’s ({currentImage + 1}/{headerGallery.length})
                   </div>
-                  <div role="button" style={{ cursor: "pointer" }} onClick={() => findFirstElement("video")}>
-                    <IconComponent icon={IconPlay} size={"12px"} />
+                  <div role="button" style={{ cursor: "pointer",color:buttonActive==="video" ? "#34aadf" :"black"  }} onClick={() => findFirstElement("video")}>
+                    <IconComponent icon={IconPlay} size={"12px"} fillColor={buttonActive==="video" ? "#34aadf" :"black" }/>
                     Video
                   </div>
                 </div>
@@ -167,15 +168,15 @@ const HeaderGalleryComponent = ({ headerGallery }: IHeaderGalleryComponentProps)
                           <ImageComponent src={value.url} />
                         ) : (
                           value.type === "video" && (
-                            // <ReactPlayer
-                            //   url={value.url}
-                            //   width={"100%"}
-                            //   height={"116px"}
-                            //   controls
-                            //   light
-                            //   style={{ pointerEvents: "none" }}
-                            // />
-                           '' 
+                            <ReactPlayer
+                              url={value.url}
+                              width={"100%"}
+                              height={"116px"}
+                              controls
+                              light
+                              style={{ pointerEvents: "none" }}
+                            />
+                           
                           )
                         )}
                       </div>

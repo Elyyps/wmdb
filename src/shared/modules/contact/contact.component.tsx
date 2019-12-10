@@ -34,7 +34,10 @@ const ContactComponent = ({ contactModule }: IContactComponentProps) => {
   const toggleMainContent = () => {
     setFullHeight(!fullHeight);
   };
-
+  const myRef = React.useRef(null)
+  const scrollToRef = (ref:any) => window.scrollTo({top: ref.current.offsetTop,behavior:"smooth"})   
+  const executeScroll = () => scrollToRef(myRef)
+  
   return (
     <div className={styles["contact-body"]} style={{ backgroundImage: `url(${PATTERN})` }}>
       <div className="uk-container">
@@ -53,7 +56,7 @@ const ContactComponent = ({ contactModule }: IContactComponentProps) => {
             <div className={styles["contact-content"]}>
               <BodyTextComponent html={contactModule.content} style={{ color: "black" }} />
             </div>
-            <Button title={contactModule.buttonText} variant={"primary"} fullWidth large onClick={toggleForm} />
+            <Button title={contactModule.buttonText} variant={"primary"} fullWidth large onClick={()=>executeScroll()} />
             <div className={styles["other-activities"]}>
               <OtherActivitiesComponent otherActivitiesModule={generateOtherActivitiesData()} />
             </div>
@@ -71,7 +74,7 @@ const ContactComponent = ({ contactModule }: IContactComponentProps) => {
             <div className="uk-visible@m">
               <h2>{contactModule.formTitle}</h2>
             </div>
-            <div className="uk-visible@m">
+            <div className="uk-visible@m"  ref={myRef}>
               <ContactFormComponent onSubmit={() => alert("submitted")} />
             </div>
 

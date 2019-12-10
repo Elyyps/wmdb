@@ -19,6 +19,7 @@ export const OrganizationsPageComponent = () => {
       <NavBarComponent navbarModule={generateDummyNavbarData()} />
       <HeaderSimpleComponent headerSimpleModule={generateOrganizationsHeaderDummyData()} />
       <OrganizationsComponent organisations={generateOrganizationsData()} />
+       
       <FooterComponent footerModule={generateDummyFooterData()} />
     </React.Fragment>
   );

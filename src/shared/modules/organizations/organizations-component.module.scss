@@ -1,8 +1,5 @@
 .organizations {
-  max-height: calc(100% - 534px);
-  @media (max-width: $breakpoint-small) {
-    max-height: calc(100% - 702px);
-  }
+
   &:not(:first-child) {
     margin-top: 16px;
   }
@@ -12,8 +9,6 @@
     font-size: 12px;
     display: flex;
     flex-wrap: wrap;
-
- 
   }
   li,
   h5 {

@@ -162,8 +162,10 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
           </div>
         )}
 
-        {isActive && (
-          <Input
+        {isActive && ( 
+          <div>
+<br/>
+<Input
             onChange={(value: string) => {
               setFilterText(value);
               sendFilterOptions({ checkedItems, keyword: keywordText, filterText: value, range });
@@ -173,6 +175,7 @@ const OverviewFilterComponent = (props: IOverviewFilterComponentProps) => {
             icon={Search}
             name={"search"}
           />
+          </div>
         )}
         <br />
         {filterItems &&

@@ -17,8 +17,19 @@
   }
 
   &__title {
+    &__text{
+  font-size: 18px;
+  font-weight: 600;
+    }
     span {
       margin-left: 15px;
+
+      @media(max-width: 1150px) and (min-width:$breakpoint-medium){
+        margin-left: 7px;
+      }
+      @media(max-width: 1150px) and (min-width:639px) {
+        margin-left: 7px;
+      }
     }
     display: flex;
     align-items: center;
@@ -44,7 +55,13 @@
       }
       border-radius: 50%;
       height: 100%;
-      padding: 15px 15px 15px 30px;
+      padding: 15px 24px 15px 44px;
+      @media(max-width: 1150px) and (min-width:$breakpoint-medium){
+        padding: 15px 15px 15px 28px;
+      }
+      @media(max-width: 1150px) and (min-width:639px) {
+        padding: 15px 15px 15px 28px;
+      }
       margin-left: -20px;
     }
   }
@@ -53,15 +70,26 @@
     display: flex;
     align-items: center;
     span {
-      color: #34aadf;
-      font-size: 16px;
-      font-weight: 600;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      margin-right: 8px;
-    }
+      margin-right: 24px;
+
+      @media(max-width: 1150px) and (min-width:$breakpoint-medium) {
+        margin-right: 12px;
+      }
+      @media(max-width: 1150px) and (min-width:640px) {
+        margin-right: 12px;
+      }
+  }
+  h6{
+    margin: auto 8px auto 0;
+
+    color: #34aadf;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
   }
 
   &:hover {

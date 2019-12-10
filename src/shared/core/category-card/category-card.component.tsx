@@ -13,8 +13,10 @@ interface ICategoryCardProps {
   title: string;
 }
 
-const CategoryCardComponent = ({ onClick, title, count, image, icon, color }: ICategoryCardProps) => (
-  <div role="button" onClick={onClick} className={styles["category-card"]}>
+const CategoryCardComponent = ({ onClick, title, count, image, icon, color,link }: ICategoryCardProps) => (
+  <a style={{textDecoration:"none"}} href={link ? link : ""}>
+
+  <div role="button" onClick={()=>link ? "" :onClick()} className={styles["category-card"]}>
     <div style={{ height: "83px" }}>
       <ActivityCardComponent title={title} total={count ? count : 0} color={color} icon={icon} />
     </div>
@@ -24,7 +26,8 @@ const CategoryCardComponent = ({ onClick, title, count, image, icon, color }: IC
         <ImageComponent src={image} />
       </div>
     )}
-  </div>
+  </div> 
+   </a>
 );
 
 export { CategoryCardComponent };
