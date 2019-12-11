@@ -105,52 +105,52 @@ deelnemers zijn op dit moment Mister X al tegen gekomen.
                 "cards": Array [
                   Object {
                     "buttonText": "",
-                    "image": "oasis.jpg",
+                    "image": "img-1.jpg",
                     "title": "U Deugt Wij Deugen",
                   },
                   Object {
                     "buttonText": "",
-                    "image": "img02.png",
+                    "image": "header-1.png",
                     "title": "The Ultimate Expedition",
                   },
                   Object {
                     "buttonText": "",
-                    "image": "rectangle.png",
+                    "image": "oasis.jpg",
                     "title": "Het Mislukte Feest",
                   },
                   Object {
                     "buttonText": "",
-                    "image": "img-big.jpg",
+                    "image": "img-blog.jpg",
                     "title": "Hou van Holland Stadsspel",
                   },
                   Object {
                     "buttonText": "",
-                    "image": "rectangle.png",
+                    "image": "img-1.jpg",
                     "title": "Het Mislukte Feest",
                   },
                   Object {
                     "buttonText": "",
-                    "image": "img-big.jpg",
+                    "image": "header-1.png",
                     "title": "Hou van Holland Stadsspel",
                   },
                   Object {
                     "buttonText": "",
-                    "image": "rectangle.png",
+                    "image": "oasis.jpg",
                     "title": "Het Mislukte Feest",
                   },
                   Object {
                     "buttonText": "",
-                    "image": "img-big.jpg",
+                    "image": "img-blog.jpg",
                     "title": "Hou van Holland Stadsspel",
                   },
                   Object {
                     "buttonText": "",
-                    "image": "rectangle.png",
+                    "image": "img-1.jpg",
                     "title": "Het Mislukte Feest",
                   },
                   Object {
                     "buttonText": "",
-                    "image": "img-big.jpg",
+                    "image": "header-1.png",
                     "title": "Hou van Holland Stadsspel",
                   },
                 ],
@@ -196,7 +196,7 @@ deelnemers zijn op dit moment Mister X al tegen gekomen.
         </div>
         <br />
         <div
-          className="uk-visible@m"
+          className="uk-visible@l"
         >
           <withRouter(Component)
             activitiesModule={
@@ -444,15 +444,8 @@ deelnemers zijn op dit moment Mister X al tegen gekomen.
                     "title": "Creatieve Uitjes",
                     "total": 500,
                   },
-                  Object {
-                    "color": "#ffdf7a",
-                    "filterSectionId": 4,
-                    "icon": "incentive.svg",
-                    "title": "Workshops",
-                    "total": 500,
-                  },
                 ],
-                "title": "Bekijk ook andere activiteiten!",
+                "title": "Bekijk ook onze andere activiteiten!",
               }
             }
           />

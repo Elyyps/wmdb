@@ -1,0 +1,875 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[BlogOverview] should render component without crashing 1`] = `
+<div
+  className="blog-overview"
+>
+  <ModuleSectionComponent
+    backgroundColor="#e8f2fc"
+    paddingBottom="40px"
+    paddingTop="40px"
+  >
+    <div
+      className="uk-grid uk-child-width-1-3@m uk-child-width-1-2@s "
+    >
+      <div
+        className="blog-overview-cards"
+        key="0"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 0"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="1"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 1"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="2"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 2"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="3"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 3"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="4"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 4"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="5"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 5"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="6"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 6"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="7"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 7"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="8"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 8"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="9"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 9"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="10"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 10"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="11"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 11"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="12"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 12"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="13"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 13"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="14"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 14"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="15"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 15"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="16"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 16"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="17"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 17"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="18"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 18"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="19"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 19"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="20"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 20"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="21"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 21"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="22"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 22"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="23"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 23"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="24"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 24"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="25"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 25"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="26"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 26"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="27"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 27"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="28"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 28"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="29"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 29"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="30"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 30"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="31"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 31"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="32"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 32"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="33"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 33"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="34"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 34"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="35"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 35"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="36"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 36"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="37"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 37"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="38"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 38"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="39"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 39"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="40"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 40"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="41"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 41"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="42"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 42"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="43"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 43"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="44"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 44"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="45"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 45"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="46"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 46"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="47"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 47"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="48"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 48"
+        />
+      </div>
+      <div
+        className="blog-overview-cards"
+        key="49"
+      >
+        <CompanyOutingCardComponent
+          button={
+            Object {
+              "title": "Lees meer",
+              "url": "/blog",
+            }
+          }
+          content="Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc"
+          data="18 sep. 2017"
+          image="https://picsum.photos/id/116/300/200"
+          title="Dagje weg in de herfstvakantie? Bekijk deze musea eens! 49"
+        />
+      </div>
+    </div>
+    <PaginationComponent
+      changePage={[Function]}
+      currentPage={1}
+      nextPage={[Function]}
+      previousPage={[Function]}
+      totalPages={5.555555555555555}
+    />
+  </ModuleSectionComponent>
+</div>
+`;

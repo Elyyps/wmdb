@@ -109,11 +109,14 @@ const Input = (props: IInputProps) => {
             min={min}
             max={max}
           />
-               {!values &&
-         <span className={styles["form__item-placeholder"]} style={{ left: icon ? "18%" : "15px",pointerEvents:"none" }}>
-            {placeholder}
-            {isRequired && <span style={{ color: "red" }}>*</span>}
-          </span> }
+          {!values && (
+            <span
+              className={`${styles["form__item-placeholder"]} ${styles[icon ? "form__item-placeholder-icon" : ""]}`}
+            >
+              {placeholder}
+              {isRequired && <span style={{ color: "red" }}>*</span>}
+            </span>
+          )}
 
           {values && !isSuccess && hasCross && (
             <div role={"button"} className={styles["form__item-icon"]} onClick={handelClear}>

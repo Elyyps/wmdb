@@ -1,13 +1,14 @@
 .activities {
-  background-color: #e8f2fc;
   height: 688px;
-
-  h1 {
-    padding: 30px 0;
-    text-align: center;
-  }
-  > div {
+  background-color: #e8f2fc;
+  // h2 {
+  //   color: black;
+  //   text-align: center;
+  //   margin: 56px 0 40px 0;
+  // }
+  &-cards {
+    height: 58px;
+    margin: 24px auto;
     width: 80%;
-    margin: 0 auto 16px auto;
   }
 }

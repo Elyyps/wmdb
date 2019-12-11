@@ -41,7 +41,8 @@ exports[`[NavBar] should render component without crashing 1`] = `
             key="2"
           >
             <LinkComponent
-              to="/info-page"
+              isExternalLink={true}
+              to="http://www.gooves.nl/"
             >
               Nieuwsbrief
             </LinkComponent>

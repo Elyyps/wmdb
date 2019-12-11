@@ -3,11 +3,12 @@
     margin-bottom: 32px;
   }
   &-image {
-    height: 220px;
+    height: 148px;
     width: 100%;
-    @media (min-width: $breakpoint-large) {
-      width: 308px;
-      height: 148px;
+
+    @media (max-width: $breakpoint-medium) {
+      width: 100%;
+      height: 100%;
     }
     img {
       object-fit: cover;

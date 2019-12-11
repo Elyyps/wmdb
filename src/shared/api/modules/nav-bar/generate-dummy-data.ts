@@ -6,7 +6,7 @@ export const generateDummyNavbarData = (): INavBarModule => ({
   links: [
     { title: "Alle bedrijfsuitjes", url: "/organisaties" },
     { title: "Helpdesk", url: "/info-page" },
-    { title: "Nieuwsbrief", url: "/info-page" },
+    { title: "Nieuwsbrief", url: "http://www.gooves.nl/", isExternalLink: true },
     { title: "Bekeken uitjes", url: "/overzicht" },
     { title: "Adverteren?", url: "/adverteren" }
   ],

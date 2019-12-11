@@ -4,16 +4,11 @@ exports[`[OtherActivities] should render component without crashing 1`] = `
 <div
   className="other-activities"
 >
+  <h2>
+    Andere activiteiten van dit bedrijf
+  </h2>
   <div
-    className="other-activities-head"
-  >
-    <h2>
-      Andere activiteiten van dit bedrijf
-    </h2>
-  </div>
-  <div
-    className="uk-grid uk-child-width-1-2@s uk-grid-medium"
-    data-uk-margin={true}
+    className="uk-grid uk-child-width-1-2@s"
   />
   <div
     className="other-activities-action"

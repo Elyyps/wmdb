@@ -23,9 +23,39 @@
     position: relative;
     &-placeholder {
       font-size: 15px;
+      left: 15px;
+      pointer-events: none;
       position: absolute;
       color: #6a6a6a;
       top: 25%;
+
+      &-icon {
+        font-size: 15px;
+        left: 48px;
+
+        @media (max-width: 1050px) and (min-width: $breakpoint-medium) {
+          font-size: 13.5px;
+          top: 30%;
+        }
+      }
+    }
+
+    &-holder {
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      .form-icon {
+        position: absolute;
+        height: 100%;
+      }
+    }
+
+    &-label {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: $global-color;
+      display: block;
     }
     &.isIcon {
       input {
@@ -76,40 +106,6 @@
         left: 16px;
         top: 50%;
         transform: translateY(-50%);
-      }
-    }
-  }
-
-  &__item-holder {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-
-    .form-icon {
-      position: absolute;
-      height: 100%;
-    }
-  }
-
-  &__item-label {
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: $global-color;
-    display: block;
-  }
-
-  &__item-icon {
-    cursor: pointer;
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-
-    .icon-svg {
-      svg,
-      path {
-        fill: currentColor;
       }
     }
   }

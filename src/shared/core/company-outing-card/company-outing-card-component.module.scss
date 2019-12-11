@@ -4,12 +4,38 @@
   overflow: hidden;
   position: relative;
   background: $global-background;
-  padding: 20px 24px;
+  @media (max-width: $breakpoint-small) {
+    background: transparent;
+  }
   font-size: 14px;
+  height: 100%;
+  h4 {
+    margin-top: 0px;
+  }
+  &__time {
+    color: #969696;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 4px;
+  }
+  &__body {
+    @media (min-width: $breakpoint-small) {
+      padding: 0 24px;
+    }
+  }
+  &__bottom {
+    width: 100%;
+    position: absolute;
+    bottom: 24px;
+    @media (min-width: $breakpoint-small) {
+      width: 60%;
+    }
+  }
 
   &__head {
+    padding: 18px 24px;
     color: $gray-light;
-    margin-bottom: 18px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,7 +51,10 @@
     overflow: hidden;
     position: relative;
     height: 190px;
-    margin: 0 -24px 24px;
+    margin-bottom: 24px;
+    @media (max-width: $breakpoint-small) {
+      margin-bottom: 16px;
+    }
     img {
       width: 100%;
       height: 100%;

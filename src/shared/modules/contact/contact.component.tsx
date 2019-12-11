@@ -84,7 +84,7 @@ const ContactComponent = ({ contactModule }: IContactComponentProps) => {
               </ContactModalComponent>
             )}
             <br />
-            <div className="uk-visible@m">
+            <div className="uk-visible@l">
               <ActivitiesComponent activitiesModule={generateActivitiesData()} />
             </div>
           </div>

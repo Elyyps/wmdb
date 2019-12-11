@@ -5,7 +5,7 @@ exports[`[CompanyOutingCard] should render component without crashing 1`] = `
   className="company-outing-card"
 >
   <div
-    className="company-outing-card__head"
+    className=" company-outing-card__head uk-visible@s "
   >
     <div
       className="company-outing-card__date"
@@ -16,11 +16,21 @@ exports[`[CompanyOutingCard] should render component without crashing 1`] = `
   >
     <ImageComponent />
   </div>
-  <h4
-    className="company-outing-card__title"
-  />
   <div
-    className="company-outing-card__content"
-  />
+    className="company-outing-card__body"
+  >
+    <div
+      className=" company-outing-card__time uk-hidden@s"
+    >
+      <span />
+    </div>
+    <h4 />
+    <div
+      className=" company-outing-card__content uk-visible@s"
+    />
+    <div
+      className="company-outing-card__bottom"
+    />
+  </div>
 </div>
 `;

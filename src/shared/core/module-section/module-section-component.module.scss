@@ -58,6 +58,14 @@
         }
       }
     }
+    &-top--56px {
+      padding-top: 56px;
+      &-mobile {
+        @media (max-width: $breakpoint-small-max) {
+          padding-top: 56px !important;
+        }
+      }
+    }
     &-top--40px {
       padding-top: 40px;
       &-mobile {
@@ -95,6 +103,14 @@
       &-mobile {
         @media (max-width: $breakpoint-small-max) {
           padding-bottom: 72px !important;
+        }
+      }
+    }
+    &-bottom--56px {
+      padding-bottom: 56px;
+      &-mobile {
+        @media (max-width: $breakpoint-small-max) {
+          padding-bottom: 56px !important;
         }
       }
     }
@@ -159,10 +175,5 @@
 
   &--center {
     text-align: center;
-  }
-
-  &--small {
-    margin: 0 auto;
-    max-width: $breakpoint-small-medium;
   }
 }

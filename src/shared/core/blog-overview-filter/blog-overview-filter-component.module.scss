@@ -1,0 +1,28 @@
+.blog-overview-filter {
+  &-body {
+    display: flex;
+    flex-direction: row;
+    margin: 24px auto 0 auto;
+  }
+  &-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+
+    li {
+      display: flex;
+      span {
+        margin-right: 8px;
+      }
+      &:hover {
+        cursor: pointer;
+        color: $brand-primary;
+        svg {
+          fill: $brand-primary;
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,4 @@
 import { ICompanyOutingModule } from "./company-outing";
-import ETEN from "@assets/icons/eten.svg";
 
 export const generateCompanyOutingDummyData = (): ICompanyOutingModule => ({
   title: "Alles over het kiezen van een bedrijfsuitje",
@@ -8,7 +7,6 @@ export const generateCompanyOutingDummyData = (): ICompanyOutingModule => ({
     "https://happytovisit.com/glib/3/Visit-Blue-Cave-and-5-Islands-with-Luxury-Speedboat-from-Split-2-19559.png",
   cards: [
     {
-      icon: ETEN,
       title: "Blog titel",
       content:
         "Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc…",
@@ -16,11 +14,10 @@ export const generateCompanyOutingDummyData = (): ICompanyOutingModule => ({
       data: "18 sep. 2017",
       button: {
         title: "Lees meer",
-        url: "#"
+        url: "/blog"
       }
     },
     {
-      icon: ETEN,
       title: "Blog titel",
       content:
         "Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc…",
@@ -28,19 +25,17 @@ export const generateCompanyOutingDummyData = (): ICompanyOutingModule => ({
       data: "18 sep. 2017",
       button: {
         title: "Lees meer",
-        url: "#"
+        url: "/blog"
       }
     },
     {
-      icon: ETEN,
       title: "Blog titel",
-      content:
-        "Lorem ipsum dolor sit amet, consectetu dipiscing elit. Duis quis tortor lectus. Aliquam vel dignissim nunc…",
+      content: "Lorem ipsuam vel dignissim nunc…",
       image: "https://picsum.photos/id/115/300/200",
       data: "18 sep. 2017",
       button: {
         title: "Lees meer",
-        url: "#"
+        url: "/blog"
       }
     }
   ]

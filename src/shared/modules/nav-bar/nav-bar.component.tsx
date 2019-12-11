@@ -22,7 +22,9 @@ const NavBarComponent = ({ navbarModule }: INavBarComponentProps) => (
           <ul className={`${styles["nav-bar__links"]} uk-visible@m`}>
             {navbarModule.links.map((link, key) => (
               <li key={key}>
-                <LinkComponent to={link.url}>{link.title}</LinkComponent>
+                <LinkComponent to={link.url} isExternalLink={link.isExternalLink}>
+                  {link.title}
+                </LinkComponent>
               </li>
             ))}
           </ul>

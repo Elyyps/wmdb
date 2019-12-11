@@ -17,3 +17,7 @@ export const generateOrganizationsHeaderDummyData = (): IHeaderSimpleModule => (
   title: "Overzicht van Uitjes op WegmetdeBaas.nl",
   picture: IMG2
 });
+export const generateBlogHeaderDummyData = (): IHeaderSimpleModule => ({
+  title: "Actuele agenda",
+  picture: IMG2
+});

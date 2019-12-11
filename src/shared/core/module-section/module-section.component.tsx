@@ -9,12 +9,12 @@ export interface IModuleSectionComponentProps {
   backgroundColor?: string;
   backgroundImage?: string;
   children?: any;
-  paddingBottom?: "120px" | "72px" | "40px" | "32px" | "0px";
-  paddingBottomMobile?: "120px" | "72px" | "40px" | "32px" | "0px";
-  paddingTop?: "120px" | "72px" | "40px" | "32px" | "0px";
-  paddingTopMobile?: "120px" | "72px" | "40px" | "32px" | "0px";
+  paddingBottom?: "120px" | "72px" | "56px" | "40px" | "32px" | "0px";
+  paddingBottomMobile?: "120px" | "72px" | "56px" | "40px" | "32px" | "0px";
+  paddingTop?: "120px" | "72px" | "56px" | "40px" | "32px" | "0px";
+  paddingTopMobile?: "120px" | "72px" | "56px" | "40px" | "32px" | "0px";
   pattern?: boolean;
-  size?: string;
+  size?: "xsmall" | "small" | "large";
   title?: string;
   titleColor?: string;
   visibility?: string;
@@ -26,8 +26,8 @@ const ModuleSectionComponent = (props: IModuleSectionComponentProps) => {
     [styles[`module-section-padding-top--${props.paddingTop}`]]: props.paddingTop,
     [styles[`module-section-padding-bottom--${props.paddingBottom}`]]: props.paddingBottom,
     [styles[`module-section-padding-top--${props.paddingTopMobile}-mobile`]]: props.paddingTopMobile,
-    [styles[`module-section-padding-bottom--${props.paddingBottomMobile}-mobile`]]: props.paddingBottomMobile,
-    [styles[`module-section--${props.size}`]]: props.size
+    [styles[`module-section-padding-bottom--${props.paddingBottomMobile}-mobile`]]: props.paddingBottomMobile
+    // [styles[`module-section--${props.size}`]]: props.size
   });
 
   const style = {
@@ -47,7 +47,7 @@ const ModuleSectionComponent = (props: IModuleSectionComponentProps) => {
         </div>
       )}
       <div className={styles["module-section__foreground"]}>
-        <div className={props.size ? "" : "uk-container"}>
+        <div className={` ${props.size ? `uk-container-${props.size}` : ``} uk-container`}>
           {props.title && (
             <h2 className={styles["module-section__title"]} style={{ color: props.titleColor }}>
               {props.title}

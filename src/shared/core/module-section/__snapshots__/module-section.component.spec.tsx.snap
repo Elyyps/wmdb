@@ -17,7 +17,7 @@ exports[`[ModuleSection] should render component without crashing 1`] = `
     className="module-section__foreground"
   >
     <div
-      className="uk-container"
+      className="  uk-container"
     >
       <div />
     </div>

@@ -1,0 +1,12 @@
+.blog-overview {
+  &-cards {
+    height: 500px;
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: $breakpoint-small) {
+      height: 350px;
+    }
+  }
+}

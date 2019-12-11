@@ -9,6 +9,8 @@ import { HeaderGalleryComponent } from "@app/modules/header-gallery";
 import { generateContactData } from "@app/api/modules/contact/end-point";
 import { generateHeaderGalleryData, generateGalleryData } from "@app/api/modules/header-gallery/end-point";
 import { GalleryComponent } from "@app/modules/gallery";
+import { ActivitiesComponent } from "@app/modules/activities";
+import { generateActivitiesData } from "@app/api/modules/activities/end-point";
 
 const SingleWMDBPage = () => {
   React.useEffect(() => {

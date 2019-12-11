@@ -4,6 +4,7 @@ import { IActivitiesModule } from "@app/api/modules/activities/activities";
 import { IActivityCard } from "@app/api/core/activity-card";
 import { ActivityCardComponent } from "@app/core/activity-card";
 import { RouteComponentProps, withRouter } from "react-router";
+import { ModuleSectionComponent } from "@app/core/module-section";
 
 export interface IActivitiesComponentProps {
   activitiesModule: IActivitiesModule;
@@ -26,13 +27,20 @@ const Component = (props: IActivitiesComponentProps & RouteComponentProps) => {
   };
 
   return (
-    <div className={styles["activities"]}>
-      <h1>{props.activitiesModule.title}</h1>
-      {props.activitiesModule.items.map((item: IActivityCard, key) => (
-        <div key={key} style={{ height: "58px" }} role="button" onClick={() => openOverviewPage(item)}>
-          <ActivityCardComponent {...item} key={key} />
-        </div>
-      ))}
+    <div className={` ${styles["activities"]} `}>
+      <ModuleSectionComponent
+        title={props.activitiesModule.title}
+        backgroundColor={"#e8f2fc"}
+        titleColor={"black"}
+        paddingTop={"56px"}
+        paddingBottom={"56px"}
+      >
+        {props.activitiesModule.items.map((item: IActivityCard, key) => (
+          <div key={key} className={styles["activities-cards"]} role="button" onClick={() => openOverviewPage(item)}>
+            <ActivityCardComponent {...item} key={key} />
+          </div>
+        ))}
+      </ModuleSectionComponent>
     </div>
   );
 };
