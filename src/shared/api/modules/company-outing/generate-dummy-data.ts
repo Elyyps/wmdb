@@ -2,7 +2,7 @@ import { ICompanyOutingModule } from "./company-outing";
 
 export const generateCompanyOutingDummyData = (): ICompanyOutingModule => ({
   title: "Alles over het kiezen van een bedrijfsuitje",
-  button: { title: "Bekijk álle blogs", url: "#" },
+  button: { title: "Bekijk álle blogs", url: "/blog-overview" },
   backgroundImage:
     "https://happytovisit.com/glib/3/Visit-Blue-Cave-and-5-Islands-with-Luxury-Speedboat-from-Split-2-19559.png",
   cards: [
