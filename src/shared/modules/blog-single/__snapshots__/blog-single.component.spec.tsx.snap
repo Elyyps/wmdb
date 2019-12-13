@@ -16,7 +16,7 @@ exports[`[BlogSingle] should render component without crashing 1`] = `
           },
           Object {
             "title": "Blogs",
-            "url": "/",
+            "url": "/blog-overview",
           },
           Object {
             "title": "Vakantiepret: spelletjes voor onderweg!",

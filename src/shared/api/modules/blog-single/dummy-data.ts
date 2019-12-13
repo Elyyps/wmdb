@@ -6,7 +6,7 @@ export const generateBlogSingleDummyData = (): IBlogSingle => ({
   title: "Vakantiepret: spelletjes voor onderweg!",
   path: [
     { title: "Home", url: "/" },
-    { title: "Blogs", url: "/" },
+    { title: "Blogs", url: "/blog-overview" },
     { title: "Vakantiepret: spelletjes voor onderweg!", url: "" }
   ],
   content: `

@@ -1,6 +1,6 @@
 .blog-single {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   &-body {
     p {
       color: black;
@@ -10,10 +10,7 @@
       color: black;
       margin-bottom: 0;
     }
-
-    h1 {
-      font-size: 34px;
-    }
+  
   }
   &-body-text {
     * {
