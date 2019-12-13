@@ -28,7 +28,6 @@ const HomePageComponent = () => {
       <HeroComponent heroModule={generateDummyHeroModule()} />
       <CategoryOverviewComponent categoryOverviewModule={GenerateDummyCategoryOverviewData()} />
       <NewActivityComponent newActivityModule={generateNewActivityData()} />
-      <FAQOverviewComponent faqOverviewModule={generateDummyFaqOverviewData()} />
       <CompanyOutingComponent companyOutingModule={generateCompanyOutingData()} />
       <FAQOverviewComponent faqOverviewModule={generateDummyLocatieOverviewData()} />
       <OtherLocationsComponent otherLocationsModule={generateOtherLocationsData()} />
