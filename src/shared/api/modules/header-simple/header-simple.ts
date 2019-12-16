@@ -18,6 +18,6 @@ export const generateOrganizationsHeaderDummyData = (): IHeaderSimpleModule => (
   picture: IMG2
 });
 export const generateBlogHeaderDummyData = (): IHeaderSimpleModule => ({
-  title: "Actuele agenda",
+  title: "Blogs",
   picture: IMG2
 });

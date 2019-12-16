@@ -71,7 +71,7 @@ exports[`[CompanyOuting] should render component without crashing 1`] = `
         className="company-outing__actions"
       >
         <Button
-          href="#"
+          href="/blog-overview"
           title="Bekijk álle blogs"
         />
       </div>

@@ -18,13 +18,15 @@ const SingleWMDBPage = () => {
   }, []);
 
   return (
-    <React.Fragment>
+    <div style={{ position: "absolute", width: "100%" }}>
       <NavBarComponent navbarModule={generateNavbarData()} />
-      {/* <HeaderGalleryComponent headerGallery={generateGalleryData()} /> */}
+      <HeaderGalleryComponent headerGallery={generateGalleryData()} />
       <GalleryComponent headerGallery={generateGalleryData()} />
       <ContactComponent contactModule={generateContactData()} />
-      <FooterComponent footerModule={generateFooterData()} />
-    </React.Fragment>
+      <div style={{ position: "relative", bottom: "0" }}>
+        <FooterComponent footerModule={generateFooterData()} />
+      </div>
+    </div>
   );
 };
 export { SingleWMDBPage };

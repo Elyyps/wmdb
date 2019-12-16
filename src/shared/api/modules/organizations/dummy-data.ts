@@ -2,7 +2,7 @@ import { IOrganisation } from "@app/api/core/organisation";
 
 export const generateOrganizationsDummyData = (): IOrganisation[] => [
   {
-    title: { title: "Art of Events Productions", url: "/adverteren" },
+    title: { title: "Art of Events Productions", url: "/overzicht" },
     links: [
       { title: "U Deugt Wij Deugen", url: "/adverteren" },
       { title: "The Ultimate Expedition", url: "/adverteren" },
@@ -12,7 +12,7 @@ export const generateOrganizationsDummyData = (): IOrganisation[] => [
     ]
   },
   {
-    title: { title: "Astron37", url: "/" },
+    title: { title: "Astron37", url: "/overzicht" },
     links: [
       { title: "Urban Walkabout; ... haal jij de 5?", url: "/adverteren" },
       { title: "Een tactisch teamspel met een hoge fun-factor", url: "/adverteren" },
@@ -26,7 +26,7 @@ export const generateOrganizationsDummyData = (): IOrganisation[] => [
     ]
   },
   {
-    title: { title: "Toon vertier", url: "/" },
+    title: { title: "Toon vertier", url: "/overzicht" },
     links: [
       { title: "Dagje Terug in de Tijd", url: "/adverteren" },
       { title: "Dagje uit- Verassingsdag", url: "/adverteren" },

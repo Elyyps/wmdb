@@ -7,9 +7,11 @@ import { QuestionsOverviewComponent } from "@app/modules/questions-overview";
 import { generateQuestionsOverviewData } from "@app/api/modules/questions-overview/end-point";
 
 export const QuestionsOverviewPage = () => (
-  <React.Fragment>
+  <div style={{ position: "absolute", width: "100%" }}>
     <NavBarComponent navbarModule={generateDummyNavbarData()} />
     <QuestionsOverviewComponent questionOverview={generateQuestionsOverviewData()} />
-    <FooterComponent footerModule={generateDummyFooterData()} />
-  </React.Fragment>
+    <div style={{ position: "relative", bottom: "0" }}>
+      <FooterComponent footerModule={generateDummyFooterData()} />
+    </div>
+  </div>
 );

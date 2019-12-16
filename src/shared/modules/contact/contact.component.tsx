@@ -24,6 +24,22 @@ const ContactComponent = ({ contactModule }: IContactComponentProps) => {
   const [isActive, setIsActive] = React.useState(false);
   const [isData, setIsData] = React.useState(false);
   const [fullHeight, setFullHeight] = React.useState(false);
+  const [windowSize, setWindowSize] = React.useState(0);
+  const mobileSize = 639;
+  const handleResize = () => {
+    setWindowSize(window.innerWidth);
+  };
+  React.useEffect(() => {
+    handleResize();
+  }, [windowSize]);
+
+  React.useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const toggleForm = () => {
     setIsData(false);
     setIsActive(!isActive);
@@ -56,7 +72,13 @@ const ContactComponent = ({ contactModule }: IContactComponentProps) => {
             <div className={styles["contact-content"]}>
               <BodyTextComponent html={contactModule.content} style={{ color: "black" }} />
             </div>
-            <Button title={contactModule.buttonText} variant={"primary"} fullWidth large onClick={executeScroll} />
+            <Button
+              title={contactModule.buttonText}
+              variant={"primary"}
+              fullWidth
+              large
+              onClick={windowSize < mobileSize ? toggleForm : executeScroll}
+            />
             <div className={styles["other-activities"]}>
               <OtherActivitiesComponent otherActivitiesModule={generateOtherActivitiesData()} />
             </div>
@@ -92,7 +114,7 @@ const ContactComponent = ({ contactModule }: IContactComponentProps) => {
             <div className={styles["contact-mobile-head"]}>
               <Button
                 icon={Arrow}
-                title={fullHeight ? " Lees meer " : "Read more"}
+                title={fullHeight ? "Lees minder" : "Lees meer"}
                 position={"left"}
                 onClick={toggleMainContent}
               />

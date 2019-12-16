@@ -72,7 +72,7 @@ const GenerateDummyCategoryOverviewData = (): ICategoryOverviewModule => ({
     {
       title: "Helpdesk",
       image: "https://picsum.photos/id/80/600/400",
-      link: "/single-wmdb"
+      link: "/info-page"
     },
     {
       title: "Nieuwsbrief",

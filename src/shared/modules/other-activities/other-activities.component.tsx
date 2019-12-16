@@ -33,7 +33,7 @@ const OtherActivitiesComponent = ({ otherActivitiesModule }: IOtherActivitiesCom
       <h2>{otherActivitiesModule.title}</h2>
       <div className="uk-grid uk-child-width-1-2@s">
         {internalArray.map((item: IEventCard, key: number) => (
-          <div key={key} className={styles["other-activities-cards"]}>
+          <div key={key}>
             <EventCardComponent image={item.image} link={item.buttonText} title={item.title} />
           </div>
         ))}

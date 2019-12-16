@@ -12,7 +12,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
   >
     <h5>
       <LinkComponent
-        to="/adverteren"
+        to="/overzicht"
       >
         Art of Events Productions
          
@@ -74,7 +74,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
   >
     <h5>
       <LinkComponent
-        to="/"
+        to="/overzicht"
       >
         Astron37
          
@@ -172,7 +172,7 @@ exports[`[Organizations] should render component without crashing 1`] = `
   >
     <h5>
       <LinkComponent
-        to="/"
+        to="/overzicht"
       >
         Toon vertier
          

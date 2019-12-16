@@ -27,7 +27,6 @@ const ModuleSectionComponent = (props: IModuleSectionComponentProps) => {
     [styles[`module-section-padding-bottom--${props.paddingBottom}`]]: props.paddingBottom,
     [styles[`module-section-padding-top--${props.paddingTopMobile}-mobile`]]: props.paddingTopMobile,
     [styles[`module-section-padding-bottom--${props.paddingBottomMobile}-mobile`]]: props.paddingBottomMobile
-    // [styles[`module-section--${props.size}`]]: props.size
   });
 
   const style = {

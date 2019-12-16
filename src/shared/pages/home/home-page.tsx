@@ -13,7 +13,7 @@ import { generateOtherLocationsData } from "@app/api/modules/other-locations/end
 import { generateDummyHeroModule } from "@app/api/modules/hero/hero-module";
 import { GenerateDummyCategoryOverviewData } from "@app/api/modules/category-overview/dummy-data";
 import { FAQOverviewComponent } from "@app/modules/faq-overview";
-import { generateDummyFaqOverviewData, generateDummyLocatieOverviewData } from "@app/api/modules/faq-overview";
+import { generateDummyLocatieOverviewData } from "@app/api/modules/faq-overview";
 import { HeroComponent } from "@app/modules/hero";
 import { CategoryOverviewComponent } from "@app/modules/category-overview";
 
@@ -23,17 +23,18 @@ const HomePageComponent = () => {
   }, []);
 
   return (
-    <React.Fragment>
+    <div style={{ position: "absolute", width: "100%" }}>
       <NavBarComponent navbarModule={generateNavbarData()} />
       <HeroComponent heroModule={generateDummyHeroModule()} />
       <CategoryOverviewComponent categoryOverviewModule={GenerateDummyCategoryOverviewData()} />
       <NewActivityComponent newActivityModule={generateNewActivityData()} />
-      <FAQOverviewComponent faqOverviewModule={generateDummyFaqOverviewData()} />
       <CompanyOutingComponent companyOutingModule={generateCompanyOutingData()} />
       <FAQOverviewComponent faqOverviewModule={generateDummyLocatieOverviewData()} />
       <OtherLocationsComponent otherLocationsModule={generateOtherLocationsData()} />
-      <FooterComponent footerModule={generateFooterData()} />
-    </React.Fragment>
+      <div style={{ position: "relative", bottom: "0" }}>
+        <FooterComponent footerModule={generateFooterData()} />
+      </div>
+    </div>
   );
 };
 export { HomePageComponent };

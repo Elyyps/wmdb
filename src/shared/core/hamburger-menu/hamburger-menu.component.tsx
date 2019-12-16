@@ -12,7 +12,9 @@ const HamburgerMenuComponent = (props: IHamburgerMenuComponentProps) => (
     <ul className={styles["hamburger-menu__navigation"]}>
       {props.menuItems.map((item, key) => (
         <li key={key}>
-          <LinkComponent to={item.url}>{item.title}</LinkComponent>
+          <LinkComponent to={item.url} isExternalLink={item.isExternalLink}>
+            {item.title}
+          </LinkComponent>
         </li>
       ))}
     </ul>

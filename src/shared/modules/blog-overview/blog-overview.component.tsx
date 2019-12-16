@@ -15,12 +15,12 @@ const BlogOverviewComponent = ({ blogOverview }: IBlogOverviewComponentProps) =>
   const [cards, setCards] = React.useState<ICompanyOutingCard[]>(blogOverview.cards);
   const [currentPage, setCurrentPage] = React.useState(1);
   const [windowSize, setWindowSize] = React.useState(0);
-  const tabletSize = 960;
-  const mobileSize = 640;
+  const tabletSize = 959;
+  const mobileSize = 639;
   const amountCardsOnTablet = 8;
   const amountCards = 9;
 
-  const take = windowSize < tabletSize && windowSize > mobileSize ? amountCardsOnTablet : amountCards;
+  const take = windowSize <= tabletSize && windowSize >= mobileSize ? amountCardsOnTablet : amountCards;
   const totalPages = blogOverview.cards.length / take;
 
   const handleResize = () => {

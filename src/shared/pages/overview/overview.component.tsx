@@ -21,13 +21,15 @@ const OverviewPageComponent = (props: IOverzichtComponentProps) => {
   }, []);
 
   return (
-    <div>
+    <div style={{ position: "absolute", width: "100%" }}>
       <NavBarComponent navbarModule={generateDummyNavbarData()} />
       <HeaderSimpleComponent headerSimpleModule={generateDummyHeaderSimpleModule()} />
       <OverviewComponent overviewModule={generateDummyOverviewModule()} />
       <OtherLocationsComponent otherLocationsModule={generateOtherLocationsData()} />
       <AboutPageComponent aboutPageModule={generateAboutPageData()} />
-      <FooterComponent footerModule={generateDummyFooterData()} />
+      <div style={{ position: "relative", bottom: "0" }}>
+        <FooterComponent footerModule={generateDummyFooterData()} />
+      </div>
     </div>
   );
 };

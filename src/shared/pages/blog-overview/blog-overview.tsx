@@ -9,10 +9,12 @@ import { HeaderSimpleComponent } from "@app/modules/header-simple";
 import { generateBlogHeaderDummyData } from "@app/api/modules/header-simple";
 
 export const BlogOverviewPage = () => (
-  <React.Fragment>
+  <div style={{ position: "absolute", width: "100%" }}>
     <NavBarComponent navbarModule={generateNavbarData()} />
     <HeaderSimpleComponent headerSimpleModule={generateBlogHeaderDummyData()} />
     <BlogOverviewComponent blogOverview={generateBlogOverviewData()} />
-    <FooterComponent footerModule={generateFooterData()} />
-  </React.Fragment>
+    <div style={{ position: "relative", bottom: "0" }}>
+      <FooterComponent footerModule={generateFooterData()} />
+    </div>
+  </div>
 );

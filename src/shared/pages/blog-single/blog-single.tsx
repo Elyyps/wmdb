@@ -12,10 +12,12 @@ export const BlogSinglePage = () => {
   }, []);
 
   return (
-    <React.Fragment>
+    <div style={{ position: "absolute", width: "100%" }}>
       <NavBarComponent navbarModule={generateNavbarData()} />
       <BlogSingleComponent blogSingle={generateBlogSingleData()} />
-      <FooterComponent footerModule={generateFooterData()} />
-    </React.Fragment>
+      <div style={{ position: "relative", bottom: "0" }}>
+        <FooterComponent footerModule={generateFooterData()} />
+      </div>
+    </div>
   );
 };

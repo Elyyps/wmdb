@@ -14,7 +14,7 @@ export const FAQPageComponent = () => {
   }, []);
 
   return (
-    <React.Fragment>
+    <div style={{ position: "absolute", width: "100%" }}>
       <NavBarComponent navbarModule={generateNavbarData()} />
       <FAQHeaderComponent
         title={"Veelgestelde vragen"}
@@ -22,7 +22,9 @@ export const FAQPageComponent = () => {
         image={PlaceholderImage}
       />
       <FAQComponent FAQModule={generateFAQData()} />
-      <FooterComponent footerModule={generateFooterData()} />
-    </React.Fragment>
+      <div style={{ position: "relative", bottom: "0" }}>
+        <FooterComponent footerModule={generateFooterData()} />
+      </div>
+    </div>
   );
 };

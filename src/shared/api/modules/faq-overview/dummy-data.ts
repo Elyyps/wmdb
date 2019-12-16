@@ -10,7 +10,6 @@ import { IFaqOverviewModule } from "@app/api/modules/faq-overview";
 export const dummyFaqOverviewData: IFaqOverviewModule = {
   title: "Veelgestelde vragen",
   paddingBottomMobile: "0px",
-
   items: [
     {
       icon: SPEL,
@@ -203,7 +202,7 @@ export const dummyFaqOverviewData: IFaqOverviewModule = {
 
 export const dummyLocatieOverviewData: IFaqOverviewModule = {
   title: "Meest bekeken locaties",
-  paddingTopMobile: "0px",
+  paddingTopMobile: "32px",
   paddingBottomMobile: "0px",
   shouldMarginBottomBeZero: true,
   items: [

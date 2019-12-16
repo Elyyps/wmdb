@@ -197,7 +197,7 @@ exports[`[Gallery] should render component without crashing 1`] = `
                     "pointerEvents": "none",
                   }
                 }
-                url="https://www.youtube.com/watch?v=7gphiFVVtUI"
+                url="https://www.youtube.com/watch?v=FKkhLWjN_I4"
                 volume={null}
                 width="100%"
                 wrapper="div"
@@ -305,7 +305,7 @@ exports[`[Gallery] should render component without crashing 1`] = `
                     "pointerEvents": "none",
                   }
                 }
-                url="https://www.youtube.com/watch?v=2oyhlad64-s"
+                url="https://www.youtube.com/watch?v=7gphiFVVtUI"
                 volume={null}
                 width="100%"
                 wrapper="div"
@@ -337,6 +337,9 @@ exports[`[Gallery] should render component without crashing 1`] = `
         startIndex={0}
         stopAutoPlayOnHover={true}
         swipeDisabled={false}
+      />
+      <div
+        className="gallery__dots"
       />
       <div
         className=" gallery__slider_arrows uk-visible@s"
@@ -389,13 +392,13 @@ exports[`[Gallery] should render component without crashing 1`] = `
           role="button"
           style={
             Object {
-              "color": "black",
+              "color": "#34aadf",
               "cursor": "pointer",
             }
           }
         >
           <IconComponent
-            fillColor="black"
+            fillColor="#34aadf"
             icon="images.svg"
             size="15px"
           />

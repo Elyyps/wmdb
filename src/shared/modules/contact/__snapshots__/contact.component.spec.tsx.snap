@@ -461,7 +461,7 @@ deelnemers zijn op dit moment Mister X al tegen gekomen.
             icon="chevron-right.svg"
             onClick={[Function]}
             position="left"
-            title="Read more"
+            title="Lees meer"
           />
         </div>
         <div

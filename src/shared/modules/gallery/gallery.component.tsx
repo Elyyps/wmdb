@@ -13,10 +13,6 @@ import { LightBoxComponent } from "@app/core/lightbox";
 import ReactAliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 
-
-
-
-
 export interface IGalleryComponentProps {
   headerGallery: IHeaderGallery[];
 }
@@ -34,21 +30,51 @@ const BreadcrumbsData: ILink[] = [
     url: ""
   }
 ];
+let activeNumber = 0;
+
 const GalleryComponent = ({ headerGallery }: IGalleryComponentProps) => {
   const [lightBoxOpen, setLightBoxOpen] = React.useState(false);
   const [currentSlide, setCurrentSlide] = React.useState<number>(0);
+  const [dots, setDots] = React.useState<any>("");
   const contentHeight = 50;
-  const [buttonActive, setbuttonActive] = React.useState<undefined|"image"|"video">(undefined);
+  const [buttonActive, setButtonActive] = React.useState<"image" | "video">("image");
+  const [windowSize, setWindowSize] = React.useState(0);
+
+  const handleResize = () => {
+    setWindowSize(window.innerWidth);
+  };
+  React.useEffect(() => {
+    handleResize();
+  }, [windowSize]);
+
+  React.useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handleClick = (newSlide: number) => {
     setCurrentSlide(newSlide);
     setLightBoxOpen(!lightBoxOpen);
   };
-  const findFirstElement = (type?: "video" | "image") => {
+  const findFirstElement = (type: "video" | "image") => {
     const firstElement = headerGallery.find(item => item.type === type);
     firstElement && setCurrentSlide(firstElement.id);
-    
-    setbuttonActive(type);
+    setButtonActive(type);
+  };
+
+  const getDots = () => {
+    const list = [];
+    const numberOfDots = 4;
+    activeNumber === numberOfDots && (activeNumber = 0);
+    for (let i = 0; i < numberOfDots; i += 1) {
+      list.push(<li style={activeNumber === i ? { height: "12px", width: "2px" } : { height: "10px" }} />);
+    }
+    activeNumber += 1;
+
+    return <ul>{list}</ul>;
   };
   const findSlide = (id: number) => {
     const slide = headerGallery.find(item => item.id === id);
@@ -70,22 +96,25 @@ const GalleryComponent = ({ headerGallery }: IGalleryComponentProps) => {
       items: 1
     }
   };
+
   React.useEffect(() => {
     currentSlide >= headerGallery.length && setCurrentSlide(0);
     currentSlide < 0 && setCurrentSlide(headerGallery.length - 1);
+    setDots(getDots());
   }, [currentSlide]);
 
   return (
     <div className={styles["gallery"]}>
       <div className="uk-container">
         <Breadcrumb breadcrumbs={BreadcrumbsData} />
+
         <div className={styles["gallery-images"]}>
           <ReactAliceCarousel
-            onSlideChanged={e => currentSlide && onButtonClick(e.slide)}
-            dotsDisabled
+            onSlideChanged={e => onButtonClick(e.item)}
             buttonsDisabled
+            dotsDisabled
             responsive={responsive}
-            startIndex={currentSlide}
+            startIndex={!lightBoxOpen ? currentSlide : 0}
             items={headerGallery.map((slide, key) => (
               <div
                 role="button"
@@ -97,23 +126,22 @@ const GalleryComponent = ({ headerGallery }: IGalleryComponentProps) => {
               >
                 {slide.type === "image" ? (
                   <ImageComponent src={slide.url} />
+                ) : slide.type === "video" ? (
+                  <ReactPlayer
+                    style={{ pointerEvents: "none" }}
+                    url={slide.url}
+                    height={"100%"}
+                    width={"100%"}
+                    controls
+                    light
+                  />
                 ) : (
-                  slide.type === "video" ? (
-                    <ReactPlayer
-                      style={{ pointerEvents: "none" }}
-                      url={slide.url}
-                      height={"100%"}
-                      width={"100%"}
-                      controls
-                      light
-                    />
-                    
-                  )
-                  :""
+                  ""
                 )}
               </div>
             ))}
           />
+          <div className={styles["gallery__dots"]}>{dots}</div>
           <div className={` ${styles["gallery__slider_arrows"]} uk-visible@s`}>
             <div
               className={styles["gallery__slider_arrows_prev"]}
@@ -136,14 +164,22 @@ const GalleryComponent = ({ headerGallery }: IGalleryComponentProps) => {
             <div
               role="button"
               className={styles["photo"]}
-              style={{ cursor: "pointer",color:buttonActive==="image" ? "#34aadf" :"black" }}
+              style={{ cursor: "pointer", color: buttonActive === "image" ? "#34aadf" : "black" }}
               onClick={() => findFirstElement("image")}
             >
-              <IconComponent icon={IconImage} size={"15px"} fillColor={buttonActive==="image" ? "#34aadf" :"black"}/>
+              <IconComponent
+                icon={IconImage}
+                size={"15px"}
+                fillColor={buttonActive === "image" ? "#34aadf" : "black"}
+              />
               Foto’s ({headerGallery.length})
             </div>
-            <div role="button" style={{ cursor: "pointer",color:buttonActive==="video" ? "#34aadf" :"black" }} onClick={() => findFirstElement("video")}>
-              <IconComponent icon={IconPlay} size={"12px"}  fillColor={buttonActive==="video" ? "#34aadf" :"black"}/>
+            <div
+              role="button"
+              style={{ cursor: "pointer", color: buttonActive === "video" ? "#34aadf" : "black" }}
+              onClick={() => findFirstElement("video")}
+            >
+              <IconComponent icon={IconPlay} size={"12px"} fillColor={buttonActive === "video" ? "#34aadf" : "black"} />
               Video
             </div>
           </div>
@@ -163,7 +199,7 @@ const GalleryComponent = ({ headerGallery }: IGalleryComponentProps) => {
               ) : (
                 findSlide(currentSlide).type === "video" && (
                   <div className={styles["gallery__lightbox-item-video"]}>
-                    <ReactPlayer url={findSlide(currentSlide).url} width={"100%"} height={"100%"} controls/>
+                    <ReactPlayer url={findSlide(currentSlide).url} width={"100%"} height={"100%"} controls />
                   </div>
                 )
               )}

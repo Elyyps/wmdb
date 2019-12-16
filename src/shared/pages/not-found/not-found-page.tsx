@@ -6,10 +6,12 @@ import { generateFooterData } from "@app/api/modules/footer/end-point";
 import { NotFoundComponent } from "@app/modules/not-found";
 
 const NotFoundPageComponent = () => (
-  <React.Fragment>
+  <div style={{ position: "absolute", width: "100%" }}>
     <NavBarComponent navbarModule={generateNavbarData()} />
     <NotFoundComponent />
-    <FooterComponent footerModule={generateFooterData()} />
-  </React.Fragment>
+    <div style={{ position: "relative", bottom: "0" }}>
+      <FooterComponent footerModule={generateFooterData()} />
+    </div>
+  </div>
 );
 export { NotFoundPageComponent };

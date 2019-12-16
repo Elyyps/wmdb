@@ -76,16 +76,29 @@ exports[`[NavBar] should render component without crashing 1`] = `
             menuItems={
               Array [
                 Object {
+                  "title": "Alle bedrijfsuitjes",
+                  "url": "/organisaties",
+                },
+                Object {
                   "title": "Helpdesk",
                   "url": "/info-page",
                 },
                 Object {
+                  "isExternalLink": true,
                   "title": "Nieuwsbrief",
-                  "url": "/info-page",
+                  "url": "http://www.gooves.nl/",
                 },
                 Object {
-                  "title": "Mijn uitjes",
+                  "title": "Bekeken uitjes",
                   "url": "/overzicht",
+                },
+                Object {
+                  "title": "Adverteren?",
+                  "url": "/adverteren",
+                },
+                Object {
+                  "title": "Blog overview",
+                  "url": "/blog-overview",
                 },
               ]
             }

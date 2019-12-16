@@ -14,11 +14,13 @@ export const AdvertiserWMDBPageComponent = () => {
   }, []);
 
   return (
-    <React.Fragment>
+    <div style={{ position: "absolute", width: "100%" }}>
       <NavBarComponent navbarModule={generateDummyNavbarData()} />
       <HeaderSimpleComponent headerSimpleModule={generateAdvertiserWMDBHeaderDummyData()} />
       <AdvertiserWMDBComponent advertiserModule={generateAdvertiserData()} />
-      <FooterComponent footerModule={generateDummyFooterData()} />
-    </React.Fragment>
+      <div style={{ position: "relative", bottom: "0" }}>
+        <FooterComponent footerModule={generateDummyFooterData()} />
+      </div>
+    </div>
   );
 };

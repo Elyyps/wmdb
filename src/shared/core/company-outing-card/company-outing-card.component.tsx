@@ -15,7 +15,7 @@ export interface ICompanyOutingCardComponentProps {
 }
 
 const CompanyOutingCardComponent = ({ title, image, button, data, content }: ICompanyOutingCardComponentProps) => {
-  const textWidth = 250;
+  const textWidth = 100;
 
   return (
     <div className={styles["company-outing-card"]}>
