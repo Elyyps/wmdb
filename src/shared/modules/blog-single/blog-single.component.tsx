@@ -19,9 +19,9 @@ const BlogSingleComponent = ({ blogSingle }: IBlogSingleComponentProps) => (
     <ModuleSectionComponent paddingTop={"40px"} paddingBottom={"40px"} size="small">
       <div className={styles["blog-single-body"]}>
         <h1>{blogSingle.title}</h1>
-        <p className={styles["blog-single-body-text"]}>
+        <div className={styles["blog-single-body-text"]}>
           <BodyTextComponent html={blogSingle.content} />
-        </p>
+        </div>
       </div>
     </ModuleSectionComponent>
   </div>

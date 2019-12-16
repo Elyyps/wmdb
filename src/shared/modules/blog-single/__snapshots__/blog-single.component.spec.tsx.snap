@@ -40,7 +40,7 @@ exports[`[BlogSingle] should render component without crashing 1`] = `
       <h1>
         Vakantiepret: spelletjes voor onderweg!
       </h1>
-      <p
+      <div
         className="blog-single-body-text"
       >
         <BodyTextComponent
@@ -62,7 +62,7 @@ exports[`[BlogSingle] should render component without crashing 1`] = `
   <p>Een van de spelers in de auto kiest een bekend persoon uit of een kennis die iedereen kent. Alle spelers mogen een x-aantal vragen stellen, zodat zij op die manier de persoon kunnen raden. Zorg ervoor dat het niet te moeilijk zal worden, want het moet wel leuk blijven. Handige vragen zijn bijvoorbeeld: is het man of een vrouw, waar is hij of zij bekend van? </p>
   "
         />
-      </p>
+      </div>
     </div>
   </ModuleSectionComponent>
 </div>
