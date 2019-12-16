@@ -7,14 +7,14 @@ import { FAQComponent } from "@app/modules/faq";
 import { generateFAQData } from "@app/api/modules/faq/end-point";
 import { FAQHeaderComponent } from "@app/modules/faq-header";
 import PlaceholderImage from "@assets/logo-wmdb-header.svg";
-
+import style from "../pages.module.scss";
 export const FAQPageComponent = () => {
   React.useEffect(() => {
     window.scroll(0, 0);
   }, []);
 
   return (
-    <div style={{ position: "absolute", width: "100%" }}>
+    <div className={style["page"]}>
       <NavBarComponent navbarModule={generateNavbarData()} />
       <FAQHeaderComponent
         title={"Veelgestelde vragen"}
@@ -22,7 +22,7 @@ export const FAQPageComponent = () => {
         image={PlaceholderImage}
       />
       <FAQComponent FAQModule={generateFAQData()} />
-      <div style={{ position: "relative", bottom: "0" }}>
+      <div className={style["page-footer"]}>
         <FooterComponent footerModule={generateFooterData()} />
       </div>
     </div>

@@ -11,19 +11,19 @@ import { generateHeaderGalleryData, generateGalleryData } from "@app/api/modules
 import { GalleryComponent } from "@app/modules/gallery";
 import { ActivitiesComponent } from "@app/modules/activities";
 import { generateActivitiesData } from "@app/api/modules/activities/end-point";
-
+import style from "../pages.module.scss";
 const SingleWMDBPage = () => {
   React.useEffect(() => {
     window.scroll(0, 0);
   }, []);
 
   return (
-    <div style={{ position: "absolute", width: "100%" }}>
+    <div className={style["page"]}>
       <NavBarComponent navbarModule={generateNavbarData()} />
       <HeaderGalleryComponent headerGallery={generateGalleryData()} />
       <GalleryComponent headerGallery={generateGalleryData()} />
       <ContactComponent contactModule={generateContactData()} />
-      <div style={{ position: "relative", bottom: "0" }}>
+      <div className={style["page-footer"]}>
         <FooterComponent footerModule={generateFooterData()} />
       </div>
     </div>

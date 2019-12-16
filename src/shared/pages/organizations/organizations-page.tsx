@@ -8,18 +8,19 @@ import { generateDummyFooterData } from "@app/api/modules/footer/generate-dummy-
 
 import { OrganizationsComponent } from "@app/modules/organizations";
 import { generateOrganizationsData } from "@app/api/modules/organizations/end-point";
-
+import style from "../pages.module.scss";
+<div className={style["page"]} />;
 export const OrganizationsPageComponent = () => {
   React.useEffect(() => {
     window.scroll(0, 0);
   }, []);
 
   return (
-    <div style={{ position: "absolute", width: "100%" }}>
+    <div className={style["page"]}>
       <NavBarComponent navbarModule={generateDummyNavbarData()} />
       <HeaderSimpleComponent headerSimpleModule={generateOrganizationsHeaderDummyData()} />
       <OrganizationsComponent organisations={generateOrganizationsData()} />
-      <div style={{ position: "relative", bottom: "0" }}>
+      <div className={style["page-footer"]}>
         <FooterComponent footerModule={generateDummyFooterData()} />
       </div>
     </div>

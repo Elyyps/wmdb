@@ -7,18 +7,18 @@ import { generateDummyNavbarData } from "@app/api/modules/nav-bar/generate-dummy
 import { FooterComponent } from "@app/modules/footer";
 import { generateDummyFooterData } from "@app/api/modules/footer/generate-dummy-data";
 import { generateAdvertiserWMDBHeaderDummyData } from "@app/api/modules/header-simple";
-
+import style from "../pages.module.scss";
 export const AdvertiserWMDBPageComponent = () => {
   React.useEffect(() => {
     window.scroll(0, 0);
   }, []);
 
   return (
-    <div style={{ position: "absolute", width: "100%" }}>
+    <div className={style["page"]}>
       <NavBarComponent navbarModule={generateDummyNavbarData()} />
       <HeaderSimpleComponent headerSimpleModule={generateAdvertiserWMDBHeaderDummyData()} />
       <AdvertiserWMDBComponent advertiserModule={generateAdvertiserData()} />
-      <div style={{ position: "relative", bottom: "0" }}>
+      <div className={style["page-footer"]}>
         <FooterComponent footerModule={generateDummyFooterData()} />
       </div>
     </div>

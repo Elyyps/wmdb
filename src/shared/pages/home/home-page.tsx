@@ -16,6 +16,7 @@ import { FAQOverviewComponent } from "@app/modules/faq-overview";
 import { generateDummyLocatieOverviewData } from "@app/api/modules/faq-overview";
 import { HeroComponent } from "@app/modules/hero";
 import { CategoryOverviewComponent } from "@app/modules/category-overview";
+import style from "../pages.module.scss";
 
 const HomePageComponent = () => {
   React.useEffect(() => {
@@ -23,7 +24,7 @@ const HomePageComponent = () => {
   }, []);
 
   return (
-    <div style={{ position: "absolute", width: "100%" }}>
+    <div className={style["page"]}>
       <NavBarComponent navbarModule={generateNavbarData()} />
       <HeroComponent heroModule={generateDummyHeroModule()} />
       <CategoryOverviewComponent categoryOverviewModule={GenerateDummyCategoryOverviewData()} />
@@ -31,7 +32,7 @@ const HomePageComponent = () => {
       <CompanyOutingComponent companyOutingModule={generateCompanyOutingData()} />
       <FAQOverviewComponent faqOverviewModule={generateDummyLocatieOverviewData()} />
       <OtherLocationsComponent otherLocationsModule={generateOtherLocationsData()} />
-      <div style={{ position: "relative", bottom: "0" }}>
+      <div className={style["page-footer"]}>
         <FooterComponent footerModule={generateFooterData()} />
       </div>
     </div>

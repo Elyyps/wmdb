@@ -5,12 +5,13 @@ import { generateDummyNavbarData } from "@app/api/modules/nav-bar/generate-dummy
 import { generateDummyFooterData } from "@app/api/modules/footer/generate-dummy-data";
 import { QuestionsOverviewComponent } from "@app/modules/questions-overview";
 import { generateQuestionsOverviewData } from "@app/api/modules/questions-overview/end-point";
+import style from "../pages.module.scss";
 
 export const QuestionsOverviewPage = () => (
-  <div style={{ position: "absolute", width: "100%" }}>
+  <div className={style["page"]}>
     <NavBarComponent navbarModule={generateDummyNavbarData()} />
     <QuestionsOverviewComponent questionOverview={generateQuestionsOverviewData()} />
-    <div style={{ position: "relative", bottom: "0" }}>
+    <div className={style["page-footer"]}>
       <FooterComponent footerModule={generateDummyFooterData()} />
     </div>
   </div>

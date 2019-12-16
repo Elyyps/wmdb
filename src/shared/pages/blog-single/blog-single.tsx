@@ -5,6 +5,7 @@ import { FooterComponent } from "@app/modules/footer";
 import { generateFooterData } from "@app/api/modules/footer/end-point";
 import { BlogSingleComponent } from "@app/modules/blog-single";
 import { generateBlogSingleData } from "@app/api/modules/blog-single/end-point";
+import style from "../pages.module.scss";
 
 export const BlogSinglePage = () => {
   React.useEffect(() => {
@@ -12,10 +13,10 @@ export const BlogSinglePage = () => {
   }, []);
 
   return (
-    <div style={{ position: "absolute", width: "100%" }}>
+    <div className={style["page"]}>
       <NavBarComponent navbarModule={generateNavbarData()} />
       <BlogSingleComponent blogSingle={generateBlogSingleData()} />
-      <div style={{ position: "relative", bottom: "0" }}>
+      <div className={style["page-footer"]}>
         <FooterComponent footerModule={generateFooterData()} />
       </div>
     </div>

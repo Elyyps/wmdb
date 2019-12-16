@@ -4,12 +4,12 @@ import { generateNavbarData } from "@app/api/modules/nav-bar/end-point";
 import { FooterComponent } from "@app/modules/footer";
 import { generateFooterData } from "@app/api/modules/footer/end-point";
 import { NotFoundComponent } from "@app/modules/not-found";
-
+import style from "../pages.module.scss";
 const NotFoundPageComponent = () => (
-  <div style={{ position: "absolute", width: "100%" }}>
+  <div className={style["page"]}>
     <NavBarComponent navbarModule={generateNavbarData()} />
     <NotFoundComponent />
-    <div style={{ position: "relative", bottom: "0" }}>
+    <div className={style["page-footer"]}>
       <FooterComponent footerModule={generateFooterData()} />
     </div>
   </div>

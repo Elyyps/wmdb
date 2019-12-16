@@ -12,6 +12,7 @@ import { generateOtherLocationsData } from "@app/api/modules/other-locations/end
 import { AboutPageComponent } from "@app/modules/about-page";
 import { generateAboutPageData } from "@app/api/modules/about-page/end-point";
 import { OverviewComponent } from "@app/modules/overview";
+import style from "../pages.module.scss";
 
 export interface IOverzichtComponentProps {}
 
@@ -21,13 +22,13 @@ const OverviewPageComponent = (props: IOverzichtComponentProps) => {
   }, []);
 
   return (
-    <div style={{ position: "absolute", width: "100%" }}>
+    <div className={style["page"]}>
       <NavBarComponent navbarModule={generateDummyNavbarData()} />
       <HeaderSimpleComponent headerSimpleModule={generateDummyHeaderSimpleModule()} />
       <OverviewComponent overviewModule={generateDummyOverviewModule()} />
       <OtherLocationsComponent otherLocationsModule={generateOtherLocationsData()} />
       <AboutPageComponent aboutPageModule={generateAboutPageData()} />
-      <div style={{ position: "relative", bottom: "0" }}>
+      <div className={style["page-footer"]}>
         <FooterComponent footerModule={generateDummyFooterData()} />
       </div>
     </div>
